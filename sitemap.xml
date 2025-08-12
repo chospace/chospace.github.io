@@ -2,50 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/first-post/</loc>
+    <loc>https://chospace.github.io/chospace/posts/first-post/</loc>
     <lastmod>2019-02-11T14:21:17+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/cara-buat-web-ini/</loc>
+    <loc>https://chospace.github.io/chospace/posts/cara-buat-web-ini/</loc>
     <lastmod>2021-08-11T15:48:53+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://chospace.github.io/chospace/</loc>
     <lastmod>2025-08-11T20:04:44+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/dummy-post-lagii/</loc>
+    <loc>https://chospace.github.io/chospace/posts/dummy-post-lagii/</loc>
     <lastmod>2025-08-11T20:04:44+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://chospace.github.io/chospace/posts/</loc>
     <lastmod>2025-08-11T20:04:44+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://chospace.github.io/chospace/categories/</loc>
     <lastmod>2025-08-11T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/contoh/</loc>
+    <loc>https://chospace.github.io/chospace/tags/contoh/</loc>
     <lastmod>2025-08-11T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dummy/</loc>
+    <loc>https://chospace.github.io/chospace/tags/dummy/</loc>
     <lastmod>2025-08-11T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://chospace.github.io/chospace/tags/hugo/</loc>
     <lastmod>2025-08-11T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/dummy-post/</loc>
+    <loc>https://chospace.github.io/chospace/posts/dummy-post/</loc>
     <lastmod>2025-08-11T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/random/</loc>
+    <loc>https://chospace.github.io/chospace/categories/random/</loc>
     <lastmod>2025-08-11T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://chospace.github.io/chospace/tags/</loc>
     <lastmod>2025-08-11T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tutorial/</loc>
+    <loc>https://chospace.github.io/chospace/tags/tutorial/</loc>
     <lastmod>2021-08-11T15:48:53+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/first/</loc>
+    <loc>https://chospace.github.io/chospace/tags/first/</loc>
     <lastmod>2019-02-11T14:21:17+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://chospace.github.io/chospace/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://chospace.github.io/chospace/search/</loc>
   </url>
 </urlset>
