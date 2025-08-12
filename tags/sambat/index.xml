@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sambat on /chospace</title>
+    <link>http://localhost:1313/tags/sambat/</link>
+    <description>Recent content in Sambat on /chospace</description>
+    <image>
+      <title>/chospace</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%3E</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Aug 2022 15:48:53 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sambat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cara Buat Web Ini</title>
+      <link>http://localhost:1313/posts/cara-buat-web-ini/</link>
+      <pubDate>Thu, 11 Aug 2022 15:48:53 +0700</pubDate>
+      <guid>http://localhost:1313/posts/cara-buat-web-ini/</guid>
+      <description>&lt;h2 id=&#34;cara-buat-web-ini---versi-cho&#34;&gt;Cara Buat Web Ini - versi Cho&lt;/h2&gt;
+&lt;p&gt;Kenapa Bikin Web Ini? Sebenernya sih… &lt;strong&gt;nggak ada alasan yang terlalu keren&lt;/strong&gt;.&lt;br&gt;
+Cuma pengen punya tempat buat nulis sambat, random, dan kadang-kadang sok produktif.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;stack-yang-dipakai&#34;&gt;Stack yang Dipakai&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;&lt;/strong&gt; → Static Site Generator (SSG) super cepat.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34;&gt;PaperMod&lt;/a&gt;&lt;/strong&gt; → Tema minimalis, clean, dan gampang dikustomisasi.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt;&lt;/strong&gt; → Buat version control.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;&lt;/strong&gt; → Hosting gratis untuk deploy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PowerShell / Terminal&lt;/strong&gt; → Jalankan perintah.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VS Code&lt;/strong&gt; → Edit file dan konfigurasi.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-by-step-biar-nggak-lupa&#34;&gt;Step-by-step (Biar Nggak Lupa)&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Install Hugo&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
