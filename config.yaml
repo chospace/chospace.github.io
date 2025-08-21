@@ -1,0 +1,92 @@
+baseURL: "https://chospace.github.io/"
+relativeURLs: false
+canonifyURLs: true
+title: "/chospace"
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: Chospace
+  description: "Welcome to Chospace, where I share random thoughts and memes."
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Cho
+  images: ["/images/avatar.jpg"]
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    safari_pinned_tab: "/favicon-32x32.png"
+
+  label:
+    text: "/chospace"
+    iconHeight: 35
+
+  profileMode:
+    enabled: false
+    title: Chospace
+    subtitle: "This is subtitle"
+    imageUrl: "/avatar.jpg"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  homeInfoParams:
+    Title: "Hi there 👋"
+    Content: |
+      Welcome to **/chospace** — I'm Choirul Anas, but you can call me *Cho*.  
+      Here I share random things, write all my *sambat* and make memes out of chaos.
+  socialIcons:
+    - name: x
+      url: "https://x.com/"
+    - name: instagram
+      url: "https://www.instagram.com/chospace/"
+
+menu:
+  main:
+    - identifier: archive
+      name: Archive
+      url: /archives/
+      weight: 10
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 20
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 30
+    - identifier: projects
+      name: Projects
+      url: '#'
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
