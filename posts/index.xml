@@ -11,7 +11,6 @@
     </image>
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 22 Aug 2025 10:42:34 +0700</lastBuildDate>
     <atom:link href="https://chospace.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First Post!</title>
@@ -26,30 +25,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://chospace.github.io/posts/kenapa-bikin-web-ini/</guid>
       <description>Kenapa Bikin Web Ini?</description>
-    </item>
-    <item>
-      <title>Artikel Baru</title>
-      <link>https://chospace.github.io/posts/artikel-baru/</link>
-      <pubDate>Fri, 22 Aug 2025 10:42:34 +0700</pubDate>
-      <guid>https://chospace.github.io/posts/artikel-baru/</guid>
-      <description>&lt;p&gt;kiw kiw&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Memes and Chaos</title>
-      <link>https://chospace.github.io/posts/hello-hi/</link>
-      <pubDate>Thu, 21 Aug 2025 16:00:00 +0700</pubDate>
-      <guid>https://chospace.github.io/posts/hello-hi/</guid>
-      <description>&lt;h1 id=&#34;-memes-and-chaos&#34;&gt;😂 Memes and Chaos&lt;/h1&gt;
-&lt;p&gt;Kadang hidup terlalu serius. Jadi saya suka bikin/mengumpulkan &lt;strong&gt;meme receh&lt;/strong&gt;.&lt;br&gt;
-Blog ini mungkin akan penuh dengan random &lt;strong&gt;sambat + meme&lt;/strong&gt; juga.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;meme example&#34; loading=&#34;lazy&#34; src=&#34;https://chospace.github.io/images/meme-sample.jpg&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hello World</title>
-      <link>https://chospace.github.io/posts/hello-world/</link>
-      <pubDate>Thu, 21 Aug 2025 14:00:00 +0700</pubDate>
-      <guid>https://chospace.github.io/posts/hello-world/</guid>
-      <description>&lt;p&gt;Halo! Ini adalah posting pertama saya di Hugo dengan tema PaperMod 🚀&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
