@@ -3,31 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://chospace.github.io/posts/first-post/</loc>
+    <lastmod>2021-02-22T19:26:33+07:00</lastmod>
   </url><url>
-    <loc>https://chospace.github.io/posts/kenapa-bikin-web-ini/</loc>
+    <loc>https://chospace.github.io/posts/buat-web-ini/</loc>
+    <lastmod>2021-02-23T14:59:54+07:00</lastmod>
   </url><url>
     <loc>https://chospace.github.io/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <lastmod>2021-02-23T14:59:54+07:00</lastmod>
   </url><url>
-    <loc>https://chospace.github.io/tags/first/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <loc>https://chospace.github.io/tags/github/</loc>
+    <lastmod>2021-02-23T14:59:54+07:00</lastmod>
   </url><url>
-    <loc>https://chospace.github.io/page/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <loc>https://chospace.github.io/tags/hugo/</loc>
+    <lastmod>2021-02-23T14:59:54+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/posts/</loc>
+    <lastmod>2021-02-23T14:59:54+07:00</lastmod>
   </url><url>
     <loc>https://chospace.github.io/tags/</loc>
+    <lastmod>2021-02-23T14:59:54+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/tags/tutorial/</loc>
+    <lastmod>2021-02-23T14:59:54+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/tags/first/</loc>
+    <lastmod>2021-02-22T19:26:33+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/page/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://chospace.github.io/archives/</loc>
   </url><url>
     <loc>https://chospace.github.io/categories/</loc>
   </url><url>
-    <loc>https://chospace.github.io/tags/hugo/</loc>
-  </url><url>
-    <loc>https://chospace.github.io/posts/</loc>
-  </url><url>
     <loc>https://chospace.github.io/search/</loc>
-  </url><url>
-    <loc>https://chospace.github.io/tags/tutorial/</loc>
   </url>
 </urlset>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>chospace</title>
-    <link>https://chospace.github.io/</link>
-    <description>Recent content on chospace</description>
+    <title>Github on chospace</title>
+    <link>https://chospace.github.io/tags/github/</link>
+    <description>Recent content in Github on chospace</description>
     <image>
       <title>chospace</title>
       <url>https://chospace.github.io/images/avatar.jpg</url>
@@ -12,27 +12,13 @@
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
     <lastBuildDate>Tue, 23 Feb 2021 14:59:54 +0700</lastBuildDate>
-    <atom:link href="https://chospace.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>First Post!</title>
-      <link>https://chospace.github.io/posts/first-post/</link>
-      <pubDate>Mon, 22 Feb 2021 19:26:33 +0700</pubDate>
-      <guid>https://chospace.github.io/posts/first-post/</guid>
-      <description>Selamat Datang.. 🙏</description>
-    </item>
+    <atom:link href="https://chospace.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cara web ini di buat!</title>
       <link>https://chospace.github.io/posts/buat-web-ini/</link>
       <pubDate>Tue, 23 Feb 2021 14:59:54 +0700</pubDate>
       <guid>https://chospace.github.io/posts/buat-web-ini/</guid>
       <description>Kenapa bikin web ini? Gimana caranya?</description>
-    </item>
-    <item>
-      <title>My 1st post</title>
-      <link>https://chospace.github.io/page/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      <guid>https://chospace.github.io/page/</guid>
-      <description>Desc Text.</description>
     </item>
   </channel>
 </rss>
