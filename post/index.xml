@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on chospace</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on chospace</description>
+    <image>
+      <title>chospace</title>
+      <url>http://localhost:1313/images/avatar.jpg</url>
+      <link>http://localhost:1313/images/avatar.jpg</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 22 Aug 2025 14:59:21 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hai Hello</title>
+      <link>http://localhost:1313/post/hai-hello/</link>
+      <pubDate>Fri, 22 Aug 2025 14:59:21 +0700</pubDate>
+      <guid>http://localhost:1313/post/hai-hello/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
