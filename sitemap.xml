@@ -2,10 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://chospace.github.io/posts/first-post/</loc>
-  </url><url>
-    <loc>https://chospace.github.io/posts/kenapa-bikin-web-ini/</loc>
-  </url><url>
     <loc>https://chospace.github.io/posts/artikel-baru/</loc>
     <lastmod>2025-08-22T10:42:34+07:00</lastmod>
   </url><url>
@@ -43,10 +39,6 @@
   </url><url>
     <loc>https://chospace.github.io/categories/</loc>
   </url><url>
-    <loc>https://chospace.github.io/tags/hugo/</loc>
-  </url><url>
     <loc>https://chospace.github.io/search/</loc>
-  </url><url>
-    <loc>https://chospace.github.io/tags/tutorial/</loc>
   </url>
 </urlset>

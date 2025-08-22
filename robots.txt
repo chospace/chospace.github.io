@@ -1,1 +1,3 @@
 User-agent: *
+Disallow:
+Sitemap: https://chospace.github.io/sitemap.xml
