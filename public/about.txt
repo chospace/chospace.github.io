@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: BenchNine
+- Font Author: undefined
+- Font Source: https://fonts.gstatic.com/s/benchnine/v16/ahcbv8612zF4jxrwMosrV8N1jU2gog.ttf
+- Font License: undefined)

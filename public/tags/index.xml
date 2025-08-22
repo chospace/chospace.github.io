@@ -11,29 +11,8 @@
     </image>
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 Aug 2025 16:00:00 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 11:30:03 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Fun</title>
-      <link>http://localhost:1313/tags/fun/</link>
-      <pubDate>Thu, 21 Aug 2025 16:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/fun/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Memes</title>
-      <link>http://localhost:1313/tags/memes/</link>
-      <pubDate>Thu, 21 Aug 2025 16:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/memes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Random</title>
-      <link>http://localhost:1313/tags/random/</link>
-      <pubDate>Thu, 21 Aug 2025 16:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/tags/random/</guid>
-      <description></description>
-    </item>
     <item>
       <title>First</title>
       <link>http://localhost:1313/tags/first/</link>
