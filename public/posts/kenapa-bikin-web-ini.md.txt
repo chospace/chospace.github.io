@@ -32,6 +32,3 @@ Cuma pengen punya tempat buat nulis sambat, random, dan kadang-kadang sok produk
 ---
 
 ## Rencana ke Depan
-- Bikin beberapa catatan tentang setup, error, dan cara ngoprek.  
-- Sharing hal random seputar teknologi, mungkin juga non-teknologi.  
-- Intinya: ini bukan blog serius, jadi jangan terlalu berharap. 😅
