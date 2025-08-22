@@ -1,8 +1,6 @@
 baseURL: "https://chospace.github.io/"
 title: "chospace"
 theme: "PaperMod"
-canonifyURLs: true
-relativeURLs: false
 
 enableRobotsTXT: true
 buildDrafts: false
