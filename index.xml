@@ -14,6 +14,20 @@
     <lastBuildDate>Fri, 22 Aug 2025 10:42:34 +0700</lastBuildDate>
     <atom:link href="https://chospace.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>First Post!</title>
+      <link>https://chospace.github.io/posts/first-post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chospace.github.io/posts/first-post/</guid>
+      <description>Selamat Datang.. 😘</description>
+    </item>
+    <item>
+      <title>Cara Website Ini</title>
+      <link>https://chospace.github.io/posts/kenapa-bikin-web-ini/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chospace.github.io/posts/kenapa-bikin-web-ini/</guid>
+      <description>Kenapa Bikin Web Ini?</description>
+    </item>
+    <item>
       <title>Artikel Baru</title>
       <link>https://chospace.github.io/posts/artikel-baru/</link>
       <pubDate>Fri, 22 Aug 2025 10:42:34 +0700</pubDate>
