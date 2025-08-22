@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>First on /chospace</title>
+    <title>First on chospace</title>
     <link>https://chospace.github.io/tags/first/</link>
-    <description>Recent content in First on /chospace</description>
+    <description>Recent content in First on chospace</description>
     <image>
-      <title>/chospace</title>
+      <title>chospace</title>
       <url>https://chospace.github.io/images/avatar.jpg</url>
       <link>https://chospace.github.io/images/avatar.jpg</link>
     </image>
