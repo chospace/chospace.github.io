@@ -2,14 +2,14 @@
 date: '2021-02-23T14:59:54+07:00'
 draft: false
 title: 'Cara web ini di buat!'
-summary: "Kenapa bikin web ini? Gimana caranya? "
+summary: "Kenapa bikin web ini? Gimana caranya? (Pstingan kedua ✌️)"
 tags: ["tutorial", "hugo", "github"]
 weight: 2
 ---
 
 ## Kenapa Bikin Web Ini?
 Sebenarnya sih... **nggak ada alasan yang terlalu keren**. 😉
-Cuma pengen punya tempat buat nulis sambat, random, dan kadang-kadang sok produktif. Intinya, punya "rumah" sendiri di internet.
+Cuma pengen punya tempat buat nulis sambat, random, dan kadang-kadang sok produktif.
 
 ---
 
@@ -87,11 +87,9 @@ Tertarik bikin juga? Tenang, nggak sesusah itu kok. Anggap aja lagi ngerakit Tam
     git push -u origin main
     ```
 
-**Voila!** Tunggu beberapa menit, dan coba akses `https://username.github.io`. Kalau semua lancar, website kamu udah mejeng di internet! Keren, kan?
+**Voila!** Tunggu beberapa menit, dan coba akses `https://username.github.io`. Kalau semua lancar, website kamu udah mejeng di internet!
 
 ---
 
 ## Rencana ke Depan
 - Nulis lebih rajin (semoga).
-- Coba-coba oprek tema biar lebih personal.
-- Mungkin nambahin fitur-fitur aneh lainnya. Liat nanti aja!

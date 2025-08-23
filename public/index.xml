@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Feb 2021 14:59:54 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jan 2022 07:01:26 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First Post!</title>
@@ -25,7 +25,23 @@
       <link>http://localhost:1313/posts/buat-web-ini/</link>
       <pubDate>Tue, 23 Feb 2021 14:59:54 +0700</pubDate>
       <guid>http://localhost:1313/posts/buat-web-ini/</guid>
-      <description>Kenapa bikin web ini? Gimana caranya?</description>
+      <description>Kenapa bikin web ini? Gimana caranya? (Pstingan kedua ✌️)</description>
+    </item>
+    <item>
+      <title>Hidup Minimalis</title>
+      <link>http://localhost:1313/posts/hidup-minimalis/</link>
+      <pubDate>Thu, 13 Jan 2022 07:01:26 +0700</pubDate>
+      <guid>http://localhost:1313/posts/hidup-minimalis/</guid>
+      <description>&lt;h3 id=&#34;review-singkat-hidup-minimalis-ala-jepang&#34;&gt;Review Singkat: Hidup Minimalis ala Jepang&lt;/h3&gt;
+&lt;p&gt;Buku ini mengajarkan bahwa dengan mengurangi jumlah barang yang tidak penting, kita bisa mendapatkan lebih banyak hal berharga: waktu, kebebasan, dan ketenangan pikiran.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Inti utamanya:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tanya ke diri sendiri:&lt;/strong&gt; Apakah barang ini membuatku bahagia, atau hanya menjadi beban?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fokus pada fungsi:&lt;/strong&gt; Simpan hanya barang yang benar-benar kamu butuhkan dan pakai.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kenangan ada di pikiran, bukan di benda.&lt;/strong&gt; Melepaskan barang bukan berarti menghilangkan kenangan.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Kesimpulan:&lt;/strong&gt;
+Ini bukan tentang membuang semua barang, tapi tentang menciptakan ruang agar hidup terasa lebih ringan dan fokus pada apa yang benar-benar berarti.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My 1st post</title>

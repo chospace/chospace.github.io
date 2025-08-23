@@ -22,4 +22,4 @@ tapi ada kemungkinan besar kamu akan menemukan:
 - Cerita debugging yang bikin pengen tutup laptop  
 
 Kalau kamu kuat mental, silakan lanjut.  
-Kalau tidak... ya sudah, tetap lanjut aja, biar kita sambat bareng. 😅
+Kalau tidak... ya sudah, tetap lanjut aja, biar kita sambat bareng.
