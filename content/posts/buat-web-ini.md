@@ -1,8 +1,8 @@
 ---
-date: '2021-02-23T14:59:54+07:00'
+date: '2018-02-23T14:59:54+07:00'
 draft: false
 title: 'Cara web ini di buat!'
-summary: "Kenapa bikin web ini? Gimana caranya? (Pstingan kedua ✌️)"
+summary: "Kenapa bikin web ini? Gimana caranya? (karena ada yg nanya✌️)"
 tags: ["tutorial", "hugo", "github"]
 weight: 2
 ---
@@ -16,7 +16,7 @@ Cuma pengen punya tempat buat nulis sambat, random, dan kadang-kadang sok produk
 ## Stack yang Dipakai
 
 - **[Hugo](https://gohugo.io/)** → Mesin roket buat bikin web statis. Super cepat!
-- **[PaperMod](https://github.com/adityatelange/hugo-PaperMod)** → Baju minimalis buat web-nya. Clean dan gampang dioprek.
+- **[Fifty of 2022's most popular Hugo themes](https://dev.to/cloudcannon/fifty-of-2022s-most-popular-hugo-themes-5foi?comments_sort=top)** → Baju yg bebas lo pilih, gw pribadi suka **[PaperMod](https://github.com/adityatelange/hugo-PaperMod)** dan **[Hello Friend NG](https://github.com/rhazdon/hugo-theme-hello-friend-ng)** karena minimalsi dan clean aja.
 - **[Git](https://git-scm.com/)** → Mesin waktu buat ngelacak semua perubahan kode.
 - **[GitHub Pages](https://pages.github.com/)** → Lahan gratis buat nerbitin web kita. Mantap!
 - **PowerShell / Terminal** → Tongkat sihir buat ngasih perintah ke komputer.

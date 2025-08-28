@@ -1,5 +1,5 @@
 baseURL: "https://chospace.github.io/"
-title: "chospace"
+title: "/chospace"
 theme: "github.com/adityatelange/hugo-PaperMod"
 
 enableRobotsTXT: true
@@ -32,6 +32,7 @@ params:
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
+  paginate: 5
 
   assets:
     favicon: "/favicon.ico"
@@ -62,6 +63,9 @@ params:
     Content: |
       Welcome to **/chospace** — I'm Choirul Anas, but you can call me *Cho*.  
       Here I share random things, write all my *sambat* and make memes out of chaos.
+
+      
+      ⚠️ Blog ini merupakan proses merapikan catatan-catatan dari arsip lama saya, jadi mohon maklum kalau masih berantakan. Terima kasih sudah mampir!
 
   socialIcons:
     - name: x

@@ -2,6 +2,7 @@
 date = '2022-01-13T07:01:26+07:00'
 draft = false
 title = 'Hidup Minimalis'
+summary = 'catatan singkat saja'
 +++
 
 ### Review Singkat: Hidup Minimalis ala Jepang
