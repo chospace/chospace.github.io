@@ -1,47 +1,66 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on chospace</title>
+    <title>Posts on /chospace</title>
     <link>https://chospace.github.io/posts/</link>
-    <description>Recent content in Posts on chospace</description>
+    <description>Recent content in Posts on /chospace</description>
     <image>
-      <title>chospace</title>
+      <title>/chospace</title>
       <url>https://chospace.github.io/images/avatar.jpg</url>
       <link>https://chospace.github.io/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- 0.148.2</generator>
+    <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <lastBuildDate>Thu, 13 Jan 2022 07:01:26 +0700</lastBuildDate>
     <atom:link href="https://chospace.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First Post!</title>
       <link>https://chospace.github.io/posts/first-post/</link>
-      <pubDate>Mon, 22 Feb 2021 19:26:33 +0700</pubDate>
+      <pubDate>Sat, 22 Apr 2017 19:26:33 +0700</pubDate>
       <guid>https://chospace.github.io/posts/first-post/</guid>
       <description>Selamat Datang.. 🙏</description>
     </item>
     <item>
       <title>Cara web ini di buat!</title>
       <link>https://chospace.github.io/posts/buat-web-ini/</link>
-      <pubDate>Tue, 23 Feb 2021 14:59:54 +0700</pubDate>
+      <pubDate>Fri, 23 Feb 2018 14:59:54 +0700</pubDate>
       <guid>https://chospace.github.io/posts/buat-web-ini/</guid>
-      <description>Kenapa bikin web ini? Gimana caranya? (Pstingan kedua ✌️)</description>
+      <description>Kenapa bikin web ini? Gimana caranya? (karena ada yg nanya✌️)</description>
     </item>
     <item>
       <title>Hidup Minimalis</title>
       <link>https://chospace.github.io/posts/hidup-minimalis/</link>
       <pubDate>Thu, 13 Jan 2022 07:01:26 +0700</pubDate>
       <guid>https://chospace.github.io/posts/hidup-minimalis/</guid>
-      <description>&lt;h3 id=&#34;review-singkat-hidup-minimalis-ala-jepang&#34;&gt;Review Singkat: Hidup Minimalis ala Jepang&lt;/h3&gt;
-&lt;p&gt;Buku ini mengajarkan bahwa dengan mengurangi jumlah barang yang tidak penting, kita bisa mendapatkan lebih banyak hal berharga: waktu, kebebasan, dan ketenangan pikiran.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Inti utamanya:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Tanya ke diri sendiri:&lt;/strong&gt; Apakah barang ini membuatku bahagia, atau hanya menjadi beban?&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Fokus pada fungsi:&lt;/strong&gt; Simpan hanya barang yang benar-benar kamu butuhkan dan pakai.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Kenangan ada di pikiran, bukan di benda.&lt;/strong&gt; Melepaskan barang bukan berarti menghilangkan kenangan.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Kesimpulan:&lt;/strong&gt;
-Ini bukan tentang membuang semua barang, tapi tentang menciptakan ruang agar hidup terasa lebih ringan dan fokus pada apa yang benar-benar berarti.&lt;/p&gt;</description>
+      <description>catatan singkat saja</description>
+    </item>
+    <item>
+      <title>15 Plugin Figma Terbaik Tahun 2020</title>
+      <link>https://chospace.github.io/posts/15-plugin-figma-terbaik/</link>
+      <pubDate>Sun, 16 Feb 2020 22:37:44 +0700</pubDate>
+      <guid>https://chospace.github.io/posts/15-plugin-figma-terbaik/</guid>
+      <description>Figma tumbuh luar biasa hebat sebagai platform kolaboratif bagi para desainer jadi setelah itu saya menatap menjelajahi area plugin dan saya membangun daftar plugin saya sendiri dan plugin ini membuat alur kerja desain saya lebih cepat dan lebih baik.</description>
+    </item>
+    <item>
+      <title>2020 Pindah ke Figma ❤</title>
+      <link>https://chospace.github.io/posts/2020-pindah-ke-figma/</link>
+      <pubDate>Sat, 15 Feb 2020 22:33:03 +0700</pubDate>
+      <guid>https://chospace.github.io/posts/2020-pindah-ke-figma/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Go &amp; File: Cara Mudah Membaca dan Menulis File Teks</title>
+      <link>https://chospace.github.io/posts/go-and-file/</link>
+      <pubDate>Thu, 28 Mar 2019 22:22:41 +0700</pubDate>
+      <guid>https://chospace.github.io/posts/go-and-file/</guid>
+      <description>Catatan singkat dan praktis tentang cara membaca konten dari sebuah file dan menuliskannya ke file baru menggunakan Go (Golang).</description>
+    </item>
+    <item>
+      <title>Exploring Filesystem in Golang</title>
+      <link>https://chospace.github.io/posts/exploring-filesystem-in-golang/</link>
+      <pubDate>Wed, 06 Mar 2019 21:37:39 +0700</pubDate>
+      <guid>https://chospace.github.io/posts/exploring-filesystem-in-golang/</guid>
+      <description>test note</description>
     </item>
   </channel>
 </rss>
