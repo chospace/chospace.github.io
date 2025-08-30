@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Books on /chospace</title>
+    <link>https://chospace.github.io/tags/books/</link>
+    <description>Recent content in Books on /chospace</description>
+    <image>
+      <title>/chospace</title>
+      <url>https://chospace.github.io/images/avatar.jpg</url>
+      <link>https://chospace.github.io/images/avatar.jpg</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jan 2022 07:01:26 +0700</lastBuildDate>
+    <atom:link href="https://chospace.github.io/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hidup Minimalis Ala Orang Jepang</title>
+      <link>https://chospace.github.io/posts/hidup-minimalis/</link>
+      <pubDate>Thu, 13 Jan 2022 07:01:26 +0700</pubDate>
+      <guid>https://chospace.github.io/posts/hidup-minimalis/</guid>
+      <description>sebuah catatan singkat saja dan biar ada postingan 🔰</description>
+    </item>
+  </channel>
+</rss>
