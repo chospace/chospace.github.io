@@ -2,25 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://chospace.github.io/posts/first-post/</loc>
-    <lastmod>2017-04-22T19:26:33+07:00</lastmod>
-  </url><url>
-    <loc>https://chospace.github.io/posts/buat-web-ini/</loc>
-    <lastmod>2018-02-23T14:59:54+07:00</lastmod>
-  </url><url>
     <loc>https://chospace.github.io/</loc>
-    <lastmod>2022-01-13T07:01:26+07:00</lastmod>
+    <lastmod>2025-06-03T17:43:39+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/posts/hyperliquid-mengubah-saya/</loc>
+    <lastmod>2025-06-03T17:43:39+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/tags/crypto/</loc>
+    <lastmod>2025-06-03T17:43:39+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/tags/investing/</loc>
+    <lastmod>2025-06-03T17:43:39+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/posts/</loc>
+    <lastmod>2025-06-03T17:43:39+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/tags/</loc>
+    <lastmod>2025-06-03T17:43:39+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/tags/trading/</loc>
+    <lastmod>2025-06-03T17:43:39+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/posts/catatan_trading/</loc>
+    <lastmod>2022-12-30T17:05:47+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/tags/finance/</loc>
+    <lastmod>2022-12-30T17:05:47+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/tags/personal/</loc>
+    <lastmod>2022-12-30T17:05:47+07:00</lastmod>
   </url><url>
     <loc>https://chospace.github.io/tags/books/</loc>
     <lastmod>2022-01-13T07:01:26+07:00</lastmod>
   </url><url>
     <loc>https://chospace.github.io/posts/hidup-minimalis/</loc>
-    <lastmod>2022-01-13T07:01:26+07:00</lastmod>
-  </url><url>
-    <loc>https://chospace.github.io/posts/</loc>
-    <lastmod>2022-01-13T07:01:26+07:00</lastmod>
-  </url><url>
-    <loc>https://chospace.github.io/tags/</loc>
     <lastmod>2022-01-13T07:01:26+07:00</lastmod>
   </url><url>
     <loc>https://chospace.github.io/tags/first/</loc>
@@ -50,6 +65,9 @@
     <loc>https://chospace.github.io/posts/exploring-filesystem-in-golang/</loc>
     <lastmod>2019-03-06T21:37:39+07:00</lastmod>
   </url><url>
+    <loc>https://chospace.github.io/posts/buat-web-ini/</loc>
+    <lastmod>2018-02-23T14:59:54+07:00</lastmod>
+  </url><url>
     <loc>https://chospace.github.io/tags/github/</loc>
     <lastmod>2018-02-23T14:59:54+07:00</lastmod>
   </url><url>
@@ -58,6 +76,9 @@
   </url><url>
     <loc>https://chospace.github.io/tags/tutorial/</loc>
     <lastmod>2018-02-23T14:59:54+07:00</lastmod>
+  </url><url>
+    <loc>https://chospace.github.io/posts/first-post/</loc>
+    <lastmod>2017-04-22T19:26:33+07:00</lastmod>
   </url><url>
     <loc>https://chospace.github.io/archives/</loc>
   </url><url>
