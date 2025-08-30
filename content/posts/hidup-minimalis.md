@@ -2,7 +2,7 @@
 date: 2022-01-13T07:01:26+07:00
 draft: false
 title: "Hidup Minimalis Ala Orang Jepang"
-summary: "sebuah catatan singkat saja dan biar ada postingan 🔰"
+summary: "sebuah catatan singkat..🔰"
 tags: ["books"]
 author: "Cho"
 cover:
