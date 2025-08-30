@@ -2,6 +2,10 @@ baseURL: "https://chospace.github.io/"
 title: "/chospace"
 theme: "github.com/adityatelange/hugo-PaperMod"
 
+pagination:
+  disableAliases: false
+  pagerSize: 5
+
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
@@ -32,7 +36,7 @@ params:
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
-  paginate: 5
+
 
   assets:
     favicon: "/favicon.ico"

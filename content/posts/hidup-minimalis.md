@@ -1,11 +1,19 @@
-+++
-date = '2022-01-13T07:01:26+07:00'
-draft = false
-title = 'Hidup Minimalis'
-summary = 'catatan singkat saja'
-+++
+---
+date: 2022-01-13T07:01:26+07:00
+draft: false
+title: "Hidup Minimalis Ala Orang Jepang"
+summary: "sebuah catatan singkat saja dan biar ada postingan 🔰"
+tags: ["books"]
+author: "Cho"
+cover:
+    image: "<image path/url>" # image path/url
+    alt: "<alt text>" # alt text
+    caption: "<text>" # display caption under cover
+    relative: false # when using page bundles set this to true
+    hidden: true # only hide on current single page
+---
 
-### Review Singkat: Hidup Minimalis ala Jepang
+### Catatan Singkat: Buku hidup minimalis ala orang jepang
 
 Buku ini mengajarkan bahwa dengan mengurangi jumlah barang yang tidak penting, kita bisa mendapatkan lebih banyak hal berharga: waktu, kebebasan, dan ketenangan pikiran.
 

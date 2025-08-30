@@ -1,7 +1,7 @@
 ---
 date: '2018-02-23T14:59:54+07:00'
 draft: false
-title: 'Cara web ini di buat!'
+title: 'Cara web ini di buat!🌟'
 summary: "Kenapa bikin web ini? Gimana caranya? (karena ada yg nanya✌️)"
 tags: ["tutorial", "hugo", "github"]
 weight: 2

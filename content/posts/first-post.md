@@ -1,7 +1,7 @@
 ---
 draft: false
 date : '2017-04-22T19:26:33+07:00'
-title: 'First Post!'
+title: 'First Post! boleh di baca boleh engga'
 summary: "Selamat Datang.. 🙏"
 tags: ["first"]
 author: "Cho"
