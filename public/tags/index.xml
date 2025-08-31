@@ -11,8 +11,43 @@
     </image>
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Jun 2025 17:43:39 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 31 Aug 2025 14:45:11 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ekonomi</title>
+      <link>http://localhost:1313/tags/ekonomi/</link>
+      <pubDate>Sun, 31 Aug 2025 14:45:11 +0700</pubDate>
+      <guid>http://localhost:1313/tags/ekonomi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IHSG</title>
+      <link>http://localhost:1313/tags/ihsg/</link>
+      <pubDate>Sun, 31 Aug 2025 14:45:11 +0700</pubDate>
+      <guid>http://localhost:1313/tags/ihsg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Investasi</title>
+      <link>http://localhost:1313/tags/investasi/</link>
+      <pubDate>Sun, 31 Aug 2025 14:45:11 +0700</pubDate>
+      <guid>http://localhost:1313/tags/investasi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pasar Saham</title>
+      <link>http://localhost:1313/tags/pasar-saham/</link>
+      <pubDate>Sun, 31 Aug 2025 14:45:11 +0700</pubDate>
+      <guid>http://localhost:1313/tags/pasar-saham/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Peluang</title>
+      <link>http://localhost:1313/tags/peluang/</link>
+      <pubDate>Sun, 31 Aug 2025 14:45:11 +0700</pubDate>
+      <guid>http://localhost:1313/tags/peluang/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Crypto</title>
       <link>http://localhost:1313/tags/crypto/</link>
