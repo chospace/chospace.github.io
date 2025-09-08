@@ -9,7 +9,7 @@
       <url>https://chospace.github.io/images/avatar.jpg</url>
       <link>https://chospace.github.io/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- 0.149.0</generator>
+    <generator>Hugo -- 0.149.1</generator>
     <language>en</language>
     <lastBuildDate>Sun, 31 Aug 2025 14:45:11 +0700</lastBuildDate>
     <atom:link href="https://chospace.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -102,6 +102,27 @@
       <link>https://chospace.github.io/tags/tutorial/</link>
       <pubDate>Fri, 23 Feb 2018 14:59:54 +0700</pubDate>
       <guid>https://chospace.github.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bitcoin</title>
+      <link>https://chospace.github.io/tags/bitcoin/</link>
+      <pubDate>Sat, 30 Dec 2017 23:32:02 +0700</pubDate>
+      <guid>https://chospace.github.io/tags/bitcoin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opini</title>
+      <link>https://chospace.github.io/tags/opini/</link>
+      <pubDate>Sat, 30 Dec 2017 23:32:02 +0700</pubDate>
+      <guid>https://chospace.github.io/tags/opini/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Teknology</title>
+      <link>https://chospace.github.io/tags/teknology/</link>
+      <pubDate>Sat, 30 Dec 2017 23:32:02 +0700</pubDate>
+      <guid>https://chospace.github.io/tags/teknology/</guid>
       <description></description>
     </item>
   </channel>
