@@ -42,6 +42,13 @@
       <description>sebuah catatan singkat..🔰</description>
     </item>
     <item>
+      <title>Waktu Kosong</title>
+      <link>http://localhost:1313/posts/waktu-kosong/</link>
+      <pubDate>Mon, 11 Jan 2021 13:32:01 +0700</pubDate>
+      <guid>http://localhost:1313/posts/waktu-kosong/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
       <title>15 Plugin Figma Terbaik Tahun 2020</title>
       <link>http://localhost:1313/posts/15-plugin-figma-terbaik/</link>
       <pubDate>Sun, 16 Feb 2020 22:37:44 +0700</pubDate>
@@ -77,11 +84,11 @@
       <description>Kenapa bikin web ini? Gimana caranya? (karena ada yg nanya✌️)</description>
     </item>
     <item>
-      <title>Bitcoin: Antara Kegilaan Massal dan Visi Masa Depan</title>
+      <title>Bitcoin: Antara Kegilaan dan Visi Masa Depan</title>
       <link>http://localhost:1313/posts/bitcoin/</link>
       <pubDate>Sat, 30 Dec 2017 23:32:02 +0700</pubDate>
       <guid>http://localhost:1313/posts/bitcoin/</guid>
-      <description>Desc Text.</description>
+      <description>Dari “andai saja” Rp 1 juta jadi Rp 15 miliar, refleksi ini melihat Bitcoin bukan hanya soal harga naik-turun, tapi juga ide gila tentang uang tanpa negara. Heroik sekaligus anarkis, Bitcoin adalah cermin zaman yang menunjukkan bagaimana teknologi bisa mengguncang tatanan ekonomi global.</description>
     </item>
     <item>
       <title>First Post!</title>
