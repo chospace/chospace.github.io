@@ -4,7 +4,6 @@ date: 2025-08-31T14:45:11+07:00
 # weight: 1
 # aliases: ["/first"]
 tags: [Investing]
-author: "Cho"
 summary: "Be fearful when others are greedy, and greedy when others are fearful"
 author: [AI Assistant] # multiple authors
 showToc: false
