@@ -13,7 +13,7 @@ hidemeta: false
 comments: false
 description: "Desc Text."
 canonicalURL: "https://canonical.url/to/page"
-disableHLJS: false # to disable  
+disableShare: false
 disableHLJS: false
 hideSummary: false
 searchHidden: true
