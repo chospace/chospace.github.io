@@ -3,9 +3,9 @@ title: "Waktu Kosong"
 date: 2021-12-11T13:32:01+07:00
 # weight: 1
 # aliases: ["/first"]
-tags: ["Opini"]
+tags: ["Personal"]
 author: "Cho"
-summary: "Santai dulu, scroll aja sebentar, nonton dikit, hiburan nggak apa-apa."
+summary: "Santai dulu, scroll aja sebentar, nonton dikit, hiburan nggak apa-apa.😪"
 # author: ["Me", "You"] # multiple authors
 showToc: false
 TocOpen: false

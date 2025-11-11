@@ -20,5 +20,12 @@
       <guid>http://localhost:1313/posts/catatan_trading/</guid>
       <description>Refleksi kecil perjalanan belajar trading saya sejak 2019—tentang money management, probabilitas, analisa, hingga kesabaran.</description>
     </item>
+    <item>
+      <title>Waktu Kosong</title>
+      <link>http://localhost:1313/posts/waktu-kosong/</link>
+      <pubDate>Sat, 11 Dec 2021 13:32:01 +0700</pubDate>
+      <guid>http://localhost:1313/posts/waktu-kosong/</guid>
+      <description>Santai dulu, scroll aja sebentar, nonton dikit, hiburan nggak apa-apa.</description>
+    </item>
   </channel>
 </rss>
