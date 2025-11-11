@@ -14,7 +14,6 @@ hidemeta: false
 comments: false
 # description: "Desc Text."
 canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs set true
 disableShare: false
 hideSummary: false
 searchHidden: false
