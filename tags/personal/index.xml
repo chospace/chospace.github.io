@@ -9,7 +9,7 @@
       <url>https://chospace.github.io/images/avatar.jpg</url>
       <link>https://chospace.github.io/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- 0.149.1</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Fri, 30 Dec 2022 17:05:47 +0700</lastBuildDate>
     <atom:link href="https://chospace.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" />
@@ -19,6 +19,13 @@
       <pubDate>Fri, 30 Dec 2022 17:05:47 +0700</pubDate>
       <guid>https://chospace.github.io/posts/catatan_trading/</guid>
       <description>Refleksi kecil perjalanan belajar trading saya sejak 2019—tentang money management, probabilitas, analisa, hingga kesabaran.</description>
+    </item>
+    <item>
+      <title>Waktu Kosong</title>
+      <link>https://chospace.github.io/posts/waktu-kosong/</link>
+      <pubDate>Sat, 11 Dec 2021 13:32:01 +0700</pubDate>
+      <guid>https://chospace.github.io/posts/waktu-kosong/</guid>
+      <description>Santai dulu, scroll aja sebentar, nonton dikit, hiburan nggak apa-apa. 😪</description>
     </item>
   </channel>
 </rss>

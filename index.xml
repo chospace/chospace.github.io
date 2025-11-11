@@ -9,7 +9,7 @@
       <url>https://chospace.github.io/images/avatar.jpg</url>
       <link>https://chospace.github.io/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- 0.149.1</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sun, 31 Aug 2025 14:45:11 +0700</lastBuildDate>
     <atom:link href="https://chospace.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -40,6 +40,13 @@
       <pubDate>Thu, 13 Jan 2022 07:01:26 +0700</pubDate>
       <guid>https://chospace.github.io/posts/hidup-minimalis/</guid>
       <description>sebuah catatan singkat..🔰</description>
+    </item>
+    <item>
+      <title>Waktu Kosong</title>
+      <link>https://chospace.github.io/posts/waktu-kosong/</link>
+      <pubDate>Sat, 11 Dec 2021 13:32:01 +0700</pubDate>
+      <guid>https://chospace.github.io/posts/waktu-kosong/</guid>
+      <description>Santai dulu, scroll aja sebentar, nonton dikit, hiburan nggak apa-apa. 😪</description>
     </item>
     <item>
       <title>My 1st post</title>
