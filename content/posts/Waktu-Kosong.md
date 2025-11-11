@@ -7,6 +7,22 @@ tags: ["Personal"]
 author: "Cho"
 summary: "Santai dulu, scroll aja sebentar, nonton dikit, hiburan nggak apa-apa. 😪"
 # author: ["Me", "You"] # multiple authors
+showToc: false
+TocOpen: false
+draft: false
+hidemeta: false
+comments: false
+canonicalURL: "https://canonical.url/to/page"
+disableHLJS: true
+disableShare: false
+hideSummary: false
+searchHidden: true
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowWordCount: true
+ShowRssButtonInSectionTermList: true
+UseHugoToc: true
 cover:
   image: "<image path/url>" # image path/url
   alt: "<alt text>" # alt text
