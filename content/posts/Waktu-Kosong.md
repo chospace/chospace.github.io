@@ -5,24 +5,8 @@ date: 2021-12-11T13:32:01+07:00
 # aliases: ["/first"]
 tags: ["Personal"]
 author: "Cho"
-summary: "Santai dulu, scroll aja sebentar, nonton dikit, hiburan nggak apa-apa.😪"
+summary: "Santai dulu, scroll aja sebentar, nonton dikit, hiburan nggak apa-apa. 😪"
 # author: ["Me", "You"] # multiple authors
-showToc: false
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-canonicalURL: "https://canonical.url/to/page"
-disableHLJS: false # to disable highlightjs set true
-disableShare: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
-ShowRssButtonInSectionTermList: true
-UseHugoToc: true
 cover:
   image: "<image path/url>" # image path/url
   alt: "<alt text>" # alt text
