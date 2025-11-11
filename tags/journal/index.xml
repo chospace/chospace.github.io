@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Journal on /chospace</title>
+    <link>https://chospace.github.io/tags/journal/</link>
+    <description>Recent content in Journal on /chospace</description>
+    <image>
+      <title>/chospace</title>
+      <url>https://chospace.github.io/images/avatar.jpg</url>
+      <link>https://chospace.github.io/images/avatar.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 04 Dec 2021 14:23:22 +0700</lastBuildDate>
+    <atom:link href="https://chospace.github.io/tags/journal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Melawan Malas</title>
+      <link>https://chospace.github.io/posts/melawan-malas/</link>
+      <pubDate>Sat, 04 Dec 2021 14:23:22 +0700</pubDate>
+      <guid>https://chospace.github.io/posts/melawan-malas/</guid>
+      <description>Desc Text.</description>
+    </item>
+  </channel>
+</rss>
