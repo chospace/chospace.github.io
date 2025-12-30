@@ -9,7 +9,7 @@
       <url>https://chospace.github.io/images/avatar.jpg</url>
       <link>https://chospace.github.io/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- 0.152.2</generator>
+    <generator>Hugo -- 0.153.4</generator>
     <language>en</language>
     <lastBuildDate>Sun, 31 Aug 2025 14:45:11 +0700</lastBuildDate>
     <atom:link href="https://chospace.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -26,6 +26,13 @@
       <pubDate>Tue, 03 Jun 2025 17:43:39 +0700</pubDate>
       <guid>https://chospace.github.io/posts/hyperliquid-mengubah-saya/</guid>
       <description>Mengenal Hyperliquid, protokol DeFi inovatif dengan model tokenomics unik yang terinspirasi dari Warren Buffett.</description>
+    </item>
+    <item>
+      <title>Matematika Trading: Mengubah Mindset dari Penjudi Menjadi Bisnis</title>
+      <link>https://chospace.github.io/posts/matematika-trading/</link>
+      <pubDate>Sat, 31 Dec 2022 11:34:02 +0700</pubDate>
+      <guid>https://chospace.github.io/posts/matematika-trading/</guid>
+      <description>Desc Text.</description>
     </item>
     <item>
       <title>Catatan Kecil: Perjalanan Trading Sejak 2019</title>
