@@ -47,6 +47,4 @@ Sampai aku sadar: masalahnya bukan di analisanya, tapi di cara berpikirnya.
 Trading bukan soal prediksi.
 Ini soal probabilitas, ukuran posisi, dan konsistensi dalam jangka panjang.
 
-Aku rangkum pelajaran terpenting itu—Expected Value, Law of Large Numbers, dan manajemen risiko—di tulisan lengkap ini:
-
-📖 Baca selengkapnya di sini: [Matematika Trading: Mengubah Mindset dari Penjudi Menjadi Bisnis](https://open.substack.com/pub/awsmtrades/p/matematika-trading?r=6vtrbu&utm_campaign=post&utm_medium=web)
+Aku rangkum pelajaran terpenting itu—Expected Value, Law of Large Numbers, dan manajemen risiko—di tulisan lengkap ini: [Matematika Trading: Mengubah Mindset dari Penjudi Menjadi Bisnis](https://open.substack.com/pub/awsmtrades/p/matematika-trading?r=6vtrbu&utm_campaign=post&utm_medium=web)
