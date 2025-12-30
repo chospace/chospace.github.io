@@ -3,7 +3,7 @@ title: "Matematika Trading: Mengubah Mindset dari Penjudi Menjadi Bisnis"
 date: 2023-12-31T11:34:02+07:00
 # weight: 1
 # aliases: ["/first"]
-tags: ["first"]
+tags: ["Personal", "Trading","Finance"]
 author: "Cho"
 summary: "Memahami Bahwa Bertahan Hidup di Pasar Adalah Prioritas Sebelum Mencari Keuntungan."
 # author: ["Me", "You"] # multiple authors
