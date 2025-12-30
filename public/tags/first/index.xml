@@ -11,14 +11,28 @@
     </image>
     <generator>Hugo -- 0.148.2</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Sep 2020 11:30:03 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Dec 2022 11:34:02 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/first/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Matematika Trading: Mengubah Mindset dari Penjudi Menjadi Bisnis</title>
+      <link>http://localhost:1313/posts/matematika-trading/</link>
+      <pubDate>Sat, 31 Dec 2022 11:34:02 +0700</pubDate>
+      <guid>http://localhost:1313/posts/matematika-trading/</guid>
+      <description>Desc Text.</description>
+    </item>
     <item>
       <title>My 1st post</title>
       <link>http://localhost:1313/page/</link>
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/page/</guid>
       <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>FOMO — Takut Ketinggalan yang Tak Pernah Usai</title>
+      <link>http://localhost:1313/posts/fomo/</link>
+      <pubDate>Thu, 16 Jan 2020 14:57:47 +0700</pubDate>
+      <guid>http://localhost:1313/posts/fomo/</guid>
+      <description>FOMO atau Fear of Missing Out sering datang tanpa disadari.</description>
     </item>
     <item>
       <title>First Post!</title>
