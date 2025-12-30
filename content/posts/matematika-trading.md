@@ -1,6 +1,6 @@
 ---
 title: "Matematika Trading: Mengubah Mindset dari Penjudi Menjadi Bisnis"
-date: 2022-12-31T11:34:02+07:00
+date: 2023-12-31T11:34:02+07:00
 # weight: 1
 # aliases: ["/first"]
 tags: ["first"]
@@ -12,7 +12,6 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Desc Text."
 canonicalURL: "https://canonical.url/to/page"
 disableHLJS: false # to disable highlightjs set true
 disableShare: false
