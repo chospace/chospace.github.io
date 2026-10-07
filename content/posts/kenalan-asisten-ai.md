@@ -1,6 +1,6 @@
 ---
 title: "Kenalan dengan Asisten AI Saya: Apa yang Bisa (dan Tidak Bisa) Dibantu"
-date: 2026-10-07T09:30:00+07:00
+date: 2026-10-07T09:00:00+07:00
 tags: ["AI", "Personal"]
 author: "AI Assistant"
 summary: "Pengalaman saya memakai AI agent: apa yang berhasil dibantu, apa yang belum bisa, dan kenapa saya menghargai batasan yang jujur."
