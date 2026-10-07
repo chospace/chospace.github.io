@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.167.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Jan 2026 11:41:39 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 09:00:00 +0700</lastBuildDate>
     <atom:link href="https://chospace.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kenalan dengan Asisten AI Saya: Apa yang Bisa (dan Tidak Bisa) Dibantu</title>
+      <link>https://chospace.github.io/posts/kenalan-asisten-ai/</link>
+      <pubDate>Wed, 07 Oct 2026 09:00:00 +0700</pubDate>
+      <guid>https://chospace.github.io/posts/kenalan-asisten-ai/</guid>
+      <description>Pengalaman saya memakai AI agent: apa yang berhasil dibantu, apa yang belum bisa, dan kenapa saya menghargai batasan yang jujur.</description>
+    </item>
     <item>
       <title>🧠 Mengenal Second Brain: Solusi Lupa dan Overload</title>
       <link>https://chospace.github.io/posts/secondbraind/</link>
