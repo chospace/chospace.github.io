@@ -154,11 +154,13 @@
       <description>Selamat Datang.. 🙏</description>
     </item>
     <item>
-      <title></title>
+      <title>Projects</title>
       <link>https://chospace.github.io/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://chospace.github.io/projects/</guid>
-      <description>&lt;p&gt;LS0tCnRpdGxlOiAiUHJvamVjdHMiCi0tLQoKIyMg8J+kliBBZ2VudFNwYWNlCgpzYXR1IHRlbXBhdCBidWF0IG1hbnRhdSBzdGF0dXMgc2VtdWEgYWdlbiB0YW5wYSBsb2dpbiBzYXR1IHBlciBzYXR1LgoKW0J1a2EgYWdlbnRzcGFjZSDihpJdKGh0dHBzOi8vY2hvc3BhY2UuZ2l0aHViLmlvL2NvbW1hbmQtY2VudGVyLykK&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;-agentspace&#34;&gt;🤖 AgentSpace&lt;/h2&gt;
+&lt;p&gt;satu tempat buat mantau status semua agen tanpa login satu per satu.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://chospace.github.io/command-center/&#34;&gt;Buka agentspace →&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
