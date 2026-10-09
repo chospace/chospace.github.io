@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trading Journal | /chospace</title>
+<style>
+:root { --bg: #1d1e20; --card: #2e2e33; --text: #dadadb; --muted: #9b9c9d; --green: #4ade80; --red: #f87171; --accent: #7dd3fc; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: -apple-system, "Segoe UI", Roboto, sans-serif; padding: 24px 16px; max-width: 900px; margin: 0 auto; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1 { font-size: 28px; margin-bottom: 6px; }
+.sub { color: var(--muted); margin-bottom: 24px; font-size: 14px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-bottom: 24px; }
+.card { background: var(--card); border-radius: 10px; padding: 14px; text-align: center; }
+.card .lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+.card .val { font-size: 22px; font-weight: 700; }
+.pos { color: var(--green); } .neg { color: var(--red); }
+.chart-wrap { background: var(--card); border-radius: 10px; padding: 16px; margin-bottom: 24px; }
+.chart-wrap h2, .table-wrap h2 { font-size: 16px; margin-bottom: 12px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 600px; }
+th, td { padding: 9px 8px; text-align: left; border-bottom: 1px solid #3a3a3f; white-space: nowrap; }
+th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; }
+tr:hover td { background: #34343a; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+.tag.sell { background: rgba(248,113,113,.15); color: var(--red); }
+.tag.buy { background: rgba(74,222,128,.15); color: var(--green); }
+.back { display: inline-block; margin-top: 24px; font-size: 14px; }
+.footer { margin-top: 32px; color: var(--muted); font-size: 12px; text-align: center; }
+</style>
+</head>
+<body>
+<h1>📓 Trading Journal</h1>
+<p class="sub">Akun kecil $100 — dimulai 7 Okt 2026. Dicatat apa adanya, termasuk entry yang melanggar plan.</p>
+<div class="stats" id="stats"></div>
+<div class="chart-wrap"><h2>Equity Curve</h2><svg id="chart" width="100%" height="180" viewBox="0 0 600 180" preserveAspectRatio="none"></svg></div>
+<div class="table-wrap"><h2>Riwayat Trade</h2>
+<table><thead><tr><th>#</th><th>Tanggal</th><th>Pair</th><th>Arah</th><th>Entry</th><th>Lot</th><th>Hasil</th><th>R</th></tr></thead>
+<tbody id="rows"></tbody></table></div>
+<a class="back" href="https://chospace.github.io/">← Kembali ke blog</a>
+<p class="footer">Diupdate tiap malam · chospace.github.io</p>
+<script>
+const D = {"trades": [{"no": 7, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "31017.27", "size": "0.05", "hasil": 9.36, "rr": "-"}, {"no": 6, "date": "2026-10-09", "instr": "XAGUSD", "arah": "Sell", "entry": "60.555", "size": "0.01", "hasil": -8.0, "rr": "-"}, {"no": 5, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "30992.94", "size": "0.05", "hasil": 8.14, "rr": "+0.71"}, {"no": 4, "date": "2026-10-08", "instr": "EURUSD", "arah": "Buy", "entry": "1.11820", "size": "0.13", "hasil": 18.07, "rr": "+2.48"}, {"no": 3, "date": "2026-10-08", "instr": "BTCUSD", "arah": "Buy", "entry": "82753.40", "size": "0.06", "hasil": 0.0, "rr": "0"}, {"no": 2, "date": "2026-10-08", "instr": "XAUUSD", "arah": "Sell", "entry": "4137.56", "size": "0.03", "hasil": -8.55, "rr": "-1.0"}, {"no": 1, "date": "2026-10-07", "instr": "XAUUSD", "arah": "Buy", "entry": "4127.83", "size": "0.01", "hasil": -9.43, "rr": "-1.0"}], "equity": [100.0, 90.57, 82.02, 82.02, 100.09, 108.23, 100.23, 109.59], "stats": {"total": "7", "w": "3", "l": "3", "bep": "1", "pnl": "+$9.59", "bal": "109.59"}};
+const s = D.stats;
+const pnlNum = parseFloat(String(s.pnl).replace('$','').replace('+',''));
+const pnlCls = pnlNum >= 0 ? 'pos' : 'neg';
+const wr = Math.round(parseInt(s.w)/parseInt(s.total)*100);
+document.getElementById('stats').innerHTML =
+'<div class="card"><div class="lbl">Balance</div><div class="val">$'+s.bal+'</div></div>' +
+'<div class="card"><div class="lbl">Total P&L</div><div class="val '+pnlCls+'">'+s.pnl+'</div></div>' +
+'<div class="card"><div class="lbl">Win</div><div class="val pos">'+s.w+'</div></div>' +
+'<div class="card"><div class="lbl">Loss</div><div class="val neg">'+s.l+'</div></div>' +
+'<div class="card"><div class="lbl">BEP</div><div class="val">'+s.bep+'</div></div>' +
+'<div class="card"><div class="lbl">Win Rate</div><div class="val">'+wr+'%</div></div>';
+var eq = D.equity, W = 600, H = 180, P = 14;
+var min = Math.min.apply(null, eq), max = Math.max.apply(null, eq), rng = (max-min) || 1;
+var pts = eq.map(function(v,i){ return [P + i*(W-2*P)/(eq.length-1), H-P - (v-min)/rng*(H-2*P)]; });
+var line = pts.map(function(p,i){ return (i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1); }).join(' ');
+var area = line + ' L'+pts[pts.length-1][0].toFixed(1)+','+(H-P)+' L'+pts[0][0].toFixed(1)+','+(H-P)+' Z';
+var up = eq[eq.length-1] >= eq[0];
+var dots = pts.map(function(p,i){ return '<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="4" fill="'+(up?'#4ade80':'#f87171')+'"><title>$'+eq[i]+'</title></circle>'; }).join('');
+document.getElementById('chart').innerHTML =
+'<path d="'+area+'" fill="'+(up?'rgba(74,222,128,.12)':'rgba(248,113,113,.12)')+'"/>' +
+'<path d="'+line+'" fill="none" stroke="'+(up?'#4ade80':'#f87171')+'" stroke-width="2.5"/>' + dots;
+document.getElementById('rows').innerHTML = D.trades.map(function(t){
+  var hc = t.hasil > 0 ? 'pos' : t.hasil < 0 ? 'neg' : '';
+  var hv = t.hasil > 0 ? '+$'+t.hasil.toFixed(2) : t.hasil < 0 ? '-$'+Math.abs(t.hasil).toFixed(2) : '$0.00';
+  var dc = t.arah.toLowerCase()==='sell' ? 'sell' : 'buy';
+  var d = t.date.split('-').reverse().join('/');
+  return '<tr><td>'+t.no+'</td><td>'+d+'</td><td><b>'+t.instr+'</b></td><td><span class="tag '+dc+'">'+t.arah+'</span></td><td>'+t.entry+'</td><td>'+t.size+'</td><td class="'+hc+'"><b>'+hv+'</b></td><td>'+t.rr+'</td></tr>';
+}).join('');
+</script>
+</body>
+</html>
