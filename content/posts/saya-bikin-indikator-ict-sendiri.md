@@ -6,7 +6,7 @@ author: "Cho"
 summary: "Ceritanya saya pengen indikator ICT all-in-one. Jadinya ngerakit sendiri: gabungin konsep yang udah ada, tambahin engine buatan sendiri, dan belajar banyak di prosesnya."
 showToc: true
 TocOpen: false
-draft: true
+draft: false
 ---
 
 Udah lama saya pakai konsep ICT/SMC buat trading. Masalahnya, tiap mau analisa harus pasang indikator satu-satu: satu buat FVG, satu buat order block, satu buat liquidity. Chart jadi rame kayak pasar malam.
