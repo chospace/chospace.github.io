@@ -5,15 +5,14 @@ date: 2021-12-04T14:23:22+07:00
 # aliases: ["/first"]
 tags: ["journal","self-reflection"]
 author: "Cho"
-summary: "summary belum di isi!"
+summary: "Rasa malas nggak pernah hilang — dia cuma nunggu kesempatan. Solusinya: bergerak dulu, jangan kasih otak ruang buat mikir ulang."
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
+description: "Rasa malas nggak pernah hilang — dia cuma nunggu kesempatan. Solusinya: bergerak dulu, jangan kasih otak ruang buat mikir ulang."
 disableHLJS: false # to disable highlightjs set true
 disableShare: false
 hideSummary: false

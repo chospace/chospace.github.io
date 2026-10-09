@@ -12,8 +12,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
+description: "Cerita pindah ke Figma di 2020 — kenapa beralih dan apa yang berubah."
 disableHLJS: false # to disable highlightjs set true
 disableShare: false
 hideSummary: false

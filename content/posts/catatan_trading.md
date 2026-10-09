@@ -13,7 +13,6 @@ draft: false
 hidemeta: false
 comments: false
 #description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
 disableHLJS: false # to disable highlightjs set true
 disableShare: false
 hideSummary: false

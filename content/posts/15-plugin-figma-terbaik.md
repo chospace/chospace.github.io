@@ -13,7 +13,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "Figma tumbuh luar biasa hebat sebagai platform kolaboratif bagi para desainer jadi setelah itu saya menatap menjelajahi area plugin dan saya membangun daftar plugin saya sendiri dan plugin ini membuat alur kerja desain saya lebih cepat dan lebih baik."
-canonicalURL: "https://canonical.url/to/page"
 disableHLJS: false # to disable highlightjs set true
 disableShare: false
 hideSummary: false

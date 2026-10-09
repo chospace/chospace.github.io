@@ -13,7 +13,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "Mengenal Hyperliquid, protokol DeFi inovatif dengan model tokenomics unik yang terinspirasi dari Warren Buffett."
-canonicalURL: "https://canonical.url/to/page"
 disableHLJS: false # to disable highlightjs set true
 disableShare: false
 hideSummary: false

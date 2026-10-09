@@ -12,7 +12,6 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true
 disableShare: false
 hideSummary: false
