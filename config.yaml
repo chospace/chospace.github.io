@@ -36,7 +36,7 @@ params:
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   footer:
-    text: '<a href="https://chospace.github.io/blog-preview/">Old theme</a>'
+    text: '[Old theme](https://chospace.github.io/blog-preview/)'
   UseHugoToc: true
 
 
