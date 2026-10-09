@@ -11,142 +11,8 @@
     </image>
     <generator>Hugo -- 0.167.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 09:00:00 +0700</lastBuildDate>
     <atom:link href="https://chospace.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Trading Journal</title>
-      <link>https://chospace.github.io/trading-journal/</link>
-      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
-      <guid>https://chospace.github.io/trading-journal/</guid>
-      <description>&lt;p&gt;Jurnal trading akun kecil ($100) — dimulai 7 Oktober 2026. Dicatat apa adanya, termasuk entry yang melanggar plan.&lt;/p&gt;
-&lt;h2 id=&#34;ringkasan&#34;&gt;Ringkasan&lt;/h2&gt;
-&lt;table&gt;
-	&lt;thead&gt;
-			&lt;tr&gt;
-					&lt;th&gt;Metrik&lt;/th&gt;
-					&lt;th&gt;Nilai&lt;/th&gt;
-			&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Total trade&lt;/td&gt;
-					&lt;td&gt;7&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Win / Loss / BEP&lt;/td&gt;
-					&lt;td&gt;3 / 3 / 1&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Win rate&lt;/td&gt;
-					&lt;td&gt;43%&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Total P&amp;amp;L&lt;/td&gt;
-					&lt;td&gt;+$9.59&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;Balance&lt;/td&gt;
-					&lt;td&gt;$109.59&lt;/td&gt;
-			&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;riwayat-trade&#34;&gt;Riwayat Trade&lt;/h2&gt;
-&lt;table&gt;
-	&lt;thead&gt;
-			&lt;tr&gt;
-					&lt;th&gt;#&lt;/th&gt;
-					&lt;th&gt;Tanggal&lt;/th&gt;
-					&lt;th&gt;Instrumen&lt;/th&gt;
-					&lt;th&gt;Arah&lt;/th&gt;
-					&lt;th&gt;Entry&lt;/th&gt;
-					&lt;th&gt;Exit&lt;/th&gt;
-					&lt;th&gt;Size&lt;/th&gt;
-					&lt;th&gt;Hasil&lt;/th&gt;
-					&lt;th&gt;R&lt;/th&gt;
-			&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-			&lt;tr&gt;
-					&lt;td&gt;7&lt;/td&gt;
-					&lt;td&gt;09/10/2026&lt;/td&gt;
-					&lt;td&gt;USTEC&lt;/td&gt;
-					&lt;td&gt;Sell&lt;/td&gt;
-					&lt;td&gt;31017.27&lt;/td&gt;
-					&lt;td&gt;30830.15&lt;/td&gt;
-					&lt;td&gt;0.05&lt;/td&gt;
-					&lt;td&gt;+$9.36&lt;/td&gt;
-					&lt;td&gt;-&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;6&lt;/td&gt;
-					&lt;td&gt;09/10/2026&lt;/td&gt;
-					&lt;td&gt;XAGUSD&lt;/td&gt;
-					&lt;td&gt;Sell&lt;/td&gt;
-					&lt;td&gt;60.555&lt;/td&gt;
-					&lt;td&gt;60.715&lt;/td&gt;
-					&lt;td&gt;0.01&lt;/td&gt;
-					&lt;td&gt;-$8.00&lt;/td&gt;
-					&lt;td&gt;-&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;5&lt;/td&gt;
-					&lt;td&gt;09/10/2026&lt;/td&gt;
-					&lt;td&gt;USTEC&lt;/td&gt;
-					&lt;td&gt;Sell&lt;/td&gt;
-					&lt;td&gt;30992.94&lt;/td&gt;
-					&lt;td&gt;30830.15&lt;/td&gt;
-					&lt;td&gt;0.05&lt;/td&gt;
-					&lt;td&gt;+$8.14&lt;/td&gt;
-					&lt;td&gt;+0.71&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;4&lt;/td&gt;
-					&lt;td&gt;08/10/2026&lt;/td&gt;
-					&lt;td&gt;EURUSD&lt;/td&gt;
-					&lt;td&gt;Buy&lt;/td&gt;
-					&lt;td&gt;1.11820&lt;/td&gt;
-					&lt;td&gt;1.11961&lt;/td&gt;
-					&lt;td&gt;0.13&lt;/td&gt;
-					&lt;td&gt;+$18.07&lt;/td&gt;
-					&lt;td&gt;+2.48&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;3&lt;/td&gt;
-					&lt;td&gt;08/10/2026&lt;/td&gt;
-					&lt;td&gt;BTCUSD&lt;/td&gt;
-					&lt;td&gt;Buy&lt;/td&gt;
-					&lt;td&gt;82753.40&lt;/td&gt;
-					&lt;td&gt;BEP&lt;/td&gt;
-					&lt;td&gt;0.06&lt;/td&gt;
-					&lt;td&gt;$0&lt;/td&gt;
-					&lt;td&gt;0&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;2&lt;/td&gt;
-					&lt;td&gt;08/10/2026&lt;/td&gt;
-					&lt;td&gt;XAUUSD&lt;/td&gt;
-					&lt;td&gt;Sell&lt;/td&gt;
-					&lt;td&gt;4137.56&lt;/td&gt;
-					&lt;td&gt;SL&lt;/td&gt;
-					&lt;td&gt;0.03&lt;/td&gt;
-					&lt;td&gt;-$8.55&lt;/td&gt;
-					&lt;td&gt;-1.0&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;1&lt;/td&gt;
-					&lt;td&gt;07/10/2026&lt;/td&gt;
-					&lt;td&gt;XAUUSD&lt;/td&gt;
-					&lt;td&gt;Buy&lt;/td&gt;
-					&lt;td&gt;4127.83&lt;/td&gt;
-					&lt;td&gt;SL&lt;/td&gt;
-					&lt;td&gt;0.01&lt;/td&gt;
-					&lt;td&gt;-$9.43&lt;/td&gt;
-					&lt;td&gt;-1.0&lt;/td&gt;
-			&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;em&gt;Diupdate otomatis setiap ada trade baru. Detail lengkap (SL, TP, konteks) ada di jurnal internal.&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Kenalan dengan Asisten AI Saya: Apa yang Bisa (dan Tidak Bisa) Dibantu</title>
       <link>https://chospace.github.io/posts/kenalan-asisten-ai/</link>
@@ -286,6 +152,13 @@
       <pubDate>Sat, 22 Apr 2017 19:26:33 +0700</pubDate>
       <guid>https://chospace.github.io/posts/first-post/</guid>
       <description>Selamat Datang.. 🙏</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://chospace.github.io/trading-journal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chospace.github.io/trading-journal/</guid>
+      <description></description>
     </item>
     <item>
       <title>Projects</title>
