@@ -1,0 +1,34 @@
+/* Pindahkan theme toggle ke kanan nav (seperti blog preview) */
+.nav .logo {
+    display: contents;
+}
+.nav .logo a {
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: var(--gap);
+}
+.nav .logo-switches {
+    order: 1;
+}
+
+/* Kursor kedip di sebelah logo (seperti blog preview) */
+.nav .logo a::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 1rem;
+    background: #fe5186;
+    margin-left: 5px;
+    border-radius: 1px;
+    animation: logo-cursor-blink 1s infinite;
+}
+@keyframes logo-cursor-blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .nav .logo a::after {
+        animation: none;
+    }
+}
