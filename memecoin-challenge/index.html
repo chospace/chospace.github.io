@@ -113,7 +113,7 @@ td.sym a:hover{ text-decoration:underline; }
 
   <div class="topbar">
     <div class="brand">WAGINEM <span style="color:var(--dim)">vs</span> MEMECOIN<span class="tag">$500 PAPER CHALLENGE</span></div>
-    <div class="topright"><a class="backbtn" href="https://chospace.github.io/">&larr; /chospace</a><div class="live"><span class="dot"></span>SIM &middot; 11 Oct 2026 22:56 WIB</div></div>
+    <div class="topright"><a class="backbtn" href="https://chospace.github.io/">&larr; /chospace</a><div class="live"><span class="dot"></span>SIM &middot; 11 Oct 2026 23:15 WIB</div></div>
   </div>
 
   <div class="mission"><b>MISI</b> &mdash; Cho nyuruh Waginem cari metode trading memecoin yang beneran jalan.
@@ -311,6 +311,7 @@ rbtns.forEach(function(b) {
     rbtns.forEach(function(x){ x.setAttribute('aria-pressed', 'false'); });
     b.setAttribute('aria-pressed', 'true');
     renderChart(b.getAttribute('data-r'));
+    try { sessionStorage.setItem('mcrange', b.getAttribute('data-r')); } catch (e) {}
   });
 });
 var fbtns = document.querySelectorAll('.tabs button');
@@ -321,8 +322,17 @@ fbtns.forEach(function(b) {
     renderRows(b.getAttribute('data-f'));
   });
 });
-renderChart('all');
 renderRows('open');
+// range chart tersimpan (biar nggak kereset pas auto-refresh)
+var initRange = 'all';
+try {
+  var sr = sessionStorage.getItem('mcrange');
+  if (sr) initRange = sr;
+} catch (e) {}
+rbtns.forEach(function(x){ x.setAttribute('aria-pressed', x.getAttribute('data-r') === initRange ? 'true' : 'false'); });
+renderChart(initRange);
+// auto-refresh tiap 10 menit (data diupdate cron tiap 30 menit)
+setTimeout(function(){ location.reload(); }, 10 * 60 * 1000);
 </script>
 </body>
 </html>
