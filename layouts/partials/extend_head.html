@@ -1,6 +1,14 @@
 <meta name="google-site-verification" content="lkUEFKEoGwpTXGEM6ozio64RR5GC8Nq9w7jYfHtIxQ4" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <script>
+/* Paksa browser pakai SVG favicon saja (ICO/PNG lama sudah kedaluwarsa/korup).
+   Jalan sinkron di <head> sebelum browser memilih favicon. */
+(function () {
+    var links = document.querySelectorAll('link[rel="icon"]:not([type="image/svg+xml"])');
+    for (var i = 0; i < links.length; i++) links[i].remove();
+})();
+</script>
+<script>
 /* 3-state theme: light → dark → glass (override toggle 2-state bawaan PaperMod).
    Rollback: hapus blok script ini + assets/css/extended/glass.css */
 (function () {

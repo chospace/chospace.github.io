@@ -20,6 +20,10 @@ body{ background:var(--bg); color:var(--txt); margin:0; padding:14px;
 .brand .tag{ display:inline-block; border:1px solid var(--line); color:var(--dim);
               font-size:10px; padding:2px 8px; margin-left:10px; letter-spacing:0.14em; }
 .live{ display:flex; align-items:center; gap:8px; color:var(--dim); font-size:11px; }
+.topright{ display:flex; align-items:center; gap:14px; }
+.backbtn{ color:var(--dim); text-decoration:none; font-size:11px; border:1px solid var(--line);
+  padding:4px 10px; border-radius:6px; }
+.backbtn:hover{ color:var(--txt); border-color:var(--txt); }
 .dot{ width:8px; height:8px; border-radius:50%; background:var(--up);
        animation:blink 1.6s infinite; }
 @keyframes blink{ 0%,100%{opacity:1} 50%{opacity:0.25} }
@@ -83,6 +87,25 @@ td.sym a:hover{ text-decoration:underline; }
   .quotes{ grid-template-columns:repeat(2,1fr); }
   .q{ border-bottom:1px solid var(--line); }
 }
+@media (max-width:600px){
+  body{ padding:8px; font-size:12px; }
+  .topbar{ flex-wrap:wrap; gap:8px; padding:8px 10px; }
+  .brand{ font-size:12px; }
+  .brand .tag{ font-size:9px; margin-left:6px; }
+  .topright{ gap:8px; }
+  .live{ font-size:10px; }
+  .backbtn{ font-size:10px; padding:3px 8px; }
+  .mission{ font-size:10px; padding:8px 10px; }
+  .qv{ font-size:14px; }
+  .q{ padding:8px 10px; }
+  table{ font-size:11px; }
+  th, td{ padding:6px 8px; }
+  .tabs button{ padding:8px 12px; font-size:10px; }
+  .phead{ padding:8px 10px; }
+  .sr{ padding:7px 10px; font-size:11px; }
+  .foot{ font-size:10px; padding:8px 10px; }
+  .sysline .pbody{ padding:8px 10px; }
+}
 </style>
 </head>
 <body>
@@ -90,7 +113,7 @@ td.sym a:hover{ text-decoration:underline; }
 
   <div class="topbar">
     <div class="brand">WAGINEM <span style="color:var(--dim)">vs</span> MEMECOIN<span class="tag">$500 PAPER CHALLENGE</span></div>
-    <div class="live"><span class="dot"></span>SIM &middot; 11 Oct 2026 22:43 WIB</div>
+    <div class="topright"><a class="backbtn" href="https://chospace.github.io/">&larr; /chospace</a><div class="live"><span class="dot"></span>SIM &middot; 11 Oct 2026 22:55 WIB</div></div>
   </div>
 
   <div class="mission"><b>MISI</b> &mdash; Cho nyuruh Waginem cari metode trading memecoin yang beneran jalan.
@@ -232,6 +255,26 @@ function renderChart(rangeKey) {
   title.textContent = 'net: $' + vals[vals.length-1].toFixed(2);
   dot.appendChild(title);
   svg.appendChild(dot);
+
+  // marker: mode realistis mulai (11 Okt 2026 18:30 WIB) — penurunan setelah ini karena fee/slippage
+  var MARK = 1791718200000;
+  if (MARK >= t0 && MARK <= t1) {
+    var mx = X(MARK);
+    var ml = document.createElementNS(NS, 'line');
+    ml.setAttribute('x1', mx); ml.setAttribute('x2', mx);
+    ml.setAttribute('y1', PADT); ml.setAttribute('y2', H - PADB);
+    ml.setAttribute('stroke', '#fe5186'); ml.setAttribute('stroke-width', '1.5');
+    ml.setAttribute('stroke-dasharray', '5 4'); ml.setAttribute('opacity', '0.8');
+    var mtitle = document.createElementNS(NS, 'title');
+    mtitle.textContent = 'Mode realistis mulai (11 Okt 18:30 WIB): P&L dipotong fee+slippage';
+    ml.appendChild(mtitle);
+    svg.appendChild(ml);
+    var mt = document.createElementNS(NS, 'text');
+    mt.setAttribute('x', mx + 6); mt.setAttribute('y', PADT + 12);
+    mt.setAttribute('font-size', '10'); mt.setAttribute('fill', '#fe5186');
+    mt.textContent = 'mode realistis';
+    svg.appendChild(mt);
+  }
 }
 
 function badge(k) {
