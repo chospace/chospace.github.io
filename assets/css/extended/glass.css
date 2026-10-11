@@ -1,0 +1,61 @@
+/* ============ GLASS THEME — opsi ketiga: light → dark → glass ============
+   Rollback: hapus file ini + blok script "3-state theme" di extend_head.html */
+
+body.glass {
+    --theme: transparent;
+    --entry: rgba(255, 255, 255, 0.07);
+    --primary: rgb(240, 240, 246);
+    --secondary: rgb(186, 186, 202);
+    --tertiary: rgba(255, 255, 255, 0.14);
+    --content: rgb(216, 216, 230);
+    --hljs-bg: rgba(8, 8, 16, 0.55);
+    --code-bg: rgba(255, 255, 255, 0.10);
+    --border: rgba(255, 255, 255, 0.14);
+    background:
+        radial-gradient(1000px 620px at 12% 6%, rgba(254, 81, 134, 0.28), transparent 62%),
+        radial-gradient(950px 720px at 88% 16%, rgba(99, 102, 241, 0.32), transparent 62%),
+        radial-gradient(900px 900px at 50% 108%, rgba(34, 211, 238, 0.15), transparent 60%),
+        #14141f;
+    background-attachment: fixed;
+}
+
+/* permukaan kaca: kartu postingan, arsip, toc, tag, code block */
+body.glass .post-entry,
+body.glass .archive-entry,
+body.glass .toc,
+body.glass .terms-tags a,
+body.glass .post-content pre {
+    background: var(--entry);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    backdrop-filter: blur(18px) saturate(150%);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* header kaca */
+body.glass .header {
+    background: rgba(20, 20, 31, 0.45);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    backdrop-filter: blur(20px) saturate(150%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* tombol back-to-top kaca */
+body.glass .top-link {
+    background: rgba(255, 255, 255, 0.10);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+}
+
+/* ikon toggle di mode glass: tampilkan sun (glass berbasis dark) */
+body.glass #moon { display: none; }
+body.glass #sun { display: block; }
+
+/* kursor kedip logo tetap pink khas blog */
+body.glass .nav .logo a::after { background: #fe5186; }
+
+/* hormati prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    body.glass { background-attachment: scroll; }
+}
