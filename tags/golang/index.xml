@@ -18,7 +18,7 @@
       <link>https://chospace.github.io/posts/go-and-file/</link>
       <pubDate>Thu, 28 Mar 2019 22:22:41 +0700</pubDate>
       <guid>https://chospace.github.io/posts/go-and-file/</guid>
-      <description>Catatan singkat dan praktis tentang cara membaca konten dari sebuah file dan menuliskannya ke file baru menggunakan Go (Golang).</description>
+      <description>Tutorial Go: cara mudah membaca dan menulis file teks dengan bahasa pemrograman Go. Cocok untuk pemula yang baru belajar Golang.</description>
     </item>
     <item>
       <title>Exploring Filesystem in Golang</title>
