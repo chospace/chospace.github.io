@@ -1,4 +1,5 @@
 ---
+description: "Bitcoin di penghujung 2017: antara kegilaan spekulasi dan visi masa depan uang digital. Refleksi dari seseorang yang menyaksikan dari pinggir."
 title: "Bitcoin: Antara Kegilaan dan Visi Masa Depan"
 date: 2017-12-30T23:32:02+07:00
 # weight: 1

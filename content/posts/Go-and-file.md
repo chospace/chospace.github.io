@@ -1,4 +1,5 @@
 ---
+description: "Tutorial Go: cara mudah membaca dan menulis file teks dengan bahasa pemrograman Go. Cocok untuk pemula yang baru belajar Golang."
 title: "Go & File: Cara Mudah Membaca dan Menulis File Teks"
 date: 2019-03-28T22:22:41+07:00
 # weight: 1

@@ -1,4 +1,5 @@
 ---
+description: "FOMO — rasa takut ketinggalan yang tak pernah usai. Dari pasar saham sampai crypto, kenapa kita selalu merasa terlambat dan gimana cara menghadapinya."
 title: "FOMO — Takut Ketinggalan yang Tak Pernah Usai"
 date: 2020-01-16T14:57:47+07:00
 # weight: 1

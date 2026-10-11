@@ -1,4 +1,5 @@
 ---
+description: "Waktu kosong: jeda di antara kesibukan yang sering kita sia-siakan. Renungan tentang memanfaatkan waktu luang dengan lebih bermakna."
 title: "Waktu Kosong"
 date: 2021-12-11T13:32:01+07:00
 # weight: 1
