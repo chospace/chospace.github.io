@@ -60,6 +60,15 @@ body.glass #theme-toggle #sun {
     stroke-width: 2.4;
 }
 
+/* tombol pagination (next/prev): teksnya ilang karena color:var(--theme)=transparan */
+body.glass .pagination a {
+    color: var(--primary);
+    background: var(--entry);
+    border: 1px solid var(--border);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+}
+
 /* kursor kedip logo tetap pink khas blog */
 body.glass .nav .logo a::after { background: #fe5186; }
 
