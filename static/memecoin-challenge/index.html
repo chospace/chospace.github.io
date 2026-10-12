@@ -120,7 +120,7 @@ td.sym a:hover{ text-decoration:underline; }
 
   <div class="topbar">
     <div class="brand">WAGINEM <span style="color:var(--dim)">vs</span> MEMECOIN<span class="tag">$500 PAPER CHALLENGE</span></div>
-    <div class="topright"><a class="backbtn" href="https://chospace.github.io/">&larr; /chospace</a><div class="live"><span class="dot" style=" "></span>SIM &middot; 12 Oct 2026 11:50 WIB</div></div>
+    <div class="topright"><a class="backbtn" href="https://chospace.github.io/">&larr; /chospace</a><div class="live"><span class="dot" style=" "></span>SIM &middot; 12 Oct 2026 11:56 WIB</div></div>
   </div>
 
   <div class="stagetabs">
@@ -182,7 +182,7 @@ td.sym a:hover{ text-decoration:underline; }
 
 <script>
 var POS = [];
-var EQ = [[1791648000000,-16.37],[1791651900000,4.4],[1791654900000,45.3],[1791658500000,43.89],[1791662100000,12.72],[1791672840000,11.84],[1791676440000,12.3],[1791680100000,-2.55],[1791683760000,11.61],[1791687300000,42.73],[1791690900000,17.19],[1791694500000,31.86],[1791698100000,33.19],[1791701700000,46.05],[1791705300000,31.2],[1791708900000,51.66],[1791712500000,75.88],[1791716100000,68.53],[1791719030888,55.3],[1791723304703,18.29],[1791726924423,-13.8],[1791730508491,-1.03],[1791733389518,-19.95],[1791737118399,-21.21],[1791741423029,-40.21],[1791744124018,-52.78],[1791748509442,-71.01],[1791752102516,-75.73],[1791754032478,-81.5],[1791759410804,-99.65],[1791761638898,-104.69],[1791764111636,-105.26],[1791766543762,-109.57],[1791769511151,-119.0],[1791771311379,-120.82],[1791773735639,-125.68],[1791776711318,-117.68],[1791778514112,-122.7]];
+var EQ = [[1791779848255,0.0]];
 var UP = '#00e07a', DN = '#ff4d5e', DIM = '#6e7681', LINE = '#1c2128';
 var NS = 'http://www.w3.org/2000/svg';
 var svg = document.getElementById('chart');
@@ -264,28 +264,10 @@ function renderChart(rangeKey) {
   dot.appendChild(title);
   svg.appendChild(dot);
 
-  // marker: mode realistis mulai (11 Okt 2026 18:30 WIB) — penurunan setelah ini karena fee/slippage
-  var MARK = 1791718200000;
-  if (MARK >= t0 && MARK <= t1) {
-    var mx = X(MARK);
-    var ml = document.createElementNS(NS, 'line');
-    ml.setAttribute('x1', mx); ml.setAttribute('x2', mx);
-    ml.setAttribute('y1', PADT); ml.setAttribute('y2', H - PADB);
-    ml.setAttribute('stroke', '#fe5186'); ml.setAttribute('stroke-width', '1.5');
-    ml.setAttribute('stroke-dasharray', '5 4'); ml.setAttribute('opacity', '0.8');
-    var mtitle = document.createElementNS(NS, 'title');
-    mtitle.textContent = 'Mode realistis mulai (11 Okt 18:30 WIB): P&L dipotong fee+slippage';
-    ml.appendChild(mtitle);
-    svg.appendChild(ml);
-    var mt = document.createElementNS(NS, 'text');
-    mt.setAttribute('x', mx + 6); mt.setAttribute('y', PADT + 12);
-    mt.setAttribute('font-size', '10'); mt.setAttribute('fill', '#fe5186');
-    mt.textContent = 'mode realistis';
-    svg.appendChild(mt);
-  }
 }
 
 function badge(k) {
+  if (IS_ARCHIVE) return '<span class="st-sl">CLOSED</span>';
   if (k === 'sl') return '<span class="st-sl">SL</span>';
   if (k === 'tp1') return '<span class="st-tp">TP1</span>';
   return '<span class="st-open">OPEN</span>';
