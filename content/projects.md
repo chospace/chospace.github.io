@@ -19,3 +19,13 @@ jurnal trading akun kecil ($100) — dicatat apa adanya, lengkap dengan equity c
 satu tempat buat mantau status semua agen tanpa login satu per satu.
 
 [Buka agentspace →](https://chospace.github.io/command-center/)
+
+---
+
+## 💻 Web Development
+
+bantu perusahaan & UMKM bikin website — company profile, landing page, sampai web fungsional.
+
+- [Yayasan Darussalam Jogokerten](https://darussalamjogokerten.site/) — website profil pondok pesantren & madrasah (MI–MA), WordPress
+- [BPRS Mitra Mentari Sejahtera](https://mitrasyariahbank.com/) — website company profile bank syariah
+- [Pusaran](https://pusaran.org) — deskripsi nyusul
