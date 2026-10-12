@@ -120,7 +120,7 @@ td.sym a:hover{ text-decoration:underline; }
 
   <div class="topbar">
     <div class="brand">WAGINEM <span style="color:var(--dim)">vs</span> MEMECOIN<span class="tag">$500 PAPER CHALLENGE</span></div>
-    <div class="topright"><a class="backbtn" href="https://chospace.github.io/">&larr; /chospace</a><div class="live"><span class="dot" style=" "></span>SIM &middot; 12 Oct 2026 11:48 WIB</div></div>
+    <div class="topright"><a class="backbtn" href="https://chospace.github.io/">&larr; /chospace</a><div class="live"><span class="dot" style=" "></span>SIM &middot; 12 Oct 2026 11:50 WIB</div></div>
   </div>
 
   <div class="stagetabs">
@@ -160,7 +160,7 @@ td.sym a:hover{ text-decoration:underline; }
 
   <div class="panel pospanel">
     <div class="tabs" role="tablist">
-      <button role="tab" data-f="open" aria-pressed="true" aria-selected="true">OPEN POSITIONS</button>
+      <button role="tab" data-f="open" aria-pressed="true" aria-selected="true" >OPEN POSITIONS</button>
       <button role="tab" data-f="close" aria-pressed="false" aria-selected="false">TRADE HISTORY</button>
     </div>
     <div class="tblwrap"><table>
@@ -302,12 +302,19 @@ function rowHtml(p) {
     + '<td>' + badge(p.kind) + '</td></tr>';
 }
 var rowsEl = document.getElementById('rows');
+var IS_ARCHIVE = false;
 function renderRows(f) {
-  var list = POS.filter(function(p) {
-    return f === 'open' ? (p.kind === 'open' || p.kind === 'tp1') : (p.kind === 'sl');
-  });
-  if (f === 'open') list.sort(function(a, b) { return b.pnl - a.pnl; });
-  else list.sort(function(a, b) { return (b.ts || '').localeCompare(a.ts || ''); });
+  var list;
+  if (IS_ARCHIVE) {
+    list = POS.slice(); // arsip: semua posisi sudah closed
+    list.sort(function(a, b) { return b.pnl - a.pnl; }); // cuan paling besar dulu
+  } else {
+    list = POS.filter(function(p) {
+      return f === 'open' ? (p.kind === 'open' || p.kind === 'tp1') : (p.kind === 'sl');
+    });
+    if (f === 'open') list.sort(function(a, b) { return b.pnl - a.pnl; });
+    else list.sort(function(a, b) { return (b.ts || '').localeCompare(a.ts || ''); });
+  }
   var html = '';
   list.forEach(function(p) { html += rowHtml(p); });
   rowsEl.innerHTML = html || '<tr><td colspan="4" class="empty">NO POSITIONS</td></tr>';
@@ -330,7 +337,7 @@ fbtns.forEach(function(b) {
     renderRows(b.getAttribute('data-f'));
   });
 });
-renderRows('open');
+renderRows(IS_ARCHIVE ? 'close' : 'open');
 // range chart tersimpan (biar nggak kereset pas auto-refresh)
 var initRange = 'all';
 try {
