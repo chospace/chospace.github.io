@@ -39,7 +39,7 @@ tr:hover td { background: #34343a; }
 <p class="sub">Akun kecil $100 — dimulai 7 Okt 2026. Dicatat apa adanya, termasuk entry yang melanggar plan.</p>
 <p class="motto">"Disiplin mengelola risiko, bukan mengejar profit."</p>
 <div class="stats" id="stats"></div>
-<div class="chart-wrap"><h2>Equity Curve</h2><svg id="chart" width="100%" height="180" viewBox="0 0 600 180" preserveAspectRatio="none"></svg></div>
+<div class="chart-wrap" style="position:relative"><h2>Equity Curve</h2><svg id="chart" width="100%" height="220" viewBox="0 0 640 220"></svg><div id="eqtip" style="display:none;position:absolute;background:#0f0f12;border:1px solid #3a3a3f;border-radius:8px;padding:8px 10px;font-size:12px;pointer-events:none;z-index:5;white-space:nowrap"></div><div id="eqinfo" style="margin-top:10px;font-size:13px;color:var(--muted)"></div></div>
 <div class="table-wrap"><h2>Riwayat Trade</h2>
 <table><thead><tr><th>#</th><th>Tanggal</th><th>Pair</th><th>Arah</th><th>Entry</th><th>Lot</th><th>Hasil</th><th>R</th></tr></thead>
 <tbody id="rows"></tbody></table></div>
@@ -61,16 +61,58 @@ document.getElementById('stats').innerHTML =
 '<div class="card"><div class="lbl">Loss</div><div class="val neg">'+s.l+'</div></div>' +
 '<div class="card"><div class="lbl">BEP</div><div class="val">'+s.bep+'</div></div>' +
 '<div class="card"><div class="lbl">Win Rate</div><div class="val">'+wr+'%</div></div>';
-var eq = D.equity, W = 600, H = 180, P = 14;
-var min = Math.min.apply(null, eq), max = Math.max.apply(null, eq), rng = (max-min) || 1;
-var pts = eq.map(function(v,i){ return [P + i*(W-2*P)/(eq.length-1), H-P - (v-min)/rng*(H-2*P)]; });
-var line = pts.map(function(p,i){ return (i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1); }).join(' ');
-var area = line + ' L'+pts[pts.length-1][0].toFixed(1)+','+(H-P)+' L'+pts[0][0].toFixed(1)+','+(H-P)+' Z';
-var up = eq[eq.length-1] >= eq[0];
-var dots = pts.map(function(p,i){ return '<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="4" fill="'+(up?'#4ade80':'#f87171')+'"><title>$'+eq[i]+'</title></circle>'; }).join('');
-document.getElementById('chart').innerHTML =
-'<path d="'+area+'" fill="'+(up?'rgba(74,222,128,.12)':'rgba(248,113,113,.12)')+'"/>' +
-'<path d="'+line+'" fill="none" stroke="'+(up?'#4ade80':'#f87171')+'" stroke-width="2.5"/>' + dots;
+var eq = D.equity, tc = D.trades.slice().reverse();
+var W=640,H=220,PL=48,PR=14,PT=16,PB=28, iw=W-PL-PR, ih=H-PT-PB;
+var min=Math.min.apply(null,eq), max=Math.max.apply(null,eq), rng=(max-min)||1;
+function X(i){ return PL + i*(iw/(eq.length-1)); }
+function Y(v){ return PT + ih - (v-min)/rng*ih; }
+var svg='';
+for(var g=0; g<=4; g++){
+  var gv=min+rng*g/4, gy=Y(gv);
+  svg+='<line x1="'+PL+'" y1="'+gy+'" x2="'+(W-PR)+'" y2="'+gy+'" stroke="#3a3a3f" stroke-width="1"/>'
+    +'<text x="'+(PL-6)+'" y="'+(gy+4)+'" fill="#9b9c9d" font-size="10" text-anchor="end">$'+gv.toFixed(0)+'</text>';
+}
+svg+='<polygon points="'+PL+','+(PT+ih)+' '+eq.map(function(v,i){return X(i).toFixed(1)+','+Y(v).toFixed(1);}).join(' ')+' '+(W-PR)+','+(PT+ih)+'" fill="rgba(125,211,252,.07)"/>';
+for(var i=1;i<eq.length;i++){
+  var c=eq[i]>=eq[i-1]?'#4ade80':'#f87171';
+  svg+='<line x1="'+X(i-1)+'" y1="'+Y(eq[i-1])+'" x2="'+X(i)+'" y2="'+Y(eq[i])+'" stroke="'+c+'" stroke-width="2.5" stroke-linecap="round"/>';
+}
+var step=Math.ceil(eq.length/9);
+for(var i=0;i<eq.length;i+=step){
+  svg+='<text x="'+X(i)+'" y="'+(H-8)+'" fill="#9b9c9d" font-size="10" text-anchor="middle">'+(i===0?'start':'#'+i)+'</text>';
+}
+for(var i=0;i<eq.length;i++){
+  var t=i===0?null:tc[i-1];
+  var info=i===0?'0|Start|Modal awal $100.00':(t.no+'|#'+t.no+' '+t.instr+' '+t.arah+'|Hasil '+(t.hasil>=0?'+$':'−$')+Math.abs(t.hasil).toFixed(2)+' → Bal $'+eq[i].toFixed(2));
+  var dc=i===0?'#9b9c9d':(eq[i]>=eq[i-1]?'#4ade80':'#f87171');
+  svg+='<circle class="eqdot" data-i="'+info+'" cx="'+X(i).toFixed(1)+'" cy="'+Y(eq[i]).toFixed(1)+'" r="5.5" fill="#1d1e20" stroke="'+dc+'" stroke-width="2.5" style="cursor:pointer"/>';
+}
+var imax=eq.indexOf(max), imin=eq.indexOf(min);
+svg+='<text x="'+X(imax)+'" y="'+(Y(max)-11)+'" fill="#4ade80" font-size="11" text-anchor="middle">▲ $'+max.toFixed(0)+'</text>'
+  +'<text x="'+X(imin)+'" y="'+(Y(min)+17)+'" fill="#f87171" font-size="11" text-anchor="middle">▼ $'+min.toFixed(0)+'</text>';
+document.getElementById('chart').innerHTML=svg;
+var tip=document.getElementById('eqtip'), wrap=tip.parentElement;
+wrap.querySelectorAll('.eqdot').forEach(function(d){
+  d.addEventListener('mouseenter',function(e){
+    var p=d.getAttribute('data-i').split('|');
+    tip.innerHTML='<b>'+p[1]+'</b><br>'+p[2];
+    tip.style.display='block';
+  });
+  d.addEventListener('mousemove',function(e){
+    var r=wrap.getBoundingClientRect();
+    tip.style.left=Math.min(e.clientX-r.left+14, r.width-160)+'px';
+    tip.style.top=(e.clientY-r.top-10)+'px';
+  });
+  d.addEventListener('mouseleave',function(){ tip.style.display='none'; });
+});
+var pk=eq[0], mdd=0, mddPk=eq[0];
+eq.forEach(function(v){ if(v>pk){pk=v;} var dd=pk-v; if(dd>mdd){mdd=dd;mddPk=pk;} });
+var best=tc.reduce(function(a,b){return b.hasil>a.hasil?b:a;},tc[0]);
+var worst=tc.reduce(function(a,b){return b.hasil<a.hasil?b:a;},tc[0]);
+document.getElementById('eqinfo').innerHTML=
+  '📉 Max drawdown: <b class="neg">-$'+mdd.toFixed(2)+'</b> ('+(mdd/mddPk*100).toFixed(1)+'% dari $'+mddPk.toFixed(0)+')'
+  +' &nbsp;·&nbsp; 🏆 Terbaik: <b class="pos">+'+'$'+best.hasil.toFixed(2)+'</b> (#'+best.no+' '+best.instr+')'
+  +' &nbsp;·&nbsp; 💀 Terburuk: <b class="neg">-$'+Math.abs(worst.hasil).toFixed(2)+'</b> (#'+worst.no+' '+worst.instr+')';
 document.getElementById('rows').innerHTML = D.trades.map(function(t){
   var hc = t.hasil > 0 ? 'pos' : t.hasil < 0 ? 'neg' : '';
   var hv = t.hasil > 0 ? '+$'+t.hasil.toFixed(2) : t.hasil < 0 ? '-$'+Math.abs(t.hasil).toFixed(2) : '$0.00';
