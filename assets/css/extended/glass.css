@@ -53,6 +53,13 @@ body.glass .top-link {
 body.glass #moon { display: none; }
 body.glass #sun { display: block; }
 
+/* ikon sun diperbesar biar jelas di mode glass (aslinya kekecilan kayak pil putih) */
+body.glass #theme-toggle #sun {
+    width: 26px;
+    height: 26px;
+    stroke-width: 2.4;
+}
+
 /* kursor kedip logo tetap pink khas blog */
 body.glass .nav .logo a::after { background: #fe5186; }
 
