@@ -12,9 +12,9 @@
   --r:12px; --pad:18px; --gap:24px;
 }
 [data-theme="light"]{
-  --bg:#f1f5f9; --card:#ffffff; --card2:#f8fafc; --line:#e2e8f0;
-  --text:#0f172a; --muted:#64748b;
-  --green:#16a34a; --red:#dc2626; --accent:#0284c7;
+  --bg:#f4ecd8; --card:#fbf7ec; --card2:#f5edda; --line:#ddd0b3;
+  --text:#2a2824; --muted:#6b6257;
+  --green:#15803d; --red:#b91c1c; --accent:#8b2020;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -28,7 +28,7 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
   border-left:3px solid var(--accent);padding-left:12px;margin:0}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:var(--gap)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 14px;text-align:center}
-.card .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px}
+.card .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
 .card .val{font-size:24px;font-weight:800;letter-spacing:-.5px}
 .pos{color:var(--green)} .neg{color:var(--red)}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:var(--pad);margin-bottom:var(--gap)}
@@ -45,16 +45,17 @@ td.num{font-variant-numeric:tabular-nums}
 .tag.buy{background:rgba(74,222,128,.14);color:var(--green)}
 .rpos{color:var(--green);font-weight:700}
 .rneg{color:var(--red);font-weight:700}
-.tfbtn{background:var(--card2);color:var(--muted);border:1px solid var(--line);border-radius:18px;
-  padding:5px 16px;font-size:12px;font-weight:600;cursor:pointer;margin-right:8px;transition:all .15s}
-.tfbtn:hover{color:var(--text);border-color:var(--muted)}
-.tfbtn.active{background:var(--accent);color:#0f0f12;border-color:var(--accent)}
+#tfbar{display:inline-flex;background:var(--card2);border:1px solid var(--line);border-radius:20px;padding:3px;margin-bottom:12px}
+.tfbtn{background:transparent;border:none;border-radius:16px;
+  padding:5px 16px;font-size:12px;font-weight:600;cursor:pointer;color:var(--muted);margin:0;transition:all .15s}
+.tfbtn:hover{color:var(--text)}
+.tfbtn.active{background:var(--card);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.18)}
 #eqinfo{margin-top:12px;font-size:13px;color:var(--muted);line-height:1.9}
 #eqtip{box-shadow:0 4px 16px rgba(0,0,0,.5)}
 nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
 nav a.brand{font-weight:800;font-size:16px;color:var(--text)}
 nav a.brand:hover{text-decoration:none;color:var(--accent)}
-#themetoggle{background:none;border:none;padding:4px;font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text);line-height:1}
+#themetoggle{background:none;border:none;padding:4px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text);line-height:1}
 #themetoggle:hover{color:var(--accent)}
 #themetoggle svg{fill:currentColor}
 .broker{margin-top:28px;text-align:center}
@@ -83,7 +84,7 @@ nav a.brand:hover{text-decoration:none;color:var(--accent)}
 
 <div class="panel" style="position:relative">
   <h2>📈 Equity Curve</h2>
-  <div id="tfbar" style="margin-bottom:12px">
+  <div id="tfbar">
     <button class="tfbtn" data-d="1">24H</button><button class="tfbtn" data-d="7">7D</button><button class="tfbtn" data-d="30">30D</button><button class="tfbtn active" data-d="ALL">ALL</button>
   </div>
   <svg id="chart" width="100%" height="250" viewBox="0 0 640 250"></svg>
@@ -121,7 +122,7 @@ document.getElementById('themetoggle').addEventListener('click',function(){
 function CC(){
   var light=document.documentElement.getAttribute('data-theme')==='light';
   return light
-    ? {grid:'#e2e8f0', txt:'#64748b', up:'#16a34a', down:'#dc2626', dot:'#ffffff', tagbg:'#ffffff', area:'rgba(2,132,199,.08)'}
+    ? {grid:'#e7dcc3', txt:'#6b6257', up:'#15803d', down:'#b91c1c', dot:'#fbf7ec', tagbg:'#fbf7ec', area:'rgba(139,32,32,.05)'}
     : {grid:'#3a3a3f', txt:'#9b9c9d', up:'#4ade80', down:'#f87171', dot:'#1d1e20', tagbg:'#0f0f12', area:'rgba(125,211,252,.06)'};
 }
 /* ---------- stat cards ---------- */
