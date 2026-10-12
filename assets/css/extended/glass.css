@@ -53,13 +53,6 @@ body.glass .top-link {
 body.glass #moon { display: none; }
 body.glass #sun { display: block; }
 
-/* ikon sun diperbesar biar jelas di mode glass (aslinya kekecilan kayak pil putih) */
-body.glass #theme-toggle #sun {
-    width: 26px;
-    height: 26px;
-    stroke-width: 2.4;
-}
-
 /* tombol pagination (next/prev): teksnya ilang karena color:var(--theme)=transparan */
 body.glass .pagination a {
     color: var(--primary);
