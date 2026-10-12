@@ -29,5 +29,4 @@ bantu perusahaan & UMKM bikin website — company profile, landing page, sampai 
 - [Yayasan Darussalam Jogokerten](https://darussalamjogokerten.site/) — website profil pondok pesantren & madrasah (MI–MA), WordPress
 - [BPRS Mitra Mentari Sejahtera](https://mitrasyariahbank.com/) — website company profile bank syariah
 - [Mecinse](https://mecinse.com) — website perusahaan franchise makanan & minuman
-- Website media & televisi — *nama klien disamarkan*
 - [Pusaran](https://pusaran.org) — portal berita & sejarah
