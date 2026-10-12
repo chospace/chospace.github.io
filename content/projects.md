@@ -26,7 +26,4 @@ satu tempat buat mantau status semua agen tanpa login satu per satu.
 
 bantu perusahaan & UMKM bikin website — company profile, landing page, sampai web fungsional.
 
-- [Yayasan Darussalam Jogokerten](https://darussalamjogokerten.site/) — website profil pondok pesantren & madrasah (MI–MA), WordPress
-- [BPRS Mitra Mentari Sejahtera](https://mitrasyariahbank.com/) — website company profile bank syariah
-- [Mecinse](https://mecinse.com) — website perusahaan franchise makanan & minuman
-- [Pusaran](https://pusaran.org) — portal berita & sejarah
+[Lihat layanan & portofolio →](https://chospace.github.io/jasa-website/)
