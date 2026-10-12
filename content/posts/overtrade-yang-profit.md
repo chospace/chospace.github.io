@@ -1,7 +1,7 @@
 ---
 description: "Overtrade yang profit $40.70 — win terbesar akunku. Tapi ini justru trade paling berbahaya yang pernah kulakukan."
 title: "Overtrade yang Profit"
-date: 2026-10-12T23:35:00+07:00
+date: 2026-10-12T23:00:00+07:00
 tags: ["Trading","Journal"]
 author: "Cho"
 summary: "Win yang melanggar aturan lebih merusak daripada loss yang disiplin."
