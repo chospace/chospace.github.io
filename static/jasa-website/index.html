@@ -6,10 +6,22 @@
 <title>Jasa Pembuatan Website — Choirul Anas</title>
 <meta name="description" content="Jasa pembuatan website untuk perusahaan & UMKM: company profile, landing page, dan website fungsional.">
 <style>
-  :root { --ink:#1a1a1a; --gray:#666; --line:#e5e5e5; --accent:#fe5186; }
+  :root, [data-theme="light"] {
+    --bg:#ffffff; --ink:#1a1a1a; --gray:#666; --line:#e5e5e5; --accent:#fe5186;
+    --card-bg:#ffffff; --btn-bg:#1a1a1a; --btn-text:#ffffff;
+  }
+  [data-theme="dark"] {
+    --bg:#1d1e20; --ink:#f2f2f2; --gray:#a3a3a3; --line:#343638; --accent:#fe5186;
+    --card-bg:#242628; --btn-bg:#f2f2f2; --btn-text:#1a1a1a;
+  }
+  [data-theme="agency"] {
+    --bg:#ffffff; --ink:#1a1a1a; --gray:#5a5a6e; --line:#e6e6f2; --accent:#fe5186;
+    --card-bg:#ffffff; --btn-bg:linear-gradient(90deg,#fe5186,#7c5cff); --btn-text:#ffffff;
+  }
   * { box-sizing:border-box; margin:0; padding:0; }
   body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-         color:var(--ink); line-height:1.7; -webkit-font-smoothing:antialiased; }
+         color:var(--ink); background:var(--bg); line-height:1.7; -webkit-font-smoothing:antialiased;
+         transition:background .3s, color .3s; }
   .page { max-width:720px; margin:0 auto; padding:3rem 1.5rem 4rem; }
   header.hero { margin-bottom:3rem; }
   h1 { font-size:2.2rem; font-weight:800; letter-spacing:-0.02em; line-height:1.25; }
@@ -18,8 +30,8 @@
   .cta-row { margin-top:1.5rem; display:flex; gap:0.8rem; flex-wrap:wrap; }
   .btn { display:inline-block; padding:0.7rem 1.4rem; border-radius:999px;
          text-decoration:none; font-weight:600; font-size:0.95rem; }
-  .btn-primary { background:var(--ink); color:#fff; }
-  .btn-primary:hover { background:#000; }
+  .btn-primary { background:var(--btn-bg); color:var(--btn-text); }
+  .btn-primary:hover { filter:brightness(0.92); }
   .btn-ghost { border:1px solid var(--line); color:var(--ink); }
   .btn-ghost:hover { border-color:var(--ink); }
   section { margin-bottom:2.8rem; }
@@ -28,13 +40,57 @@
        border-bottom:1px solid var(--line); padding-bottom:0.4rem; margin-bottom:1.2rem; }
   .grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
   @media (max-width:560px){ .grid { grid-template-columns:1fr; } }
-  .card { border:1px solid var(--line); border-radius:12px; padding:1.2rem; }
+  .card { border:1px solid var(--line); border-radius:12px; padding:1.2rem; background:var(--card-bg); }
   .card h3 { font-size:1rem; margin-bottom:0.3rem; }
   .card p { font-size:0.9rem; color:var(--gray); }
   .port { margin-bottom:1.2rem; }
   .port a { color:var(--ink); font-weight:700; text-decoration:none; border-bottom:1px solid var(--line); }
   .port a:hover { border-color:var(--ink); }
   .port p { font-size:0.92rem; color:var(--gray); margin-top:0.2rem; }
+  .pf-card h3 { font-size:1rem; margin-bottom:0.15rem; }
+  .pf-card h3 a { color:var(--ink); text-decoration:none; }
+  .pf-card h3 a:hover { color:var(--accent); }
+  .pf-card .tag { display:inline-block; font-size:0.72rem; font-weight:600; text-transform:uppercase;
+                  letter-spacing:0.08em; color:var(--accent); margin-bottom:0.4rem; }
+  .pf-card p { font-size:0.88rem; color:var(--gray); margin-bottom:0.7rem; }
+  .pf-card .visit { font-size:0.85rem; font-weight:600; color:var(--ink); text-decoration:none;
+                   border-bottom:1px solid var(--line); }
+  .pf-card .visit:hover { border-color:var(--ink); }
+  .pf-strip { display:flex; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory;
+              margin:0 -1.5rem; padding:0.2rem 1.5rem 1rem; touch-action:pan-x pan-y;
+              scrollbar-width:none; -webkit-overflow-scrolling:touch; }
+  .pf-strip::-webkit-scrollbar { display:none; }
+  .pf-strip .card { min-width:250px; max-width:250px; flex-shrink:0; scroll-snap-align:start; }
+  .swipe-hint { font-size:0.8rem; color:var(--gray); margin-bottom:0.8rem; }
+  .pf-nav { display:flex; gap:0.5rem; margin-bottom:0.8rem; }
+  .pf-nav button { width:2.2rem; height:2.2rem; border-radius:50%; border:1px solid var(--line);
+                   background:var(--card-bg); color:var(--ink); font-size:1rem; cursor:pointer; }
+  .pf-nav button:hover { border-color:var(--ink); }
+  /* Agency theme: colorful professional */
+  [data-theme="agency"] h1 .pink {
+    background:linear-gradient(90deg,#fe5186,#7c5cff,#00b8d4);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  [data-theme="agency"] .card {
+    border:1px solid transparent;
+    background:linear-gradient(var(--card-bg),var(--card-bg)) padding-box,
+               linear-gradient(135deg,rgba(254,81,134,.45),rgba(124,92,255,.45),rgba(0,184,212,.35)) border-box;
+    box-shadow:0 8px 24px rgba(124,92,255,.08);
+  }
+  [data-theme="agency"] .contact-box {
+    background:linear-gradient(135deg,#fff5f7,#f4f2ff);
+    border:1px solid transparent;
+    background:linear-gradient(135deg,#fff5f7,#f4f2ff) padding-box,
+               linear-gradient(135deg,rgba(254,81,134,.5),rgba(124,92,255,.5)) border-box;
+  }
+  [data-theme="agency"] .pf-card .tag { color:#7c5cff; }
+  .theme-btn { border:none; background:transparent; color:var(--ink);
+               width:auto; height:auto; border-radius:0; cursor:pointer; font-size:1.05rem; padding:0.2rem;
+               display:inline-flex; align-items:center; justify-content:center; }
+  .theme-btn:hover { opacity:0.7; }
+  nav.top .links { display:flex; gap:1.2rem; align-items:center; }
+  .pf-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem; }
+  .pf-head .swipe-hint { margin-bottom:0; }
   .about p { font-size:0.95rem; margin-bottom:0.8rem; }
   .contact-box { border:1px solid var(--line); border-radius:12px; padding:1.5rem; text-align:center; }
   .contact-box p { color:var(--gray); font-size:0.95rem; margin-bottom:1rem; }
@@ -42,10 +98,31 @@
   .back:hover { color:var(--ink); }
   footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line);
            font-size:0.85rem; color:var(--gray); text-align:center; }
+  nav.top { display:flex; justify-content:space-between; align-items:center;
+            padding:0 0 1rem; margin-bottom:2.5rem; border-bottom:1px solid var(--line); }
+  nav.top .brand { font-weight:800; text-decoration:none; color:var(--ink); font-size:1.15rem; letter-spacing:-0.01em; }
+  nav.top .brand::after { content:""; display:inline-block; width:10px; height:1.1rem;
+                         background:var(--accent); margin-left:6px; border-radius:1px;
+                         vertical-align:-2px; animation:logo-cursor-blink 1s infinite; }
+  @keyframes logo-cursor-blink { 0%,100% { opacity:0; } 50% { opacity:1; } }
+  @media (prefers-reduced-motion: reduce) { nav.top .brand::after { animation:none; } }
+  nav.top .links { display:flex; gap:1.2rem; }
+  nav.top .links a { font-size:0.88rem; color:var(--gray); text-decoration:none; }
+  nav.top .links a:hover { color:var(--ink); }
 </style>
 </head>
 <body>
 <div class="page">
+
+  <nav class="top">
+    <a class="brand" href="https://chospace.github.io/jasa-website/">chospace</a>
+    <div class="links">
+      <a href="#layanan">Layanan</a>
+      <a href="#portofolio">Portofolio</a>
+      <a href="#kontak">Kontak</a>
+      <button class="theme-btn" id="theme-btn" aria-label="Ganti tema">🌙</button>
+    </div>
+  </nav>
 
   <header class="hero">
     <h1>Pelanggan mencari bisnis Anda di Google.<br>Pastikan yang mereka temukan <span class="pink">meyakinkan.</span></h1>
@@ -56,7 +133,7 @@
     </div>
   </header>
 
-  <section>
+  <section id="layanan">
     <h2>Layanan</h2>
     <div class="grid">
       <div class="card">
@@ -79,27 +156,50 @@
     <p style="font-size:.85rem;color:var(--gray);margin-top:1rem;">Teknologi menyesuaikan skala project — dari WordPress yang mudah dikelola sendiri sampai custom development untuk kebutuhan khusus.</p>
   </section>
 
-  <section>
+  <section id="portofolio">
     <h2>Portofolio</h2>
-    <div class="port">
-      <a href="https://darussalamjogokerten.site/">Yayasan Darussalam Jogokerten</a>
-      <p>Website profil pondok pesantren &amp; madrasah (MI–MA) — WordPress.</p>
+    <div class="pf-head">
+      <p class="swipe-hint">Geser → untuk lihat lainnya</p>
+      <div class="pf-nav">
+        <button id="pf-prev" aria-label="Sebelumnya">‹</button>
+        <button id="pf-next" aria-label="Berikutnya">›</button>
+      </div>
     </div>
-    <div class="port">
-      <a href="https://mitrasyariahbank.com/">BPRS Mitra Mentari Sejahtera</a>
-      <p>Website company profile bank syariah.</p>
-    </div>
-    <div class="port">
-      <a href="https://mecinse.com">Mecinse</a>
-      <p>Website perusahaan franchise makanan &amp; minuman.</p>
-    </div>
-    <div class="port">
-      <a href="https://pusaran.org">Pusaran</a>
-      <p>Portal berita &amp; sejarah.</p>
-    </div>
-    <div class="port">
-      <a href="https://melaticostore.shop">Toko Bu Suis Melati</a>
-      <p>Website wedding shop.</p>
+    <div class="pf-strip" id="pf-strip">
+      <div class="card pf-card">
+        <div class="tag">Yayasan / Pendidikan</div>
+        <h3><a href="https://darussalamjogokerten.site/">Darussalam Jogokerten</a></h3>
+        <p>Website profil pondok pesantren &amp; madrasah (MI–MA) — WordPress.</p>
+        <a class="visit" href="https://darussalamjogokerten.site/">Kunjungi →</a>
+      </div>
+      <div class="card pf-card">
+        <div class="tag">Perbankan</div>
+        <h3><a href="https://mitrasyariahbank.com/">BPRS Mitra Mentari Sejahtera</a></h3>
+        <p>Website company profile bank syariah.</p>
+        <a class="visit" href="https://mitrasyariahbank.com/">Kunjungi →</a>
+      </div>
+      <div class="card pf-card">
+        <div class="tag">Wedding / UMKM</div>
+        <h3><a href="https://melaticostore.shop">Toko Bu Suis Melati</a></h3>
+        <p>Website wedding shop.</p>
+        <a class="visit" href="https://melaticostore.shop">Kunjungi →</a>
+      </div>
+      <div class="card pf-card">
+        <div class="tag">Franchise F&amp;B</div>
+        <h3><a href="https://mecinse.com">Mecinse</a></h3>
+        <p>Website perusahaan franchise makanan &amp; minuman.</p>
+        <a class="visit" href="https://mecinse.com">Kunjungi →</a>
+      </div>
+      <div class="card pf-card">
+        <div class="tag">Media</div>
+        <h3><a href="https://pusaran.org">Pusaran</a></h3>
+        <p>Portal berita &amp; sejarah.</p>
+        <a class="visit" href="https://pusaran.org">Kunjungi →</a>
+      </div>
+      <div class="card pf-card" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;">
+        <h3><a href="https://chospace.github.io/projects/">Project lainnya →</a></h3>
+        <p>Lihat semua project yang pernah dikerjakan.</p>
+      </div>
     </div>
   </section>
 
@@ -109,7 +209,7 @@
     <p>Prinsip itu saya bawa ke setiap website yang saya buat: rapi, stabil, dan mudah dikelola sendiri setelah serah terima. Fokus saya satu — membantu UMKM naik kelas dengan harga yang bersahabat.</p>
   </section>
 
-  <section>
+  <section id="kontak">
     <div class="contact-box">
       <h2 style="border:none;padding:0;margin-bottom:0.5rem;">Punya project website?</h2>
       <p>Ceritakan kebutuhan Anda — konsultasi awal gratis, tanpa komitmen.</p>
@@ -125,5 +225,35 @@
   <footer>Dikerjakan dengan teliti oleh Choirul Anas</footer>
 
 </div>
+<script>
+  (function(){
+    var strip = document.getElementById('pf-strip');
+    var step = 266; // card width + gap
+    document.getElementById('pf-prev').addEventListener('click', function(){
+      strip.scrollBy({left: -step, behavior: 'smooth'});
+    });
+    document.getElementById('pf-next').addEventListener('click', function(){
+      strip.scrollBy({left: step, behavior: 'smooth'});
+    });
+  })();
+  (function(){
+    // Theme switcher: light -> dark -> agency
+    var themes = ['light', 'dark', 'agency'];
+    var icons = { light: '🌙', dark: '🎨', agency: '☀️' };
+    var btn = document.getElementById('theme-btn');
+    function apply(t){
+      document.documentElement.setAttribute('data-theme', t);
+      btn.textContent = icons[t];
+      try { localStorage.setItem('jasa-theme', t); } catch(e){}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('jasa-theme'); } catch(e){}
+    apply(themes.indexOf(saved) >= 0 ? saved : 'light');
+    btn.addEventListener('click', function(){
+      var cur = document.documentElement.getAttribute('data-theme') || 'light';
+      apply(themes[(themes.indexOf(cur) + 1) % themes.length]);
+    });
+  })();
+</script>
 </body>
 </html>
