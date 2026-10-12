@@ -5,64 +5,139 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trading Journal | /chospace</title>
 <style>
-:root { --bg: #1d1e20; --card: #2e2e33; --text: #dadadb; --muted: #9b9c9d; --green: #4ade80; --red: #f87171; --accent: #7dd3fc; }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: var(--bg); color: var(--text); font-family: -apple-system, "Segoe UI", Roboto, sans-serif; padding: 24px 16px; max-width: 900px; margin: 0 auto; }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-h1 { font-size: 28px; margin-bottom: 6px; }
-.sub { color: var(--muted); margin-bottom: 24px; font-size: 14px; }
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-bottom: 24px; }
-.card { background: var(--card); border-radius: 10px; padding: 14px; text-align: center; }
-.card .lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
-.card .val { font-size: 22px; font-weight: 700; }
-.pos { color: var(--green); } .neg { color: var(--red); }
-.chart-wrap { background: var(--card); border-radius: 10px; padding: 16px; margin-bottom: 24px; }
-.chart-wrap h2, .table-wrap h2 { font-size: 16px; margin-bottom: 12px; }
-.table-wrap { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 600px; }
-th, td { padding: 9px 8px; text-align: left; border-bottom: 1px solid #3a3a3f; white-space: nowrap; }
-th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; }
-tr:hover td { background: #34343a; }
-.tag { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
-.tag.sell { background: rgba(248,113,113,.15); color: var(--red); }
-.tag.buy { background: rgba(74,222,128,.15); color: var(--green); }
-.back { display: inline-block; margin-top: 24px; font-size: 14px; }
-.footer { margin-top: 32px; color: var(--muted); font-size: 12px; text-align: center; line-height: 1.8; }
-.motto { font-style: italic; color: var(--accent); margin-bottom: 24px; font-size: 15px; }
-.broker { margin-top: 24px; text-align: center; }
-.broker p { font-size: 13px; color: var(--muted); }
-.tfbtn{background:#2e2e33;color:#9b9c9d;border:1px solid #3a3a3f;border-radius:16px;padding:4px 14px;font-size:12px;cursor:pointer;margin-right:6px}
-.tfbtn.active{background:#7dd3fc;color:#0f0f12;border-color:#7dd3fc;font-weight:700}
+:root{
+  --bg:#1d1e20; --card:#2e2e33; --card2:#34343a; --line:#3a3a3f;
+  --text:#dadadb; --muted:#9b9c9d;
+  --green:#4ade80; --red:#f87171; --accent:#7dd3fc;
+  --r:12px; --pad:18px; --gap:24px;
+}
+[data-theme="light"]{
+  --bg:#f1f5f9; --card:#ffffff; --card2:#f8fafc; --line:#e2e8f0;
+  --text:#0f172a; --muted:#64748b;
+  --green:#16a34a; --red:#dc2626; --accent:#0284c7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI",Roboto,sans-serif;
+  padding:28px 16px 40px;max-width:920px;margin:0 auto;line-height:1.5}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header{margin-bottom:var(--gap)}
+h1{font-size:30px;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:14px}
+.motto{font-style:italic;color:var(--accent);font-size:15px;
+  border-left:3px solid var(--accent);padding-left:12px;margin:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:var(--gap)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 14px;text-align:center}
+.card .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px}
+.card .val{font-size:24px;font-weight:800;letter-spacing:-.5px}
+.pos{color:var(--green)} .neg{color:var(--red)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:var(--pad);margin-bottom:var(--gap)}
+.panel h2{font-size:16px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}
+th,td{padding:10px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+tbody tr:hover td{background:var(--card2)}
+tbody tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums}
+.tag{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700}
+.tag.sell{background:rgba(248,113,113,.14);color:var(--red)}
+.tag.buy{background:rgba(74,222,128,.14);color:var(--green)}
+.rpos{color:var(--green);font-weight:700}
+.rneg{color:var(--red);font-weight:700}
+.tfbtn{background:var(--card2);color:var(--muted);border:1px solid var(--line);border-radius:18px;
+  padding:5px 16px;font-size:12px;font-weight:600;cursor:pointer;margin-right:8px;transition:all .15s}
+.tfbtn:hover{color:var(--text);border-color:var(--muted)}
+.tfbtn.active{background:var(--accent);color:#0f0f12;border-color:var(--accent)}
+#eqinfo{margin-top:12px;font-size:13px;color:var(--muted);line-height:1.9}
+#eqtip{box-shadow:0 4px 16px rgba(0,0,0,.5)}
+nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+nav a.brand{font-weight:800;font-size:16px;color:var(--text)}
+nav a.brand:hover{text-decoration:none;color:var(--accent)}
+#themetoggle{background:none;border:none;padding:4px;font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text);line-height:1}
+#themetoggle:hover{color:var(--accent)}
+#themetoggle svg{fill:currentColor}
+.broker{margin-top:28px;text-align:center}
+.broker p{font-size:13px;color:var(--muted)}
+.footer{margin-top:20px;color:var(--muted);font-size:12px;text-align:center;line-height:1.8}
+@media(max-width:560px){
+  body{padding:20px 12px 32px}
+  h1{font-size:24px}
+  .card .val{font-size:20px}
+  :root{--pad:14px;--gap:18px}
+}
 </style>
 </head>
 <body>
-<h1>📓 Trading Journal</h1>
-<p class="sub">Akun kecil $100 — dimulai 7 Okt 2026. Dicatat apa adanya, termasuk entry yang melanggar plan.</p>
-<p class="motto">"Disiplin mengelola risiko, bukan mengejar profit."</p>
+<nav>
+  <a class="brand" href="https://chospace.github.io/">← chospace</a>
+  <button id="themetoggle" title="Ganti tema"><svg width="20" height="20" viewBox="0 0 48 48" fill="none"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></button>
+</nav>
+<header>
+  <h1>📓 Trading Journal</h1>
+  <p class="sub">Akun real $100 — dimulai 7 Okt 2026. Dicatat apa adanya, termasuk entry yang melanggar plan.</p>
+  <p class="motto">"Disiplin mengelola risiko, bukan mengejar profit."</p>
+</header>
+
 <div class="stats" id="stats"></div>
-<div class="chart-wrap" style="position:relative"><h2>Equity Curve</h2><div id="tfbar" style="margin-bottom:10px"><button class="tfbtn" data-d="1">24H</button><button class="tfbtn" data-d="7">7D</button><button class="tfbtn" data-d="30">30D</button><button class="tfbtn active" data-d="ALL">ALL</button></div><svg id="chart" width="100%" height="220" viewBox="0 0 640 220"></svg><div id="eqtip" style="display:none;position:absolute;background:#0f0f12;border:1px solid #3a3a3f;border-radius:8px;padding:8px 10px;font-size:12px;pointer-events:none;z-index:5;white-space:nowrap"></div><div id="eqinfo" style="margin-top:10px;font-size:13px;color:var(--muted)"></div></div>
-<div class="table-wrap"><h2>Riwayat Trade</h2>
-<table><thead><tr><th>#</th><th>Tanggal</th><th>Pair</th><th>Arah</th><th>Entry</th><th>Lot</th><th>Hasil</th><th>R</th></tr></thead>
-<tbody id="rows"></tbody></table></div>
-<a class="back" href="https://chospace.github.io/">← Kembali ke blog</a>
+
+<div class="panel" style="position:relative">
+  <h2>📈 Equity Curve</h2>
+  <div id="tfbar" style="margin-bottom:12px">
+    <button class="tfbtn" data-d="1">24H</button><button class="tfbtn" data-d="7">7D</button><button class="tfbtn" data-d="30">30D</button><button class="tfbtn active" data-d="ALL">ALL</button>
+  </div>
+  <svg id="chart" width="100%" height="250" viewBox="0 0 640 250"></svg>
+  <div id="eqtip" style="display:none;position:absolute;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px;pointer-events:none;z-index:5;white-space:nowrap;color:var(--text)"></div>
+  <div id="eqinfo"></div>
+</div>
+
+<div class="panel table-wrap">
+  <h2>🧾 Riwayat Trade</h2>
+  <table>
+    <thead><tr><th>#</th><th>Tanggal</th><th>Pair</th><th>Arah</th><th>Entry</th><th>Lot</th><th>Hasil</th><th>R</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+</div>
+
 <div class="broker">
-<p>Broker yang saya pakai: <a href="https://one.exnessonelink.com/a/ntsmrktlh5" target="_blank" rel="noopener">Exness</a></p>
+  <p>Broker yang saya pakai: <a href="https://one.exnessonelink.com/a/ntsmrktlh5" target="_blank" rel="noopener">Exness</a></p>
 </div>
 <p class="footer">Jurnal ini dibantu oleh AI Agent <b>Waginem</b> 🤖<br>Diupdate tiap malam · chospace.github.io</p>
+
 <script>
 const D = {"stats": {"bal": "124.66", "pnl": "+$24.66", "w": 4, "l": 6, "bep": 1, "total": 11}, "equity": [100.0, 90.57, 82.02, 82.02, 100.09, 108.23, 100.23, 109.59, 99.14, 89.89, 83.96, 124.66], "trades": [{"no": 11, "date": "2026-10-12", "instr": "USOIL", "arah": "Buy", "entry": "92.819", "size": "0.10", "hasil": 40.7, "rr": "+4.0"}, {"no": 10, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4171.559", "size": "0.03", "hasil": -5.93, "rr": "-0.49"}, {"no": 9, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4173.052", "size": "0.03", "hasil": -9.25, "rr": "-1.0"}, {"no": 8, "date": "2026-10-11", "instr": "BTCUSD", "arah": "Sell", "entry": "82975.38", "size": "0.07", "hasil": -10.45, "rr": "-1.18"}, {"no": 7, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "31017.27", "size": "0.05", "hasil": 9.36, "rr": "+1.0"}, {"no": 6, "date": "2026-10-09", "instr": "XAGUSD", "arah": "Sell", "entry": "60.555", "size": "0.01", "hasil": -8.0, "rr": "-1.0"}, {"no": 5, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "30992.94", "size": "0.05", "hasil": 8.14, "rr": "+0.71"}, {"no": 4, "date": "2026-10-08", "instr": "EURUSD", "arah": "Buy", "entry": "1.11820", "size": "0.13", "hasil": 18.07, "rr": "+2.48"}, {"no": 3, "date": "2026-10-08", "instr": "BTCUSD", "arah": "Buy", "entry": "82753.40", "size": "0.06", "hasil": 0.0, "rr": "0"}, {"no": 2, "date": "2026-10-08", "instr": "XAUUSD", "arah": "Sell", "entry": "4137.56", "size": "0.03", "hasil": -8.55, "rr": "-1.0"}, {"no": 1, "date": "2026-10-07", "instr": "XAUUSD", "arah": "Buy", "entry": "4127.83", "size": "0.01", "hasil": -9.43, "rr": "-1.0"}]};
+/* ---------- theme ---------- */
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme',t);
+  try{ localStorage.setItem('tj-theme',t); }catch(e){}
+}
+var _saved=null; try{ _saved=localStorage.getItem('tj-theme'); }catch(e){}
+applyTheme(_saved||'dark');
+document.getElementById('themetoggle').addEventListener('click',function(){
+  var cur=document.documentElement.getAttribute('data-theme');
+  applyTheme(cur==='light'?'dark':'light');
+  renderChart();
+});
+function CC(){
+  var light=document.documentElement.getAttribute('data-theme')==='light';
+  return light
+    ? {grid:'#e2e8f0', txt:'#64748b', up:'#16a34a', down:'#dc2626', dot:'#ffffff', tagbg:'#ffffff', area:'rgba(2,132,199,.08)'}
+    : {grid:'#3a3a3f', txt:'#9b9c9d', up:'#4ade80', down:'#f87171', dot:'#1d1e20', tagbg:'#0f0f12', area:'rgba(125,211,252,.06)'};
+}
+/* ---------- stat cards ---------- */
 const s = D.stats;
 const pnlNum = parseFloat(String(s.pnl).replace('$','').replace('+',''));
 const pnlCls = pnlNum >= 0 ? 'pos' : 'neg';
 const wr = Math.round(parseInt(s.w)/parseInt(s.total)*100);
 document.getElementById('stats').innerHTML =
-'<div class="card"><div class="lbl">Balance</div><div class="val">$'+s.bal+'</div></div>' +
-'<div class="card"><div class="lbl">Total P&L</div><div class="val '+pnlCls+'">'+s.pnl+'</div></div>' +
-'<div class="card"><div class="lbl">Win</div><div class="val pos">'+s.w+'</div></div>' +
-'<div class="card"><div class="lbl">Loss</div><div class="val neg">'+s.l+'</div></div>' +
-'<div class="card"><div class="lbl">BEP</div><div class="val">'+s.bep+'</div></div>' +
-'<div class="card"><div class="lbl">Win Rate</div><div class="val">'+wr+'%</div></div>';
+ '<div class="card"><div class="lbl">Balance</div><div class="val">$'+s.bal+'</div></div>'
++'<div class="card"><div class="lbl">Total P&amp;L</div><div class="val '+pnlCls+'">'+s.pnl+'</div></div>'
++'<div class="card"><div class="lbl">Win</div><div class="val pos">'+s.w+'</div></div>'
++'<div class="card"><div class="lbl">Loss</div><div class="val neg">'+s.l+'</div></div>'
++'<div class="card"><div class="lbl">BEP</div><div class="val">'+s.bep+'</div></div>'
++'<div class="card"><div class="lbl">Win Rate</div><div class="val">'+wr+'%</div></div>';
+
+/* ---------- equity curve ---------- */
 function pDate(s){ var a=s.split('-'); return new Date(+a[0],+a[1]-1,+a[2]).getTime(); }
 var chronoAll = D.trades.slice().reverse();
 var balsAll=[100]; chronoAll.forEach(function(t){ balsAll.push(+(balsAll[balsAll.length-1]+t.hasil).toFixed(2)); });
@@ -74,94 +149,101 @@ document.querySelectorAll('.tfbtn').forEach(function(b){
     b.classList.add('active'); _tf=b.getAttribute('data-d'); renderChart();
   });
 });
-function tag(x,y,txt,color,W){
-  var w=txt.length*6.2+14;
+function tag(x,y,txt,color,W,C){
+  var w=txt.length*6.2+16;
   x=Math.max(w/2+2, Math.min(W-w/2-2, x));
-  return '<rect x="'+(x-w/2).toFixed(1)+'" y="'+(y-10)+'" width="'+w.toFixed(1)+'" height="20" rx="10" fill="#0f0f12" stroke="'+color+'" stroke-width="1"/>'
-    +'<text x="'+x.toFixed(1)+'" y="'+(y+4.5)+'" fill="'+color+'" font-size="11" font-weight="600" text-anchor="middle">'+txt+'</text>';
+  return '<rect x="'+(x-w/2).toFixed(1)+'" y="'+(y-11)+'" width="'+w.toFixed(1)+'" height="22" rx="11" fill="'+C.tagbg+'" stroke="'+color+'" stroke-width="1"/>'
+    +'<text x="'+x.toFixed(1)+'" y="'+(y+4.5)+'" fill="'+color+'" font-size="11" font-weight="700" text-anchor="middle">'+txt+'</text>';
 }
 function renderChart(){
-var wrap=document.querySelector('.chart-wrap');
-var W=Math.max(320, wrap.clientWidth-32), H=230;
-var chart=document.getElementById('chart');
-chart.setAttribute('viewBox','0 0 '+W+' '+H);
-chart.setAttribute('height',H);
-var f, startBal;
-if(_tf==='ALL'){ f=chronoAll; startBal=100; }
-else{
-  var cut=maxT-(+_tf)*864e5;
-  f=chronoAll.filter(function(t){ return pDate(t.date)>=cut; });
-  startBal=f.length?balsAll[chronoAll.indexOf(f[0])]:100;
-}
-if(!f.length){
-  chart.innerHTML='<text x="'+(W/2)+'" y="'+(H/2)+'" fill="#9b9c9d" font-size="13" text-anchor="middle">Belum ada trade di periode ini</text>';
-  document.getElementById('eqinfo').innerHTML='';
-  return;
-}
-var eq=[startBal], tm=[null];
-f.forEach(function(t){ var i=chronoAll.indexOf(t); eq.push(balsAll[i+1]); tm.push(t); });
-var PL=44,PR=10,PT=28,PB=30, iw=W-PL-PR, ih=H-PT-PB;
-var min=Math.min.apply(null,eq), max=Math.max.apply(null,eq), rng=(max-min)||1;
-function X(i){ return PL + i*(iw/(eq.length-1)); }
-function Y(v){ return PT + ih - (v-min)/rng*ih; }
-var imax=eq.indexOf(max), imin=eq.indexOf(min);
-var svg='';
-for(var g=0; g<=4; g++){
-  var gv=min+rng*g/4, gy=Y(gv);
-  svg+='<line x1="'+PL+'" y1="'+gy+'" x2="'+(W-PR)+'" y2="'+gy+'" stroke="#3a3a3f" stroke-width="1"/>'
-    +'<text x="'+(PL-6)+'" y="'+(gy+4)+'" fill="#9b9c9d" font-size="10" text-anchor="end">$'+gv.toFixed(0)+'</text>';
-}
-svg+='<polygon points="'+PL+','+(PT+ih)+' '+eq.map(function(v,i){return X(i).toFixed(1)+','+Y(v).toFixed(1);}).join(' ')+' '+(W-PR)+','+(PT+ih)+'" fill="rgba(125,211,252,.07)"/>';
-for(var i=1;i<eq.length;i++){
-  var c=eq[i]>=eq[i-1]?'#4ade80':'#f87171';
-  svg+='<line x1="'+X(i-1)+'" y1="'+Y(eq[i-1])+'" x2="'+X(i)+'" y2="'+Y(eq[i])+'" stroke="'+c+'" stroke-width="2.5" stroke-linecap="round"/>';
-}
-var step=Math.ceil(eq.length/Math.max(6,Math.floor(iw/70)));
-for(var i=0;i<eq.length;i+=step){
-  if(i===imin||i===imax) continue;
-  var lbl = tm[i] ? '#'+tm[i].no : 'start';
-  svg+='<text x="'+X(i)+'" y="'+(H-8)+'" fill="#9b9c9d" font-size="10" text-anchor="middle">'+lbl+'</text>';
-}
-for(var i=0;i<eq.length;i++){
-  var t=tm[i];
-  var info=!t?'0|Start|Bal $'+eq[i].toFixed(2):(t.no+'|#'+t.no+' '+t.instr+' '+t.arah+'|Hasil '+(t.hasil>=0?'+$':'−$')+Math.abs(t.hasil).toFixed(2)+' → Bal $'+eq[i].toFixed(2));
-  var dc=!t?'#9b9c9d':(eq[i]>=eq[i-1]?'#4ade80':'#f87171');
-  svg+='<circle class="eqdot" data-i="'+info+'" cx="'+X(i).toFixed(1)+'" cy="'+Y(eq[i]).toFixed(1)+'" r="5.5" fill="#1d1e20" stroke="'+dc+'" stroke-width="2.5" style="cursor:pointer"/>';
-}
-svg+=tag(X(imax),Y(max)-16,'▲ $'+max.toFixed(0),'#4ade80',W)
-   +tag(X(imin),Y(min)+22,'▼ $'+min.toFixed(0),'#f87171',W);
-chart.innerHTML=svg;
-var tip=document.getElementById('eqtip');
-wrap.querySelectorAll('.eqdot').forEach(function(d){
-  d.addEventListener('mouseenter',function(){
-    var p=d.getAttribute('data-i').split('|');
-    tip.innerHTML='<b>'+p[1]+'</b><br>'+p[2];
-    tip.style.display='block';
+  var wrap=document.querySelector('.panel');
+  var W=Math.max(320, wrap.clientWidth-36), H=250;
+  var chart=document.getElementById('chart');
+  chart.setAttribute('viewBox','0 0 '+W+' '+H);
+  var C=CC();
+  chart.setAttribute('height',H);
+  var f, startBal;
+  if(_tf==='ALL'){ f=chronoAll; startBal=100; }
+  else{
+    var cut=maxT-(+_tf)*864e5;
+    f=chronoAll.filter(function(t){ return pDate(t.date)>=cut; });
+    startBal=f.length?balsAll[chronoAll.indexOf(f[0])]:100;
+  }
+  if(!f.length){
+    chart.innerHTML='<text x="'+(W/2)+'" y="'+(H/2)+'" fill="'+C.txt+'" font-size="13" text-anchor="middle">Belum ada trade di periode ini</text>';
+    document.getElementById('eqinfo').innerHTML='';
+    return;
+  }
+  var eq=[startBal], tm=[null];
+  f.forEach(function(t){ var i=chronoAll.indexOf(t); eq.push(balsAll[i+1]); tm.push(t); });
+  var PL=46,PR=12,PT=38,PB=52, iw=W-PL-PR, ih=H-PT-PB;
+  var min=Math.min.apply(null,eq), max=Math.max.apply(null,eq), rng=(max-min)||1;
+  function X(i){ return eq.length===1 ? PL+iw/2 : PL + i*(iw/(eq.length-1)); }
+  function Y(v){ return PT + ih - (v-min)/rng*ih; }
+  var imax=eq.indexOf(max), imin=eq.indexOf(min);
+  var svg='';
+  for(var g=0; g<=4; g++){
+    var gv=min+rng*g/4, gy=Y(gv);
+    svg+='<line x1="'+PL+'" y1="'+gy+'" x2="'+(W-PR)+'" y2="'+gy+'" stroke="'+C.grid+'" stroke-width="1"/>'
+      +'<text x="'+(PL-7)+'" y="'+(gy+4)+'" fill="'+C.txt+'" font-size="10" text-anchor="end">$'+gv.toFixed(0)+'</text>';
+  }
+  svg+='<polygon points="'+PL+','+(PT+ih)+' '+eq.map(function(v,i){return X(i).toFixed(1)+','+Y(v).toFixed(1);}).join(' ')+' '+(W-PR)+','+(PT+ih)+'" fill="'+C.area+'"/>';
+  for(var i=1;i<eq.length;i++){
+    var c=eq[i]>=eq[i-1]?C.up:C.down;
+    svg+='<line x1="'+X(i-1)+'" y1="'+Y(eq[i-1])+'" x2="'+X(i)+'" y2="'+Y(eq[i])+'" stroke="'+c+'" stroke-width="2.5" stroke-linecap="round"/>';
+  }
+  var step=Math.ceil(eq.length/Math.max(6,Math.floor(iw/72)));
+  for(var i=0;i<eq.length;i+=step){
+    if(i===imin||i===imax) continue;
+    var lbl = tm[i] ? '#'+tm[i].no : 'start';
+    svg+='<text x="'+X(i)+'" y="'+(H-10)+'" fill="'+C.txt+'" font-size="10" text-anchor="middle">'+lbl+'</text>';
+  }
+  for(var i=0;i<eq.length;i++){
+    var t=tm[i];
+    var info=!t?'0|Start|Bal $'+eq[i].toFixed(2):(t.no+'|#'+t.no+' '+t.instr+' '+t.arah+'|Hasil '+(t.hasil>=0?'+$':'−$')+Math.abs(t.hasil).toFixed(2)+' → Bal $'+eq[i].toFixed(2));
+    var dc=!t?C.txt:(eq[i]>=eq[i-1]?C.up:C.down);
+    svg+='<circle class="eqdot" data-i="'+info+'" cx="'+X(i).toFixed(1)+'" cy="'+Y(eq[i]).toFixed(1)+'" r="5.5" fill="'+C.dot+'" stroke="'+dc+'" stroke-width="2.5" style="cursor:pointer"/>';
+  }
+  svg+=tag(X(imax),Y(max)-20,'▲ $'+max.toFixed(0),C.up,W,C)
+     +tag(X(imin),Y(min)+26,'▼ $'+min.toFixed(0),C.down,W,C);
+  chart.innerHTML=svg;
+  var tip=document.getElementById('eqtip');
+  wrap.querySelectorAll('.eqdot').forEach(function(d){
+    d.addEventListener('mouseenter',function(){
+      var p=d.getAttribute('data-i').split('|');
+      tip.innerHTML='<b>'+p[1]+'</b><br>'+p[2];
+      tip.style.display='block';
+    });
+    d.addEventListener('mousemove',function(e){
+      var r=wrap.getBoundingClientRect();
+      tip.style.left=Math.min(e.clientX-r.left+14, r.width-170)+'px';
+      tip.style.top=(e.clientY-r.top-10)+'px';
+    });
+    d.addEventListener('mouseleave',function(){ tip.style.display='none'; });
   });
-  d.addEventListener('mousemove',function(e){
-    var r=wrap.getBoundingClientRect();
-    tip.style.left=Math.min(e.clientX-r.left+14, r.width-170)+'px';
-    tip.style.top=(e.clientY-r.top-10)+'px';
-  });
-  d.addEventListener('mouseleave',function(){ tip.style.display='none'; });
-});
-var pk=eq[0], mdd=0, mddPk=eq[0];
-eq.forEach(function(v){ if(v>pk){pk=v;} var dd=pk-v; if(dd>mdd){mdd=dd;mddPk=pk;} });
-var best=f.reduce(function(a,b){return b.hasil>a.hasil?b:a;},f[0]);
-var worst=f.reduce(function(a,b){return b.hasil<a.hasil?b:a;},f[0]);
-document.getElementById('eqinfo').innerHTML=
-  '📉 Max drawdown: <b class="neg">-$'+mdd.toFixed(2)+'</b> ('+(mdd/mddPk*100).toFixed(1)+'% dari $'+mddPk.toFixed(0)+')'
-  +' &nbsp;·&nbsp; 🏆 Terbaik: <b class="pos">+$'+best.hasil.toFixed(2)+'</b> (#'+best.no+' '+best.instr+')'
-  +' &nbsp;·&nbsp; 💀 Terburuk: <b class="neg">-$'+Math.abs(worst.hasil).toFixed(2)+'</b> (#'+worst.no+' '+worst.instr+')';
+  var pk=eq[0], mdd=0, mddPk=eq[0];
+  eq.forEach(function(v){ if(v>pk){pk=v;} var dd=pk-v; if(dd>mdd){mdd=dd;mddPk=pk;} });
+  var best=f.reduce(function(a,b){return b.hasil>a.hasil?b:a;},f[0]);
+  var worst=f.reduce(function(a,b){return b.hasil<a.hasil?b:a;},f[0]);
+  document.getElementById('eqinfo').innerHTML=
+    '📉 Max drawdown: <b class="neg">-$'+mdd.toFixed(2)+'</b> ('+(mdd/mddPk*100).toFixed(1)+'% dari $'+mddPk.toFixed(0)+')'
+    +' &nbsp;·&nbsp; 🏆 Terbaik: <b class="pos">+$'+best.hasil.toFixed(2)+'</b> (#'+best.no+' '+best.instr+')'
+    +' &nbsp;·&nbsp; 💀 Terburuk: <b class="neg">-$'+Math.abs(worst.hasil).toFixed(2)+'</b> (#'+worst.no+' '+worst.instr+')';
 }
 renderChart();
 var _rt; window.addEventListener('resize',function(){ clearTimeout(_rt); _rt=setTimeout(renderChart,200); });
+
+/* ---------- trade table ---------- */
 document.getElementById('rows').innerHTML = D.trades.map(function(t){
   var hc = t.hasil > 0 ? 'pos' : t.hasil < 0 ? 'neg' : '';
-  var hv = t.hasil > 0 ? '+$'+t.hasil.toFixed(2) : t.hasil < 0 ? '-$'+Math.abs(t.hasil).toFixed(2) : '$0.00';
+  var hv = t.hasil > 0 ? '+$'+t.hasil.toFixed(2) : t.hasil < 0 ? '−$'+Math.abs(t.hasil).toFixed(2) : '$0.00';
   var dc = t.arah.toLowerCase()==='sell' ? 'sell' : 'buy';
   var d = t.date.split('-').reverse().join('/');
-  return '<tr><td>'+t.no+'</td><td>'+d+'</td><td><b>'+t.instr+'</b></td><td><span class="tag '+dc+'">'+t.arah+'</span></td><td>'+t.entry+'</td><td>'+t.size+'</td><td class="'+hc+'"><b>'+hv+'</b></td><td>'+t.rr+'</td></tr>';
+  var rv = parseFloat(t.rr), rc = isNaN(rv) ? '' : (rv>0?'rpos':(rv<0?'rneg':''));
+  var rr = t.rr==='-'||t.rr==='' ? '<span style="color:var(--muted)">—</span>' : '<span class="'+rc+'">'+t.rr+'</span>';
+  return '<tr><td class="num">'+t.no+'</td><td class="num">'+d+'</td><td><b>'+t.instr+'</b></td>'
+    +'<td><span class="tag '+dc+'">'+t.arah+'</span></td><td class="num">'+t.entry+'</td><td class="num">'+t.size+'</td>'
+    +'<td class="num '+hc+'"><b>'+hv+'</b></td><td class="num">'+rr+'</td></tr>';
 }).join('');
 </script>
 </body>
