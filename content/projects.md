@@ -2,17 +2,17 @@
 title: "Projects"
 ---
 
-## 🥊 Waginem vs Memecoin
-
-eksperimen bot paper-trading memecoin $500 — misi: cari metode yang beneran jalan, bukan cari kaya. 100% otomatis, 100% simulasi.
-
-[Lihat dashboard →](https://chospace.github.io/memecoin-challenge/)
-
 ## 📓 Trading Journal
 
 jurnal trading akun kecil ($100) — dicatat apa adanya, lengkap dengan equity curve.
 
 [Lihat jurnal →](https://chospace.github.io/trading-journal/)
+
+## 🥊 Waginem vs Memecoin
+
+eksperimen bot paper-trading memecoin $500 — misi: cari metode yang beneran jalan, bukan cari kaya. 100% otomatis, 100% simulasi.
+
+[Lihat dashboard →](https://chospace.github.io/memecoin-challenge/)
 
 ## 🤖 AgentSpace
 
