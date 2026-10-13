@@ -7,7 +7,7 @@ author: "Cho"
 summary: "Win yang melanggar aturan lebih merusak daripada loss yang disiplin."
 showToc: false
 TocOpen: false
-draft: false
+draft: true
 hidemeta: false
 comments: false
 disableHLJS: false

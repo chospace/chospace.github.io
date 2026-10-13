@@ -6,7 +6,7 @@ pagination:
   disableAliases: false
   pagerSize: 5
 
-enableRobotsTXT: false
+enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
@@ -36,7 +36,7 @@ params:
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   footer:
-    text: '[Old theme](https://chospace.github.io/blog-preview/)'
+    text: '[my old theme](https://chospace.github.io/blog-preview/)'
   UseHugoToc: true
 
 
@@ -86,7 +86,7 @@ params:
 menu:
   main:
     - identifier: archive
-      name: Archive
+      name: Blog
       url: /archives/
       weight: 10
     - identifier: search
