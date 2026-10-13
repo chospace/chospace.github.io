@@ -19,6 +19,8 @@ Tiga tahun berikutnya, 638 trade ini yang ngebuktiin kalimat itu.
 
 ![Kurva saldo $100 Challenge — $100 jadi $1.590 dalam 5 tahun](/images/equity-curve-100-challenge.svg)
 
+*[Lihat jurnal lengkapnya di halaman $100 Challenge →](/100-challenge/)*
+
 ## Cara Mainnya
 
 Cara main saya sederhana. Saya trading pakai teknikal analisis — baca grafik harga, cari setup dari pola dan level di chart, bukan dari berita atau feeling. Saya hanya ambil setup yang risikonya sekecil mungkin dan untungnya sebesar mungkin. Selain itu, nggak saya ambil.
