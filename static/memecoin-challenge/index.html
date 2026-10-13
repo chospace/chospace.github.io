@@ -2,191 +2,338 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>$500 Memecoin Challenge</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waginem vs Memecoin — $500 Paper Challenge</title>
 <style>
-:root{ --ink:#171717; --mut:#6b7280; --line:#e5e7eb; --bg:#fafafa; --card:#ffffff;
-       --up:#15803d; --dn:#dc2626; }
-*{box-sizing:border-box}
-body{ background:var(--bg); color:var(--ink);
-      font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-      margin:0; padding:0 16px 48px; -webkit-font-smoothing:antialiased; }
-.num{ font-variant-numeric:tabular-nums; font-feature-settings:"tnum"; }
-.wrap{ max-width:980px; margin:0 auto; }
-
-/* header */
-header{ padding:28px 0 4px; }
-header h1{ font-size:22px; font-weight:700; letter-spacing:-0.01em; margin:0; }
-header p{ color:var(--mut); font-size:13px; margin:6px 0 0; max-width:60ch; line-height:1.5; }
-.disclaimer{ font-size:12px; color:var(--mut); line-height:1.65; margin:14px 0 0;
-              max-width:72ch; }
-.disclaimer b{ color:var(--ink); }
-.mscore{ display:flex; align-items:center; gap:18px; flex-wrap:wrap;
-          background:var(--card); border:1px solid var(--line); border-radius:10px;
-          padding:10px 16px; margin-top:12px; font-size:13px; color:var(--mut); }
-.mscore .mk{ font-size:11px; text-transform:uppercase; letter-spacing:0.08em; }
-.mscore .ms{ display:flex; gap:10px; align-items:baseline; }
-.mscore .ms b{ color:var(--ink); }
-
-/* hero: satu angka */
-.hero{ background:var(--card); border:1px solid var(--line); border-radius:14px;
-        padding:24px 28px; margin:20px 0; }
-.hero .lbl{ font-size:12px; color:var(--mut); text-transform:uppercase; letter-spacing:0.08em; }
-.hero .eq{ font-size:44px; font-weight:700; letter-spacing:-0.02em; margin:4px 0 2px; }
-.hero .delta{ font-size:15px; font-weight:600; }
-.hero .sub2{ font-size:12px; color:var(--mut); margin-top:6px; }
-
-/* strip statistik ramping, bukan kartu-kartu kembar */
-.stats{ display:flex; flex-wrap:wrap; gap:0; background:var(--card);
-         border:1px solid var(--line); border-radius:14px; margin:0 0 20px; overflow:hidden; }
-.stat{ flex:1 1 0; min-width:96px; padding:14px 18px; border-left:1px solid var(--line); }
-.stat:first-child{ border-left:none; }
-.stat .k{ font-size:11px; color:var(--mut); text-transform:uppercase; letter-spacing:0.06em; }
-.stat .v{ font-size:20px; font-weight:700; margin-top:2px; }
-
-/* chart */
-.chart{ background:var(--card); border:1px solid var(--line); border-radius:14px;
-         padding:20px 20px 8px; margin:0 0 20px; }
-.chart h2{ font-size:14px; font-weight:600; margin:0 0 4px; }
-.chart .cap{ font-size:12px; color:var(--mut); margin:0 0 8px; }
-.chart svg{ width:100%; height:auto; display:block; }
-
-/* tabel */
-.tblhead{ display:flex; align-items:center; justify-content:space-between;
-           flex-wrap:wrap; gap:12px; margin:4px 0 12px; }
-.tblhead h2{ font-size:14px; font-weight:600; margin:0; }
-.filters{ display:inline-flex; background:#f3f4f6; border:1px solid var(--line);
-           border-radius:999px; padding:3px; gap:2px; }
-.filters button{ appearance:none; border:none; background:transparent;
-                  border-radius:999px; padding:8px 22px; font-size:13px; font-weight:600;
-                  color:var(--mut); cursor:pointer; min-height:44px; }
-.filters button[aria-pressed="true"]{ background:var(--card); color:var(--ink);
-                  box-shadow:0 1px 3px rgba(0,0,0,0.12); }
-.filters button:focus-visible{ outline:2px solid var(--ink); outline-offset:2px; }
-.tblwrap{ background:var(--card); border:1px solid var(--line); border-radius:14px;
-           overflow:hidden; }
-.tblscroll{ max-height:480px; overflow-y:auto; }
-table{ width:100%; border-collapse:collapse; font-size:14px; }
-thead th{ position:sticky; top:0; background:var(--card); z-index:1;
-           font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--mut);
-           text-align:left; padding:12px 16px; border-bottom:1px solid var(--line); }
-tbody td{ padding:10px 16px; border-bottom:1px solid var(--line); }
-tbody tr:last-child td{ border-bottom:none; }
-td.sym{ font-weight:600; }
-td.sym a{ color:inherit; text-decoration:none; border-bottom:1px dotted var(--mut); }
-td.sym a:hover{ border-bottom-style:solid; }
-.chain{ display:block; font-size:11px; color:var(--mut); font-weight:400; margin-top:2px; }
-td.num{ text-align:right; font-weight:600; }
-th.num{ text-align:right; }
-.st{ display:inline-block; font-size:11px; font-weight:700; letter-spacing:0.04em;
-      padding:3px 10px; border-radius:999px; }
-.st-sl{ color:var(--dn); background:#fef2f2; border:1px solid #fecaca; }
-.st-tp{ color:var(--up); background:#f0fdf4; border:1px solid #bbf7d0; }
-.st-open{ color:var(--mut); background:#f9fafb; border:1px solid var(--line); }
-.empty{ text-align:center; color:var(--mut); padding:32px !important; }
-
-footer{ color:var(--mut); font-size:12px; margin-top:20px; line-height:1.6; }
-
-@media (max-width:640px){
-  .hero .eq{ font-size:34px; }
-  .stat{ min-width:44%; border-left:none; border-top:1px solid var(--line); }
-  .stat:nth-child(-n+2){ border-top:none; }
-  .stat:nth-child(even){ border-left:1px solid var(--line); }
-  .tblscroll{ overflow-x:auto; }
-  table{ min-width:420px; }
+:root{ --bg:#0b0d10; --panel:#101318; --line:#1c2128; --txt:#c9d1d9;
+        --dim:#6e7681; --up:#00e07a; --dn:#ff4d5e; }
+*{ box-sizing:border-box; }
+body{ background:var(--bg); color:var(--txt); margin:0; padding:14px;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:13px; }
+.num{ font-variant-numeric:tabular-nums; }
+.term{ max-width:1380px; margin:0 auto; }
+/* top bar */
+.topbar{ display:flex; justify-content:space-between; align-items:center;
+          border:1px solid var(--line); background:var(--panel);
+          padding:10px 14px; }
+.brand{ font-weight:700; letter-spacing:0.06em; }
+.brand .tag{ display:inline-block; border:1px solid var(--line); color:var(--dim);
+              font-size:10px; padding:2px 8px; margin-left:10px; letter-spacing:0.14em; }
+.live{ display:flex; align-items:center; gap:8px; color:var(--dim); font-size:11px; }
+.topright{ display:flex; align-items:center; gap:14px; }
+.backbtn{ color:var(--dim); text-decoration:none; font-size:11px; border:1px solid var(--line);
+  padding:4px 10px; border-radius:6px; }
+.backbtn:hover{ color:var(--txt); border-color:var(--txt); }
+.dot{ width:8px; height:8px; border-radius:50%; background:var(--up);
+       animation:blink 1.6s infinite; }
+@keyframes blink{ 0%,100%{opacity:1} 50%{opacity:0.25} }
+/* stage tabs */
+.stagetabs{ display:flex; border:1px solid var(--line); border-top:0; background:var(--panel); }
+.stagetabs a{ flex:1; text-align:center; padding:9px; font-size:11px; letter-spacing:0.12em;
+               color:var(--dim); text-decoration:none; border-right:1px solid var(--line); }
+.stagetabs a:last-child{ border-right:0; }
+.stagetabs a.on{ color:var(--txt); background:#161b22; font-weight:700; }
+.stagetabs a:hover{ color:var(--txt); }
+/* mission strip */
+.mission{ border:1px solid var(--line); border-top:0; background:var(--panel);
+           padding:8px 14px; font-size:11px; color:var(--dim); line-height:1.6; }
+.mission b{ color:var(--txt); letter-spacing:0.1em; }
+/* quote bar */
+.quotes{ display:grid; grid-template-columns:repeat(5,1fr);
+          border:1px solid var(--line); border-top:0; background:var(--panel); }
+.q{ padding:10px 14px; border-right:1px solid var(--line); }
+.q:last-child{ border-right:0; }
+.ql{ font-size:10px; color:var(--dim); letter-spacing:0.12em; margin-bottom:4px; }
+.qv{ font-size:16px; font-weight:700; }
+/* main grid */
+.main{ display:grid; grid-template-columns:1fr 300px; gap:0; margin-top:14px; }
+.panel{ border:1px solid var(--line); background:var(--panel); }
+.phead{ display:flex; justify-content:space-between; align-items:center;
+         padding:9px 14px; border-bottom:1px solid var(--line);
+         font-size:11px; letter-spacing:0.12em; color:var(--dim); }
+.chart-panel{ border-right:0; }
+.ranges{ display:flex; gap:6px; }
+.ranges button{ background:transparent; border:1px solid var(--line); color:var(--dim);
+                 font:inherit; font-size:11px; padding:3px 10px; cursor:pointer; }
+.ranges button[aria-pressed="true"]{ background:#1c2128; color:var(--txt);
+                 border-color:#2d333b; }
+.chart{ padding:6px 4px 2px; }
+.stats{ padding:4px 0; }
+.sr{ display:flex; justify-content:space-between; padding:9px 14px;
+      border-bottom:1px solid var(--line); font-size:12px; }
+.sr:last-child{ border-bottom:0; }
+.sr span:first-child{ color:var(--dim); letter-spacing:0.08em; font-size:11px; }
+.sysline{ margin-top:14px; }
+.sysline .pbody{ padding:10px 14px; font-size:11px; color:var(--dim); line-height:1.8; }
+/* positions */
+.pospanel{ margin-top:14px; }
+.tabs{ display:flex; gap:0; border-bottom:1px solid var(--line); }
+.tabs button{ background:transparent; border:0; border-right:1px solid var(--line);
+               color:var(--dim); font:inherit; font-size:11px; letter-spacing:0.12em;
+               padding:10px 18px; cursor:pointer; }
+.tabs button[aria-pressed="true"]{ color:var(--txt); background:#161b22;
+               box-shadow:inset 0 -2px 0 var(--up); }
+.tblwrap{ overflow-x:auto; }
+table{ width:100%; border-collapse:collapse; font-size:12px; }
+th{ text-align:left; font-size:10px; letter-spacing:0.12em; color:var(--dim);
+     font-weight:400; padding:8px 14px; border-bottom:1px solid var(--line); }
+th.r, td.r{ text-align:right; }
+td{ padding:8px 14px; border-bottom:1px solid #14181d; }
+tr:hover td{ background:#131820; }
+td.sym a{ color:var(--txt); text-decoration:none; font-weight:700; }
+td.sym a:hover{ text-decoration:underline; }
+.st-sl{ color:var(--dn); } .st-tp{ color:var(--up); } .st-open{ color:var(--dim); }
+.empty{ text-align:center; color:var(--dim); padding:22px; }
+/* footer */
+.foot{ margin-top:14px; border:1px solid var(--line); background:var(--panel);
+        padding:10px 14px; font-size:11px; color:var(--dim); line-height:1.7; }
+.foot b{ color:var(--txt); letter-spacing:0.1em; }
+@media (max-width:900px){
+  .main{ grid-template-columns:1fr; }
+  .chart-panel{ border-right:1px solid var(--line); border-bottom:0; }
+  .quotes{ grid-template-columns:repeat(2,1fr); }
+  .q{ border-bottom:1px solid var(--line); }
+}
+@media (max-width:600px){
+  body{ padding:8px; font-size:12px; }
+  .topbar{ flex-wrap:wrap; gap:8px; padding:8px 10px; }
+  .brand{ font-size:12px; }
+  .brand .tag{ font-size:9px; margin-left:6px; }
+  .topright{ gap:8px; }
+  .live{ font-size:10px; }
+  .backbtn{ font-size:10px; padding:3px 8px; }
+  .mission{ font-size:10px; padding:8px 10px; }
+  .qv{ font-size:14px; }
+  .q{ padding:8px 10px; }
+  table{ font-size:11px; }
+  th, td{ padding:6px 8px; }
+  .tabs button{ padding:8px 12px; font-size:10px; }
+  .phead{ padding:8px 10px; }
+  .sr{ padding:7px 10px; font-size:11px; }
+  .foot{ font-size:10px; padding:8px 10px; }
+  .sysline .pbody{ padding:8px 10px; }
 }
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="term">
 
-<header>
-  <h1>$500 Memecoin Challenge</h1>
-  <p>Paper trade 100% simulasi. Alokasi tetap $10 per token dari pool $500.
-     Strategi B: stop loss -25%, TP parsial saat +100% lalu sisa dibiarkan jalan.</p>
-</header>
+  <div class="topbar">
+    <div class="brand">WAGINEM <span style="color:var(--dim)">vs</span> MEMECOIN<span class="tag">$500 PAPER CHALLENGE</span></div>
+    <div class="topright"><a class="backbtn" href="https://chospace.github.io/">&larr; /chospace</a><div class="live"><span class="dot" style=" "></span>SIM &middot; 13 Oct 2026 08:36 WIB</div></div>
+  </div>
 
-<p class="disclaimer"><b>Disclaimer:</b> eksperimen bot paper-trading memecoin. 100% simulasi,
-  nggak ada uang beneran yang dipertaruhkan di sini. Angka sudah dipotong estimasi fee +
-  slippage 2%/sisi biar realistis, tapi psikologi dan eksekusi di dunia nyata nggak bisa
-  disimulasikan. Bukan saran finansial. Memecoin bisa bikin rugi 100%.</p>
+  <div class="stagetabs">
+    <a href="/memecoin-challenge/" class="on">🚀 STAGE 2 · ⭐ ONLY</a><a href="/memecoin-challenge/stage1.html" class="">📦 STAGE 1 · ARSIP</a><a href="/memecoin-challenge/stage3.html">🔜 STAGE 3 · WALLET</a>
+  </div>
 
-<section class="hero" aria-label="Ringkasan equity">
-  <div class="lbl">Equity challenge</div>
-  <div class="eq num" style="color:#dc2626">$381.28</div>
-  <div class="delta num" style="color:#dc2626">$-118.72 (-23.7% dari pool)</div>
-  <div class="sub2">Pool awal $500. Return dihitung terhadap pool, bukan total alokasi.<br>
-  Cash = pool dikurangi modal terpakai ($10 x posisi open). Runner TP1 = house money, modalnya sudah kembali ke cash.<br>
-  Sejak 11 Okt 2026: net dipotong estimasi fee+slippage 2%/sisi; token unsellable dihitung rugi -$10.</div>
-</section>
+  <div class="mission"><b>MISI</b> &mdash; Cho nyuruh Waginem cari metode trading memecoin yang beneran jalan.<br>  Caranya: paper trade se-realistis mungkin (fee, slippage, cash terbatas kayak dompet beneran).<br>  Tiap sinyal dicatat asalnya (⭐ sinyal ganda), tiap metode dinilai dari data.<br>  Yang buntung dibuang, yang cuan diterusin &mdash; biar yang rugi cuma angka di layar, bukan uang beneran. 😅</div>
 
-<section class="stats" aria-label="Statistik posisi">
-  <div class="stat"><div class="k">Posisi</div><div class="v num">127</div></div>
-  <div class="stat"><div class="k">TP1 kena</div><div class="v num" style="color:#15803d">10</div></div>
-  <div class="stat"><div class="k">SL kena</div><div class="v num" style="color:#dc2626">79</div></div>
-  <div class="stat"><div class="k">Open</div><div class="v num">37</div></div>
-  <div class="stat"><div class="k">Cash</div><div class="v num">$327.30</div></div>
-  <div class="stat"><div class="k">Terpakai</div><div class="v num">$370</div></div>
-  <div class="stat"><div class="k">Win rate</div><div class="v num">11%</div></div>
-</section>
+  <div class="quotes"><div class="q"><div class="ql">EQUITY</div><div class="qv num" style="color:#00e07a">$381.28</div></div><div class="q"><div class="ql">NET P&L</div><div class="qv num" style="color:#00e07a">+$3.98 (+1.1%)</div></div><div class="q"><div class="ql">CASH</div><div class="qv num">$327.30</div></div><div class="q"><div class="ql">OPEN P&L</div><div class="qv num" style="color:#00e07a">+$3.98</div></div><div class="q"><div class="ql">POSITIONS</div><div class="qv num">5</div></div></div>
 
-<section class="mscore" aria-label="Skor per metode">
-  <div class="mk">Skor metode</div>
-  <div class="ms"><span>🔥 APED <b>×118</b></span><span class="num" style="color:#dc2626">-131.44</span><span class="num">WR 10%</span></div><div class="ms"><span>⭐ GANDA <b>×9</b></span><span class="num" style="color:#15803d">+12.72</span><span class="num">WR 33%</span></div>
-</section>
-
-<section class="chart" aria-label="Equity curve">
-  <h2>Equity curve</h2>
-  <p class="cap">Net P&amp;L per jam, dalam USD. Arahkan kursor ke titik untuk detail.</p>
-  <svg viewBox="0 0 960 260" role="img" aria-label="Grafik net P&L per jam">
-    <line x1="44" y1="216.0" x2="916" y2="216.0" stroke="#e5e7eb" stroke-width="1"/><text x="38" y="219.0" font-size="10" fill="#9ca3af" text-anchor="end">$-126</text><line x1="44" y1="108.8" x2="916" y2="108.8" stroke="#e5e7eb" stroke-width="1"/><text x="38" y="111.8" font-size="10" fill="#9ca3af" text-anchor="end">$+0</text><line x1="44" y1="44.0" x2="916" y2="44.0" stroke="#e5e7eb" stroke-width="1"/><text x="38" y="47.0" font-size="10" fill="#9ca3af" text-anchor="end">$+76</text>
-    <path d="M 44.0,122.7 L 57.8,105.0 L 71.7,70.1 L 85.5,71.3 L 99.4,97.9 L 113.2,98.6 L 127.0,98.3 L 140.9,110.9 L 154.7,98.8 L 168.6,72.3 L 182.4,94.1 L 196.3,81.6 L 210.1,80.4 L 223.9,69.5 L 237.8,82.1 L 251.6,64.7 L 265.5,44.0 L 279.3,50.3 L 293.1,61.6 L 307.0,93.1 L 320.8,120.5 L 334.7,109.6 L 348.5,125.8 L 362.3,126.9 L 376.2,143.1 L 390.0,153.8 L 403.9,169.3 L 417.7,173.4 L 431.6,178.3 L 445.4,193.8 L 459.2,198.1 L 473.1,198.6 L 486.9,202.3 L 500.8,210.3 L 514.6,211.9 L 528.4,216.0 L 542.3,209.2 L 556.1,213.5 L 570.0,213.5 L 583.8,108.8 L 597.7,108.8 L 611.5,108.8 L 625.3,108.8 L 639.2,108.8 L 653.0,108.8 L 666.9,108.8 L 680.7,108.8 L 694.5,108.8 L 708.4,108.8 L 722.2,108.8 L 736.1,108.8 L 749.9,108.8 L 763.7,108.8 L 777.6,108.8 L 791.4,108.8 L 805.3,108.8 L 819.1,108.8 L 833.0,108.8 L 846.8,108.8 L 860.6,108.8 L 874.5,108.8 L 888.3,108.8 L 902.2,108.8 L 916.0,105.4 L 916.0,216 L 44.0,216 Z" fill="#dc2626" opacity="0.08"/>
-    <path d="M 44.0,122.7 L 57.8,105.0 L 71.7,70.1 L 85.5,71.3 L 99.4,97.9 L 113.2,98.6 L 127.0,98.3 L 140.9,110.9 L 154.7,98.8 L 168.6,72.3 L 182.4,94.1 L 196.3,81.6 L 210.1,80.4 L 223.9,69.5 L 237.8,82.1 L 251.6,64.7 L 265.5,44.0 L 279.3,50.3 L 293.1,61.6 L 307.0,93.1 L 320.8,120.5 L 334.7,109.6 L 348.5,125.8 L 362.3,126.9 L 376.2,143.1 L 390.0,153.8 L 403.9,169.3 L 417.7,173.4 L 431.6,178.3 L 445.4,193.8 L 459.2,198.1 L 473.1,198.6 L 486.9,202.3 L 500.8,210.3 L 514.6,211.9 L 528.4,216.0 L 542.3,209.2 L 556.1,213.5 L 570.0,213.5 L 583.8,108.8 L 597.7,108.8 L 611.5,108.8 L 625.3,108.8 L 639.2,108.8 L 653.0,108.8 L 666.9,108.8 L 680.7,108.8 L 694.5,108.8 L 708.4,108.8 L 722.2,108.8 L 736.1,108.8 L 749.9,108.8 L 763.7,108.8 L 777.6,108.8 L 791.4,108.8 L 805.3,108.8 L 819.1,108.8 L 833.0,108.8 L 846.8,108.8 L 860.6,108.8 L 874.5,108.8 L 888.3,108.8 L 902.2,108.8 L 916.0,105.4" fill="none" stroke="#dc2626" stroke-width="2"/>
-    <circle cx="44.0" cy="122.7" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>10 Oct 23:00: $-16.37 net (31 posisi)</title></circle><circle cx="57.8" cy="105.0" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 00:05: $+4.40 net (32 posisi)</title></circle><circle cx="71.7" cy="70.1" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 00:55: $+45.30 net (33 posisi)</title></circle><circle cx="85.5" cy="71.3" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 01:55: $+43.89 net (35 posisi)</title></circle><circle cx="99.4" cy="97.9" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 02:55: $+12.72 net (36 posisi)</title></circle><circle cx="113.2" cy="98.6" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 05:54: $+11.84 net (43 posisi)</title></circle><circle cx="127.0" cy="98.3" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 06:54: $+12.30 net (46 posisi)</title></circle><circle cx="140.9" cy="110.9" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 07:55: $-2.55 net (49 posisi)</title></circle><circle cx="154.7" cy="98.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 08:56: $+11.61 net (54 posisi)</title></circle><circle cx="168.6" cy="72.3" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 09:55: $+42.73 net (62 posisi)</title></circle><circle cx="182.4" cy="94.1" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 10:55: $+17.19 net (65 posisi)</title></circle><circle cx="196.3" cy="81.6" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 11:55: $+31.86 net (68 posisi)</title></circle><circle cx="210.1" cy="80.4" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 12:55: $+33.19 net (73 posisi)</title></circle><circle cx="223.9" cy="69.5" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 13:55: $+46.05 net (76 posisi)</title></circle><circle cx="237.8" cy="82.1" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 14:55: $+31.20 net (79 posisi)</title></circle><circle cx="251.6" cy="64.7" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 15:55: $+51.66 net (81 posisi)</title></circle><circle cx="265.5" cy="44.0" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 16:55: $+75.88 net (85 posisi)</title></circle><circle cx="279.3" cy="50.3" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 17:55: $+68.53 net (89 posisi)</title></circle><circle cx="293.1" cy="61.6" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 18:43: $+55.30 net (89 posisi)</title></circle><circle cx="307.0" cy="93.1" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 19:55: $+18.29 net (92 posisi)</title></circle><circle cx="320.8" cy="120.5" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 20:55: $-13.80 net (94 posisi)</title></circle><circle cx="334.7" cy="109.6" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 21:55: $-1.03 net (96 posisi)</title></circle><circle cx="348.5" cy="125.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 22:43: $-19.95 net (98 posisi)</title></circle><circle cx="362.3" cy="126.9" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>11 Oct 23:45: $-21.21 net (101 posisi)</title></circle><circle cx="376.2" cy="143.1" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 00:57: $-40.21 net (104 posisi)</title></circle><circle cx="390.0" cy="153.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 01:42: $-52.78 net (106 posisi)</title></circle><circle cx="403.9" cy="169.3" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 02:55: $-71.01 net (107 posisi)</title></circle><circle cx="417.7" cy="173.4" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 03:55: $-75.73 net (108 posisi)</title></circle><circle cx="431.6" cy="178.3" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 04:27: $-81.50 net (109 posisi)</title></circle><circle cx="445.4" cy="193.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 05:56: $-99.65 net (109 posisi)</title></circle><circle cx="459.2" cy="198.1" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 06:33: $-104.69 net (110 posisi)</title></circle><circle cx="473.1" cy="198.6" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 07:15: $-105.26 net (111 posisi)</title></circle><circle cx="486.9" cy="202.3" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 07:55: $-109.57 net (113 posisi)</title></circle><circle cx="500.8" cy="210.3" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 08:45: $-119.00 net (113 posisi)</title></circle><circle cx="514.6" cy="211.9" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 09:15: $-120.82 net (117 posisi)</title></circle><circle cx="528.4" cy="216.0" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 09:55: $-125.68 net (118 posisi)</title></circle><circle cx="542.3" cy="209.2" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 10:45: $-117.68 net (118 posisi)</title></circle><circle cx="556.1" cy="213.5" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 11:15: $-122.70 net (122 posisi)</title></circle><circle cx="570.0" cy="213.5" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 11:55: $-122.70 net (122 posisi)</title></circle><circle cx="583.8" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 12:45: $+0.00 net (0 posisi)</title></circle><circle cx="597.7" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 13:45: $+0.00 net (0 posisi)</title></circle><circle cx="611.5" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 14:45: $+0.00 net (0 posisi)</title></circle><circle cx="625.3" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 15:45: $+0.00 net (0 posisi)</title></circle><circle cx="639.2" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 16:15: $+0.00 net (0 posisi)</title></circle><circle cx="653.0" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 16:45: $+0.00 net (0 posisi)</title></circle><circle cx="666.9" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 17:45: $+0.00 net (0 posisi)</title></circle><circle cx="680.7" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 18:15: $+0.00 net (0 posisi)</title></circle><circle cx="694.5" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 18:45: $+0.00 net (0 posisi)</title></circle><circle cx="708.4" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 19:15: $+0.00 net (0 posisi)</title></circle><circle cx="722.2" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 19:45: $+0.00 net (0 posisi)</title></circle><circle cx="736.1" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 20:45: $+0.00 net (0 posisi)</title></circle><circle cx="749.9" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 21:45: $+0.00 net (0 posisi)</title></circle><circle cx="763.7" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 22:15: $+0.00 net (0 posisi)</title></circle><circle cx="777.6" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 22:55: $+0.00 net (0 posisi)</title></circle><circle cx="791.4" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>12 Oct 23:56: $+0.00 net (0 posisi)</title></circle><circle cx="805.3" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>13 Oct 00:56: $+0.00 net (0 posisi)</title></circle><circle cx="819.1" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>13 Oct 01:56: $+0.00 net (0 posisi)</title></circle><circle cx="833.0" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>13 Oct 02:56: $+0.00 net (0 posisi)</title></circle><circle cx="846.8" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>13 Oct 03:55: $+0.00 net (0 posisi)</title></circle><circle cx="860.6" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>13 Oct 04:55: $+0.00 net (0 posisi)</title></circle><circle cx="874.5" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>13 Oct 05:58: $+0.00 net (0 posisi)</title></circle><circle cx="888.3" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>13 Oct 06:56: $+0.00 net (0 posisi)</title></circle><circle cx="902.2" cy="108.8" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>13 Oct 07:57: $+0.00 net (0 posisi)</title></circle><circle cx="916.0" cy="105.4" r="3.5" fill="#dc2626" fill-opacity="0.85"><title>13 Oct 08:32: $+3.98 net (5 posisi)</title></circle>
-    <text x="44.0" y="246" font-size="10" fill="#9ca3af" text-anchor="middle">10/10 23:00</text><text x="154.7" y="246" font-size="10" fill="#9ca3af" text-anchor="middle">11/10 08:56</text><text x="265.5" y="246" font-size="10" fill="#9ca3af" text-anchor="middle">11/10 16:55</text><text x="376.2" y="246" font-size="10" fill="#9ca3af" text-anchor="middle">12/10 00:57</text><text x="486.9" y="246" font-size="10" fill="#9ca3af" text-anchor="middle">12/10 07:55</text><text x="597.7" y="246" font-size="10" fill="#9ca3af" text-anchor="middle">12/10 13:45</text><text x="708.4" y="246" font-size="10" fill="#9ca3af" text-anchor="middle">12/10 19:15</text><text x="819.1" y="246" font-size="10" fill="#9ca3af" text-anchor="middle">13/10 01:56</text><text x="916.0" y="246" font-size="10" fill="#9ca3af" text-anchor="middle">13/10 08:32</text>
-  </svg>
-</section>
-
-<section aria-label="Daftar posisi">
-  <div class="tblhead">
-    <h2>Posisi (127)</h2>
-    <div class="filters" role="tablist" aria-label="Filter posisi">
-      <button role="tab" data-f="open" aria-pressed="true" aria-selected="true">Open</button>
-      <button role="tab" data-f="close" aria-pressed="false" aria-selected="false">Close</button>
+  <div class="main">
+    <div class="panel chart-panel">
+      <div class="phead"><span>EQUITY / NET P&amp;L</span>
+        <span class="ranges">
+          <button data-r="24h" aria-pressed="false">24H</button><button data-r="7d" aria-pressed="false">7D</button><button data-r="all" aria-pressed="true">ALL</button>
+        </span>
+      </div>
+      <div class="chart"><svg id="chart" viewBox="0 0 900 260" preserveAspectRatio="none" style="width:100%;height:260px;display:block"></svg></div>
+    </div>
+    <div>
+      <div class="panel stats">
+        <div class="phead"><span>ACCOUNT STATS</span></div>
+        <div class="sr"><span>WIN RATE</span><span class="num" style="color:#e8e8ea">0.0%</span></div><div class="sr"><span>TP1 HIT</span><span class="num" style="color:#00e07a">0</span></div><div class="sr"><span>STOP LOSS</span><span class="num" style="color:#ff4d5e">0</span></div><div class="sr"><span>OPEN</span><span class="num">5</span></div><div class="sr"><span>CLOSED</span><span class="num">0</span></div><div class="sr"><span>POOL</span><span class="num">$377.30</span></div>
+      </div>
+      <div class="panel stats" style="margin-top:14px">
+        <div class="phead"><span>METHOD SCORE</span></div>
+        <div class="sr"><span>🔥 APED</span><span class="num">×0 <span style="color:#00e07a">+0.00</span> WR 0%</span></div><div class="sr"><span>⭐ GANDA</span><span class="num">×5 <span style="color:#00e07a">+3.98</span> WR 0%</span></div>
+      </div>
+      <div class="panel sysline">
+        <div class="phead"><span>SYSTEM</span></div>
+        <div class="pbody">STRAT B &middot; SL -25% / TP +100%<br>
+        RISK $10/token &middot; POOL $377.30<br>
+        FEE+SLIP est 2%/side</div>
+      </div>
     </div>
   </div>
-  <div class="tblwrap"><div class="tblscroll">
-    <table>
-      <thead><tr><th>Token</th><th class="num">P&L $</th><th class="num">Return</th><th>Status</th></tr></thead>
-      <tbody id="rows"><tr data-kind="tp1"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0x7d5b748519957f51620c1aa07ce1c091abbc62ec566ba8ec9cf1a32e54c21585" target="_blank" rel="noopener">STAMP</a></td><td class="num" style="color:#15803d">+16.61</td><td class="num" style="color:#15803d">+240.3%</td><td><span class="st st-tp">TP1</span></td></tr><tr data-kind="tp1"><td class="sym">⭐ <a href="https://dexscreener.com/robinhood/0x0ce22b6206cf4c9223e765629445f91b91f39b2cbfdd83871dc6720c498d43de" target="_blank" rel="noopener">CLAUDIA</a></td><td class="num" style="color:#15803d">+14.64</td><td class="num" style="color:#15803d">+200.8%</td><td><span class="st st-tp">TP1</span></td></tr><tr data-kind="tp1"><td class="sym">🔥 <a href="https://dexscreener.com/solana/asuibk8bpqvknitk6gs2zqqc5hyvwjg9thdppr15vspp" target="_blank" rel="noopener">STRKT</a></td><td class="num" style="color:#15803d">+10.55</td><td class="num" style="color:#15803d">+119.0%</td><td><span class="st st-tp">TP1</span></td></tr><tr data-kind="tp1"><td class="sym">🔥 <a href="https://dexscreener.com/solana/himwcpmnfpangziakgwdpwxumh7qrymxeb79sb1qphvf" target="_blank" rel="noopener">CHAVA</a></td><td class="num" style="color:#15803d">+10.53</td><td class="num" style="color:#15803d">+118.5%</td><td><span class="st st-tp">TP1</span></td></tr><tr data-kind="tp1"><td class="sym">🔥 <a href="https://dexscreener.com/solana/gfjzaretaerqxwg53j8zpq5vxffz6fmtchxerj3mvsa9" target="_blank" rel="noopener">trenchcat</a></td><td class="num" style="color:#15803d">+10.15</td><td class="num" style="color:#15803d">+111.0%</td><td><span class="st st-tp">TP1</span></td></tr><tr data-kind="tp1"><td class="sym">🔥 <a href="https://dexscreener.com/solana/12jc1dzjpzbcdakum4brakh9jcfry2tlg1ffgsl4ftcg" target="_blank" rel="noopener">SI276</a></td><td class="num" style="color:#15803d">+9.88</td><td class="num" style="color:#15803d">+105.7%</td><td><span class="st st-tp">TP1</span></td></tr><tr data-kind="tp1"><td class="sym">🔥 <a href="https://dexscreener.com/solana/hbmj67p4xglex7j7jw1igrxyf6zaa2kisr7utkmkztam" target="_blank" rel="noopener">wifpumpkin</a></td><td class="num" style="color:#15803d">+9.70</td><td class="num" style="color:#15803d">+102.0%</td><td><span class="st st-tp">TP1</span></td></tr><tr data-kind="tp1"><td class="sym">🔥 <a href="https://dexscreener.com/solana/eok2exsl1yysnysqfsm7hwlbhw5sktt1ungkn6p6texc" target="_blank" rel="noopener">Nala</a></td><td class="num" style="color:#15803d">+8.27</td><td class="num" style="color:#15803d">+73.5%</td><td><span class="st st-tp">TP1</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/8u8s25mbused5bmaali6xsp2mpurw8qatrs6h2zp2z7j" target="_blank" rel="noopener">NOKI</a></td><td class="num" style="color:#15803d">+5.48</td><td class="num" style="color:#15803d">+56.8%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/56a6dyhpkj1r5yw57ba4uylc2qqprguvbst3pbasrpw" target="_blank" rel="noopener">KILOS</a></td><td class="num" style="color:#15803d">+5.47</td><td class="num" style="color:#15803d">+56.7%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="tp1"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0x151a2d919c2e04133c6214f4be6b9edb8e9efffdce334a7ba6c3bc79310c0999" target="_blank" rel="noopener">uGold</a></td><td class="num" style="color:#15803d">+7.01</td><td class="num" style="color:#15803d">+48.3%</td><td><span class="st st-tp">TP1</span></td></tr><tr data-kind="open"><td class="sym">⭐ <a href="https://dexscreener.com/robinhood/0xc0bef5a7be0427ff126661b2c3cd0f711c979b3f" target="_blank" rel="noopener">3RDI</a></td><td class="num" style="color:#15803d">+3.97</td><td class="num" style="color:#15803d">+41.7%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="tp1"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0xe96c99be1ffcc204714ebce32870ab12b8b362308fa50b9352c03b2486a5d448" target="_blank" rel="noopener">GIGATENEV</a></td><td class="num" style="color:#15803d">+6.27</td><td class="num" style="color:#15803d">+33.4%</td><td><span class="st st-tp">TP1</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/cnvst3suymo1gfygnangygpqhwtnzzmb59wyyzqf1nvj" target="_blank" rel="noopener">SEAN</a></td><td class="num" style="color:#15803d">+1.82</td><td class="num" style="color:#15803d">+20.2%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">⭐ <a href="https://dexscreener.com/robinhood/0xc375fd076ba87dea254134c69c7fb42f072aa531" target="_blank" rel="noopener">hi</a></td><td class="num" style="color:#15803d">+1.41</td><td class="num" style="color:#15803d">+16.1%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/5a7qurjlart146jajjype5nh6vlyfpn2qrhuslqbsczy" target="_blank" rel="noopener">GOMO</a></td><td class="num" style="color:#15803d">+1.15</td><td class="num" style="color:#15803d">+13.5%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/89dxsak1yzx8tbpapmssegkedhyuhybo26bytgelrjbd" target="_blank" rel="noopener">Solamians</a></td><td class="num" style="color:#15803d">+1.07</td><td class="num" style="color:#15803d">+12.7%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/5xhpqpbpuetpshdvupmzeea66x24i2af6qsm9hwq1zou" target="_blank" rel="noopener">SPACEXSI</a></td><td class="num" style="color:#15803d">+0.30</td><td class="num" style="color:#15803d">+5.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="&quot;https://dexscreener.com/solana/bow9h5gbqdnr55fke3vhdzngplanzmyky1eiqmx1drlz&quot;" target="_blank" rel="noopener">FIGHT</a></td><td class="num" style="color:#15803d">+0.21</td><td class="num" style="color:#15803d">+4.1%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">⭐ <a href="https://dexscreener.com/robinhood/0xbd168eeb83cfc89d1b66bdcbb5d7d9b391ed3b6034dfc8e3bd6556ff4ee14a00" target="_blank" rel="noopener">¥</a></td><td class="num" style="color:#15803d">+0.13</td><td class="num" style="color:#15803d">+3.3%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">⭐ <a href="https://dexscreener.com/solana/9pqrnahbkjd61kys2k4fenlcpvai5hu5jbmbesunhljz" target="_blank" rel="noopener">HUMPH</a></td><td class="num" style="color:#15803d">+0.04</td><td class="num" style="color:#15803d">+2.4%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/eo6ltjtssu8shstnduad8bxkpa33jua1bkr4jalvy4bf" target="_blank" rel="noopener">HAZEPAD</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/dzxerxhehzs5teexusapxlnc52guftdc8a4rwbngfgi5" target="_blank" rel="noopener">QUBE</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/heajeowzhypeggk2w3rbrpg66jzhvhmb33s9o2gleedu" target="_blank" rel="noopener">Memeology</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/3yrarkeebkhqzbuaeunlb9khqrhftdbquqerluds4hvg" target="_blank" rel="noopener">FUNDICO</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">⭐ <a href="https://dexscreener.com/solana/fue2nmep8ynprvbwfeadwh1pa427k9vpctrvziqboaqt" target="_blank" rel="noopener">TWITCHY</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/5zkimsx6pst7nd3xnamh5azulurvj1rccxf1nxntch1d" target="_blank" rel="noopener">ELONHOUSE</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/c8jhqqkqzdvhbjbbrtdsnkfbyfubnkia99y8gbv785y" target="_blank" rel="noopener">Dexter</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/gbiekeeeh5u5sbzhbgptpnz9x1q4snv5mqfjmvt1el5z" target="_blank" rel="noopener">sweep</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/gxscmw4geqqsmsmdsfcdmrbdsmstaw4abhlsn7jn9ul" target="_blank" rel="noopener">GLYPH8192</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/6rhhtsv9xqhv2fjkvpkkez4pzydtukusfbzq4cc7qiwo" target="_blank" rel="noopener">Animates</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/e35kcvqx9zg6s77uurxpd12xuun58ax1nrssr4ahehbo" target="_blank" rel="noopener">Q</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/4fmhhtspp2emajgtggewucomwzba2pawh7hm44xjp2ng" target="_blank" rel="noopener">YILONG</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/7jwdmautbkpmqzcngftq1cmmrkactyhm2a2wju6qtwvw" target="_blank" rel="noopener">ZNT</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/dyuk6jcrhbcezexcspr3oqs814tj32e8utfikkawr3ry" target="_blank" rel="noopener">VENTART</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/7zaqetuu9sxyabpytj2skggskgqhvboajqspjyasyfsg" target="_blank" rel="noopener">PIXEL</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/j9zuckx2f6uqmdtxbys5rgsramxssrjn7j33w9c6bwi2" target="_blank" rel="noopener">WILSON</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/7dfh5marc9anvzsqgydwebvqxmtnrtyalszxknfkd7ck" target="_blank" rel="noopener">WEDNESDAY</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/fvakse41dfftodpmthfesxqrxxgzyqr8ueyba5s8yekf" target="_blank" rel="noopener">POOKIE</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/9cw9epgqi98tgpnyeirfcshtt5nnm9ybafyksfh7c5x7" target="_blank" rel="noopener">9LIVES</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/ejkftneb1h9sdm2xnblemo32mixzk2iyhbcw93vsznso" target="_blank" rel="noopener">BATONSEM</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/9ffqew6e5ff9vxqyt1xmzyd5otl9kqbemqphrttkfqrm" target="_blank" rel="noopener">oracle</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/88vpcvd7w2masijkyvrrjprph1hazz62shhpfeco2yy3" target="_blank" rel="noopener">TOPCAT</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="&quot;https://dexscreener.com/solana/8i5ypkux8xuua92nuabuavbzsqle5a6pvrsxwoj4uryt&quot;" target="_blank" rel="noopener">Sniff</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="&quot;https://dexscreener.com/solana/3fsbqrsguamn25jtn5puk3fsmr82anvmer6oh6a4wgkp&quot;" target="_blank" rel="noopener">MONKEY</a></td><td class="num" style="color:#9ca3af">-0.20</td><td class="num" style="color:#9ca3af">+0.0%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">⭐ <a href="https://dexscreener.com/robinhood/0x757b8fd4096357462f0810c76f4289100a978a90c759e33409c5f7d5ade610dd" target="_blank" rel="noopener">FORGE</a></td><td class="num" style="color:#dc2626">-1.57</td><td class="num" style="color:#dc2626">-13.7%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="open"><td class="sym">🔥 <a href="https://dexscreener.com/solana/c8jetu5lgpgcdd6pcnhb8rpho92jfr9s3ryk1dtfz7qq" target="_blank" rel="noopener">CLAUDIAPHIL</a></td><td class="num" style="color:#dc2626">-1.66</td><td class="num" style="color:#dc2626">-14.6%</td><td><span class="st st-open">Open</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/7f7q1oktpuyg7oyyhxzauszcnmkhri18bxbvx7dhazpb" target="_blank" rel="noopener">qOMPUTE</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/25fp3tvcfebae48b61fgczuejd1bpa3g4xr51kacgk1e" target="_blank" rel="noopener">CHOCOBEAR</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/3yvse13tvnjkmildmrcbophy5b12ppprd9g8xgsbpnf1" target="_blank" rel="noopener">WALTER</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/bjzufbcm6dgaeu6nswry8pezpazse2uhg7yoe4cjzhgi" target="_blank" rel="noopener">UNITS</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/gma1qtoljhrozhod4bjw5ee9joejq7zjstadmvfsibve" target="_blank" rel="noopener">SEED</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/aejzg6fnhrds8atnytos3cpzzmqredy5tkm1yjtviec" target="_blank" rel="noopener">Jef</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/cza9oelwkydbgxrpzib9yhe6zefpqwqdrzbr6go8ya9f" target="_blank" rel="noopener">TRUMPCAT</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/21v4gsasnlqwlxynwtqldpwlzvsykaxfjdokfyrrbp5s" target="_blank" rel="noopener">SDR</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/8woxvtt58skfbxbp8e7b9jebt3usf6yynfjfkrb9agfd" target="_blank" rel="noopener">ONBOARD</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/9fmswr8ztffbgngrwlesmjn1fo4y71ukb1n28uz6uahx" target="_blank" rel="noopener">MogCat</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/2wbcpwmbor8qgk7dcttxxfhverqvjcy2jtv2sr4xfgrf" target="_blank" rel="noopener">Q/ACC</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/gfvr8p37we8kxgqcrrtxbuxspu4qafenhetf8osee2gw" target="_blank" rel="noopener">ALTERNET</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/38dzkjeqxaguuwsgovmammuqmnboye8ede5k5aqqktul" target="_blank" rel="noopener">COMMIE</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/cb4gfrgeitfu5qtxfrmiqzsavpwgbd3heor4cs2jfpn" target="_blank" rel="noopener">QI</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">⭐ <a href="https://dexscreener.com/solana/gbzrldk9fqzffrdrv9fy1eypfosqbnvz639gcdz4tlcx" target="_blank" rel="noopener">FACTORY</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/3sh3vodtvxt2cmnb9tggn2zhy42uezwkahefrpfftuhg" target="_blank" rel="noopener">SOSI</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/fwm1h5gchxieh2nvyzrccvagtkzgptoxgbzxwbgdvdp" target="_blank" rel="noopener">GSQUAD</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">⭐ <a href="https://dexscreener.com/solana/5sqdmzbb5htmbxdybgktonhgxncewgyyxdfshtdhxtxj" target="_blank" rel="noopener">XNS</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/btececve4gjpckywc9av7etcqcjurokaqam5flznwr4w" target="_blank" rel="noopener">&gt;_</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/4ap3asx8bwjrrpeemkn5wwt8jbdgjuvhnkw6urkjk2zo" target="_blank" rel="noopener">SOL1</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/dvkcuvtrpqk4nt1udjjm42m5tdmsgmaekvaq8pazjzbq" target="_blank" rel="noopener">Pepper</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/594cv4iewzoz8okejdeydwra1trednbpjssrfcwzwtdp" target="_blank" rel="noopener">REELS</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0xd54edaa4a65bb0c1326a9c086da99f30b73e5e8f" target="_blank" rel="noopener">Pepper</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/gbvazyt5u91rhymmbkqrpbjagna6wswhcqf2yk5uj16" target="_blank" rel="noopener">Pepper</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/g3izgdeczcolp6sybtjckmyjfpazpavuti9yn6muuvqp" target="_blank" rel="noopener">patryczek</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/dwarljl1j991qvnkdm32t717os12sfgwnckicbppnyu" target="_blank" rel="noopener">FYP</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/hbgbcs6ay1ntk8dp26cg1uyykzgtz67tgcvnpzqneowl" target="_blank" rel="noopener">brigitte</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/5bgktuidxrl8ew42vfjg5hsyeqcxupciyxv8jhfjjw2b" target="_blank" rel="noopener">BFA</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0x6ed5ed4cfb43d273e7830589fc4be1c0f5bcecddb8c3c46260071a793c20f9ce" target="_blank" rel="noopener">HOODOG</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/3z1bqgbnp2qwkedugbu5bwkfhmte2tkytadtruvh8bqp" target="_blank" rel="noopener">Qiger</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/6ankwj1rczxdhso6yh1xuzyhvls7juyzkv26ywko2fal" target="_blank" rel="noopener">pump.fun</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/fkknxvybrt22bqef9mbmswiw35oig5ion2qmnasfvrat" target="_blank" rel="noopener">QT</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/8gsb3cvazo66paunkudj2yqif7wqid52qzxpjva3ydpy" target="_blank" rel="noopener">TRUMP</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/79wyzs7wwqrmykueuhxverux6zcfkh6lkiwx3cxyo6xe" target="_blank" rel="noopener">CYBERINU</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/bw18dvvbf9agwwzubspszqdhtwmcbw5txhdmg4hjjzgj" target="_blank" rel="noopener">PIGGER</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/fufrwejxx2pgrccmsp1dzutidgrweutyzbgzt9yndn1w" target="_blank" rel="noopener">BUDDY</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/3wrsvksy2ftcsevna1afrk9wz68cdpqgk26whjmvkl5l" target="_blank" rel="noopener">Ollie</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/8wp84g9rsxzjaj1sceewb3oynrxjgkpygpwxrua5gpev" target="_blank" rel="noopener">GEPE</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/ca4ghyolapmim3rgyjzpjesjepnyjeaneuawffmehxej" target="_blank" rel="noopener">ZQI</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/6awgb5upha2jbmdtqdvehkiy7jjazxxxpenzbf9brxsw" target="_blank" rel="noopener">LAUNCHER</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/vjeaskt1hdmbkq6futrz3k3wnjkmxmje7vho1mpgfud" target="_blank" rel="noopener">FRENS</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/ffzkmfub1zcvwk4jtmg2ezue2enfzstzn5etlnxsrhgj" target="_blank" rel="noopener">flyte</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/94tupyk7hinha9fu2nqekfh6jkykx88ntubvqc2v9mab" target="_blank" rel="noopener">SUPMKT</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/4gaj3mmdm2yk41frm7twytuazwvsuzhjh9zndw81qspp" target="_blank" rel="noopener">SUB-01</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/gdfc6qjjzbdzgjtxc9rzpdckyhcrbfbs6dewumznbho2" target="_blank" rel="noopener">SHIBUCKS</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/4dqezuvaizmysj99sbmmtdy4szkd3o8p49myec2x4dg1" target="_blank" rel="noopener">CHROME</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0xa3073ee1926df7ab68a76ffb8165136f9ad3a2f0271af7f51b79441c56504928" target="_blank" rel="noopener">I</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/ar1dmxm6suyktnhtlu42v7bfzkab3jjaf6pyvr2nu1qx" target="_blank" rel="noopener">L3NT1L</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/86pzkuq1lgwgpacrbidp5z92ukvpgz2q888h7rxhjqid" target="_blank" rel="noopener">Fin</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/4ff94gzszrfa7umgttw56yr5hapn2tdkhhyvwgpf3ukp" target="_blank" rel="noopener">TRENCH</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/3c2m8x1f4f7iz3px9rqqzvjf6qeewsgghqtjwibhmxer" target="_blank" rel="noopener">POPI</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/excam9xdp7eyalmluremexdbk1qb5pqwcow1dh2d1bwy" target="_blank" rel="noopener">SI</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/apg2pr5qj42yiqg2gqce9fgw4xrbibrge8g1vgd9rmma" target="_blank" rel="noopener">CINEMA</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/q4yfzxd2afsbwra5k5u2dnkblvstw7kacatr9zdylfn" target="_blank" rel="noopener">BENNY</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/2zehc8flssfby4re58ynpabnke2yztzqvxpsftgngb9a" target="_blank" rel="noopener">CAMELPUMP</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/qccqkrurvgbpd83lbs5itdng8cftkjccbji9nngh4ja" target="_blank" rel="noopener">VOLUMIZER</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0x34b662ad45328a308300978dfbe8328066f3824c93681f36be110e102dc22d21" target="_blank" rel="noopener">BORK</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/53ekt8dv1frwmxwk9aifdasjcdhqtszxxrabdvvcjjsm" target="_blank" rel="noopener">QRP</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0xa3311357133f46d9cc880c3e1e93bc77d8166137" target="_blank" rel="noopener">SWOLF</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/4pcw17c7xcnjjinuvramej8u1cguhmleu3mkqfz218ws" target="_blank" rel="noopener">RPC</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/ezbmncwvj2puzbwqy15nv6vedv468gukvuu8htohj54w" target="_blank" rel="noopener">BTB</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/ajzpex2njcdkoxxq6zextpzfdbig2lhgvtjsxv8u8f7u" target="_blank" rel="noopener">Incognito</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/cwqf2qj1sdymw8ru7v5nxwhl4gqwvlgrwfscyhsz98im" target="_blank" rel="noopener">Goose</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/4quote1mqix6ntmj591m4jajlbnfr3lb2rc6bsluncaz" target="_blank" rel="noopener">SOULJA</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/aqxpyzf4epwlxd3z8ovmabr44p1gcgnwwuqn95n8xsne" target="_blank" rel="noopener">67cat</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0xffd2726a41acfbb828a1140a2c6990e1773b9430" target="_blank" rel="noopener">liquititty</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/6ny9tjcydz81grs1ocknd8skfkwbjbqqbbrmukvz5reh" target="_blank" rel="noopener">ALT</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/4poweghzar3qd2hpbkrkyq8bb3dy7vanszhbq3rsxryh" target="_blank" rel="noopener">Normie</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/uq72gxevtr85kpeqqw8isvmqxr2k627t5rzbrd57nnj" target="_blank" rel="noopener">100xbroker</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/cghuc2215dbadeux1iuybnskzp2icvxrszyqyrzaakjb" target="_blank" rel="noopener">PSTR</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0xeab3a5979033a57e4512806812cffa98ee128e88" target="_blank" rel="noopener">Dexter</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/g2uurbmvdzdfp4qyobjrskbxsi7d6v4bpp9thps36y4b" target="_blank" rel="noopener">Dacity</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0x3335a3c165858ad334fcce4e6af8c05ec06bfbad1f1fb0b9b0fb97d483318a67" target="_blank" rel="noopener">SPACEXSI</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0x649a4ed9364c7d4f0e85aa9a3d27dab664f376296a88a3ae1f7832b57ec438c1" target="_blank" rel="noopener">GROYPER</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/tu5nbbsulgmhgsykvcvxnnrxhs1a7kkoywxowwgyaw1" target="_blank" rel="noopener">SISTER</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/edv32pdidmufsseba9db97vzisfsrxdduq7wcprjwzep" target="_blank" rel="noopener">Glorp</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/3xs6qzj5qfmoc7pqth42kdsmqwegiu4hmvufwjpmoz5a" target="_blank" rel="noopener">SQI</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/qgayv4tnkpv85qvgfavwuxxuqngywcva2dte5it3bpi" target="_blank" rel="noopener">CLAUD</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/solana/dmupgsgaruuzwfr1u9lgvnnucnq2om416rgdjjrfurgz" target="_blank" rel="noopener">ROSED</a></td><td class="num" style="color:#dc2626">-2.85</td><td class="num" style="color:#dc2626">-25.0%</td><td><span class="st st-sl">SL</span></td></tr><tr data-kind="sl"><td class="sym">🔥 <a href="https://dexscreener.com/robinhood/0x6d5fd630aff710761ff43e7b3fe10c6449b4b33e" target="_blank" rel="noopener">uzicat</a></td><td class="num" style="color:#dc2626">-10.20</td><td class="num" style="color:#dc2626">-100.0%</td><td><span class="st st-sl">SL</span></td></tr></tbody>
-    </table>
-  </div></div>
-</section>
 
-<footer>
-  Update: 13 Oct 2026, 08:32 WIB. Ledger paper-trades.json adalah sumber kebenaran tunggal.<br>
-  Bukan saran finansial. Semua posisi simulasi, tidak ada order real.
-</footer>
+  <div class="panel pospanel">
+    <div class="tabs" role="tablist">
+      <button role="tab" data-f="open" aria-pressed="true" aria-selected="true">OPEN POSITIONS</button>
+      <button role="tab" data-f="close" aria-pressed="false" aria-selected="false">TRADE HISTORY</button>
+    </div>
+    <div class="tblwrap"><table>
+      <thead><tr>
+        <th>TOKEN</th><th class="r">P&amp;L $</th><th class="r">RET</th><th>STATUS</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </div>
+
+  <div class="foot"><b>WAGINEM PAPER-TRADING BOT</b> &mdash; seluruh posisi di halaman ini
+  dibuka dan dikelola otomatis oleh Waginem (AI agent). Cho cuma ngawasin, nggak ikut campur.<br>
+  <b>DISCLAIMER</b> &mdash; 100% simulasi, nggak ada uang beneran yang dipertaruhkan di sini.
+  Angka sudah dipotong estimasi fee + slippage 2%/sisi biar realistis, tapi psikologi dan
+  eksekusi di dunia nyata nggak bisa disimulasikan. Bukan saran finansial &mdash; jangan
+  tiru pakai uang beneran. Memecoin bisa bikin rugi 100%.</div>
 
 </div>
+
 <script>
-(function(){
-  var btns = document.querySelectorAll('.filters button');
-  var rows = document.querySelectorAll('#rows tr[data-kind]');
-  btns.forEach(function(b){
-    b.addEventListener('click', function(){
-      btns.forEach(function(x){ x.setAttribute('aria-pressed','false'); });
-      b.setAttribute('aria-pressed','true');
-      var f = b.getAttribute('data-f');
-      rows.forEach(function(r){
-        var k = r.getAttribute('data-kind');
-        var show = (f === 'open') ? (k === 'open' || k === 'tp1') : (k === 'sl');
-        r.style.display = show ? '' : 'none';
-      });
-      btns.forEach(function(x){ x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
-    });
+var POS = [{"s":"\u00a5","ret":3.296703296703287,"kind":"open","url":"https://dexscreener.com/robinhood/0xbd168eeb83cfc89d1b66bdcbb5d7d9b391ed3b6034dfc8e3bd6556ff4ee14a00","pnl":0.13,"ts":"2026-10-13T01:31:54.447838+00:00","m":"double"},{"s":"3RDI","ret":41.66950017001021,"kind":"open","url":"https://dexscreener.com/robinhood/0xc0bef5a7be0427ff126661b2c3cd0f711c979b3f","pnl":3.97,"ts":"2026-10-13T01:31:55.472318+00:00","m":"double"},{"s":"HUMPH","ret":2.4226110363391604,"kind":"open","url":"https://dexscreener.com/solana/9pqrnahbkjd61kys2k4fenlcpvai5hu5jbmbesunhljz","pnl":0.04,"ts":"2026-10-13T01:31:56.424256+00:00","m":"double"},{"s":"FORGE","ret":-13.734312100402557,"kind":"open","url":"https://dexscreener.com/robinhood/0x757b8fd4096357462f0810c76f4289100a978a90c759e33409c5f7d5ade610dd","pnl":-1.57,"ts":"2026-10-13T01:31:57.506945+00:00","m":"double"},{"s":"hi","ret":16.130620282244827,"kind":"open","url":"https://dexscreener.com/robinhood/0xc375fd076ba87dea254134c69c7fb42f072aa531","pnl":1.41,"ts":"2026-10-13T01:31:58.450406+00:00","m":"double"}];
+var EQ = [[1791783911718,0],[1791787510166,0],[1791791111421,0],[1791794708822,0],[1791796510207,0],[1791798310686,0],[1791801908625,0],[1791803710968,0],[1791805511194,0],[1791807312341,0],[1791809118195,0],[1791812709941,0],[1791816310959,0],[1791818118939,0],[1791820519624,0],[1791824192482,0],[1791827775405,0],[1791831379428,0],[1791834979193,0],[1791838542358,0],[1791842150090,0],[1791845938715,0],[1791849390847,0],[1791853044153,0],[1791855121187,3.98]];
+var UP = '#00e07a', DN = '#ff4d5e', DIM = '#6e7681', LINE = '#1c2128';
+var NS = 'http://www.w3.org/2000/svg';
+var svg = document.getElementById('chart');
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
   });
-})();
+}
+function smooth(pts) {
+  if (pts.length < 2) return pts.length ? 'M '+pts[0][0]+','+pts[0][1] : '';
+  var d = 'M ' + pts[0][0].toFixed(1) + ',' + pts[0][1].toFixed(1);
+  for (var i = 0; i < pts.length - 1; i++) {
+    var p0 = pts[Math.max(0, i-1)], p1 = pts[i], p2 = pts[i+1],
+        p3 = pts[Math.min(pts.length-1, i+2)];
+    var c1x = p1[0] + (p2[0]-p0[0])/6, c1y = p1[1] + (p2[1]-p0[1])/6;
+    var c2x = p2[0] - (p3[0]-p1[0])/6, c2y = p2[1] - (p3[1]-p1[1])/6;
+    d += ' C ' + c1x.toFixed(1) + ',' + c1y.toFixed(1) + ' '
+       + c2x.toFixed(1) + ',' + c2y.toFixed(1) + ' '
+       + p2[0].toFixed(1) + ',' + p2[1].toFixed(1);
+  }
+  return d;
+}
+function renderChart(rangeKey) {
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  var W = 900, H = 260, PADL = 64, PADR = 12, PADT = 10, PADB = 18;
+  var nowMs = EQ[EQ.length-1][0];
+  var win = rangeKey === '24h' ? 24*3600e3 : rangeKey === '7d' ? 7*24*3600e3 : Infinity;
+  var pts = EQ.filter(function(p){ return nowMs - p[0] <= win; });
+  if (pts.length < 2) pts = EQ.slice(-2);
+  var vals = pts.map(function(p){ return p[1]; });
+  var vmin = Math.min.apply(null, vals), vmax = Math.max.apply(null, vals);
+  var span = (vmax - vmin) || 1, pad = span * 0.12;
+  vmin -= pad; vmax += pad; span = vmax - vmin;
+  var t0 = pts[0][0], t1 = pts[pts.length-1][0], tspan = (t1 - t0) || 1;
+  function X(ms) { return PADL + (ms - t0) / tspan * (W - PADL - PADR); }
+  function Y(v) { return PADT + (1 - (v - vmin) / span) * (H - PADT - PADB); }
+  var xy = pts.map(function(p){ return [X(p[0]), Y(p[1])]; });
+  var col = vals[vals.length-1] >= 0 ? UP : DN;
+
+  // grid horizontal + label nilai
+  for (var g = 0; g <= 4; g++) {
+    var gv = vmin + span * g / 4, gy = Y(gv);
+    var gl = document.createElementNS(NS, 'line');
+    gl.setAttribute('x1', PADL); gl.setAttribute('x2', W - PADR);
+    gl.setAttribute('y1', gy); gl.setAttribute('y2', gy);
+    gl.setAttribute('stroke', gv === 0 ? '#2d333b' : LINE);
+    if (gv !== 0) gl.setAttribute('stroke-dasharray', '3 4');
+    svg.appendChild(gl);
+    var gt = document.createElementNS(NS, 'text');
+    gt.setAttribute('x', PADL - 8); gt.setAttribute('y', gy + 4);
+    gt.setAttribute('text-anchor', 'end'); gt.setAttribute('font-size', '10');
+    gt.setAttribute('fill', DIM);
+    gt.textContent = (gv >= 0 ? '+' : '') + '$' + gv.toFixed(0);
+    svg.appendChild(gt);
+  }
+
+  var defs = document.createElementNS(NS, 'defs');
+  defs.innerHTML =
+    '<linearGradient id="tg" x1="0" y1="0" x2="0" y2="1">'
+    + '<stop offset="0" stop-color="' + col + '" stop-opacity="0.25"/>'
+    + '<stop offset="1" stop-color="' + col + '" stop-opacity="0"/></linearGradient>';
+  svg.appendChild(defs);
+  var area = document.createElementNS(NS, 'path');
+  area.setAttribute('d', smooth(xy) + ' L ' + xy[xy.length-1][0].toFixed(1) + ',' + (H-PADB)
+    + ' L ' + xy[0][0].toFixed(1) + ',' + (H-PADB) + ' Z');
+  area.setAttribute('fill', 'url(#tg)');
+  svg.appendChild(area);
+  var line = document.createElementNS(NS, 'path');
+  line.setAttribute('d', smooth(xy)); line.setAttribute('fill', 'none');
+  line.setAttribute('stroke', col); line.setAttribute('stroke-width', '2');
+  svg.appendChild(line);
+  var lx = xy[xy.length-1][0], ly = xy[xy.length-1][1];
+  var dot = document.createElementNS(NS, 'circle');
+  dot.setAttribute('cx', lx); dot.setAttribute('cy', ly); dot.setAttribute('r', 4);
+  dot.setAttribute('fill', col);
+  var title = document.createElementNS(NS, 'title');
+  title.textContent = 'net: $' + vals[vals.length-1].toFixed(2);
+  dot.appendChild(title);
+  svg.appendChild(dot);
+
+}
+
+function badge(k) {
+  if (IS_ARCHIVE) return '<span class="st-sl">CLOSED</span>';
+  if (k === 'sl') return '<span class="st-sl">SL</span>';
+  if (k === 'tp1') return '<span class="st-tp">TP1</span>';
+  return '<span class="st-open">OPEN</span>';
+}
+function rowHtml(p) {
+  var col = p.pnl > 0 ? UP : p.pnl < 0 ? DN : DIM;
+  var amt = (p.pnl > 0 ? '+' : p.pnl < 0 ? '-' : '') + '$' + Math.abs(p.pnl).toFixed(2);
+  var ret = (p.ret > 0 ? '+' : '') + (p.ret === null ? '?' : p.ret.toFixed(1) + '%');
+  var sym = p.url ? '<a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.s) + '</a>' : esc(p.s);
+  var memo = p.m === 'double' ? '⭐' : '🔥';
+  return '<tr><td class="sym">' + memo + ' ' + sym + '</td>'
+    + '<td class="r num" style="color:' + col + ';font-weight:700">' + esc(amt) + '</td>'
+    + '<td class="r num" style="color:' + col + '">' + esc(ret) + '</td>'
+    + '<td>' + badge(p.kind) + '</td></tr>';
+}
+var rowsEl = document.getElementById('rows');
+var IS_ARCHIVE = false;
+function renderRows(f) {
+  var list;
+  if (IS_ARCHIVE) {
+    if (f === 'open') {
+      list = []; // arsip: tidak ada posisi open
+    } else {
+      list = POS.slice(); // arsip: semua posisi sudah closed
+      list.sort(function(a, b) { return b.pnl - a.pnl; }); // cuan paling besar dulu
+    }
+  } else {
+    list = POS.filter(function(p) {
+      return f === 'open' ? (p.kind === 'open' || p.kind === 'tp1') : (p.kind === 'sl');
+    });
+    if (f === 'open') list.sort(function(a, b) { return b.pnl - a.pnl; });
+    else list.sort(function(a, b) { return (b.ts || '').localeCompare(a.ts || ''); });
+  }
+  var html = '';
+  list.forEach(function(p) { html += rowHtml(p); });
+  rowsEl.innerHTML = html || '<tr><td colspan="4" class="empty">NO POSITIONS</td></tr>';
+}
+
+var rbtns = document.querySelectorAll('.ranges button');
+rbtns.forEach(function(b) {
+  b.addEventListener('click', function() {
+    rbtns.forEach(function(x){ x.setAttribute('aria-pressed', 'false'); });
+    b.setAttribute('aria-pressed', 'true');
+    renderChart(b.getAttribute('data-r'));
+    try { sessionStorage.setItem('mcrange', b.getAttribute('data-r')); } catch (e) {}
+  });
+});
+var fbtns = document.querySelectorAll('.tabs button');
+fbtns.forEach(function(b) {
+  b.addEventListener('click', function() {
+    fbtns.forEach(function(x){ x.setAttribute('aria-pressed', 'false'); x.setAttribute('aria-selected', 'false'); });
+    b.setAttribute('aria-pressed', 'true'); b.setAttribute('aria-selected', 'true');
+    renderRows(b.getAttribute('data-f'));
+  });
+});
+renderRows(IS_ARCHIVE ? 'close' : 'open');
+// range chart tersimpan (biar nggak kereset pas auto-refresh)
+var initRange = 'all';
+try {
+  var sr = sessionStorage.getItem('mcrange');
+  if (sr) initRange = sr;
+} catch (e) {}
+rbtns.forEach(function(x){ x.setAttribute('aria-pressed', x.getAttribute('data-r') === initRange ? 'true' : 'false'); });
+renderChart(initRange);
+// auto-refresh tiap 10 menit (data diupdate cron tiap 30 menit)
+setTimeout(function(){ location.reload(); }, 10 * 60 * 1000);
 </script>
 </body>
 </html>
