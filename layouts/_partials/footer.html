@@ -11,12 +11,7 @@
 
     {{- with site.Params.footer.text }}
         {{ . | markdownify }}
-        {{- print " · "}}
     {{- end }}
-
-    <span>
-        <a href="https://chospace.github.io/blog-preview/">Old theme</a>
-    </span>
 </footer>
 {{- end }}
 
