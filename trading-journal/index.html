@@ -67,7 +67,12 @@ td.num{font-variant-numeric:tabular-nums}
 .cal-day{border:1px solid var(--line);border-radius:8px;min-height:54px;padding:6px;display:flex;flex-direction:column;justify-content:space-between;background:var(--card2)}
 .cal-day.empty{background:transparent;border:none;min-height:0}
 .cal-n{font-size:12px;font-weight:700}
-.cal-v{font-size:11px;font-weight:700}.tfbtn{background:transparent;border:none;border-radius:16px;
+.cal-v{font-size:11px;font-weight:700}
+.cal-sum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;background:var(--card2);
+  border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:10px}
+.cal-sum .lbl{font-size:11px;color:var(--muted)}
+.cal-sum .val{font-size:15px;font-weight:800;margin-top:3px;white-space:nowrap}
+.cal-sum .c3{text-align:right}.tfbtn{background:transparent;border:none;border-radius:16px;
   padding:5px 16px;font-size:12px;font-weight:600;cursor:pointer;color:var(--muted);margin:0;transition:all .15s}
 .tfbtn:hover{color:var(--text)}
 .tfbtn.active{background:var(--card);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.18)}
@@ -168,7 +173,7 @@ nav a.brand:hover{text-decoration:none;color:var(--accent)}
 <p class="footer">📜 Jurnal lama (2021–2026): <a href="https://chospace.github.io/100-challenge/">$100 Challenge →</a><br>Jurnal ini dibantu oleh AI Agent <b>Waginem</b> 🤖<br>Diupdate tiap malam · chospace.github.io · <span id="ver-foot"></span></p>
 
 <script>
-const D = {"trades": [{"no": 19, "date": "2026-10-14", "instr": "XAUUSD", "arah": "Buy", "entry": "4123.701", "size": "0.01", "hasil": -30.16, "rr": "-3.02*"}, {"no": 18, "date": "2026-10-14", "instr": "AUDUSD", "arah": "Sell", "entry": "0.70006", "size": "0.78", "hasil": -10.14, "rr": "-"}, {"no": 17, "date": "2026-10-14", "instr": "BTCUSD", "arah": "Buy", "entry": "83265.99", "size": "0.03", "hasil": 10.86, "rr": "+1.09*"}, {"no": 16, "date": "2026-10-13", "instr": "GBPUSD", "arah": "Sell", "entry": "1.32475", "size": "0.21", "hasil": -9.87, "rr": "-0.99*"}, {"no": 15, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.517", "size": "0.10", "hasil": -4.3, "rr": "-0.43*"}, {"no": 14, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.523", "size": "0.10", "hasil": -10.8, "rr": "-1.08*"}, {"no": 13, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.572", "size": "0.10", "hasil": 5.4, "rr": "+0.55"}, {"no": 12, "date": "2026-10-13", "instr": "USDJPY", "arah": "Buy", "entry": "158.251", "size": "0.45", "hasil": 27.0, "rr": "+2.79"}, {"no": 11, "date": "2026-10-12", "instr": "USOIL", "arah": "Buy", "entry": "92.819", "size": "0.10", "hasil": 40.7, "rr": "+4.0"}, {"no": 10, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4171.559", "size": "0.03", "hasil": -5.93, "rr": "-0.49"}, {"no": 9, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4173.052", "size": "0.03", "hasil": -9.25, "rr": "-1.0"}, {"no": 8, "date": "2026-10-11", "instr": "BTCUSD", "arah": "Sell", "entry": "82975.38", "size": "0.07", "hasil": -10.45, "rr": "-1.18"}, {"no": 7, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "31017.27", "size": "0.05", "hasil": 9.36, "rr": "+1.0"}, {"no": 6, "date": "2026-10-09", "instr": "XAGUSD", "arah": "Sell", "entry": "60.555", "size": "0.01", "hasil": -8.0, "rr": "-1.0"}, {"no": 5, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "30992.94", "size": "0.05", "hasil": 8.14, "rr": "+0.71"}, {"no": 4, "date": "2026-10-08", "instr": "EURUSD", "arah": "Buy", "entry": "1.11820", "size": "0.13", "hasil": 18.07, "rr": "+2.48"}, {"no": 3, "date": "2026-10-08", "instr": "BTCUSD", "arah": "Buy", "entry": "82753.40", "size": "0.06", "hasil": 0.0, "rr": "0"}, {"no": 2, "date": "2026-10-08", "instr": "XAUUSD", "arah": "Sell", "entry": "4137.56", "size": "0.03", "hasil": -8.55, "rr": "-1.0"}, {"no": 1, "date": "2026-10-07", "instr": "XAUUSD", "arah": "Buy", "entry": "4127.83", "size": "0.01", "hasil": -9.43, "rr": "-1.0"}], "stats": {"total": "19", "w": "7", "l": "11", "bep": "1", "pnl": "$+2.65", "bal": "102.65"}, "lessons": [{"date": "14/10/2026", "text": "<b>Pending order itu posisi juga.</b> Limit buy XAUUSD 0.01 kefill 19:30:04 — tepat saat CPI rilis hot (core +0,3% vs 0,2%), gold dump $30. Evaluasi: (1) order nganggur dibiarkan hidup lewat news red-folder; (2) trade ke-3 hari ini = overtrade; (3) no-trade window 18:30–20:30 WIB dilanggar. Perbaikan: cancel semua pending order sebelum news merah, atau pasang alarm 30 menit sebelumnya."}], "changelog": [{"date": "14/10/2026", "text": "Perombakan: tab Riwayat Trade / Per Pair / Kalender dalam satu card; tabel muat 10 bertahap; section Kesalahan Penting (3 terbaru + tombol); kalender P&L harian; tinggi card konsisten antar tab.", "v": "2.0.0"}, {"date": "09/10/2026", "text": "Rilis awal: stat card, equity curve + filter timeframe, tabel riwayat trade.", "v": "1.0.0"}]};
+const D = {"trades": [{"no": 19, "date": "2026-10-14", "instr": "XAUUSD", "arah": "Buy", "entry": "4123.701", "size": "0.01", "hasil": -30.16, "rr": "-3.02*"}, {"no": 18, "date": "2026-10-14", "instr": "AUDUSD", "arah": "Sell", "entry": "0.70006", "size": "0.78", "hasil": -10.14, "rr": "-"}, {"no": 17, "date": "2026-10-14", "instr": "BTCUSD", "arah": "Buy", "entry": "83265.99", "size": "0.03", "hasil": 10.86, "rr": "+1.09*"}, {"no": 16, "date": "2026-10-13", "instr": "GBPUSD", "arah": "Sell", "entry": "1.32475", "size": "0.21", "hasil": -9.87, "rr": "-0.99*"}, {"no": 15, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.517", "size": "0.10", "hasil": -4.3, "rr": "-0.43*"}, {"no": 14, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.523", "size": "0.10", "hasil": -10.8, "rr": "-1.08*"}, {"no": 13, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.572", "size": "0.10", "hasil": 5.4, "rr": "+0.55"}, {"no": 12, "date": "2026-10-13", "instr": "USDJPY", "arah": "Buy", "entry": "158.251", "size": "0.45", "hasil": 27.0, "rr": "+2.79"}, {"no": 11, "date": "2026-10-12", "instr": "USOIL", "arah": "Buy", "entry": "92.819", "size": "0.10", "hasil": 40.7, "rr": "+4.0"}, {"no": 10, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4171.559", "size": "0.03", "hasil": -5.93, "rr": "-0.49"}, {"no": 9, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4173.052", "size": "0.03", "hasil": -9.25, "rr": "-1.0"}, {"no": 8, "date": "2026-10-11", "instr": "BTCUSD", "arah": "Sell", "entry": "82975.38", "size": "0.07", "hasil": -10.45, "rr": "-1.18"}, {"no": 7, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "31017.27", "size": "0.05", "hasil": 9.36, "rr": "+1.0"}, {"no": 6, "date": "2026-10-09", "instr": "XAGUSD", "arah": "Sell", "entry": "60.555", "size": "0.01", "hasil": -8.0, "rr": "-1.0"}, {"no": 5, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "30992.94", "size": "0.05", "hasil": 8.14, "rr": "+0.71"}, {"no": 4, "date": "2026-10-08", "instr": "EURUSD", "arah": "Buy", "entry": "1.11820", "size": "0.13", "hasil": 18.07, "rr": "+2.48"}, {"no": 3, "date": "2026-10-08", "instr": "BTCUSD", "arah": "Buy", "entry": "82753.40", "size": "0.06", "hasil": 0.0, "rr": "0"}, {"no": 2, "date": "2026-10-08", "instr": "XAUUSD", "arah": "Sell", "entry": "4137.56", "size": "0.03", "hasil": -8.55, "rr": "-1.0"}, {"no": 1, "date": "2026-10-07", "instr": "XAUUSD", "arah": "Buy", "entry": "4127.83", "size": "0.01", "hasil": -9.43, "rr": "-1.0"}], "stats": {"total": "19", "w": "7", "l": "11", "bep": "1", "pnl": "$+2.65", "bal": "102.65"}, "lessons": [{"date": "14/10/2026", "text": "<b>Pending order itu posisi juga.</b> Limit buy XAUUSD 0.01 kefill 19:30:04 — tepat saat CPI rilis hot (core +0,3% vs 0,2%), gold dump $30. Evaluasi: (1) order nganggur dibiarkan hidup lewat news red-folder; (2) trade ke-3 hari ini = overtrade; (3) no-trade window 18:30–20:30 WIB dilanggar. Perbaikan: cancel semua pending order sebelum news merah, atau pasang alarm 30 menit sebelumnya."}], "changelog": [{"v": "2.1.0", "date": "14/10/2026", "text": "Kalender: ringkasan bulan (Total PnL, Profitable Days/Amount, Loss Days/Amount)."}, {"date": "14/10/2026", "text": "Perombakan: tab Riwayat Trade / Per Pair / Kalender dalam satu card; tabel muat 10 bertahap; section Kesalahan Penting (3 terbaru + tombol); kalender P&L harian; tinggi card konsisten antar tab.", "v": "2.0.0"}, {"date": "09/10/2026", "text": "Rilis awal: stat card, equity curve + filter timeframe, tabel riwayat trade.", "v": "1.0.0"}]};
 /* ---------- theme ---------- */
 function applyTheme(t){
   document.documentElement.setAttribute('data-theme',t);
@@ -391,6 +396,7 @@ var _calY, _calM;
   _calY = +dp[0]; _calM = +dp[1] - 1;
 })();
 var _monNames = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+function fmtM(v){ return '<span class="'+(v>=0?'pos':'neg')+'">'+(v>=0?'+$':'\u2212$')+Math.abs(v).toFixed(2)+'</span>'; }
 function renderCal(){
   var first = new Date(_calY, _calM, 1);
   var startDay = first.getDay();
@@ -400,6 +406,16 @@ function renderCal(){
   var html = '<div class="cal-head"><button class="tfbtn" id="cal-prev">\u2039</button>'
     + '<b>'+_monNames[_calM]+' '+_calY+'</b>'
     + '<button class="tfbtn" id="cal-next">\u203a</button></div>';
+  var mTotal = 0, mWin = 0, mWinAmt = 0, mLoss = 0, mLossAmt = 0;
+  Object.keys(_dayPnl).forEach(function(k){
+    var dp = k.split('-');
+    if (+dp[0] === _calY && +dp[1] - 1 === _calM) {
+      var v = _dayPnl[k];
+      mTotal += v;
+      if (v > 0) { mWin++; mWinAmt += v; }
+      else if (v < 0) { mLoss++; mLossAmt += v; }
+    }
+  });
   html += '<div class="cal-grid">';
   ['Min','Sen','Sel','Rab','Kam','Jum','Sab'].forEach(function(dn){ html += '<div class="cal-dn">'+dn+'</div>'; });
   for (var i = 0; i < startDay; i++) html += '<div class="cal-day empty"></div>';
@@ -417,6 +433,11 @@ function renderCal(){
     html += '<div class="cal-day"'+style+'>'+inner+'</div>';
   }
   html += '</div>';
+  html += '<div class="cal-sum" style="margin-bottom:0;margin-top:10px">'
+    + '<div><div class="lbl">Total PnL</div><div class="val">'+fmtM(mTotal)+'</div></div>'
+    + '<div><div class="lbl">Profitable Days/Amount</div><div class="val"><span class="pos">'+mWin+'</span>/'+fmtM(mWinAmt)+'</div></div>'
+    + '<div class="c3"><div class="lbl">Loss Days/Amount</div><div class="val"><span class="neg">'+mLoss+'</span>/'+fmtM(mLossAmt)+'</div></div>'
+    + '</div>';
   document.getElementById('cal-body').innerHTML = html;
   document.getElementById('cal-prev').addEventListener('click', function(){ _calM--; if (_calM < 0) { _calM = 11; _calY--; } renderCal(); });
   document.getElementById('cal-next').addEventListener('click', function(){ _calM++; if (_calM > 11) { _calM = 0; _calY++; } renderCal(); });
