@@ -6,6 +6,7 @@ FORMAT DATA (wajib):
   trades HARUS urut DESCENDING (terbaru dulu). Template reverse sendiri buat equity curve.
   stats: {"total": str, "w": str, "l": str, "bep": str,
           "pnl": "$+X.XX", "bal": "X.XX"}  <-- bal TANPA $, template nambahin $ sendiri!
+  lessons[]: {"date": "DD/MM/YYYY", "text": str}  <-- dari section ## Pelajaran di jurnal md
   JANGAN pakai field lain (n/symbol/dir/pnl/summary/equity) — template tidak membacanya.
 -->
 <!DOCTYPE html>
@@ -57,13 +58,18 @@ td.num{font-variant-numeric:tabular-nums}
 .tag.buy{background:rgba(74,222,128,.14);color:var(--green)}
 .rpos{color:var(--green);font-weight:700}
 .rneg{color:var(--red);font-weight:700}
-#tfbar{display:inline-flex;background:var(--card2);border:1px solid var(--line);border-radius:20px;padding:3px;margin-bottom:12px}
-.tfbtn{background:transparent;border:none;border-radius:16px;
+#tfbar{display:inline-flex;background:var(--card2);border:1px solid var(--line);border-radius:20px;padding:3px;margin-bottom:12px}.tfbtn{background:transparent;border:none;border-radius:16px;
   padding:5px 16px;font-size:12px;font-weight:600;cursor:pointer;color:var(--muted);margin:0;transition:all .15s}
 .tfbtn:hover{color:var(--text)}
 .tfbtn.active{background:var(--card);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.18)}
 #eqinfo{margin-top:12px;font-size:13px;color:var(--muted);line-height:1.9}
 #eqtip{box-shadow:0 4px 16px rgba(0,0,0,.5)}
+.lesson{border-left:3px solid var(--red);background:var(--card2);border-radius:0 8px 8px 0;
+  padding:12px 14px;margin:0 0 12px}
+.lesson:last-child{margin-bottom:0}
+.lesson-date{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;
+  margin-bottom:6px;font-weight:700}
+.lesson-text{font-size:14px;line-height:1.65}
 nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
 nav a.brand{font-weight:800;font-size:16px;color:var(--text)}
 nav a.brand:hover{text-decoration:none;color:var(--accent)}
@@ -118,6 +124,11 @@ nav a.brand:hover{text-decoration:none;color:var(--accent)}
   <p style="color:var(--muted);font-size:12px;margin:10px 0 0">* R estimasi — risk/SL tidak dilaporkan, pakai default 1R = $10.</p>
 </div>
 
+<div class="panel" id="lesson-panel" style="display:none">
+  <h2>⚠️ Kesalahan Penting</h2>
+  <div id="lessons"></div>
+</div>
+
 <div class="broker">
   <p>Broker yang saya pakai: <a href="https://one.exnessonelink.com/a/ntsmrktlh5" target="_blank" rel="noopener">Exness</a></p>
   <div class="social">
@@ -128,7 +139,7 @@ nav a.brand:hover{text-decoration:none;color:var(--accent)}
 <p class="footer">📜 Jurnal lama (2021–2026): <a href="https://chospace.github.io/100-challenge/">$100 Challenge →</a><br>Jurnal ini dibantu oleh AI Agent <b>Waginem</b> 🤖<br>Diupdate tiap malam · chospace.github.io</p>
 
 <script>
-const D = {"trades": [{"no": 19, "date": "2026-10-14", "instr": "XAUUSD", "arah": "Buy", "entry": "4123.701", "size": "0.01", "hasil": -30.16, "rr": "-3.02*"}, {"no": 18, "date": "2026-10-14", "instr": "AUDUSD", "arah": "Sell", "entry": "0.70006", "size": "0.78", "hasil": -10.14, "rr": "-"}, {"no": 17, "date": "2026-10-14", "instr": "BTCUSD", "arah": "Buy", "entry": "83265.99", "size": "0.03", "hasil": 10.86, "rr": "+1.09*"}, {"no": 16, "date": "2026-10-13", "instr": "GBPUSD", "arah": "Sell", "entry": "1.32475", "size": "0.21", "hasil": -9.87, "rr": "-0.99*"}, {"no": 15, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.517", "size": "0.10", "hasil": -4.3, "rr": "-0.43*"}, {"no": 14, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.523", "size": "0.10", "hasil": -10.8, "rr": "-1.08*"}, {"no": 13, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.572", "size": "0.10", "hasil": 5.4, "rr": "+0.55"}, {"no": 12, "date": "2026-10-13", "instr": "USDJPY", "arah": "Buy", "entry": "158.251", "size": "0.45", "hasil": 27.0, "rr": "+2.79"}, {"no": 11, "date": "2026-10-12", "instr": "USOIL", "arah": "Buy", "entry": "92.819", "size": "0.10", "hasil": 40.7, "rr": "+4.0"}, {"no": 10, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4171.559", "size": "0.03", "hasil": -5.93, "rr": "-0.49"}, {"no": 9, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4173.052", "size": "0.03", "hasil": -9.25, "rr": "-1.0"}, {"no": 8, "date": "2026-10-11", "instr": "BTCUSD", "arah": "Sell", "entry": "82975.38", "size": "0.07", "hasil": -10.45, "rr": "-1.18"}, {"no": 7, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "31017.27", "size": "0.05", "hasil": 9.36, "rr": "+1.0"}, {"no": 6, "date": "2026-10-09", "instr": "XAGUSD", "arah": "Sell", "entry": "60.555", "size": "0.01", "hasil": -8.0, "rr": "-1.0"}, {"no": 5, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "30992.94", "size": "0.05", "hasil": 8.14, "rr": "+0.71"}, {"no": 4, "date": "2026-10-08", "instr": "EURUSD", "arah": "Buy", "entry": "1.11820", "size": "0.13", "hasil": 18.07, "rr": "+2.48"}, {"no": 3, "date": "2026-10-08", "instr": "BTCUSD", "arah": "Buy", "entry": "82753.40", "size": "0.06", "hasil": 0.0, "rr": "0"}, {"no": 2, "date": "2026-10-08", "instr": "XAUUSD", "arah": "Sell", "entry": "4137.56", "size": "0.03", "hasil": -8.55, "rr": "-1.0"}, {"no": 1, "date": "2026-10-07", "instr": "XAUUSD", "arah": "Buy", "entry": "4127.83", "size": "0.01", "hasil": -9.43, "rr": "-1.0"}], "stats": {"total": "19", "w": "7", "l": "11", "bep": "1", "pnl": "$+2.65", "bal": "102.65"}};
+const D = {"trades": [{"no": 19, "date": "2026-10-14", "instr": "XAUUSD", "arah": "Buy", "entry": "4123.701", "size": "0.01", "hasil": -30.16, "rr": "-3.02*"}, {"no": 18, "date": "2026-10-14", "instr": "AUDUSD", "arah": "Sell", "entry": "0.70006", "size": "0.78", "hasil": -10.14, "rr": "-"}, {"no": 17, "date": "2026-10-14", "instr": "BTCUSD", "arah": "Buy", "entry": "83265.99", "size": "0.03", "hasil": 10.86, "rr": "+1.09*"}, {"no": 16, "date": "2026-10-13", "instr": "GBPUSD", "arah": "Sell", "entry": "1.32475", "size": "0.21", "hasil": -9.87, "rr": "-0.99*"}, {"no": 15, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.517", "size": "0.10", "hasil": -4.3, "rr": "-0.43*"}, {"no": 14, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.523", "size": "0.10", "hasil": -10.8, "rr": "-1.08*"}, {"no": 13, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.572", "size": "0.10", "hasil": 5.4, "rr": "+0.55"}, {"no": 12, "date": "2026-10-13", "instr": "USDJPY", "arah": "Buy", "entry": "158.251", "size": "0.45", "hasil": 27.0, "rr": "+2.79"}, {"no": 11, "date": "2026-10-12", "instr": "USOIL", "arah": "Buy", "entry": "92.819", "size": "0.10", "hasil": 40.7, "rr": "+4.0"}, {"no": 10, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4171.559", "size": "0.03", "hasil": -5.93, "rr": "-0.49"}, {"no": 9, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4173.052", "size": "0.03", "hasil": -9.25, "rr": "-1.0"}, {"no": 8, "date": "2026-10-11", "instr": "BTCUSD", "arah": "Sell", "entry": "82975.38", "size": "0.07", "hasil": -10.45, "rr": "-1.18"}, {"no": 7, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "31017.27", "size": "0.05", "hasil": 9.36, "rr": "+1.0"}, {"no": 6, "date": "2026-10-09", "instr": "XAGUSD", "arah": "Sell", "entry": "60.555", "size": "0.01", "hasil": -8.0, "rr": "-1.0"}, {"no": 5, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "30992.94", "size": "0.05", "hasil": 8.14, "rr": "+0.71"}, {"no": 4, "date": "2026-10-08", "instr": "EURUSD", "arah": "Buy", "entry": "1.11820", "size": "0.13", "hasil": 18.07, "rr": "+2.48"}, {"no": 3, "date": "2026-10-08", "instr": "BTCUSD", "arah": "Buy", "entry": "82753.40", "size": "0.06", "hasil": 0.0, "rr": "0"}, {"no": 2, "date": "2026-10-08", "instr": "XAUUSD", "arah": "Sell", "entry": "4137.56", "size": "0.03", "hasil": -8.55, "rr": "-1.0"}, {"no": 1, "date": "2026-10-07", "instr": "XAUUSD", "arah": "Buy", "entry": "4127.83", "size": "0.01", "hasil": -9.43, "rr": "-1.0"}], "stats": {"total": "19", "w": "7", "l": "11", "bep": "1", "pnl": "$+2.65", "bal": "102.65"}, "lessons": [{"date": "14/10/2026", "text": "<b>Pending order itu posisi juga.</b> Limit order lama dibiarkan hidup lewat CPI (hot: core m/m +0,3% vs 0,2%) → kefill 19:30:04 tepat saat rilis, gold dump $30. Sebelum news red-folder: cek &amp; cancel order yang nganggur, atau pasang alarm 30 menit sebelum rilis. No-trade window 18:30–20:30 WIB berlaku juga untuk order yang sudah terpasang — bukan cuma entry baru."}]};
 /* ---------- theme ---------- */
 function applyTheme(t){
   document.documentElement.setAttribute('data-theme',t);
@@ -268,6 +279,15 @@ document.getElementById('rows').innerHTML = D.trades.map(function(t){
     +'<td><span class="tag '+dc+'">'+t.arah+'</span></td><td class="num">'+t.entry+'</td><td class="num">'+t.size+'</td>'
     +'<td class="num '+hc+'"><b>'+hv+'</b></td><td class="num">'+rr+'</td></tr>';
 }).join('');
+
+/* ---------- lessons ---------- */
+if (D.lessons && D.lessons.length) {
+  document.getElementById('lesson-panel').style.display = '';
+  document.getElementById('lessons').innerHTML = D.lessons.map(function(l){
+    return '<div class="lesson"><div class="lesson-date">'+l.date+'</div>'
+      +'<div class="lesson-text">'+l.text+'</div></div>';
+  }).join('');
+}
 </script>
 </body>
 </html>
