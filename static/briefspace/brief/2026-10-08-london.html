@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing LONDON — 8 Okt 2026 · briefspace</title>
+<style>
+:root{--bg:#fbfbfa;--text:#1c1c1c;--muted:#8b8b8b;--faint:#b5b5b5;
+--line:#e9e9e7;--red:#c43d3d;--green:#1d9e57}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+max-width:680px;margin:0 auto;padding:48px 24px 64px;line-height:1.65;font-size:15px}
+a{color:inherit}
+.overline{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+h1{font-size:30px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.meta{color:var(--muted);font-size:13.5px;margin-bottom:44px}
+h2{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint);
+font-weight:600;margin:40px 0 4px}
+.nav{margin-bottom:32px;font-size:13.5px;color:var(--muted)}
+.nav a{text-decoration:none;border-bottom:1px solid var(--line)}
+.event{padding:18px 0;border-bottom:1px solid var(--line)}
+.event:last-child{border-bottom:none}
+.event .time{color:var(--red);font-weight:800;font-variant-numeric:tabular-nums}
+.event .title{font-weight:700}
+.event .nt{display:inline-block;font-size:11.5px;font-weight:700;color:var(--red);
+background:#fdeeee;border-radius:20px;padding:2px 10px;margin-left:8px}
+.event .cons{color:var(--muted);font-size:13.5px;margin-top:2px}
+.event .sc{font-size:14px;margin-top:6px}
+.newsline{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.newsline:last-child{border-bottom:none}
+.row{display:grid;grid-template-columns:86px 1fr auto;gap:6px 14px;
+padding:13px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.row:last-child{border-bottom:none}
+.row .n{font-weight:700}
+.row .p{font-variant-numeric:tabular-nums}
+.row .p .chg{font-size:12.5px;color:var(--muted)}
+.row .lv{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px}
+.dot.up{background:var(--green)}.dot.dn{background:var(--red)}.dot.fl{background:var(--faint)}
+.row .note{grid-column:2/4;font-size:13px;color:var(--muted);margin-top:-2px}
+.calm{padding:13px 0;color:var(--faint);font-size:13.5px;font-style:italic}
+.hunt{padding:13px 0;border-bottom:1px solid var(--line)}
+.hunt:last-child{border-bottom:none}
+.hunt .pair{font-weight:700}
+.hunt .sell{color:var(--red);font-weight:600}.hunt .buy{color:var(--green);font-weight:600}
+.hunt .d{font-size:13.5px;color:var(--muted);margin-top:2px}
+.hunt .d b{color:var(--text)}
+.focus{margin-top:40px;padding-left:18px;border-left:2px solid var(--text);font-size:14.5px}
+.arch-day{padding:16px 0;border-bottom:1px solid var(--line)}
+.arch-day .d{font-weight:700;margin-bottom:6px}
+.arch-day .sess{display:flex;gap:10px;flex-wrap:wrap}
+.sess a{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:20px;padding:5px 14px;color:var(--text)}
+.sess a:hover{border-color:var(--text)}
+.sess a .t{color:var(--muted);font-size:11.5px}
+.badge-new{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1.5px;color:var(--green);
+border:1px solid var(--green);border-radius:20px;padding:3px 10px;margin-bottom:12px;text-transform:uppercase}
+.raw{font-size:14px}
+.raw h3{font-size:17px;margin:22px 0 8px}
+.raw h4{font-size:15px;margin:18px 0 6px}
+.raw p{margin:8px 0}
+.raw ul{margin:8px 0 8px 20px}
+.raw li{margin:4px 0}
+.raw table{border-collapse:collapse;width:100%;font-size:12.5px;margin:12px 0;display:block;overflow-x:auto}
+.raw th,.raw td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.raw th{background:#f4f4f2;font-size:11px}
+.pn{display:flex;justify-content:space-between;margin-top:48px;padding-top:20px;
+border-top:1px solid var(--line);font-size:13.5px}
+.pn a{text-decoration:none;color:var(--muted)}
+.pn a:hover{color:var(--text)}
+.topnav{position:sticky;top:0;z-index:10;background:var(--bg);
+display:flex;justify-content:space-between;align-items:center;
+padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px}
+.topnav .brand{font-weight:800;letter-spacing:-.3px;text-decoration:none;font-size:17px}
+.topnav .links{display:flex;gap:20px;font-size:13.5px}
+.topnav .links a{text-decoration:none;color:var(--muted)}
+.topnav .links a:hover{color:var(--text)}
+.topnav .links a.active{color:var(--text);font-weight:700}
+.arch-link{display:block;text-align:center;margin-top:48px;font-size:14px;color:var(--muted);text-decoration:none}
+.arch-link:hover{color:var(--text)}
+footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-align:center}
+@media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
+</style></head><body>
+<nav class="topnav"><a class="brand" href="../index.html">briefspace</a><div class="links"><a class="" href="../index.html">Terbaru</a><a class="" href="../arsip.html">Arsip</a></div></nav>
+<div class="overline">Pre-session briefing</div>
+<h1>LONDON · 8 Okt 2026</h1>
+<div class="meta">arsip</div>
+<div class="raw"><h3>🎯 ICT BRIEF | London Killzone</h3>
+<p><b>Kamis, 8 Okt 2026 | Jam Acuan:</b> 13:00–16:00 WIB / 02:00–05:00 ET</p>
+<p><b>Harga per ~12:30 WIB.</b> Sumber: thegoldprice.net + Finnhub (gold, spot ~4.130–4.138), agregator spot (BTC/ETH), TradingView/BlackBull (USTEC ~31.386–31.438), BlackBull futures/cash + hexn (USOIL), kalender forexsentiment.live + housingbrief.</p>
+<p>📰 <b>News high-impact:</b></p>
+<p>• TIDAK ADA red-folder di dalam jendela London 13:00–16:00 WIB — jendela boleh diperdagangkan.</p>
+<p>• 15:30 WIB / 04:30 ET — FOMC Waller Speaks (USD, medium) — di dalam killzone; waspada whipsaw ±30 mnt sekitar rilis.</p>
+<p>• Heads-up sore (di luar jendela, sebelum sesi NY): 19:15 WIB / 08:15 ET — BOE Gov Bailey (GBP, HIGH); 19:30 WIB / 08:30 ET — US Initial Jobless Claims 200K (197K prev, medium) + ECB Meeting Account (EUR, high). Jangan hold blind melewati jam 19.</p>
+<p>📊 <b>Satu baris per instrumen:</b></p>
+<p>• <b>USTEC</b> ~31,390 (flat, +0,04%) 🟢 | BSL 31,540–31,600 (ATH) | SSL 31,000 (round) — nempel premium dekat ATH; DOL ke atas selama di atas 31.000. 10Y 5,27% tetap menahan upside.</p>
+<p>• <b>XAUUSD</b> ~4,130 (+0,4%) 🔴 | BSL 4,170 → 4,195–4,208 | SSL 4,103,5 (PDL 5-Okt) → 4,000 — rebound dari PDL pagi ini (low hari ini 4.103,45 = persis PDL); struktur D1 tetap bearish (lower-highs dari 4.399,67, harga di bawah EQ). High hari ini 4.143,4 = stop-hunt 81% yang nyapu SL trade #2-mu sebelum harga balik turun.</p>
+<p>• <b>BTCUSD</b> ~82,9K (−1,4%) 🔴 | BSL 85,008 (EQ) → 86,699 | SSL 82,500 → 80,000 — break di bawah low 7-hari 83.591; likuidasi long 24 jam >$700M ($646M posisi long, Coinglass); jangan long sebelum reclaim 83,591/85,008.</p>
+<p>• <b>ETHUSD</b> ~2,565 (−2,1%) 🔴 | BSL 2,645 → 2,699 (EQ) → 2,730 | SSL 2,546 (MA50) → 2,500 — kehilangan support 2.600; outflow ETF 6 sesi beruntun; jangan tangkap pisau jatuh sebelum 2,500.</p>
+<p>• <b>USOIL</b> ~89,9 (+0,5%) / cash ~90,75 🔴 | BSL 90,72 (EQ) → 90,85–91,31 | SSL 89,36 → 88,74 → 88,06 — rally pagi ke atas zona short-mu (89,50–90,00); plan lama batal sementara, tunggu struktur baru sebelum short lagi. SL di atas 90,01 sudah tidak relevan — reassesmen.</p>
+<p>🎯 <b>Fokus sesi:</b> Gold rebound dari PDL — jangan chase buy, bias tetap bearish di bawah EQ; BTC/ETH hands-off total sampai SSL/SD selesai dikerjain atau reclaim; oil rally di atas zona trigger — plan short dibekukan, tunggu MSS baru. Satu-satunya event di killzone: Waller 15:30; jangan bawa posisi blind melewati 19:15 (Bailey + claims).</p>
+<p>📒 <b>Jurnal $100:</b> 0W/2L, balance $82,02 — trade #2 (XAUUSD sell, entry 4.137,56 / SL 4.140,41) kena stop-hunt 81% → −$8,55 (−1R). Bukan oversize/overtrade.</p>
+<p>FVG/OB presisi tandai manual di chart M15/H1.</p></div>
+<div class="pn">
+<span><a href="2026-10-08-asian.html">← sesi sebelumnya</a></span>
+<span><a href="2026-10-08-ny.html">sesi berikutnya →</a></span>
+</div>
+<footer>Level dari data terverifikasi, bukan ramalan · dibantu AI Agent Waginem<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.</footer>
+</body></html>
