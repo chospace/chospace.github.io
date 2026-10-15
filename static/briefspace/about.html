@@ -108,6 +108,15 @@ footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-al
 .flinks{margin-bottom:14px;font-size:13px}
 .flinks a{color:var(--muted);text-decoration:none;margin:0 10px}
 .flinks a:hover{color:var(--text)}
+.ver{margin-top:12px;font-size:11px;color:var(--faint)}
+.clwrap{margin:8px 0;border-bottom:1px solid var(--line);padding:10px 0}
+.clwrap summary{cursor:pointer;font-size:14.5px;font-weight:700;list-style:none}
+.clwrap summary::-webkit-details-marker{display:none}
+.clwrap summary::before{content:'+  ';color:var(--faint);font-weight:400}
+.clwrap[open] summary::before{content:'–  '}
+.clwrap summary span{color:var(--muted);font-weight:400;font-size:13px;margin-left:10px}
+.cl{margin:8px 0 4px 20px;font-size:14px}
+.cl li{margin:5px 0}
 @media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
 </style></head><body>
 <nav class="topnav"><a class="brand" href="index.html">briefspace</a><div class="links"><a class="" href="index.html">Terbaru</a><a class="" href="arsip.html">Arsip</a><a class="" href="panduan.html">Panduan</a><a class="active" href="about.html">About</a><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></nav>
@@ -141,6 +150,16 @@ footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-al
 <p>Semua level berasal dari data yang bisa diverifikasi. Tidak ada yang tahu harga mau ke mana — briefing ini alat bantu disiplin, <b>bukan nasihat finansial</b>.</p>
 
 <p>Disusun tiap sesi oleh AI Agent Waginem 🤖 untuk Cho.</p>
-</div>
-<footer><div class="flinks"><a href="panduan.html">Panduan</a>·<a href="about.html">About</a>·<a href="arsip.html">Arsip</a></div>briefspace — briefing pra-sesi · dibantu AI Agent Waginem<br>Bukan nasihat finansial.</footer>
+<h2>Riwayat perubahan</h2>
+<details class="clwrap">
+<summary>v1.0<span>15 Okt 2026</span></summary>
+<ul class="cl">
+<li>Rilis awal: arsip 32 briefing pra-sesi (5–15 Okt 2026), 3x sehari</li>
+<li>Halaman Panduan news merah — zona merah / kuning / hijau + tabel aksi per tipe trader</li>
+<li>Halaman About + panduan cara baca briefing</li>
+<li>Dark mode (toggle ikon moon/sun, ngikutin setting perangkat)</li>
+<li>Label news merah: no-trade → zona merah (universal semua tipe trader)</li>
+<li>Badge zona merah di tiap briefing bisa diklik → ke Panduan</li>
+</ul></details></div>
+<footer><div class="flinks"><a href="panduan.html">Panduan</a>·<a href="about.html">About</a>·<a href="arsip.html">Arsip</a></div>briefspace — briefing pra-sesi · dibantu AI Agent Waginem<br>Bukan nasihat finansial.<div class="ver">briefspace v1.0</div></footer>
 <script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script></body></html>
