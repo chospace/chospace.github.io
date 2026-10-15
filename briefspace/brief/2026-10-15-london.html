@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing London — Kamis 15 Okt 2026 · briefspace</title>
+<style>
+:root{--bg:#fbfbfa;--text:#1c1c1c;--muted:#8b8b8b;--faint:#b5b5b5;
+--line:#e9e9e7;--red:#c43d3d;--green:#1d9e57}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+max-width:680px;margin:0 auto;padding:48px 24px 64px;line-height:1.65;font-size:15px}
+a{color:inherit}
+.overline{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+h1{font-size:30px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.meta{color:var(--muted);font-size:13.5px;margin-bottom:44px}
+h2{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint);
+font-weight:600;margin:40px 0 4px}
+.nav{margin-bottom:32px;font-size:13.5px;color:var(--muted)}
+.nav a{text-decoration:none;border-bottom:1px solid var(--line)}
+.event{padding:18px 0;border-bottom:1px solid var(--line)}
+.event:last-child{border-bottom:none}
+.event .time{color:var(--red);font-weight:800;font-variant-numeric:tabular-nums}
+.event .title{font-weight:700}
+.event .nt{display:inline-block;font-size:11.5px;font-weight:700;color:var(--red);
+background:#fdeeee;border-radius:20px;padding:2px 10px;margin-left:8px}
+.event .cons{color:var(--muted);font-size:13.5px;margin-top:2px}
+.event .sc{font-size:14px;margin-top:6px}
+.newsline{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.newsline:last-child{border-bottom:none}
+.row{display:grid;grid-template-columns:86px 1fr auto;gap:6px 14px;
+padding:13px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.row:last-child{border-bottom:none}
+.row .n{font-weight:700}
+.row .p{font-variant-numeric:tabular-nums}
+.row .p .chg{font-size:12.5px;color:var(--muted)}
+.row .lv{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px}
+.dot.up{background:var(--green)}.dot.dn{background:var(--red)}.dot.fl{background:var(--faint)}
+.row .note{grid-column:2/4;font-size:13px;color:var(--muted);margin-top:-2px}
+.calm{padding:13px 0;color:var(--faint);font-size:13.5px;font-style:italic}
+.hunt{padding:13px 0;border-bottom:1px solid var(--line)}
+.hunt:last-child{border-bottom:none}
+.hunt .pair{font-weight:700}
+.hunt .sell{color:var(--red);font-weight:600}.hunt .buy{color:var(--green);font-weight:600}
+.hunt .d{font-size:13.5px;color:var(--muted);margin-top:2px}
+.hunt .d b{color:var(--text)}
+.focus{margin-top:40px;padding-left:18px;border-left:2px solid var(--text);font-size:14.5px}
+.arch-day{padding:16px 0;border-bottom:1px solid var(--line)}
+.arch-day .d{font-weight:700;margin-bottom:6px}
+.arch-day .sess{display:flex;gap:10px;flex-wrap:wrap}
+.sess a{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:20px;padding:5px 14px;color:var(--text)}
+.sess a:hover{border-color:var(--text)}
+.sess a .t{color:var(--muted);font-size:11.5px}
+.badge-new{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1.5px;color:var(--green);
+border:1px solid var(--green);border-radius:20px;padding:3px 10px;margin-bottom:12px;text-transform:uppercase}
+.raw{font-size:14px}
+.raw h3{font-size:17px;margin:22px 0 8px}
+.raw h4{font-size:15px;margin:18px 0 6px}
+.raw p{margin:8px 0}
+.raw ul{margin:8px 0 8px 20px}
+.raw li{margin:4px 0}
+.raw table{border-collapse:collapse;width:100%;font-size:12.5px;margin:12px 0;display:block;overflow-x:auto}
+.raw th,.raw td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.raw th{background:#f4f4f2;font-size:11px}
+.pn{display:flex;justify-content:space-between;margin-top:48px;padding-top:20px;
+border-top:1px solid var(--line);font-size:13.5px}
+.pn a{text-decoration:none;color:var(--muted)}
+.pn a:hover{color:var(--text)}
+.topnav{position:sticky;top:0;z-index:10;background:var(--bg);
+display:flex;justify-content:space-between;align-items:center;
+padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px}
+.topnav .brand{font-weight:800;letter-spacing:-.3px;text-decoration:none;font-size:17px}
+.topnav .links{display:flex;gap:20px;font-size:13.5px}
+.topnav .links a{text-decoration:none;color:var(--muted)}
+.topnav .links a:hover{color:var(--text)}
+.topnav .links a.active{color:var(--text);font-weight:700}
+.arch-link{display:block;text-align:center;margin-top:48px;font-size:14px;color:var(--muted);text-decoration:none}
+.arch-link:hover{color:var(--text)}
+footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-align:center}
+@media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
+</style></head><body>
+<nav class="topnav"><a class="brand" href="../index.html">briefspace</a><div class="links"><a class="" href="../index.html">Terbaru</a><a class="" href="../arsip.html">Arsip</a></div></nav>
+<div class="overline">Pre-session briefing</div>
+<h1>London · Kamis 15 Okt 2026</h1>
+<div class="meta">13:00–16:00 WIB</div>
+<h2>Red-folder</h2>
+<div class="event">
+<span class="title"><span class="time">13:00</span> — GDP UK (Agu)</span><span class="nt">no-trade 12:30–13:30</span>
+<div class="cons">Konsensus -0,1% m/m (prev +0,4%)</div>
+<div class="sc"><b>Panas</b> → GBP↑ (BoE hike Nov hampir pasti) · <b>Dingin</b> → GBP↓</div>
+</div>
+<div class="event">
+<span class="title"><span class="time">19:30</span> — PPI AS + Retail Sales (Sep) + klaim pengangguran</span><span class="nt">no-trade 18:30–20:30</span>
+<div class="cons">Konsensus PPI +0,5% m/m; retail sales +0,3% m/m</div>
+<div class="cons">(Ingat: CPI kemarin panas 3,7% y/y, core 0,3% m/m; odds hike Okt 26–30%, Jumat 10:30 pidato Warsh terakhir sebelum blackout)</div>
+<div class="sc"><b>Panas</b> → USD↑ emas↓ · <b>Dingin</b> → sebaliknya</div>
+</div>
+<h2>Index</h2>
+<div class="row">
+<span class="n"><span class="dot fl"></span>USTEC</span>
+<span class="p">29.879</span>
+<span class="lv">30.200 / 29.800</span>
+<span class="note">futures datar-miring, semua mata ke PPI malam ini</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot fl"></span>SPX500</span>
+<span class="p">7.739</span>
+<span class="lv">7.752 / 7.700</span>
+<span class="note">tenang, di bawah ATH 7.852; KOSPI -7,9% pagi ini bikin Asia risk-off</span>
+</div>
+<h2>Komoditas</h2>
+<div class="row">
+<span class="n"><span class="dot fl"></span>XAUUSD</span>
+<span class="p">$4.148</span>
+<span class="lv">4.200 / 4.100</span>
+<span class="note">range 4.100–4.162; yield pullback nahan, tapi USD masih kuat pasca-CPI panas</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot up"></span>USOIL</span>
+<span class="p">$94,0</span>
+<span class="lv">95 / 93</span>
+<span class="note">sedikit di bawah angka bulat 94; premi geopolitik masih nempel (Brent ~$106)</span>
+</div>
+<div class="calm">XAGUSD — tenang, jauh dari level.</div>
+<h2>Crypto</h2>
+<div class="row">
+<span class="n"><span class="dot dn"></span>BTCUSD</span>
+<span class="p">$81.148 <span class="chg">-2,9%</span></span>
+<span class="lv">84.146 / 80.000</span>
+<span class="note">🧲 liq atas ~83.300–83.500 (cluster terbesar, short liq kumulatif ~$439jt), bawah ~80.300–80.600 (heatmap Coinglass live ~12:15 WIB, harga $80.736) | semalam sempat sentuh ~$80.2k; ETF 14-Okt outflow -$261,4jt, 7d net -$740,2jt | liq 24j ~$942jt (91,6% long)</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot dn"></span>ETHUSD</span>
+<span class="p">$2.365 <span class="chg">-5,7%</span></span>
+<span class="lv">2.400 / 2.300</span>
+<span class="note">jebol 2.400; ETH paling parah kena liq (~$283jt longs)</span>
+</div>
+<h2>Forex</h2>
+<div class="row">
+<span class="n"><span class="dot fl"></span>EURUSD</span>
+<span class="p">1,1212 <span class="chg">+0,5%</span></span>
+<span class="lv">1,1250 / 1,1150</span>
+<span class="note">bounce korektif karena USD retrace + yield turun; expiry jumbo 1,1250 (€4bn) menjepit dari atas</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot fl"></span>GBPUSD</span>
+<span class="p">1,3241 <span class="chg">+0,3%</span></span>
+<span class="lv">1,3275 / 1,3150</span>
+<span class="note">GDP 13:00 WIB; BoE&#x27;s Pill skeptis pasar pricing 4 hike</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot fl"></span>USDJPY</span>
+<span class="p">157,96</span>
+<span class="lv">158,50 / 157,50</span>
+<span class="note">expiry 158,00 &amp; 158,50 menjepit; 160 = zona intervensi</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot dn"></span>AUDUSD</span>
+<span class="p">0,6953</span>
+<span class="lv">0,7000 / 0,6900</span>
+<span class="note">jobs AU jeblok: -39,3K (est +20K), jobless 4,7% tertinggi 5 thn; peluang RBA hold Nov ~90%</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot dn"></span>USDCHF</span>
+<span class="p">0,8305 <span class="chg">-0,5%</span></span>
+<span class="lv">0,8350 / 0,8250</span>
+<span class="note">turun dari high 0,8395 (tertinggi sejak Mei 2025); CHF dapet bid safe-haven + carry unwind</span>
+</div>
+<div class="calm">USDCAD — tenang, jauh dari level.</div>
+<h2>Hunt — ide setup, bukan sinyal</h2>
+<div class="hunt">
+<div class="pair">EURUSD <span class="sell">sell</span></div>
+<div class="d">Trigger: <b>reject 1,1240–1,1250 (zona expiry) + MSS bearish</b> · invalidasi: <b>1,1280</b></div>
+</div>
+<div class="hunt">
+<div class="pair">GBPUSD <span class="sell">sell</span></div>
+<div class="d">Trigger: <b>reject 1,3260–1,3275 + MSS bearish</b> · invalidasi: <b>1,3300</b></div>
+</div>
+<div class="hunt">
+<div class="pair">BTCUSD <span class="sell">sell</span></div>
+<div class="d">Trigger: <b>bounce ke 81.444–82.000 + MSS bearish</b> · invalidasi: <b>84.146</b></div>
+</div>
+<div class="calm">Ketiganya searah USD — pilih SATU, jangan ditumpuk.</div>
+<div class="focus">Jam pertama = GBP, GDP 13:00 penentu. EUR/GBP paling aktif sesi ini, rajin sweep likuiditas. Posisi ringan; no-trade 12:30–13:30 dan 18:30–20:30. Malam cluster PPI + retail sales, Jumat pagi pidato Warsh.</div>
+<div class="pn">
+<span><a href="2026-10-15-asian.html">← sesi sebelumnya</a></span>
+<span></span>
+</div>
+<footer>Level dari data terverifikasi, bukan ramalan · dibantu AI Agent Waginem<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.</footer>
+</body></html>
