@@ -35,10 +35,10 @@ font-weight:600;margin:40px 0 4px}
 .event:last-child{border-bottom:none}
 .event .time{color:var(--red);font-weight:800;font-variant-numeric:tabular-nums}
 .event .title{font-weight:700}
-.event .nt{display:inline-block;font-size:11.5px;font-weight:700;color:var(--red);
-background:var(--badge);border-radius:20px;padding:2px 10px;margin-left:8px}
-a.event .nt, .event a.nt{text-decoration:none;cursor:pointer}
-.event a.nt:hover{background:var(--badgeh)}
+.event .ev-meta{margin-top:6px;font-size:13px;color:var(--muted)}
+.event .ev-meta a.nt{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1px solid var(--line)}
+.event .ev-meta a.nt:hover{border-bottom-color:var(--red)}
+
 .guide .tbl{overflow-x:auto}
 .event .cons{color:var(--muted);font-size:13.5px;margin-top:2px}
 .event .sc{font-size:14px;margin-top:6px}
@@ -165,4 +165,4 @@ footer a.bl:hover{text-decoration:underline}
 <span><a href="../2026-10-06-asian/">sesi berikutnya →</a></span>
 </div>
 <footer>briefspace by <a class="bl" href="https://chospace.github.io/">chospace</a> · Level dari data terverifikasi, bukan ramalan · dibantu AI Agent Waginem<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.0</div></footer>
-<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='sudah lewat'}else if(s<3600){txt='dimulai dalam '+Math.floor(s/60)+' mnt'}else{txt='dimulai dalam '+Math.floor(s/3600)+'j '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
+<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='sudah rilis'}else if(s<3600){txt='rilis dalam '+Math.floor(s/60)+' mnt'}else{txt='rilis dalam '+Math.floor(s/3600)+'j '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
