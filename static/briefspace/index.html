@@ -2,7 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>briefspace — briefing pra-sesi</title>
 <meta property="og:title" content="briefspace — briefing pra-sesi"><meta property="og:description" content="Arsip briefing pra-sesi trading — key levels, bias, dan zona merah news tiap sesi Asia, London, New York."><meta property="og:url" content="https://chospace.github.io/briefspace/"><meta property="og:type" content="website"><meta name="twitter:card" content="summary">
-<script>(function(){try{var t=localStorage.getItem('briefspace-theme');if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1c1c'/%3E%3Ctext x='32' y='45' font-family='-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif' font-size='38' font-weight='800' text-anchor='middle' fill='%23ffffff'%3Eb%3C/text%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('briefspace-theme');if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
+<script>(function(){var tabs=document.querySelectorAll('.tab');tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.classList.remove('active')});document.querySelectorAll('.tabpanel').forEach(function(x){x.hidden=true});t.classList.add('active');var p=document.querySelector('.tabpanel[data-panel="'+t.dataset.tab+'"]');if(p)p.hidden=false;});});})();</script><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1c1c'/%3E%3Ctext x='32' y='45' font-family='-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif' font-size='38' font-weight='800' text-anchor='middle' fill='%23ffffff'%3Eb%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1d1e20" media="(prefers-color-scheme: dark)"><style>
 :root{--bg:#fbfbfa;--text:#1c1c1c;--muted:#8b8b8b;--faint:#b5b5b5;
@@ -54,6 +55,10 @@ font-weight:600;margin:34px 0 8px}
 
 
 .hunt .hnum{font-size:12px;color:var(--faint);font-weight:700;letter-spacing:1.5px;margin-right:10px}
+.tabs{display:flex;gap:4px;margin:0 0 8px}
+.tab{background:none;border:none;font-family:inherit;font-size:13px;font-weight:600;color:var(--muted);padding:6px 12px;cursor:pointer;border-radius:8px}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--text);background:var(--line)}
 .newsline{padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
 .newsline:last-child{border-bottom:none}
 .row{display:grid;grid-template-columns:86px 1fr auto;gap:6px 14px;
@@ -158,6 +163,13 @@ footer a.bl:hover{text-decoration:underline}
 <div class="ezone"><a href="panduan/">Zona merah</a> 18:30–20:30 — hindari entry agresif</div>
 </div>
 <h2>Instruments</h2>
+<div class="tabs" role="tablist">
+<button class="tab active" data-tab="Index" role="tab">Index</button>
+<button class="tab" data-tab="Komoditas" role="tab">Komoditas</button>
+<button class="tab" data-tab="Crypto" role="tab">Crypto</button>
+<button class="tab" data-tab="Forex" role="tab">Forex</button>
+</div>
+<div class="tabpanel" data-panel="Index" role="tabpanel">
 <div class="row">
 <span class="n"><span class="dot dn"></span>USTEC</span>
 <span class="p">29.780</span>
@@ -170,6 +182,8 @@ footer a.bl:hover{text-decoration:underline}
 <span class="lv">7.800 / 7.700</span>
 <span class="note">Rabu penurunan harian terbesar sejak Juli (-1,11%); futures masih merah menunggu PPI</span>
 </div>
+</div>
+<div class="tabpanel" data-panel="Komoditas" hidden role="tabpanel">
 <div class="row">
 <span class="n"><span class="dot fl"></span>XAUUSD</span>
 <span class="p">$4.150</span>
@@ -188,6 +202,8 @@ footer a.bl:hover{text-decoration:underline}
 <span class="lv">95 / 93</span>
 <span class="note">rebound dari 93,2 ke ~94,5; Brent ~104,4; API report draw besar -11,1jt bbl, EIA inventori 00:00 WIB</span>
 </div>
+</div>
+<div class="tabpanel" data-panel="Crypto" hidden role="tabpanel">
 <div class="row">
 <span class="n"><span class="dot dn"></span>BTCUSD</span>
 <span class="p">$80.900 <span class="chg">-2,9%</span></span>
@@ -200,6 +216,8 @@ footer a.bl:hover{text-decoration:underline}
 <span class="lv">2.400 / 2.300</span>
 <span class="note">jebol 2.400; low hari ini 2.318; RSI harian ~34, tapi momentum masih bearish</span>
 </div>
+</div>
+<div class="tabpanel" data-panel="Forex" hidden role="tabpanel">
 <div class="row">
 <span class="n"><span class="dot fl"></span>EURUSD</span>
 <span class="p">1,1215 <span class="chg">+0,5%</span></span>
@@ -235,6 +253,7 @@ footer a.bl:hover{text-decoration:underline}
 <span class="p">0,8284 <span class="chg">-0,8%</span></span>
 <span class="lv">0,8350 / 0,8250</span>
 <span class="note">turun dari high 0,8395 (tertinggi sejak Mei 2025); CHF bid safe-haven + carry unwind</span>
+</div>
 </div>
 <h2>Hunt — ide setup, bukan sinyal</h2>
 <div class="hunt">
