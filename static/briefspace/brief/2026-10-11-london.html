@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing London — Minggu, 11 Okt 2026 · briefspace</title>
+<style>
+:root{--bg:#fbfbfa;--text:#1c1c1c;--muted:#8b8b8b;--faint:#b5b5b5;
+--line:#e9e9e7;--red:#c43d3d;--green:#1d9e57}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+max-width:680px;margin:0 auto;padding:48px 24px 64px;line-height:1.65;font-size:15px}
+a{color:inherit}
+.overline{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+h1{font-size:30px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.meta{color:var(--muted);font-size:13.5px;margin-bottom:44px}
+h2{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint);
+font-weight:600;margin:40px 0 4px}
+.nav{margin-bottom:32px;font-size:13.5px;color:var(--muted)}
+.nav a{text-decoration:none;border-bottom:1px solid var(--line)}
+.event{padding:18px 0;border-bottom:1px solid var(--line)}
+.event:last-child{border-bottom:none}
+.event .time{color:var(--red);font-weight:800;font-variant-numeric:tabular-nums}
+.event .title{font-weight:700}
+.event .nt{display:inline-block;font-size:11.5px;font-weight:700;color:var(--red);
+background:#fdeeee;border-radius:20px;padding:2px 10px;margin-left:8px}
+.event .cons{color:var(--muted);font-size:13.5px;margin-top:2px}
+.event .sc{font-size:14px;margin-top:6px}
+.newsline{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.newsline:last-child{border-bottom:none}
+.row{display:grid;grid-template-columns:86px 1fr auto;gap:6px 14px;
+padding:13px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.row:last-child{border-bottom:none}
+.row .n{font-weight:700}
+.row .p{font-variant-numeric:tabular-nums}
+.row .p .chg{font-size:12.5px;color:var(--muted)}
+.row .lv{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px}
+.dot.up{background:var(--green)}.dot.dn{background:var(--red)}.dot.fl{background:var(--faint)}
+.row .note{grid-column:2/4;font-size:13px;color:var(--muted);margin-top:-2px}
+.calm{padding:13px 0;color:var(--faint);font-size:13.5px;font-style:italic}
+.hunt{padding:13px 0;border-bottom:1px solid var(--line)}
+.hunt:last-child{border-bottom:none}
+.hunt .pair{font-weight:700}
+.hunt .sell{color:var(--red);font-weight:600}.hunt .buy{color:var(--green);font-weight:600}
+.hunt .d{font-size:13.5px;color:var(--muted);margin-top:2px}
+.hunt .d b{color:var(--text)}
+.focus{margin-top:40px;padding-left:18px;border-left:2px solid var(--text);font-size:14.5px}
+.arch-day{padding:16px 0;border-bottom:1px solid var(--line)}
+.arch-day .d{font-weight:700;margin-bottom:6px}
+.arch-day .sess{display:flex;gap:10px;flex-wrap:wrap}
+.sess a{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:20px;padding:5px 14px;color:var(--text)}
+.sess a:hover{border-color:var(--text)}
+.sess a .t{color:var(--muted);font-size:11.5px}
+.badge-new{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1.5px;color:var(--green);
+border:1px solid var(--green);border-radius:20px;padding:3px 10px;margin-bottom:12px;text-transform:uppercase}
+.raw{font-size:14px}
+.raw h3{font-size:17px;margin:22px 0 8px}
+.raw h4{font-size:15px;margin:18px 0 6px}
+.raw p{margin:8px 0}
+.raw ul{margin:8px 0 8px 20px}
+.raw li{margin:4px 0}
+.raw table{border-collapse:collapse;width:100%;font-size:12.5px;margin:12px 0;display:block;overflow-x:auto}
+.raw th,.raw td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.raw th{background:#f4f4f2;font-size:11px}
+.pn{display:flex;justify-content:space-between;margin-top:48px;padding-top:20px;
+border-top:1px solid var(--line);font-size:13.5px}
+.pn a{text-decoration:none;color:var(--muted)}
+.pn a:hover{color:var(--text)}
+.topnav{position:sticky;top:0;z-index:10;background:var(--bg);
+display:flex;justify-content:space-between;align-items:center;
+padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px}
+.topnav .brand{font-weight:800;letter-spacing:-.3px;text-decoration:none;font-size:17px}
+.topnav .links{display:flex;gap:20px;font-size:13.5px}
+.topnav .links a{text-decoration:none;color:var(--muted)}
+.topnav .links a:hover{color:var(--text)}
+.topnav .links a.active{color:var(--text);font-weight:700}
+.arch-link{display:block;text-align:center;margin-top:48px;font-size:14px;color:var(--muted);text-decoration:none}
+.arch-link:hover{color:var(--text)}
+footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-align:center}
+@media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
+</style></head><body>
+<nav class="topnav"><a class="brand" href="../index.html">briefspace</a><div class="links"><a class="" href="../index.html">Terbaru</a><a class="" href="../arsip.html">Arsip</a></div></nav>
+<div class="overline">Pre-session briefing</div>
+<h1>London · Minggu, 11 Okt 2026</h1>
+<div class="meta">13:00–16:00 WIB</div>
+<h2>News</h2>
+<div class="newsline">Minggu — tidak ada event high-impact; pasar spot, FX, dan ETF libur.</div>
+<h2>Index</h2>
+<div class="calm">USTEC — tenang, jauh dari level.</div>
+<h2>Komoditas</h2>
+<div class="calm">XAUUSD, USOIL — tenang, jauh dari level.</div>
+<h2>Crypto</h2>
+<div class="row">
+<span class="n"><span class="dot dn"></span>BTCUSD</span>
+<span class="p">$83,0K <span class="chg">+0,5%</span></span>
+<span class="lv">BSL $83.441 (PDH Jumat) / SSL $82.1–82.3K (cluster likuidasi) → $80.394 (low 8-Okt)</span>
+<span class="note">🧲 atas $83.9–84.0K / bawah $82.1–82.3K | ETF 7d net -$386,3M (Jumat +$21,1M inflow — hari hijau pertama setelah 2 hari outflow berat)</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot dn"></span>ETHUSD</span>
+<span class="p">$2.505 <span class="chg">+0,7%</span></span>
+<span class="lv">BSL $2.512 (high Jumat — harga nempel) → $2.600 / SSL $2.406 (low Kamis) → $2.358</span>
+<span class="note">ETF ether outflow 5 hari trading beruntun (-$542M, per Jumat)</span>
+</div>
+<h2>Forex</h2>
+<div class="calm">Semua pair tutup weekend — FX buka lagi Senin pagi WIB. — tenang, jauh dari level.</div>
+<h2>Hunt — ide setup, bukan sinyal</h2>
+<div class="calm">tidak ada hunt valid — jangan dipaksa. (BTC &amp; ETH nempel resistance tapi likuiditas weekend tipis + trigger MSS intraday tak terverifikasi = bukan setup A-grade.)</div>
+<div class="focus">Keduanya masih di bawah resistance Jumat (BTC $83.441, ETH $2.512). Likuidasi BTC menumpuk di $83.9–84K atas dan $82.1–82.3K bawah — weekend rawan sweep tipis; jangan kejar breakout, tunggu reaksi pembukaan Senin.</div>
+<div class="pn">
+<span><a href="2026-10-11-asian.html">← sesi sebelumnya</a></span>
+<span><a href="2026-10-11-ny.html">sesi berikutnya →</a></span>
+</div>
+<footer>Level dari data terverifikasi, bukan ramalan · dibantu AI Agent Waginem<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.</footer>
+</body></html>
