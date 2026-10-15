@@ -19,39 +19,46 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{background-color:var(--bg);background-image:var(--paper);color:var(--text);
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-max-width:680px;margin:0 auto;padding:48px 24px 64px;line-height:1.65;font-size:15px}
+max-width:680px;margin:0 auto;padding:55px 21px 55px;line-height:1.618;font-size:15px}
 a{color:inherit}
-.overline{display:inline-block;font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;border:1px solid var(--line);border-radius:99px;padding:5px 14px}
+.overline{display:inline-block;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:13px;border:1px solid var(--line);border-radius:99px;padding:5px 14px}
 h1{font-size:30px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
-.meta{color:var(--muted);font-size:13.5px;margin-bottom:44px}
-h2{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint);
-font-weight:600;margin:40px 0 4px}
-h2 .ff{font-size:10px;letter-spacing:1px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);text-transform:none}
-h2 .ff:hover{color:var(--text)}
+.meta{color:var(--muted);font-size:12px;margin-bottom:34px}
+h2{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint);
+font-weight:600;margin:34px 0 8px}
+.frow a.ff{font-size:12px;color:var(--faint);text-decoration:none}
+.frow a.ff:hover{color:var(--red)}
 .about h3{font-size:15px;font-weight:700;margin:24px 0 6px}
-.about p{font-size:14.5px;margin:8px 0;color:var(--text)}
+.about p{font-size:15px;margin:8px 0;color:var(--text)}
 .about p b{font-weight:700}
-.nav{margin-bottom:32px;font-size:13.5px;color:var(--muted)}
+.nav{margin-bottom:34px;font-size:12px;color:var(--muted)}
 .nav a{text-decoration:none;border-bottom:1px solid var(--line)}
-.event{padding:18px 0;border-bottom:1px solid var(--line)}
+.event{position:relative;padding:16px 0 16px 28px;border-bottom:1px solid var(--line)}
+.event::before{content:'';position:absolute;left:8px;top:26px;bottom:-2px;width:2px;background:var(--line)}
 .event:last-child{border-bottom:none}
+.event:last-child::before{display:none}
+.event .edot{position:absolute;left:3px;top:25px;width:12px;height:12px;border-radius:50%;background:var(--red)}
+.event .edot:hover{transform:scale(1.15)}
 .event .time{color:var(--red);font-weight:800;font-variant-numeric:tabular-nums}
 .event .title{font-weight:700}
-.event .ev-meta{margin-top:6px;font-size:13px;color:var(--muted)}
+.event .nw{white-space:nowrap}
+
+.event .ev-meta{margin-top:8px;font-size:12px;color:var(--muted)}
 .event .ev-meta a.nt{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1px solid var(--line)}
 .event .ev-meta a.nt:hover{border-bottom-color:var(--red)}
 
 .guide .tbl{overflow-x:auto}
-.event .cons{color:var(--muted);font-size:13.5px;margin-top:2px}
-.event .frow{font-size:14px;margin-top:6px}
-.event .frow .fl{color:var(--muted);font-size:12.5px;font-weight:600}
-.event .frow.kx{color:var(--muted);font-size:13px}
+.event .cons{color:var(--muted);font-size:15px;margin-top:2px}
+.event .frow{font-size:15px;margin-top:8px}
+.event .frow .fl{color:var(--muted);font-size:12px;font-weight:600}
+.event .frow.kx{color:var(--muted);font-size:12px}
 .event .frow.kx .fl{color:var(--faint)}
-.event .zm{margin-top:10px;font-size:13.5px;color:var(--red);font-weight:600}
-.event .sc{font-size:14px;margin-top:6px}
-.event .cd{display:inline-block;font-size:12px;color:var(--muted);margin-left:8px;font-variant-numeric:tabular-nums}
-.hunt .hnum{font-size:11px;color:var(--faint);font-weight:700;letter-spacing:1.5px;margin-right:10px}
-.newsline{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.event .zm{margin-top:13px;font-size:12px;color:var(--muted);line-height:2}
+.event .zm .zmpill{display:inline-block;font-size:11.5px;font-weight:700;color:#c43d3d;background:var(--badge);border-radius:20px;padding:2px 10px;margin-left:8px;margin-right:8px;white-space:nowrap;vertical-align:1px}
+.event .sc{font-size:15px;margin-top:8px}
+.event .cd{display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.5px;color:var(--muted);background:var(--line);border-radius:20px;padding:2px 10px;white-space:nowrap;font-variant-numeric:tabular-nums;text-transform:uppercase}
+.hunt .hnum{font-size:12px;color:var(--faint);font-weight:700;letter-spacing:1.5px;margin-right:10px}
+.newsline{padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
 .newsline:last-child{border-bottom:none}
 .row{display:grid;grid-template-columns:86px 1fr auto;gap:6px 14px;
 padding:13px 10px;border-bottom:1px solid var(--line);align-items:baseline;
@@ -99,7 +106,7 @@ border-top:1px solid var(--line);font-size:13.5px}
 display:flex;justify-content:space-between;align-items:center;
 padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px}
 
-.topnav .brand{font-weight:800;letter-spacing:-.3px;text-decoration:none;font-size:19px}
+.topnav .brand{font-weight:800;letter-spacing:-.5px;text-decoration:none;font-size:24px}
 .topnav .brand .lb{color:var(--text)}
 .topnav .brand .ls{color:var(--muted);font-weight:800}
 .topnav .links{display:flex;gap:20px;font-size:13.5px;align-items:center}
@@ -172,4 +179,4 @@ footer a.bl:hover{text-decoration:underline}
 <span><a href="../2026-10-06-asian/">sesi berikutnya →</a></span>
 </div>
 <footer>briefspace by <a class="bl" href="https://chospace.github.io/">chospace</a> · Level dari data terverifikasi, bukan ramalan · dibantu AI Agent Waginem<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.0</div></footer>
-<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='sudah rilis'}else if(s<3600){txt='rilis dalam '+Math.floor(s/60)+' mnt'}else{txt='rilis dalam '+Math.floor(s/3600)+'j '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
+<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='Released'}else if(s<3600){txt='in '+Math.floor(s/60)+'m'}else{txt='in '+Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
