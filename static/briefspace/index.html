@@ -1,9 +1,13 @@
 <!DOCTYPE html><html lang="id"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>briefspace — briefing pra-sesi</title>
-<style>
+<script>(function(){try{var t=localStorage.getItem('briefspace-theme');if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script><style>
 :root{--bg:#fbfbfa;--text:#1c1c1c;--muted:#8b8b8b;--faint:#b5b5b5;
---line:#e9e9e7;--red:#c43d3d;--green:#1d9e57}
+--line:#e9e9e7;--red:#c43d3d;--green:#1d9e57;
+--card:#f4f4f2;--badge:#fdeeee;--badgeh:#fbd9d4}
+[data-theme="dark"]{--bg:#1d1e20;--text:#e8e6e3;--muted:#9c9c9c;--faint:#636363;
+--line:#2b2c30;--red:#e0685a;--green:#63bd85;
+--card:#26272b;--badge:#3a2424;--badgeh:#4a2c2c}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -24,7 +28,10 @@ font-weight:600;margin:40px 0 4px}
 .event .time{color:var(--red);font-weight:800;font-variant-numeric:tabular-nums}
 .event .title{font-weight:700}
 .event .nt{display:inline-block;font-size:11.5px;font-weight:700;color:var(--red);
-background:#fdeeee;border-radius:20px;padding:2px 10px;margin-left:8px}
+background:var(--badge);border-radius:20px;padding:2px 10px;margin-left:8px}
+a.event .nt, .event a.nt{text-decoration:none;cursor:pointer}
+.event a.nt:hover{background:var(--badgeh)}
+.guide .tbl{overflow-x:auto}
 .event .cons{color:var(--muted);font-size:13.5px;margin-top:2px}
 .event .sc{font-size:14px;margin-top:6px}
 .newsline{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -64,7 +71,7 @@ border:1px solid var(--green);border-radius:20px;padding:3px 10px;margin-bottom:
 .raw li{margin:4px 0}
 .raw table{border-collapse:collapse;width:100%;font-size:12.5px;margin:12px 0;display:block;overflow-x:auto}
 .raw th,.raw td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
-.raw th{background:#f4f4f2;font-size:11px}
+.raw th{background:var(--card);font-size:11px}
 .pn{display:flex;justify-content:space-between;margin-top:48px;padding-top:20px;
 border-top:1px solid var(--line);font-size:13.5px}
 .pn a{text-decoration:none;color:var(--muted)}
@@ -73,16 +80,34 @@ border-top:1px solid var(--line);font-size:13.5px}
 display:flex;justify-content:space-between;align-items:center;
 padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px}
 .topnav .brand{font-weight:800;letter-spacing:-.3px;text-decoration:none;font-size:17px}
-.topnav .links{display:flex;gap:20px;font-size:13.5px}
+.topnav .links{display:flex;gap:20px;font-size:13.5px;align-items:center}
+#theme-btn{background:none;border:none;cursor:pointer;padding:4px;color:var(--muted);display:flex;align-items:center}
+#theme-btn:hover{color:var(--text)}
+#theme-btn svg{width:19px;height:15px}
+#theme-btn #sun{display:none}
+[data-theme="dark"] #theme-btn #sun{display:block}
+[data-theme="dark"] #theme-btn #moon{display:none}
 .topnav .links a{text-decoration:none;color:var(--muted)}
 .topnav .links a:hover{color:var(--text)}
 .topnav .links a.active{color:var(--text);font-weight:700}
 .arch-link{display:block;text-align:center;margin-top:48px;font-size:14px;color:var(--muted);text-decoration:none}
 .arch-link:hover{color:var(--text)}
+.guide table{border-collapse:collapse;width:100%;font-size:13px;margin:14px 0}
+.guide th,.guide td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+.guide th{background:var(--card);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.guide td:first-child{font-weight:700;white-space:nowrap}
+.zone{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.zone:last-child{border-bottom:none}
+.zone .zd{flex:none;width:14px;height:14px;border-radius:50%;margin-top:5px}
+.zd.r{background:var(--red)}.zd.y{background:#d9a821}.zd.g{background:var(--green)}
+.zone .zt{font-weight:800;margin-bottom:4px}
+.zone .zt .tw{font-weight:400;color:var(--muted);font-size:13px}
+.zone p{font-size:13.5px;color:var(--muted);margin:4px 0}
+.zone p b{color:var(--text)}
 footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-align:center}
 @media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
 </style></head><body>
-<nav class="topnav"><a class="brand" href="index.html">briefspace</a><div class="links"><a class="active" href="index.html">Terbaru</a><a class="" href="arsip.html">Arsip</a><a class="" href="about.html">About</a></div></nav>
+<nav class="topnav"><a class="brand" href="index.html">briefspace</a><div class="links"><a class="active" href="index.html">Terbaru</a><a class="" href="arsip.html">Arsip</a><a class="" href="panduan.html">Panduan</a><a class="" href="about.html">About</a><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></nav>
 
 
 <div class="overline">Pre-session briefing</div>
@@ -90,12 +115,12 @@ footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-al
 <div class="meta">13:00–16:00 WIB</div>
 <h2>Red-folder</h2>
 <div class="event">
-<span class="title"><span class="time">13:00</span> — GDP UK (Agu)</span><span class="nt">no-trade 12:30–13:30</span>
+<span class="title"><span class="time">13:00</span> — GDP UK (Agu)</span><a class="nt" href="panduan.html">no-trade 12:30–13:30</a>
 <div class="cons">Konsensus -0,1% m/m (prev +0,4%)</div>
 <div class="sc"><b>Panas</b> → GBP↑ (BoE hike Nov hampir pasti) · <b>Dingin</b> → GBP↓</div>
 </div>
 <div class="event">
-<span class="title"><span class="time">19:30</span> — PPI AS + Retail Sales (Sep) + klaim pengangguran</span><span class="nt">no-trade 18:30–20:30</span>
+<span class="title"><span class="time">19:30</span> — PPI AS + Retail Sales (Sep) + klaim pengangguran</span><a class="nt" href="panduan.html">no-trade 18:30–20:30</a>
 <div class="cons">Konsensus PPI +0,5% m/m; retail sales +0,3% m/m</div>
 <div class="cons">(Ingat: CPI kemarin panas 3,7% y/y, core 0,3% m/m; odds hike Okt 26–30%, Jumat 10:30 pidato Warsh terakhir sebelum blackout)</div>
 <div class="sc"><b>Panas</b> → USD↑ emas↓ · <b>Dingin</b> → sebaliknya</div>
@@ -189,7 +214,7 @@ footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-al
 <div class="focus">Jam pertama = GBP, GDP 13:00 penentu. EUR/GBP paling aktif sesi ini, rajin sweep likuiditas. Posisi ringan; no-trade 12:30–13:30 dan 18:30–20:30. Malam cluster PPI + retail sales, Jumat pagi pidato Warsh.</div>
 
 
-
+<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script>
 <a class="arch-link" href="arsip.html">Lihat arsip briefing →</a>
 <footer>briefspace — briefing pra-sesi · dibantu AI Agent Waginem<br>Bukan nasihat finansial.</footer>
-</body></html>
+<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script></body></html>
