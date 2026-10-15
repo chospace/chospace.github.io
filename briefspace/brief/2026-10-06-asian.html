@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing Asian — 6 Okt 2026 · briefspace</title>
+<style>
+:root{--bg:#fbfbfa;--text:#1c1c1c;--muted:#8b8b8b;--faint:#b5b5b5;
+--line:#e9e9e7;--red:#c43d3d;--green:#1d9e57}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+max-width:680px;margin:0 auto;padding:48px 24px 64px;line-height:1.65;font-size:15px}
+a{color:inherit}
+.overline{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+h1{font-size:30px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.meta{color:var(--muted);font-size:13.5px;margin-bottom:44px}
+h2{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint);
+font-weight:600;margin:40px 0 4px}
+.nav{margin-bottom:32px;font-size:13.5px;color:var(--muted)}
+.nav a{text-decoration:none;border-bottom:1px solid var(--line)}
+.event{padding:18px 0;border-bottom:1px solid var(--line)}
+.event:last-child{border-bottom:none}
+.event .time{color:var(--red);font-weight:800;font-variant-numeric:tabular-nums}
+.event .title{font-weight:700}
+.event .nt{display:inline-block;font-size:11.5px;font-weight:700;color:var(--red);
+background:#fdeeee;border-radius:20px;padding:2px 10px;margin-left:8px}
+.event .cons{color:var(--muted);font-size:13.5px;margin-top:2px}
+.event .sc{font-size:14px;margin-top:6px}
+.newsline{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.newsline:last-child{border-bottom:none}
+.row{display:grid;grid-template-columns:86px 1fr auto;gap:6px 14px;
+padding:13px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.row:last-child{border-bottom:none}
+.row .n{font-weight:700}
+.row .p{font-variant-numeric:tabular-nums}
+.row .p .chg{font-size:12.5px;color:var(--muted)}
+.row .lv{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px}
+.dot.up{background:var(--green)}.dot.dn{background:var(--red)}.dot.fl{background:var(--faint)}
+.row .note{grid-column:2/4;font-size:13px;color:var(--muted);margin-top:-2px}
+.calm{padding:13px 0;color:var(--faint);font-size:13.5px;font-style:italic}
+.hunt{padding:13px 0;border-bottom:1px solid var(--line)}
+.hunt:last-child{border-bottom:none}
+.hunt .pair{font-weight:700}
+.hunt .sell{color:var(--red);font-weight:600}.hunt .buy{color:var(--green);font-weight:600}
+.hunt .d{font-size:13.5px;color:var(--muted);margin-top:2px}
+.hunt .d b{color:var(--text)}
+.focus{margin-top:40px;padding-left:18px;border-left:2px solid var(--text);font-size:14.5px}
+.arch-day{padding:16px 0;border-bottom:1px solid var(--line)}
+.arch-day .d{font-weight:700;margin-bottom:6px}
+.arch-day .sess{display:flex;gap:10px;flex-wrap:wrap}
+.sess a{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:20px;padding:5px 14px;color:var(--text)}
+.sess a:hover{border-color:var(--text)}
+.sess a .t{color:var(--muted);font-size:11.5px}
+.badge-new{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1.5px;color:var(--green);
+border:1px solid var(--green);border-radius:20px;padding:3px 10px;margin-bottom:12px;text-transform:uppercase}
+.raw{font-size:14px}
+.raw h3{font-size:17px;margin:22px 0 8px}
+.raw h4{font-size:15px;margin:18px 0 6px}
+.raw p{margin:8px 0}
+.raw ul{margin:8px 0 8px 20px}
+.raw li{margin:4px 0}
+.raw table{border-collapse:collapse;width:100%;font-size:12.5px;margin:12px 0;display:block;overflow-x:auto}
+.raw th,.raw td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.raw th{background:#f4f4f2;font-size:11px}
+.pn{display:flex;justify-content:space-between;margin-top:48px;padding-top:20px;
+border-top:1px solid var(--line);font-size:13.5px}
+.pn a{text-decoration:none;color:var(--muted)}
+.pn a:hover{color:var(--text)}
+.topnav{position:sticky;top:0;z-index:10;background:var(--bg);
+display:flex;justify-content:space-between;align-items:center;
+padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px}
+.topnav .brand{font-weight:800;letter-spacing:-.3px;text-decoration:none;font-size:17px}
+.topnav .links{display:flex;gap:20px;font-size:13.5px}
+.topnav .links a{text-decoration:none;color:var(--muted)}
+.topnav .links a:hover{color:var(--text)}
+.topnav .links a.active{color:var(--text);font-weight:700}
+.arch-link{display:block;text-align:center;margin-top:48px;font-size:14px;color:var(--muted);text-decoration:none}
+.arch-link:hover{color:var(--text)}
+footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-align:center}
+@media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
+</style></head><body>
+<nav class="topnav"><a class="brand" href="../index.html">briefspace</a><div class="links"><a class="" href="../index.html">Terbaru</a><a class="" href="../arsip.html">Arsip</a></div></nav>
+<div class="overline">Pre-session briefing</div>
+<h1>Asian · 6 Okt 2026</h1>
+<div class="meta">arsip</div>
+<div class="raw"><h3>🎯 ICT PRE-SESSION BRIEF | Asian Session</h3>
+<p><b>Jam Acuan:</b> 06:30-09:00 WIB / 19:30-22:00 ET</p>
+<p><b>Tanggal:</b> Selasa, 6 Okt 2026</p>
+<h4>1. News Drivers (Filter Volatilitas)</h4>
+<ul><li>~06:35 WIB — BOJ Gov Ueda Speaks (JPY High, per forexsentiment.live; jam pasti bervariasi per sumber). Bukan Red Folder untuk pair USD.</li>19:30 WIB / 08:30 ET — US Trade Balance Agustus (Medium, per heygotrade weekly outlook) → No Trade Zone 19:00–20:00 WIB (sesi NY).</li>Selasa, jam TBD — Fed's Williams & Bowman speaks (Medium) → headline risk, hindari entry saat statement.</li>Rabu 21:30 WIB / 10:30 ET — Crude Oil Inventories (Medium, khusus USOIL).</li>⚠️ Red Folder advance: FOMC Meeting Minutes — Rabu 14:00 ET = <b>Kamis 01:00 WIB</b> → No Trade Zone 00:30–01:30 WIB Kamis. Ini event terbesar minggu ini.</li></ul>
+<p>Selama sesi Asian pagi ini tidak ada Red Folder USD → filter volatilitas relatif bersih.</p>
+<h4>2. Draw on Liquidity (DOL) & Key Levels</h4>
+<p>_Harga per ~06:30 WIB. Sumber: Finnhub (XAUUSD), BlackBull (USTEC/USOIL), aggregator kripto (BTC/ETH)._</p>
+<table>
+<tr><td>Pair</td><td>HTF Bias</td><td>BSL Target (Liquidity Pool Atas)</td><td>SSL Target (Liquidity Pool Bawah)</td><td>Current Zone</td></tr>
+<tr><td><b>USTEC</b> (~31.337, -0,2%)</td><td>Bullish</td><td>31.500 (round number, area ATH) / PDH-D1*</td><td>31.000 (round number) / PDL-D1*</td><td>Premium — dekat area ATH; EQ D1 tandai manual*</td></tr>
+<tr><td><b>XAUUSD</b> (4.143,91, +0,08%)</td><td>Bearish</td><td>4.170,44 (PDH) → 4.195–4.208 (supply analis)</td><td>4.123,36 (PDL) → 4.110,87 (low 27-Sep)</td><td>Discount (4.143,91 vs EQ 4.255,27)</td></tr>
+<tr><td><b>BTCUSD</b> (~85.700, -0,2%)</td><td>Bullish</td><td>86.424 (high Minggu) → 87.000</td><td>83.591 (low 7-hari) → 83.000</td><td>Premium (85.700 vs EQ 85.008)</td></tr>
+<tr><td><b>ETHUSD</b> (~2.708,5, -0,2%)</td><td>Bullish</td><td>2.730 (high Minggu) → 2.750</td><td>2.667 (low Jumat) → 2.650</td><td>Premium tipis (2.708,5 vs EQ 2.698,77)</td></tr>
+<tr><td><b>USOIL</b> (~89,2, -1–2%)</td><td>Bearish</td><td>92,90 (resistance analis) → 94,00</td><td>88,54 (support analis) → 88,00</td><td>Discount (89,2 vs EQ 90,72)</td></tr>
+</table>
+<p>_*USTEC: daily candle H/L tidak terverifikasi pagi ini (feed hanya cocok untuk ETF Eropa, bukan index CFD) — PDH/PDL dan equilibrium D1 WAJIB ditandai manual di chart. Level lama analis (27.5k–29.7k) sudah tidak relevan, harga sudah jauh di atas._</p>
+<p>XAUUSD: struktur D1 lower-highs dari 4.399,67 (17-Sep), harga di bawah EQ 4.255,27 → bias bearish; candle D1 Senin 5-Okt: H 4.170,44 / L 4.123,36 / C 4.138,26. EQ dihitung dari 16 candle D1 terakhir (high 4.399,67 / low 4.110,87).</p>
+<h4>3. Unmitigated PD Arrays (Area Pantau Entry)</h4>
+<ul><li><b>USTEC:</b> 31.500 / 31.000 angka bulat psikologis; area ATH ~31.300–31.500 — PDH/PDL D1 & OB tandai manual, jangan pakai level FVG lama.</li><b>XAUUSD:</b> PDH 4.170,44 / PDL 4.123,36 (candle D1 Senin); supply analis 4.195–4.208 (invalidation di atas 4.220); support 4.110 → 4.000–4.020.</li><b>BTCUSD:</b> 86.424 (high Minggu) / 83.591 (low 7-hari); round 86.000 / 84.000.</li><b>ETHUSD:</b> 2.730 (high Minggu) / 2.667 (low Jumat); round 2.750 / 2.700.</li><b>USOIL:</b> 92,90 (resistance analis) / 88,54 (support analis); round 90,00 / 88,00. Awas crude oil inventories Rabu.</li></ul>
+<p>FVG/OB presisi tandai manual di chart M15/H1.</p>
+<h4>4. Checklist Eksekusi Sesi</h4>
+<ul><li>[ ] Apakah Killzone sudah aktif? (06:30–09:00 WIB = 19:30–22:30 ET → ya, dalam Asian killzone)</li>[ ] Apakah sudah terjadi sweep liquidity (BSL/SSL diambil)?</li>[ ] Apakah ada Market Structure Shift (MSS) dengan displacement kuat pada LTF (M1/M5)?</li>[ ] Entry hanya di POI yang searah dengan HTF Bias.</li></ul>
+<p>Catatan: semua 5 instrumen buka normal (hari kerja). USOIL lemah pasca -2% Senin — waspada pantulan teknikal dari 88,54. XAUUSD: sell-the-rally ke arah 4.110 selama di bawah supply 4.195–4.208; batal jika close H4 di atas 4.220.</p></div>
+<div class="pn">
+<span><a href="2026-10-05-ny.html">← sesi sebelumnya</a></span>
+<span><a href="2026-10-06-london.html">sesi berikutnya →</a></span>
+</div>
+<footer>Level dari data terverifikasi, bukan ramalan · dibantu AI Agent Waginem<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.</footer>
+</body></html>
