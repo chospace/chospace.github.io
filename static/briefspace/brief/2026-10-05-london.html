@@ -79,7 +79,9 @@ border-top:1px solid var(--line);font-size:13.5px}
 .topnav{position:sticky;top:0;z-index:10;background:var(--bg);
 display:flex;justify-content:space-between;align-items:center;
 padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px}
-.topnav .brand{font-weight:800;letter-spacing:-.3px;text-decoration:none;font-size:17px}
+.topnav .brand{font-weight:800;letter-spacing:-.3px;text-decoration:none;font-size:19px}
+.topnav .brand .lb{color:var(--text)}
+.topnav .brand .ls{color:var(--muted);font-weight:800}
 .topnav .links{display:flex;gap:20px;font-size:13.5px;align-items:center}
 #theme-btn{background:none;border:none;cursor:pointer;padding:4px;color:var(--muted);display:flex;align-items:center}
 #theme-btn:hover{color:var(--text)}
@@ -108,6 +110,8 @@ footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-al
 .flinks{margin-bottom:14px;font-size:13px}
 .flinks a{color:var(--muted);text-decoration:none;margin:0 10px}
 .flinks a:hover{color:var(--text)}
+footer a.bl{color:var(--text);text-decoration:none;font-weight:700}
+footer a.bl:hover{text-decoration:underline}
 .ver{margin-top:12px;font-size:11px;color:var(--faint)}
 .clwrap{margin:8px 0;border-bottom:1px solid var(--line);padding:10px 0}
 .clwrap summary{cursor:pointer;font-size:14.5px;font-weight:700;list-style:none}
@@ -119,7 +123,7 @@ footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-al
 .cl li{margin:5px 0}
 @media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
 </style></head><body>
-<nav class="topnav"><a class="brand" href="../index.html">briefspace</a><div class="links"><a class="" href="../index.html">Terbaru</a><a class="" href="../arsip.html">Arsip</a><a class="" href="../panduan.html">Panduan</a><a class="" href="../about.html">About</a><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></nav>
+<nav class="topnav"><a class="brand" href="../index.html"><span class="lb">brief</span><span class="ls">space</span></a><div class="links"><a class="" href="../index.html">Terbaru</a><a class="" href="../arsip.html">Arsip</a><a class="" href="../panduan.html">Panduan</a><a class="" href="../about.html">About</a><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></nav>
 <div class="overline">Pre-session briefing</div>
 <h1>LONDON · 5 Oktober 2026</h1>
 <div class="meta">arsip</div>
@@ -135,5 +139,5 @@ footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-al
 <span><a href="2026-10-05-asian.html">← sesi sebelumnya</a></span>
 <span><a href="2026-10-05-ny.html">sesi berikutnya →</a></span>
 </div>
-<footer><div class="flinks"><a href="../panduan.html">Panduan</a>·<a href="../about.html">About</a>·<a href="../arsip.html">Arsip</a></div>Level dari data terverifikasi, bukan ramalan · dibantu AI Agent Waginem<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">briefspace v1.0</div></footer>
+<footer><div class="flinks"><a href="../panduan.html">Panduan</a>·<a href="../about.html">About</a>·<a href="../arsip.html">Arsip</a></div>briefspace by <a class="bl" href="https://chospace.github.io/">chospace</a> · Level dari data terverifikasi, bukan ramalan · dibantu AI Agent Waginem<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.0</div></footer>
 <script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script></body></html>
