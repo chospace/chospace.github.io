@@ -33,30 +33,26 @@ font-weight:600;margin:34px 0 8px}
 .about p b{font-weight:700}
 .nav{margin-bottom:34px;font-size:12px;color:var(--muted)}
 .nav a{text-decoration:none;border-bottom:1px solid var(--line)}
-.event{position:relative;padding:16px 0 16px 28px;border-bottom:1px solid var(--line)}
-.event::before{content:'';position:absolute;left:8px;top:26px;bottom:-2px;width:2px;background:var(--line)}
+.event{padding:18px 0;border-bottom:1px solid var(--line)}
 .event:last-child{border-bottom:none}
-.event:last-child::before{display:none}
-.event .edot{position:absolute;left:3px;top:25px;width:12px;height:12px;border-radius:50%;background:var(--red)}
-.event .edot:hover{transform:scale(1.15)}
 .event .time{color:var(--red);font-weight:800;font-variant-numeric:tabular-nums}
-.event .title{font-weight:700}
-.event .nw{white-space:nowrap}
+.event .etitle{font-weight:700;font-size:15px}
+.event .etitle .etime{color:var(--red);font-variant-numeric:tabular-nums}
 
-.event .ev-meta{margin-top:8px;font-size:12px;color:var(--muted)}
+
 .event .ev-meta a.nt{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1px solid var(--line)}
 .event .ev-meta a.nt:hover{border-bottom-color:var(--red)}
 
 .guide .tbl{overflow-x:auto}
-.event .cons{color:var(--muted);font-size:15px;margin-top:2px}
+
 .event .frow{font-size:15px;margin-top:8px}
 .event .frow .fl{color:var(--muted);font-size:12px;font-weight:600}
 .event .frow.kx{color:var(--muted);font-size:12px}
 .event .frow.kx .fl{color:var(--faint)}
-.event .zm{margin-top:13px;font-size:12px;color:var(--muted);line-height:2}
-.event .zm .zmpill{display:inline-block;font-size:11.5px;font-weight:700;color:#c43d3d;background:var(--badge);border-radius:20px;padding:2px 10px;margin-left:8px;margin-right:8px;white-space:nowrap;vertical-align:1px}
-.event .sc{font-size:15px;margin-top:8px}
-.event .cd{display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.5px;color:var(--muted);background:var(--line);border-radius:20px;padding:2px 10px;white-space:nowrap;font-variant-numeric:tabular-nums;text-transform:uppercase}
+.event .ezone{margin-top:8px;font-size:13px;color:var(--muted)}
+.event .ezone a{color:var(--red);font-weight:600;text-decoration:none}
+
+
 .hunt .hnum{font-size:12px;color:var(--faint);font-weight:700;letter-spacing:1.5px;margin-right:10px}
 .newsline{padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
 .newsline:last-child{border-bottom:none}
@@ -153,12 +149,11 @@ footer a.bl:hover{text-decoration:underline}
 <div class="meta">18:00–21:00 WIB</div>
 <h2>Red-folder</h2>
 <div class="event">
-<a class="edot" href="../../panduan/" title="Panduan zona merah"></a>
-<span class="title"><span class="time">19:30 WIB</span> — PPI AS (Sep) + Retail Sales + klaim pengangguran + Philly Fed<span class="nw"> <span class="cd" data-dt="2026-10-15T19:30:00+07:00"></span></span></span>
+<div class="etitle"><span class="etime">19:30</span> PPI AS (Sep) + Retail Sales + klaim pengangguran + Philly Fed</div>
 <div class="frow"><span class="fl">Forecast:</span> PPI +0,6% (Core +0,3%) | Retail +0,3% | Claims ~199K | Philly Fed <a class="ff" href="https://www.forexfactory.com/calendar" target="_blank" rel="noopener" title="Buka di ForexFactory">↗</a></div>
 <div class="frow kx"><span class="fl">Konteks:</span> CPI kemarin panas (3,7%) · Odds hike Okt ~32% · Besok Warsh speech</div>
 <div class="frow"><span class="fl">Reaksi:</span> <b>Panas</b> = USD ↑ / Gold ↓ | <b>Dingin</b> = USD ↓ / Gold ↑</div>
-<div class="zm"><span class="zmpill">redzone 18:30–20:30</span> hindari entry agresif ⚠️</div>
+<div class="ezone"><a href="../../panduan/">Zona merah</a> 18:30–20:30 — hindari entry agresif</div>
 </div>
 <h2>Index</h2>
 <div class="row">
