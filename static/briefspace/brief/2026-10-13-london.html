@@ -1,19 +1,26 @@
 <!DOCTYPE html><html lang="id"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Briefing London — Selasa, 13 Okt 2026 · briefspace</title>
-<script>(function(){try{var t=localStorage.getItem('briefspace-theme');if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script><style>
+<script>(function(){try{var t=localStorage.getItem('briefspace-theme');if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1c1c'/%3E%3Ctext x='32' y='45' font-family='-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif' font-size='38' font-weight='800' text-anchor='middle' fill='%23ffffff'%3Eb%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d1e20" media="(prefers-color-scheme: dark)"><style>
 :root{--bg:#fbfbfa;--text:#1c1c1c;--muted:#8b8b8b;--faint:#b5b5b5;
 --line:#e9e9e7;--red:#c43d3d;--green:#1d9e57;
---card:#f4f4f2;--badge:#fdeeee;--badgeh:#fbd9d4}
+--card:#f4f4f2;--badge:#fdeeee;--badgeh:#fbd9d4;
+--paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.055 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
 [data-theme="dark"]{--bg:#1d1e20;--text:#e8e6e3;--muted:#9c9c9c;--faint:#636363;
 --line:#2b2c30;--red:#e0685a;--green:#63bd85;
---card:#26272b;--badge:#3a2424;--badgeh:#4a2c2c}
+--card:#26272b;--badge:#3a2424;--badgeh:#4a2c2c;
+--paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:#f3d3cc}
+[data-theme="dark"] ::selection{background:#4a2c2c}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:4px}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);
+body{background-color:var(--bg);background-image:var(--paper);color:var(--text);
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 max-width:680px;margin:0 auto;padding:48px 24px 64px;line-height:1.65;font-size:15px}
 a{color:inherit}
-.overline{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.overline{display:inline-block;font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;border:1px solid var(--line);border-radius:99px;padding:5px 14px}
 h1{font-size:30px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
 .meta{color:var(--muted);font-size:13.5px;margin-bottom:44px}
 h2{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint);
@@ -34,10 +41,14 @@ a.event .nt, .event a.nt{text-decoration:none;cursor:pointer}
 .guide .tbl{overflow-x:auto}
 .event .cons{color:var(--muted);font-size:13.5px;margin-top:2px}
 .event .sc{font-size:14px;margin-top:6px}
+.event .cd{display:inline-block;font-size:12px;color:var(--muted);margin-left:8px;font-variant-numeric:tabular-nums}
+.hunt .hnum{font-size:11px;color:var(--faint);font-weight:700;letter-spacing:1.5px;margin-right:10px}
 .newsline{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
 .newsline:last-child{border-bottom:none}
 .row{display:grid;grid-template-columns:86px 1fr auto;gap:6px 14px;
-padding:13px 0;border-bottom:1px solid var(--line);align-items:baseline}
+padding:13px 10px;border-bottom:1px solid var(--line);align-items:baseline;
+border-radius:10px;transition:background .15s ease}
+.row:hover{background:var(--card)}
 .row:last-child{border-bottom:none}
 .row .n{font-weight:700}
 .row .p{font-variant-numeric:tabular-nums}
@@ -76,9 +87,10 @@ border:1px solid var(--green);border-radius:20px;padding:3px 10px;margin-bottom:
 border-top:1px solid var(--line);font-size:13.5px}
 .pn a{text-decoration:none;color:var(--muted)}
 .pn a:hover{color:var(--text)}
-.topnav{position:sticky;top:0;z-index:10;background:var(--bg);
+.topnav{position:sticky;top:0;z-index:10;background-color:var(--bg);background-image:var(--paper);
 display:flex;justify-content:space-between;align-items:center;
 padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px}
+
 .topnav .brand{font-weight:800;letter-spacing:-.3px;text-decoration:none;font-size:19px}
 .topnav .brand .lb{color:var(--text)}
 .topnav .brand .ls{color:var(--muted);font-weight:800}
@@ -178,15 +190,15 @@ footer a.bl:hover{text-decoration:underline}
 </div>
 <h2>Hunt — ide setup, bukan sinyal</h2>
 <div class="hunt">
-<div class="pair">EURUSD <span class="sell">sell</span></div>
+<div class="pair"><span class="hnum">01</span>EURUSD <span class="sell">sell</span></div>
 <div class="d">Trigger: <b>sweep 1.1161 (low 17 bulan) + MSS bearish M5/M15</b> · invalidasi: <b>1.1200</b></div>
 </div>
 <div class="hunt">
-<div class="pair">USDCAD <span class="buy">buy</span></div>
+<div class="pair"><span class="hnum">02</span>USDCAD <span class="buy">buy</span></div>
 <div class="d">Trigger: <b>break 1.4300 (high 18 bulan) + retest + MSS bullish M5/M15</b> · invalidasi: <b>1.4250</b></div>
 </div>
 <div class="hunt">
-<div class="pair">USDJPY <span class="buy">buy</span></div>
+<div class="pair"><span class="hnum">03</span>USDJPY <span class="buy">buy</span></div>
 <div class="d">Trigger: <b>sweep 158.00 + MSS bullish M5/M15</b> · invalidasi: <b>157.70 — harga 0,2% di atas level; tunggu merapat, jangan kejar</b></div>
 </div>
 <div class="focus">Sesi London sepi news besar — dua magnet menempel: EURUSD di low 17 bulan dan USDCAD di pintu 1,4300. Jangan short BTC blind tepat di atas cluster bawah $81,9–82,1K; magnet dominan justru di atas ($84,2–84,4K). Besok CPI AS 19:30 — jangan overtrade hari ini.</div>
@@ -195,4 +207,4 @@ footer a.bl:hover{text-decoration:underline}
 <span><a href="2026-10-13-ny.html">sesi berikutnya →</a></span>
 </div>
 <footer><div class="flinks"><a href="../panduan.html">Panduan</a>·<a href="../about.html">About</a>·<a href="../arsip.html">Arsip</a></div>briefspace by <a class="bl" href="https://chospace.github.io/">chospace</a> · Level dari data terverifikasi, bukan ramalan · dibantu AI Agent Waginem<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.0</div></footer>
-<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script></body></html>
+<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='sudah lewat'}else if(s<3600){txt='dimulai dalam '+Math.floor(s/60)+' mnt'}else{txt='dimulai dalam '+Math.floor(s/3600)+'j '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
