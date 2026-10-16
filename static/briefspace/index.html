@@ -39,6 +39,7 @@ font-weight:600;margin:34px 0 8px}
 .event .time{color:var(--red);font-weight:800;font-variant-numeric:tabular-nums}
 .event .etitle{font-weight:700;font-size:15px}
 .event .etitle .etime{color:var(--red);font-variant-numeric:tabular-nums}
+.event .etitle .cd{font-size:12px;color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums}
 
 
 .event .ev-meta a.nt{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1px solid var(--line)}
@@ -105,12 +106,16 @@ border-top:1px solid var(--line);font-size:13.5px}
 .pn a:hover{color:var(--text)}
 .topnav{position:sticky;top:0;z-index:10;background-color:var(--bg);background-image:var(--paper);
 display:flex;justify-content:space-between;align-items:center;
-padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px}
+padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px;
+transition:backdrop-filter .3s,background-color .3s}
+.topnav.scrolled{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background-color:color-mix(in srgb,var(--bg) 85%,transparent)}
 
 .topnav .brand{font-weight:800;letter-spacing:-.5px;text-decoration:none;font-size:24px}
 .topnav .brand .lb{color:var(--text)}
 .topnav .brand .ls{color:var(--muted);font-weight:800}
 .topnav .links{display:flex;gap:20px;font-size:13.5px;align-items:center}
+.topnav .burger{display:none;background:none;border:none;font-size:22px;color:var(--text);cursor:pointer;padding:4px}
+@media(max-width:520px){.topnav .brand{font-size:19px}.topnav .burger{display:block}.topnav .links{display:none;position:absolute;top:100%;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border:1px solid var(--line);border-radius:8px;min-width:150px;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:20}.topnav .links.open{display:flex}.topnav .links a{padding:12px 16px;border-bottom:1px solid var(--line)}.topnav .links a:last-of-type{border-bottom:none}.topnav{position:relative}}
 #theme-btn{background:none;border:none;cursor:pointer;padding:4px;color:var(--muted);display:flex;align-items:center}
 #theme-btn:hover{color:var(--text)}
 #theme-btn svg{width:19px;height:15px}
@@ -148,7 +153,7 @@ footer a.bl:hover{text-decoration:underline}
 .cl li{margin:5px 0}
 @media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
 </style></head><body>
-<nav class="topnav"><a class="brand" href="./"><span class="lb">brief</span><span class="ls">space</span></a><div class="links"><a class="active" href="./">Terbaru</a><a class="" href="arsip/">Arsip</a><a class="" href="panduan/">Panduan</a><a class="" href="about/">About</a><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></nav>
+<nav class="topnav"><a class="brand" href="./"><span class="lb">brief</span><span class="ls">space</span></a><button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button><div class="links"><a class="active" href="./">Latest</a><a class="" href="arsip/">Archive</a><a class="" href="panduan/">Guide</a><a class="" href="about/">About</a><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></nav>
 
 
 <div class="overline">Pre-session briefing</div>
@@ -156,7 +161,7 @@ footer a.bl:hover{text-decoration:underline}
 <div class="meta">07:00–11:00 WIB</div>
 <h2>Red-folder</h2>
 <div class="event">
-<div class="etitle"><span class="etime">10:30</span> Pidato Ketua Fed Warsh (fireside chat IMF)</div>
+<div class="etitle"><span class="etime">10:30</span> Pidato Ketua Fed Warsh (fireside chat IMF) <span class="cd" data-dt="2026-10-16T10:30:00+07:00"></span></div>
 <div class="frow"><span class="fl">Forecast:</span> tidak ada angka (pidato) <a class="ff" href="https://www.forexfactory.com/calendar" target="_blank" rel="noopener" title="Buka di ForexFactory">↗</a></div>
 <div class="frow kx"><span class="fl">Konteks:</span> pidato terakhir sebelum blackout Fed 17 Okt · FOMC 27–28 Okt (odds hold ~75%) · seminggu data inflasi panas (CPI 3,7%, PPI 6,3% y/y)</div>
 <div class="frow"><span class="fl">Reaksi:</span> Hawkish = USD ↑ | Dovish = USD ↓</div>
@@ -260,4 +265,4 @@ footer a.bl:hover{text-decoration:underline}
 
 <a class="arch-link" href="arsip/">Lihat arsip briefing →</a>
 <footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial.<div class="ver">v1.0</div></footer>
-<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='Released'}else if(s<3600){txt='in '+Math.floor(s/60)+'m'}else{txt='in '+Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
+<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}function toggleMenu(){var l=document.querySelector('.topnav .links');if(l)l.classList.toggle('open')}window.addEventListener('scroll',function(){var n=document.querySelector('.topnav');if(n)n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='Released'}else if(s<3600){txt='in '+Math.floor(s/60)+'m'}else{txt='in '+Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
