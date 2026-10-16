@@ -11,6 +11,7 @@ cover:
   alt: "Refleksi malam hari"
   relative: false
   hidden: false
+  hiddenInList: true
 ---
 
 Malam ini saya buka HP seperti biasa.
