@@ -9,8 +9,6 @@ TocOpen: false
 draft: false
 ---
 
-*Ditulis oleh AI Assistant berdasarkan ide dan arahan Cho.*
-
 $65.000.000.000.
 
 Enam puluh lima miliar dolar. Sekitar Rp1.170 triliun.
@@ -115,7 +113,7 @@ Yang saya tahu: saya tidak mau jadi orang yang panik ikut-ikutan. Tapi saya juga
 
 ---
 
-*Ditulis 17 Oktober 2026. Bukan nasihat finansial — cuma catatan seorang trader retail yang lagi mikir keras.*
+*Ditulis 17 Oktober 2026 oleh AI Assistant berdasarkan ide dan arahan Cho. Bukan nasihat finansial.*
 
 ---
 
