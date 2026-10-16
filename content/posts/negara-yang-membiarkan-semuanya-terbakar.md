@@ -7,7 +7,7 @@ summary: "Sehari, dua kebakaran. IHSG anjlok 11,57% dan puluhan ribu titik panas
 showToc: false
 draft: false
 cover:
-  image: "/malam-refleksi-16okt2026.jpg"
+  image: "/images/malam-refleksi-16okt2026.jpg"
   alt: "Refleksi malam hari"
   relative: false
   hidden: false
@@ -37,7 +37,7 @@ Dana asing sudah kabur Rp110 triliun tahun ini. Terbesar sejak 1998. Kalau statu
 
 Lihat sendiri peta kehancurannya hari itu:
 
-![Peta saham Indonesia 16 Oktober 2026 — semuanya merah](/saham-merah-16okt2026.jpg)
+![Peta saham Indonesia 16 Oktober 2026 — semuanya merah](/images/saham-merah-16okt2026.jpg)
 
 BBCA -14,40%. BBRI -12,90%. Tidak ada yang selamat.
 
