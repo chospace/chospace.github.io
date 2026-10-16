@@ -25,7 +25,7 @@ Sehari, dua kebakaran. Yang satu membakar duit. Yang satu membakar hutan.
 
 Saya bukan investor kakap. Bukan juga aktivis lingkungan. Saya cuma warga biasa yang baca berita sambil ngopi, lalu bertanya ke diri sendiri: kok bisa semuanya kebakar bareng-bareng?
 
-#### Yang membakar duit
+### Yang membakar duit
 
 IHSG tutup di 5.185. Terparah dalam lima tahun terakhir. Pagi-pagi bursa sempat dihentikan sementara — *trading halt* — karena panik.
 
@@ -43,7 +43,7 @@ Lihat sendiri peta kehancurannya hari itu:
 
 BBCA -14,40%. BBRI -12,90%. Tidak ada yang selamat.
 
-#### Yang membakar hutan
+### Yang membakar hutan
 
 Sementara layar bursa memerah, langit separuh Indonesia juga memerah. Karena api dan asap.
 
@@ -69,7 +69,7 @@ Ada satu hal yang bikin saya senyum pahit. Tahun 2015 — sebelas tahun lalu —
 
 Sekarang dia presiden. Karhutla kembali melanda. Status bencana nasional belum ditetapkan juga.
 
-#### Pola yang sama
+### Pola yang sama
 
 IHSG dan karhutla kelihatannya tidak ada hubungan. Yang satu soal uang, yang satu soal api.
 
@@ -85,7 +85,7 @@ Lalu lupa. Setelah hujan turun dan IHSG memantul, perhatian publik pindah ke hal
 
 Saya tidak menyamakan hilangnya uang investor dengan rusaknya paru-paru warga. Bobotnya beda. Tapi kegagalan sistemnya sama: negara yang pandai membuat program, tapi lemah dalam eksekusi dan pengawasan.
 
-#### Sampai kapan nonton doang?
+### Sampai kapan nonton doang?
 
 Saya menulis ini bukan karena punya solusi. Saya tidak punya.
 
