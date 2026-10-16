@@ -1,7 +1,7 @@
 ---
 title: "Negara yang Membiarkan Semuanya Terbakar"
 date: 2026-10-16T23:00:00+07:00
-tags: ["opini", "ihsg", "karhutla", "refleksi"]
+tags: ["opini", "ihsg", "karhutla", "refleksi", "sambat"]
 author: "Cho"
 summary: "Sehari, dua kebakaran. IHSG anjlok 11,57% dan puluhan ribu titik panas karhutla. Yang satu membakar duit, yang satu membakar hutan — polanya sama."
 showToc: false
