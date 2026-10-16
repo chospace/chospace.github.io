@@ -2,7 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arsip · briefspace</title>
 <meta property="og:title" content="Arsip · briefspace"><meta property="og:description" content="Semua briefing pra-sesi per tanggal."><meta property="og:url" content="https://chospace.github.io/briefspace/arsip/"><meta property="og:type" content="website"><meta name="twitter:card" content="summary">
-<script>(function(){try{var t=localStorage.getItem('briefspace-theme');if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1c1c'/%3E%3Ctext x='32' y='45' font-family='-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif' font-size='38' font-weight='800' text-anchor='middle' fill='%23ffffff'%3Eb%3C/text%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('briefspace-theme');if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
+<script>document.addEventListener('DOMContentLoaded',function(){var tabs=document.querySelectorAll('.tab');tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.classList.remove('active')});document.querySelectorAll('.tabpanel').forEach(function(x){x.hidden=true});t.classList.add('active');var p=document.querySelector('.tabpanel[data-panel="'+t.dataset.tab+'"]');if(p)p.hidden=false;});});});</script><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1c1c'/%3E%3Ctext x='32' y='45' font-family='-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif' font-size='38' font-weight='800' text-anchor='middle' fill='%23ffffff'%3Eb%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1d1e20" media="(prefers-color-scheme: dark)"><style>
 :root{--bg:#fbfbfa;--text:#1c1c1c;--muted:#8b8b8b;--faint:#b5b5b5;
@@ -38,6 +39,7 @@ font-weight:600;margin:34px 0 8px}
 .event .time{color:var(--red);font-weight:800;font-variant-numeric:tabular-nums}
 .event .etitle{font-weight:700;font-size:15px}
 .event .etitle .etime{color:var(--red);font-variant-numeric:tabular-nums}
+.event .etitle .cd{font-size:12px;color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums}
 
 
 .event .ev-meta a.nt{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1px solid var(--line)}
@@ -54,6 +56,10 @@ font-weight:600;margin:34px 0 8px}
 
 
 .hunt .hnum{font-size:12px;color:var(--faint);font-weight:700;letter-spacing:1.5px;margin-right:10px}
+.tabs{display:flex;gap:4px;margin:0 0 8px}
+.tab{background:none;border:none;font-family:inherit;font-size:13px;font-weight:600;color:var(--muted);padding:6px 12px;cursor:pointer;border-radius:8px}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--text);background:var(--line)}
 .newsline{padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
 .newsline:last-child{border-bottom:none}
 .row{display:grid;grid-template-columns:86px 1fr auto;gap:6px 14px;
@@ -100,12 +106,18 @@ border-top:1px solid var(--line);font-size:13.5px}
 .pn a:hover{color:var(--text)}
 .topnav{position:sticky;top:0;z-index:10;background-color:var(--bg);background-image:var(--paper);
 display:flex;justify-content:space-between;align-items:center;
-padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px}
+padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px;
+transition:backdrop-filter .3s,background-color .3s}
+.topnav.scrolled{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background-color:color-mix(in srgb,var(--bg) 85%,transparent)}
 
 .topnav .brand{font-weight:800;letter-spacing:-.5px;text-decoration:none;font-size:24px}
 .topnav .brand .lb{color:var(--text)}
 .topnav .brand .ls{color:var(--muted);font-weight:800}
 .topnav .links{display:flex;gap:20px;font-size:13.5px;align-items:center}
+.topnav .nav-right{display:flex;gap:20px;align-items:center}
+.topnav .nav-actions{display:flex;gap:8px;align-items:center}
+.topnav .burger{display:none;background:none;border:none;font-size:22px;color:var(--text);cursor:pointer;padding:4px}
+@media(max-width:520px){.topnav .brand{font-size:19px}.topnav .burger{display:block}.topnav .links{display:none;position:absolute;top:100%;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border:1px solid var(--line);border-radius:8px;min-width:150px;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:20}.topnav .links.open{display:flex}.topnav .links a{padding:12px 16px;border-bottom:1px solid var(--line)}.topnav .links a:last-of-type{border-bottom:none}.topnav{position:relative}}
 #theme-btn{background:none;border:none;cursor:pointer;padding:4px;color:var(--muted);display:flex;align-items:center}
 #theme-btn:hover{color:var(--text)}
 #theme-btn svg{width:19px;height:15px}
@@ -143,10 +155,14 @@ footer a.bl:hover{text-decoration:underline}
 .cl li{margin:5px 0}
 @media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
 </style></head><body>
-<nav class="topnav"><a class="brand" href="../"><span class="lb">brief</span><span class="ls">space</span></a><div class="links"><a class="" href="../">Terbaru</a><a class="active" href="../arsip/">Arsip</a><a class="" href="../panduan/">Panduan</a><a class="" href="../about/">About</a><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></nav>
-<div class="overline">briefspace</div>
+<nav class="topnav"><a class="brand" href="../"><span class="lb">brief</span><span class="ls">space</span></a><div class="nav-right"><div class="links"><a class="" href="../">Latest</a><a class="active" href="../arsip/">Archive</a><a class="" href="../panduan/">Guide</a><a class="" href="../about/">About</a></div><div class="nav-actions"><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button></div></div></nav>
 <h1>Arsip briefing</h1>
 <div class="meta">Asian · London · NY — terbaru dulu</div>
+<div class="arch-day">
+<div class="d">2026-10-16</div>
+<div class="sess">
+<a href="../brief/2026-10-16-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+</div></div>
 <div class="arch-day">
 <div class="d">2026-10-15</div>
 <div class="sess">
@@ -224,5 +240,5 @@ footer a.bl:hover{text-decoration:underline}
 <a href="../brief/2026-10-05-london/">LONDON <span class="t"></span></a>
 <a href="../brief/2026-10-05-ny/">NY <span class="t"></span></a>
 </div></div>
-<footer>briefspace by <a class="bl" href="https://chospace.github.io/">chospace</a> — arsip briefing pra-sesi · dibantu AI Agent Waginem<br>Bukan nasihat finansial.<div class="ver">v1.0</div></footer>
-<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='Released'}else if(s<3600){txt='in '+Math.floor(s/60)+'m'}else{txt='in '+Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
+<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.0</div></footer>
+<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}function toggleMenu(){var l=document.querySelector('.topnav .links');if(l)l.classList.toggle('open')}window.addEventListener('scroll',function(){var n=document.querySelector('.topnav');if(n)n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='Released'}else if(s<3600){txt='in '+Math.floor(s/60)+'m'}else{txt='in '+Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
