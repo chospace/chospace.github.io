@@ -8,12 +8,6 @@ jurnal trading akun kecil ($100) — dicatat apa adanya, lengkap dengan equity c
 
 [Lihat jurnal →](https://chospace.github.io/trading-journal/)
 
-## 📰 Briefspace
-
-briefing pra-sesi trading tiap sesi Asia, London, New York — key levels, bias, dan zona merah news.
-
-[Buka briefspace →](https://chospace.github.io/briefspace/)
-
 ## 🥊 Waginem vs Memecoin
 
 eksperimen bot paper-trading memecoin $500 — misi: cari metode yang beneran jalan, bukan cari kaya. 100% otomatis, 100% simulasi.
@@ -25,6 +19,12 @@ eksperimen bot paper-trading memecoin $500 — misi: cari metode yang beneran ja
 satu tempat buat mantau status semua agen tanpa login satu per satu.
 
 [Buka agentspace →](https://chospace.github.io/command-center/)
+
+## 🔒 Simple Security Check
+
+cek security headers website-mu — skor A+ sampai F + saran perbaikan. gratis, tanpa daftar.
+
+[Coba scanner →](https://chospace.github.io/simple-security-check/)
 
 ---
 
