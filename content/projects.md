@@ -26,6 +26,12 @@ cek security headers website-mu — skor A+ sampai F + saran perbaikan. gratis, 
 
 [Coba scanner →](https://chospace.github.io/simple-security-check/)
 
+## 🔍 slopAI
+
+detektor tulisan AI — cek apakah teks dibuat AI atau manusia. 70+ pola, support Indonesia, gratis, tanpa daftar, 100% privat.
+
+[Coba slopAI →](https://slop.ai.id)
+
 ---
 
 ## 💻 Web Development
