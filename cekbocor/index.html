@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cekbocor — cek email & password yang bocor</title>
+<meta name="description" content="Cek apakah email atau password kamu pernah muncul di data breach. Gratis, tanpa daftar. Password tidak pernah keluar dari perangkatmu.">
+<style>
+  :root {
+    --bg: #fafafa; --fg: #1a1a1a; --muted: #6b6b6b;
+    --card: #ffffff; --border: #e5e5e5;
+    --green: #16a34a; --red: #dc2626;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111111; --fg: #f0f0f0; --muted: #9a9a9a; --card: #1c1c1c; --border: #2e2e2e; }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+         background: var(--bg); color: var(--fg); line-height: 1.6;
+         max-width: 560px; margin: 0 auto; padding: 48px 20px; }
+  header { text-align: center; margin-bottom: 32px; }
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+  h1 span { color: var(--muted); font-weight: 400; }
+  .tagline { color: var(--muted); margin-top: 8px; font-size: 15px; }
+  .lang { position: absolute; top: 16px; right: 20px; }
+  .lang button { background: none; border: 1px solid var(--border); color: var(--muted);
+                 border-radius: 20px; padding: 4px 14px; font-size: 13px; cursor: pointer; }
+  .lang button.active { color: var(--fg); border-color: var(--muted); }
+  .tabs { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; }
+  .tabs button { background: none; border: 1px solid var(--border); color: var(--muted);
+                 border-radius: 20px; padding: 8px 24px; font-size: 14px; cursor: pointer; }
+  .tabs button.active { background: var(--fg); color: var(--bg); border-color: var(--fg); font-weight: 600; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
+  label { display: block; font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  .input-row { display: flex; gap: 8px; }
+  input { flex: 1; padding: 12px 14px; font-size: 16px; border: 1px solid var(--border);
+          border-radius: 8px; background: var(--bg); color: var(--fg); outline: none; min-width: 0; }
+  input:focus { border-color: var(--muted); }
+  button.check { padding: 12px 20px; font-size: 15px; border: none; border-radius: 8px;
+                 background: var(--fg); color: var(--bg); cursor: pointer; font-weight: 600; white-space: nowrap; }
+  button.check:disabled { opacity: 0.5; cursor: wait; }
+  .toggle { margin-top: 10px; font-size: 13px; color: var(--muted); cursor: pointer; user-select: none; }
+  #result { margin-top: 20px; padding: 16px; border-radius: 8px; font-size: 15px; display: none; }
+  #result.show { display: block; }
+  #result.bad { background: rgba(220,38,38,.08); border: 1px solid rgba(220,38,38,.3); }
+  #result.good { background: rgba(22,163,74,.08); border: 1px solid rgba(22,163,74,.3); }
+  #result .big { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  #result.bad .big { color: var(--red); } #result.good .big { color: var(--green); }
+  #result ul { margin: 10px 0 0 20px; font-size: 14px; }
+  #result ul li { margin-bottom: 2px; }
+  .how { margin-top: 32px; font-size: 14px; color: var(--muted); }
+  .how h2 { font-size: 15px; color: var(--fg); margin-bottom: 8px; }
+  .how ol { padding-left: 20px; } .how li { margin-bottom: 6px; }
+  footer { margin-top: 40px; text-align: center; font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="lang">
+  <button id="btn-id" class="active" onclick="setLang('id')">ID</button>
+  <button id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+<header>
+  <h1>cekbocor<span>.pw</span></h1>
+  <p class="tagline" data-i18n="tagline">Cek apakah email atau password kamu pernah bocor.</p>
+</header>
+
+<div class="tabs">
+  <button id="tab-pw" class="active" onclick="setTab('pw')" data-i18n="tab_pw">Password</button>
+  <button id="tab-email" onclick="setTab('email')" data-i18n="tab_email">Email</button>
+</div>
+
+<div class="card" id="panel-pw">
+  <label data-i18n="label_pw">Password yang mau dicek</label>
+  <div class="input-row">
+    <input type="password" id="pw" data-i18n-ph="ph_pw" placeholder="ketik password…" autocomplete="off" spellcheck="false">
+    <button class="check" id="btn-pw" onclick="checkPw()" data-i18n="check">Cek</button>
+  </div>
+  <div class="toggle" onclick="toggleShow()">👁 <span data-i18n="show">tampilkan</span></div>
+  <div id="result-pw"></div>
+</div>
+
+<div class="card" id="panel-email" style="display:none">
+  <label data-i18n="label_email">Email yang mau dicek</label>
+  <div class="input-row">
+    <input type="email" id="email" data-i18n-ph="ph_email" placeholder="nama@email.com" autocomplete="off" spellcheck="false">
+    <button class="check" id="btn-email" onclick="checkEmail()" data-i18n="check">Cek</button>
+  </div>
+  <div id="result-email"></div>
+</div>
+
+<div class="how">
+  <h2 data-i18n="how_title">Kok bisa aman?</h2>
+  <ol>
+    <li data-i18n="how1"><strong>Password:</strong> di-hash (SHA-1) di browser ini, yang dikirim cuma 5 karakter pertama hash-nya. Password utuh tidak pernah keluar dari perangkatmu (k-anonymity).</li>
+    <li data-i18n="how2"><strong>Email:</strong> dicek via proxy kami ke database breach publik. Email tidak disimpan.</li>
+  </ol>
+  <p style="margin-top:12px" data-i18n="dbsrc">Database: Have I Been Pwned (password) & XposedOrNot (email).</p>
+</div>
+
+<footer><span data-i18n="footer">Dibuat dengan prinsip minimalis. Tidak menyimpan apa pun.</span></footer>
+
+<script>
+// Ganti dengan URL worker setelah deploy:
+const EMAIL_PROXY = "https://cekbocor-proxy.choirul-anas.workers.dev";
+
+const T = {
+  id: {
+    tagline: "Cek apakah email atau password kamu pernah bocor.",
+    tab_pw: "Password", tab_email: "Email", check: "Cek",
+    label_pw: "Password yang mau dicek", ph_pw: "ketik password…",
+    label_email: "Email yang mau dicek", ph_email: "nama@email.com",
+    show: "tampilkan", hide: "sembunyikan", checking: "ngecek…",
+    pw_bad: "🔴 Password ini BOCOR", pw_bad_sub: c => `Ditemukan <strong>${c.toLocaleString("id-ID")}</strong> kali di data breach. Jangan dipakai — ganti sekarang.`,
+    pw_good: "🟢 Password ini aman", pw_good_sub: "Tidak ditemukan di database breach. Tetap pakai password unik per akun ya.",
+    em_bad: n => `🔴 Email ini muncul di <strong>${n}</strong> breach`, em_bad_sub: "Ganti password akun-akun yang pakai email ini, dan nyalakan 2FA.",
+    em_good: "🟢 Email ini aman", em_good_sub: "Tidak ditemukan di database breach yang diketahui.",
+    empty: "Isi dulu.", neterr: "Gagal menghubungi server. Cek koneksi internetmu.",
+    bademail: "Format email-nya kayaknya salah.",
+    how_title: "Kok bisa aman?",
+    how1: "<strong>Password:</strong> di-hash (SHA-1) di browser ini, yang dikirim cuma 5 karakter pertama hash-nya. Password utuh tidak pernah keluar dari perangkatmu (k-anonymity).",
+    how2: "<strong>Email:</strong> dicek via proxy kami ke database breach publik. Email tidak disimpan.",
+    dbsrc: "Database: Have I Been Pwned (password) & XposedOrNot (email).",
+    footer: "Dibuat dengan prinsip minimalis. Tidak menyimpan apa pun."
+  },
+  en: {
+    tagline: "Check if your email or password has been leaked.",
+    tab_pw: "Password", tab_email: "Email", check: "Check",
+    label_pw: "Password to check", ph_pw: "type password…",
+    label_email: "Email to check", ph_email: "name@email.com",
+    show: "show", hide: "hide", checking: "checking…",
+    pw_bad: "🔴 This password is LEAKED", pw_bad_sub: c => `Found <strong>${c.toLocaleString("en-US")}</strong> times in data breaches. Don't use it — change it now.`,
+    pw_good: "🟢 This password is clean", pw_good_sub: "Not found in breach databases. Still, use a unique password per account.",
+    em_bad: n => `🔴 This email appears in <strong>${n}</strong> breaches`, em_bad_sub: "Change passwords on accounts using this email, and enable 2FA.",
+    em_good: "🟢 This email is clean", em_good_sub: "Not found in known breach databases.",
+    empty: "Fill it in first.", neterr: "Couldn't reach the server. Check your connection.",
+    bademail: "That email format looks wrong.",
+    how_title: "Why is this safe?",
+    how1: "<strong>Password:</strong> hashed (SHA-1) in this browser — only the first 5 hash characters are sent. Your full password never leaves your device (k-anonymity).",
+    how2: "<strong>Email:</strong> checked via our proxy against public breach databases. The email is not stored.",
+    dbsrc: "Databases: Have I Been Pwned (passwords) & XposedOrNot (emails).",
+    footer: "Built minimalist. Nothing is stored."
+  }
+};
+let lang = "id", S = T.id;
+
+function setLang(l) {
+  lang = l; S = T[l];
+  document.getElementById("btn-id").classList.toggle("active", l === "id");
+  document.getElementById("btn-en").classList.toggle("active", l === "en");
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.innerHTML = S[el.dataset.i18n]; });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = S[el.dataset.i18nPh]; });
+  document.documentElement.lang = l;
+}
+function setTab(t) {
+  document.getElementById("tab-pw").classList.toggle("active", t === "pw");
+  document.getElementById("tab-email").classList.toggle("active", t === "email");
+  document.getElementById("panel-pw").style.display = t === "pw" ? "" : "none";
+  document.getElementById("panel-email").style.display = t === "email" ? "" : "none";
+}
+function toggleShow() {
+  const i = document.getElementById("pw");
+  i.type = i.type === "password" ? "text" : "password";
+}
+function show(id, html, cls) {
+  const r = document.getElementById(id);
+  r.innerHTML = html; r.className = "show " + cls;
+}
+async function sha1hex(str) {
+  const b = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(str));
+  return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, "0")).join("").toUpperCase();
+}
+async function checkPw() {
+  const pw = document.getElementById("pw").value, btn = document.getElementById("btn-pw");
+  if (!pw) return show("result-pw", S.empty, "bad");
+  btn.disabled = true; btn.textContent = S.checking;
+  try {
+    const h = await sha1hex(pw), pre = h.slice(0, 5), suf = h.slice(5);
+    const r = await fetch("https://api.pwnedpasswords.com/range/" + pre);
+    if (!r.ok) throw 0;
+    const line = (await r.text()).split("\n").find(l => l.split(":")[0] === suf);
+    if (line) show("result-pw", `<div class="big">${S.pw_bad}</div><div>${S.pw_bad_sub(parseInt(line.split(":")[1], 10))}</div>`, "bad");
+    else show("result-pw", `<div class="big">${S.pw_good}</div><div>${S.pw_good_sub}</div>`, "good");
+  } catch (e) { show("result-pw", S.neterr, "bad"); }
+  btn.disabled = false; btn.textContent = S.check;
+}
+async function checkEmail() {
+  const em = document.getElementById("email").value.trim(), btn = document.getElementById("btn-email");
+  if (!em) return show("result-email", S.empty, "bad");
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) return show("result-email", S.bademail, "bad");
+  btn.disabled = true; btn.textContent = S.checking;
+  try {
+    const r = await fetch(EMAIL_PROXY + "?email=" + encodeURIComponent(em));
+    if (!r.ok) throw 0;
+    const d = await r.json();
+    const names = (d.breaches && d.breaches[0]) || [];
+    if (names.length) {
+      const list = names.slice(0, 20).map(n => `<li>${n}</li>`).join("");
+      const more = names.length > 20 ? `<li>… +${names.length - 20}</li>` : "";
+      show("result-email", `<div class="big">${S.em_bad(names.length)}</div><div>${S.em_bad_sub}</div><ul>${list}${more}</ul>`, "bad");
+    } else show("result-email", `<div class="big">${S.em_good}</div><div>${S.em_good_sub}</div>`, "good");
+  } catch (e) { show("result-email", S.neterr, "bad"); }
+  btn.disabled = false; btn.textContent = S.check;
+}
+document.getElementById("pw").addEventListener("keydown", e => { if (e.key === "Enter") checkPw(); });
+document.getElementById("email").addEventListener("keydown", e => { if (e.key === "Enter") checkEmail(); });
+setLang("id");
+</script>
+</body>
+</html>
