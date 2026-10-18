@@ -190,9 +190,16 @@ async function checkEmail() {
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) return show("result-email", S.bademail, "bad");
   btn.disabled = true; btn.textContent = S.checking;
   try {
-    const r = await fetch(EMAIL_PROXY + "?email=" + encodeURIComponent(em));
-    if (!r.ok) throw 0;
-    const d = await r.json();
+    // retry 3x — API gratis kadang rate-limit, worker sudah retry juga
+    let d = null, ok = false;
+    for (let i = 0; i < 3 && !ok; i++) {
+      const r = await fetch(EMAIL_PROXY + "?email=" + encodeURIComponent(em) + "&t=" + Date.now());
+      if (!r.ok) { await new Promise(x => setTimeout(x, 1200)); continue; }
+      d = await r.json();
+      if (d.breaches) ok = true;
+      else await new Promise(x => setTimeout(x, 1200));
+    }
+    if (!ok) throw 0;
     const names = (d.breaches && d.breaches[0]) || [];
     if (names.length) {
       const list = names.slice(0, 20).map(n => `<li>${n}</li>`).join("");
