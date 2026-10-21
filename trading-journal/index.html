@@ -17,48 +17,56 @@ FORMAT DATA (wajib):
 <title>Trading Journal | /chospace</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%231c1c1c%22/%3E%0A%3Cpath%20d%3D%22M14%2044%20L28%2028%20L36%2036%20L50%2018%22%20stroke%3D%22%234ade80%22%20stroke-width%3D%225%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%0A%3Cpath%20d%3D%22M40%2018%20L50%2018%20L50%2028%22%20stroke%3D%22%234ade80%22%20stroke-width%3D%225%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%0A%3C/svg%3E">
 <style>
+/* Briefspace-style: clean, minimal, elegant */
 :root{
-  --bg:#1d1e20; --card:#2e2e33; --card2:#34343a; --line:#3a3a3f;
-  --text:#dadadb; --muted:#9b9c9d;
-  --green:#4ade80; --red:#f87171; --accent:#7dd3fc;
-  --r:12px; --pad:18px; --gap:24px;
+  --bg:#fbfbfa; --text:#1c1c1c; --muted:#8b8b8b; --faint:#b5b5b5;
+  --line:#e9e9e7; --red:#c43d3d; --green:#1d9e57;
+  --card:#f4f4f2; --card2:#efefec;
+  --accent:#c43d3d;
+  --paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.055 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  --r:8px; --pad:20px; --gap:32px;
 }
-[data-theme="light"]{
-  --bg:#f4ecd8; --card:#fbf7ec; --card2:#f5edda; --line:#ddd0b3;
-  --text:#2a2824; --muted:#6b6257;
-  --green:#15803d; --red:#b91c1c; --accent:#8b2020;
+[data-theme="dark"]{
+  --bg:#1d1e20; --text:#e8e6e3; --muted:#9c9c9c; --faint:#636363;
+  --line:#2b2c30; --red:#e0685a; --green:#63bd85;
+  --card:#26272b; --card2:#2e2f34;
+  --accent:#e0685a;
+  --paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-  padding:28px 16px 40px;max-width:920px;margin:0 auto;line-height:1.5}
-a{color:var(--accent);text-decoration:none}
+body{background-color:var(--bg);background-image:var(--paper);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  padding:48px 21px 64px;max-width:680px;margin:0 auto;line-height:1.618;font-size:15px}
+::selection{background:#f3d3cc}
+[data-theme="dark"] ::selection{background:#4a2c2c}
+a{color:inherit}
 a:hover{text-decoration:underline}
 header{margin-bottom:var(--gap)}
-h1{font-size:30px;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
-.sub{color:var(--muted);font-size:14px;margin-bottom:14px}
-.motto{font-style:italic;color:var(--accent);font-size:15px;
-  border-left:3px solid var(--accent);padding-left:12px;margin:0}
-.brand-badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
-  color:var(--accent);border:1px solid var(--accent);border-radius:20px;padding:5px 16px;margin-bottom:12px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:var(--gap)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 14px;text-align:center}
-.card .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
-.card .val{font-size:24px;font-weight:800;letter-spacing:-.5px}
+h1{font-size:28px;font-weight:800;letter-spacing:-.5px;margin-bottom:8px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:16px;line-height:1.6}
+.motto{font-style:italic;color:var(--muted);font-size:14px;
+  border-left:2px solid var(--line);padding-left:14px;margin:0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:var(--gap)}
+.card{background:var(--bg);padding:20px 16px;text-align:center;border:none;border-radius:0}
+.card .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.card .val{font-size:26px;font-weight:800;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
 .pos{color:var(--green)} .neg{color:var(--red)}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:var(--pad);margin-bottom:var(--gap)}
-.panel h2{font-size:16px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.panel{background:transparent;border:none;border-radius:0;padding:0;margin-bottom:var(--gap)}
+.panel h2{font-size:13px;font-weight:700;margin-bottom:16px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--muted)}
 .table-wrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}
-th,td{padding:10px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
-th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
-tbody tr:hover td{background:var(--card2)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px}
+th,td{padding:12px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+tbody tr:hover td{background:var(--card)}
 tbody tr:last-child td{border-bottom:none}
 td.num{font-variant-numeric:tabular-nums}
-.tag{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700}
-.tag.sell{background:rgba(248,113,113,.14);color:var(--red)}
-.tag.buy{background:rgba(74,222,128,.14);color:var(--green)}
-.rpos{color:var(--green);font-weight:700}
-.rneg{color:var(--red);font-weight:700}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:600}
+.tag.sell{background:transparent;color:var(--red);border:1px solid var(--red)}
+.tag.buy{background:transparent;color:var(--green);border:1px solid var(--green)}
+.rpos{color:var(--green);font-weight:600}
+.rneg{color:var(--red);font-weight:600}
 #tfbar,#ttbar{display:inline-flex;background:var(--card2);border:1px solid var(--line);border-radius:20px;padding:3px;margin-bottom:12px}
 #tab-rows,#tab-pairs,#tab-cal{min-height:430px}
 .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
@@ -164,14 +172,6 @@ nav a.brand:hover{text-decoration:none;color:var(--accent)}
   </div>
 </div>
 
-<div class="panel" id="weekly-panel" style="display:none">
-  <h2>📅 Evaluasi Mingguan</h2>
-  <div id="weekly-list"></div>
-  <div style="margin-top:4px;text-align:center">
-    <button id="toggle-weekly" class="tfbtn" style="display:none"></button>
-  </div>
-</div>
-
 <div class="broker">
   <p>Broker yang saya pakai: <a href="https://one.exnessonelink.com/a/ntsmrktlh5" target="_blank" rel="noopener">Exness</a></p>
   <div class="social">
@@ -182,14 +182,15 @@ nav a.brand:hover{text-decoration:none;color:var(--accent)}
 <p class="footer">🧪 Trading lab — akun $100 buat riset strategi dan disiplin · <a href="https://chospace.github.io/100-challenge/">jurnal lama $100 Challenge →</a> · dibantu AI Agent <b>Waginem</b> 🤖 · diupdate tiap malam · <span id="ver-foot"></span></p>
 
 <script>
-const D = {"trades": [{"no": 27, "date": "2026-10-20", "instr": "XAUUSD", "arah": "Buy", "entry": "4123.057", "size": "0.01", "hasil": 29.15, "rr": "+3.40", "against_brief": false}, {"no": 26, "date": "2026-10-20", "instr": "AUDUSD", "arah": "Sell", "entry": "0.69944", "size": "0.17", "hasil": -7.65, "rr": "-0.77*", "against_brief": false}, {"no": 25, "date": "2026-10-20", "instr": "USOIL", "arah": "Sell", "entry": "99.071", "size": "0.02", "hasil": 0.14, "rr": "+0.01", "against_brief": false}, {"no": 24, "date": "2026-10-19", "instr": "USOIL", "arah": "Buy", "entry": "96.805", "size": "0.09", "hasil": 0.0, "rr": "0", "against_brief": false}, {"no": 23, "date": "2026-10-19", "instr": "USOIL", "arah": "Buy", "entry": "96.753", "size": "0.14", "hasil": -9.94, "rr": "-1.0", "against_brief": false}, {"no": 22, "date": "2026-10-16", "instr": "XAGUSD", "arah": "Sell", "entry": "57.6945", "size": "0.02", "hasil": -11.05, "rr": "-1.11*", "against_brief": true}, {"no": 20, "date": "2026-10-15", "instr": "BTCUSDT", "arah": "Buy", "entry": "81475.23", "size": "0.11", "hasil": -10.8, "rr": "-1.08*", "against_brief": true}, {"no": 19, "date": "2026-10-14", "instr": "XAUUSD", "arah": "Buy", "entry": "4123.701", "size": "0.01", "hasil": -30.16, "rr": "-3.02*", "against_brief": false}, {"no": 18, "date": "2026-10-14", "instr": "AUDUSD", "arah": "Sell", "entry": "0.70006", "size": "0.78", "hasil": -10.14, "rr": "-", "against_brief": false}, {"no": 17, "date": "2026-10-14", "instr": "BTCUSD", "arah": "Buy", "entry": "83265.99", "size": "0.03", "hasil": 10.86, "rr": "+1.09*", "against_brief": false}, {"no": 16, "date": "2026-10-13", "instr": "GBPUSD", "arah": "Sell", "entry": "1.32475", "size": "0.21", "hasil": -9.87, "rr": "-0.99*", "against_brief": false}, {"no": 15, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.517", "size": "0.10", "hasil": -4.3, "rr": "-0.43*", "against_brief": false}, {"no": 14, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.523", "size": "0.10", "hasil": -10.8, "rr": "-1.08*", "against_brief": false}, {"no": 13, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.572", "size": "0.10", "hasil": 5.4, "rr": "+0.55", "against_brief": false}, {"no": 12, "date": "2026-10-13", "instr": "USDJPY", "arah": "Buy", "entry": "158.251", "size": "0.45", "hasil": 27.0, "rr": "+2.79", "against_brief": false}, {"no": 11, "date": "2026-10-12", "instr": "USOIL", "arah": "Buy", "entry": "92.819", "size": "0.10", "hasil": 40.7, "rr": "+4.0", "against_brief": false}, {"no": 10, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4171.559", "size": "0.03", "hasil": -5.93, "rr": "-0.49", "against_brief": false}, {"no": 9, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4173.052", "size": "0.03", "hasil": -9.25, "rr": "-1.0", "against_brief": false}, {"no": 8, "date": "2026-10-11", "instr": "BTCUSD", "arah": "Sell", "entry": "82975.38", "size": "0.07", "hasil": -10.45, "rr": "-1.18", "against_brief": false}, {"no": 7, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "31017.27", "size": "0.05", "hasil": 9.36, "rr": "+1.0", "against_brief": false}, {"no": 6, "date": "2026-10-09", "instr": "XAGUSD", "arah": "Sell", "entry": "60.555", "size": "0.01", "hasil": -8.0, "rr": "-1.0", "against_brief": false}, {"no": 5, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "30992.94", "size": "0.05", "hasil": 8.14, "rr": "+0.71", "against_brief": false}, {"no": 4, "date": "2026-10-08", "instr": "EURUSD", "arah": "Buy", "entry": "1.11820", "size": "0.13", "hasil": 18.07, "rr": "+2.48", "against_brief": false}, {"no": 3, "date": "2026-10-08", "instr": "BTCUSD", "arah": "Buy", "entry": "82753.40", "size": "0.06", "hasil": 0.0, "rr": "0", "against_brief": false}, {"no": 2, "date": "2026-10-08", "instr": "XAUUSD", "arah": "Sell", "entry": "4137.56", "size": "0.03", "hasil": -8.55, "rr": "-1.0", "against_brief": false}, {"no": 1, "date": "2026-10-07", "instr": "XAUUSD", "arah": "Buy", "entry": "4127.83", "size": "0.01", "hasil": -9.43, "rr": "-1.0", "against_brief": true}], "stats": {"total": "26", "w": "9", "l": "15", "bep": "2", "pnl": "$-7.50", "bal": "92.50", "avgr": "0.04", "pf": "0.95"}, "lessons": [{"date": "14/10/2026", "text": "**Pending order itu posisi juga.** Limit buy XAUUSD 0.01 kefill 19:30:04 \u2014 tepat saat CPI rilis hot (core +0,3% vs 0,2%), gold dump $30. Evaluasi: (1) order nganggur dibiarkan hidup lewat news red-folder; (2) trade ke-3 hari ini = overtrade; (3) no-trade window 18:30\u201320:30 WIB dilanggar. Perbaikan: cancel semua pending order sebelum news merah, atau pasang alarm 30 menit sebelumnya."}], "weekly": [{"key": "2026-W43", "label": "19\u201325 Oct 2026", "trades": 5, "w": 2, "l": 2, "bep": 1, "pnl": 11.7, "wr": 40, "overtrade_days": 1, "against_brief": 0, "note": ""}, {"key": "2026-W42", "label": "12\u201318 Oct 2026", "trades": 13, "w": 4, "l": 9, "bep": 0, "pnl": -18.34, "wr": 31, "overtrade_days": 3, "against_brief": 2, "note": ""}, {"key": "2026-W41", "label": "5\u201311 Oct 2026", "trades": 8, "w": 3, "l": 4, "bep": 1, "pnl": -0.86, "wr": 38, "overtrade_days": 2, "against_brief": 1, "note": ""}], "changelog": [{"v": "2.3.0", "date": "16/10/2026", "text": "Trade baru #22: XAGUSD Sell -$11.05 (-1.11R). 21 trade, 7W/13L/1BEP, P&L -$19.20, balance $80.80, Avg R -0.04, PF 0.86."}, {"v": "2.2.0", "date": "14/10/2026", "text": "Stat card baru: Avg R dan Profit Factor."}, {"v": "2.1.0", "date": "14/10/2026", "text": "Kalender: ringkasan bulan (Total PnL, Profitable Days/Amount, Loss Days/Amount)."}, {"date": "14/10/2026", "text": "Perombakan: tab Riwayat Trade / Per Pair / Kalender dalam satu card; tabel muat 10 bertahap; section Kesalahan Penting (3 terbaru + tombol); kalender P&L harian; tinggi card konsisten antar tab.", "v": "2.0.0"}, {"date": "09/10/2026", "text": "Rilis awal: stat card, equity curve + filter timeframe, tabel riwayat trade.", "v": "1.0.0"}]};
+const D = {"trades": [{"no": 30, "date": "2026-10-21", "instr": "GBPUSD", "arah": "Sell", "entry": "1.33928", "size": "0.24 (2x 0.12)", "hasil": 21.0, "rr": "+2.10*"}, {"no": 29, "date": "2026-10-21", "instr": "XAUUSD", "arah": "Buy", "entry": "4116.330", "size": "0.03", "hasil": -9.72, "rr": "-1.0"}, {"no": 28, "date": "2026-10-21", "instr": "ETHUSD", "arah": "Sell", "entry": "2452.99", "size": "5.41", "hasil": -9.95, "rr": "-1.0*"}, {"no": 27, "date": "2026-10-20", "instr": "XAUUSD", "arah": "Buy", "entry": "4123.057", "size": "0.01", "hasil": 29.15, "rr": "+3.40"}, {"no": 26, "date": "2026-10-20", "instr": "AUDUSD", "arah": "Sell", "entry": "0.69944", "size": "0.17", "hasil": -7.65, "rr": "-0.77*"}, {"no": 25, "date": "2026-10-20", "instr": "USOIL", "arah": "Sell", "entry": "99.071", "size": "0.02", "hasil": 0.14, "rr": "+0.01"}, {"no": 24, "date": "2026-10-19", "instr": "USOIL", "arah": "Buy", "entry": "96.805", "size": "0.09", "hasil": 0.0, "rr": "0"}, {"no": 23, "date": "2026-10-19", "instr": "USOIL", "arah": "Buy", "entry": "96.753", "size": "0.14", "hasil": -9.94, "rr": "-1.0"}, {"no": 22, "date": "2026-10-16", "instr": "XAGUSD", "arah": "Sell", "entry": "57.6945", "size": "0.02", "hasil": -11.05, "rr": "-1.11*"}, {"no": 20, "date": "2026-10-15", "instr": "BTCUSDT", "arah": "Buy", "entry": "81475.23", "size": "0.11", "hasil": -10.8, "rr": "-1.08*"}, {"no": 19, "date": "2026-10-14", "instr": "XAUUSD", "arah": "Buy", "entry": "4123.701", "size": "0.01", "hasil": -30.16, "rr": "-3.02*"}, {"no": 18, "date": "2026-10-14", "instr": "AUDUSD", "arah": "Sell", "entry": "0.70006", "size": "0.78", "hasil": -10.14, "rr": "-"}, {"no": 17, "date": "2026-10-14", "instr": "BTCUSD", "arah": "Buy", "entry": "83265.99", "size": "0.03", "hasil": 10.86, "rr": "+1.09*"}, {"no": 16, "date": "2026-10-13", "instr": "GBPUSD", "arah": "Sell", "entry": "1.32475", "size": "0.21", "hasil": -9.87, "rr": "-0.99*"}, {"no": 15, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.517", "size": "0.10", "hasil": -4.3, "rr": "-0.43*"}, {"no": 14, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.523", "size": "0.10", "hasil": -10.8, "rr": "-1.08*"}, {"no": 13, "date": "2026-10-13", "instr": "USOIL", "arah": "Buy", "entry": "91.572", "size": "0.10", "hasil": 5.4, "rr": "+0.55"}, {"no": 12, "date": "2026-10-13", "instr": "USDJPY", "arah": "Buy", "entry": "158.251", "size": "0.45", "hasil": 27.0, "rr": "+2.79"}, {"no": 11, "date": "2026-10-12", "instr": "USOIL", "arah": "Buy", "entry": "92.819", "size": "0.10", "hasil": 40.7, "rr": "+4.0"}, {"no": 10, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4171.559", "size": "0.03", "hasil": -5.93, "rr": "-0.49"}, {"no": 9, "date": "2026-10-12", "instr": "XAUUSD", "arah": "Buy", "entry": "4173.052", "size": "0.03", "hasil": -9.25, "rr": "-1.0"}, {"no": 8, "date": "2026-10-11", "instr": "BTCUSD", "arah": "Sell", "entry": "82975.38", "size": "0.07", "hasil": -10.45, "rr": "-1.18"}, {"no": 7, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "31017.27", "size": "0.05", "hasil": 9.36, "rr": "+1.0"}, {"no": 6, "date": "2026-10-09", "instr": "XAGUSD", "arah": "Sell", "entry": "60.555", "size": "0.01", "hasil": -8.0, "rr": "-1.0"}, {"no": 5, "date": "2026-10-09", "instr": "USTEC", "arah": "Sell", "entry": "30992.94", "size": "0.05", "hasil": 8.14, "rr": "+0.71"}, {"no": 4, "date": "2026-10-08", "instr": "EURUSD", "arah": "Buy", "entry": "1.11820", "size": "0.13", "hasil": 18.07, "rr": "+2.48"}, {"no": 3, "date": "2026-10-08", "instr": "BTCUSD", "arah": "Buy", "entry": "82753.40", "size": "0.06", "hasil": 0.0, "rr": "0"}, {"no": 2, "date": "2026-10-08", "instr": "XAUUSD", "arah": "Sell", "entry": "4137.56", "size": "0.03", "hasil": -8.55, "rr": "-1.0"}, {"no": 1, "date": "2026-10-07", "instr": "XAUUSD", "arah": "Buy", "entry": "4127.83", "size": "0.01", "hasil": -9.43, "rr": "-1.0"}], "stats": {"total": "29", "w": "10", "l": "17", "bep": "2", "pnl": "$-6.17", "bal": "93.83", "avgr": "0.03", "pf": "0.96"}, "lessons": [{"date": "14/10/2026", "text": "**Pending order itu posisi juga.** Limit buy XAUUSD 0.01 kefill 19:30:04 \u2014 tepat saat CPI rilis hot (core +0,3% vs 0,2%), gold dump $30. Evaluasi: (1) order nganggur dibiarkan hidup lewat news red-folder; (2) trade ke-3 hari ini = overtrade; (3) no-trade window 18:30\u201320:30 WIB dilanggar. Perbaikan: cancel semua pending order sebelum news merah, atau pasang alarm 30 menit sebelumnya."}]};
 /* ---------- theme ---------- */
 function applyTheme(t){
   document.documentElement.setAttribute('data-theme',t);
   try{ localStorage.setItem('tj-theme',t); }catch(e){}
 }
 var _saved=null; try{ _saved=localStorage.getItem('tj-theme'); }catch(e){}
-applyTheme(_saved||'dark');
+if(!_saved){ _saved=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'; }
+applyTheme(_saved);
 document.getElementById('themetoggle').addEventListener('click',function(){
   var cur=document.documentElement.getAttribute('data-theme');
   applyTheme(cur==='light'?'dark':'light');
@@ -452,39 +453,6 @@ function renderCal(){
   document.getElementById('cal-next').addEventListener('click', function(){ _calM++; if (_calM > 11) { _calM = 0; _calY++; } renderCal(); });
 }
 renderCal();
-
-/* ---------- weekly evaluation ---------- */
-var _weeklyLimit = 4;
-function renderWeekly(){
-  var panel = document.getElementById('weekly-panel');
-  if (!D.weekly || !D.weekly.length) return;
-  panel.style.display = '';
-  document.getElementById('weekly-list').innerHTML = D.weekly.slice(0, _weeklyLimit).map(function(wk){
-    var pc = wk.pnl > 0 ? 'pos' : wk.pnl < 0 ? 'neg' : '';
-    var pv = wk.pnl > 0 ? '+$'+wk.pnl.toFixed(2) : wk.pnl < 0 ? '−$'+Math.abs(wk.pnl).toFixed(2) : '$0.00';
-    var ot = wk.overtrade_days > 0 ? ' · <span class="neg">⚠️ '+wk.overtrade_days+' hari overtrade</span>' : '';
-    var ab = wk.against_brief > 0 ? ' · <span class="neg">🚩 '+wk.against_brief+' lawan briefing</span>' : '';
-    var note = wk.note ? '<div style="margin-top:8px;font-size:13px;color:var(--muted);font-style:italic">📝 '+wk.note+'</div>' : '';
-    return '<div style="border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px;background:var(--card2)">'
-      + '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:8px">'
-      + '<b style="font-size:15px">'+wk.label+'</b>'
-      + '<span class="'+pc+'" style="font-weight:800;font-size:16px">'+pv+'</span></div>'
-      + '<div style="font-size:13px;color:var(--muted)">'+wk.trades+' trade · '
-      + '<span class="pos">'+wk.w+'W</span>/<span class="neg">'+wk.l+'L</span>/'+wk.bep+'BEP · WR '+wk.wr+'%'+ot+ab+'</div>'
-      + note + '</div>';
-  }).join('');
-  var btn = document.getElementById('toggle-weekly');
-  if (D.weekly.length <= 4) { btn.style.display = 'none'; return; }
-  btn.style.display = '';
-  var rest = D.weekly.length - _weeklyLimit;
-  btn.textContent = rest > 0 ? 'Lihat '+rest+' minggu lainnya' : 'Tampilkan sedikit';
-}
-document.getElementById('toggle-weekly').addEventListener('click', function(){
-  if (D.weekly.length - _weeklyLimit > 0) { _weeklyLimit += 8; }
-  else { _weeklyLimit = 4; }
-  renderWeekly();
-});
-renderWeekly();
 
 /* ---------- version ---------- */
 if (D.changelog && D.changelog.length) {
