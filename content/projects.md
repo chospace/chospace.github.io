@@ -2,8 +2,13 @@
 title: "Projects"
 ---
 
-## 📓 Trading Journal
+## 🎨 mnml
 
+projek eksperimen: generator wallpaper minimalis. gratis, tanpa daftar, 100% di browser.
+
+[Bikin wallpaper →](https://chospace.github.io/mnml/)
+
+## 📓 Trading Journal
 jurnal trading akun kecil ($100) — dicatat apa adanya, lengkap dengan equity curve.
 
 [Lihat jurnal →](https://chospace.github.io/trading-journal/)
