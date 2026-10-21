@@ -192,11 +192,106 @@ footer a.bl:hover{text-decoration:underline}
 </div>
 <h2>Instruments</h2>
 <div class="tabs" role="tablist">
-<button class="tab active" data-tab="Forex" role="tab">Forex</button>
+<button class="tab active" data-tab="Index" role="tab">Index</button>
+<button class="tab" data-tab="Komoditas" role="tab">Komoditas</button>
+<button class="tab" data-tab="Crypto" role="tab">Crypto</button>
+<button class="tab" data-tab="Forex" role="tab">Forex</button>
 </div>
-<div class="tabpanel" data-panel="Forex" role="tabpanel">
+<div class="tabpanel" data-panel="Index" role="tabpanel">
+<div class="row">
+<span class="n"><span class="dot fl"></span>USTEC</span>
+<span class="p">29.609</span>
+<span class="lv">30.000 / 29.260</span>
+<span class="note">rejection di 30.010 (MA50 = 30.008); malam ini earnings Meta &amp; Tesla.</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot fl"></span>SPX500</span>
+<span class="p">7.782</span>
+<span class="lv">7.800 / 7.736</span>
+<span class="note">MA20 di 7.787 jadi atap, MA50 di 7.736 jadi lantai; tunggu earnings.</span>
+</div>
+</div>
+<div class="tabpanel" data-panel="Komoditas" hidden role="tabpanel">
+<div class="row">
+<span class="n"><span class="dot dn"></span>XAUUSD</span>
+<span class="p">4.119</span>
+<span class="lv">4.132 / 4.106</span>
+<span class="note">4 hari turun beruntun, di bawah MA20; oversold, waspada bounce teknikal.</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot dn"></span>XAGUSD</span>
+<span class="p">57,40</span>
+<span class="lv">57,52 / 56,60</span>
+<span class="note">di bawah MA50 &amp; MA200; rebound selalu mentok.</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot up"></span>USOIL</span>
+<span class="p">99,0</span>
+<span class="lv">100,00 / 95,00</span>
+<span class="note">API tarik stok besar (-4,93 jt), geopolitik panas; EIA 22:30 penentu.</span>
+</div>
+</div>
+<div class="tabpanel" data-panel="Crypto" hidden role="tabpanel">
+<div class="row">
+<span class="n"><span class="dot up"></span>BTCUSD</span>
+<span class="p">83.075</span>
+<span class="lv">84.000 / 81.000</span>
+<span class="note">liq atas ~84.500, bawah ~81.000; ETF spot 2 hari inflow (+$23,2 jt kemarin).</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot fl"></span>ETHUSD</span>
+<span class="p">2.450</span>
+<span class="lv">2.535 / 2.410</span>
+<span class="note">ETF spot 5 hari outflow beruntun (-$26,1 jt), BTC lebih dilirik institusi.</span>
+</div>
+</div>
+<div class="tabpanel" data-panel="Forex" hidden role="tabpanel">
+<div class="row">
+<span class="n"><span class="dot fl"></span>USDCAD</span>
+<span class="p">1,4054</span>
+<span class="lv">1,4100 / 1,4000</span>
+<span class="note">5 hari turun; CPI 20:30 bisa balikkan arah, jangan tebak.</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot up"></span>GBPUSD</span>
+<span class="p">1,3375</span>
+<span class="lv">1,3410 / 1,3360</span>
+<span class="note">CPI Inggris beat, RSI(10) 73 jenuh beli; Bailey 20:00 penentu.</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot up"></span>AUDUSD</span>
+<span class="p">0,7009</span>
+<span class="lv">0,7050 / 0,7000</span>
+<span class="note">RBA hawkish (Hauser), 4 hari naik beruntun.</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot fl"></span>USDJPY</span>
+<span class="p">158,08</span>
+<span class="lv">158,50 / 158,00</span>
+<span class="note">opsi $1,6 M di 158,00 = magnet NY cut.</span>
+</div>
+<div class="row">
+<span class="n"><span class="dot fl"></span>EURUSD</span>
+<span class="p">1,1223</span>
+<span class="lv">1,1260 / 1,1195</span>
+<span class="note">opsi €4,3 M di 1,1195–1,1200 = magnet NY cut.</span>
+</div>
 <div class="calm">USDCHF — tenang, jauh dari level.</div>
 </div>
+<h2>Hunt — ide setup, bukan sinyal</h2>
+<div class="hunt">
+<div class="pair"><span class="hnum">01</span>USDCAD <span class="buy">buy</span></div>
+<div class="d">Trigger: <b>CPI panas → sweep 1,4000 lalu MSS bullish H1</b> · invalidasi: <b>close di bawah 1,3980</b></div>
+</div>
+<div class="hunt">
+<div class="pair"><span class="hnum">02</span>GBPUSD <span class="sell">sell</span></div>
+<div class="d">Trigger: <b>sweep 1,3410 (RSI jenuh) lalu MSS bearish H1</b> · invalidasi: <b>close di atas 1,3440</b></div>
+</div>
+<div class="hunt">
+<div class="pair"><span class="hnum">03</span>XAUUSD <span class="sell">sell</span></div>
+<div class="d">Trigger: <b>rejection 4,132 (0,3% di atas harga) lalu MSS bearish</b> · invalidasi: <b>close di atas 4,156</b></div>
+</div>
+<div class="focus">Malam ini driver-nya USD dan news: CPI Kanada 20:30 + EIA 22:30. Opsi NY cut bisa magnet EURUSD ke 1,1195–1,1225 dan USDJPY ke 158,00 — sabar, jangan entry di zona merah.</div>
 
 
 
