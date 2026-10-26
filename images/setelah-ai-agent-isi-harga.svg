@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="600.962667pt" height="304.686845pt" viewBox="0 0 600.962667 304.686845" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T21:19:09.709656</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 304.686845 
+L 600.962667 304.686845 
+L 600.962667 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 328.74427 249.000565 
+C 354.007105 249.000565 378.261082 238.954239 396.124604 221.090717 
+C 413.988125 203.227195 424.034452 178.973218 424.034452 153.710384 
+C 424.034452 128.447549 413.988125 104.193572 396.124604 86.33005 
+C 378.261082 68.466528 354.007105 58.420202 328.74427 58.420202 
+L 328.74427 98.442078 
+C 343.396714 98.442078 357.464021 104.268947 367.824863 114.62979 
+C 378.185706 124.990633 384.012575 139.057939 384.012575 153.710384 
+C 384.012575 168.362828 378.185706 182.430134 367.824863 192.790977 
+C 357.464021 203.15182 343.396714 208.978689 328.74427 208.978689 
+L 328.74427 249.000565 
+z
+" style="fill: #24425c; stroke: #ffffff; stroke-width: 2.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 240.1457 188.78904 
+C 247.176599 206.547063 259.386634 221.787678 275.183243 232.523042 
+C 290.979852 243.258407 309.645031 249.000565 328.74427 249.000565 
+L 328.74427 208.978689 
+C 317.666712 208.978689 306.840908 205.648237 297.678874 199.421726 
+C 288.516841 193.195214 281.435021 184.355658 277.357099 174.056005 
+L 240.1457 188.78904 
+z
+" style="fill: #e39a2d; stroke: #ffffff; stroke-width: 2.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 328.74427 58.420202 
+C 313.201187 58.420202 297.891595 62.223124 284.155152 69.496196 
+C 270.41871 76.769268 258.66812 87.293975 249.931611 100.149357 
+C 241.195102 113.004739 235.735159 127.804564 234.02955 143.253782 
+C 232.32394 158.703 234.423909 174.337447 240.1457 188.78904 
+L 277.357099 174.056005 
+C 274.038461 165.67408 272.820479 156.606101 273.809732 147.645555 
+C 274.798985 138.685008 277.965753 130.10111 283.032928 122.644988 
+C 288.100103 115.188866 294.915445 109.084537 302.882582 104.866155 
+C 310.849719 100.647773 319.729282 98.442078 328.74427 98.442078 
+L 328.74427 58.420202 
+z
+" style="fill: #b9c2cc; stroke: #ffffff; stroke-width: 2.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="text_1">
+    <text style="fill: #1f2733; font: 700 12px 'DejaVu Sans'" transform="translate(444.998292 149.619087)">Aktuator — otot robot</text>
+    <text style="fill: #1f2733; font: 700 12px 'DejaVu Sans'" transform="translate(444.998292 164.42418)">&gt;50%</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #1f2733; font: 700 12px 'DejaVu Sans'" transform="translate(214.887942 245.67678)">Tangan</text>
+    <text style="fill: #1f2733; font: 700 12px 'DejaVu Sans'" transform="translate(224.621067 260.575624)">±19%</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #1f2733; font: 700 12px 'DejaVu Sans'" transform="translate(179.729076 84.227759)">Lainnya</text>
+    <text style="fill: #1f2733; font: 700 12px 'DejaVu Sans'" transform="translate(193.814076 99.126603)">±31%</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #5b6774; font: 13px 'DejaVu Sans'; text-anchor: middle" x="328.74427" y="149.674356" transform="rotate(-0 328.74427 149.674356)">Harga</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #1f2733; font: 700 15px 'DejaVu Sans'; text-anchor: middle" x="328.74427" y="173.095875" transform="rotate(-0 328.74427 173.095875)">1 robot</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #1f2733; font: 700 15px 'DejaVu Sans'; text-anchor: middle" x="328.74427" y="18.597656" transform="rotate(-0 328.74427 18.597656)">Yang paling mahal bukan chip AI-nya — tapi badannya</text>
+   </g>
+  </g>
+  <g id="text_7">
+   <text style="fill: #8a95a3; font: 8.5px 'DejaVu Sans'; text-anchor: start" x="7.2" y="295.719111" transform="rotate(-0 7.2 295.719111)">Sumber: Proyeksi BofA Global Research</text>
+  </g>
+ </g>
+</svg>

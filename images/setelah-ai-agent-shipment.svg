@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="659.376pt" height="333.198845pt" viewBox="0 0 659.376 333.198845" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T21:19:09.843206</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 333.198845 
+L 659.376 333.198845 
+L 659.376 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 11.376 285.555838 
+L 652.176 285.555838 
+L 652.176 32.597656 
+L 11.376 32.597656 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill: #5b6774; font: 11.5px 'DejaVu Sans'; text-anchor: middle" x="87.692709" y="297.794041" transform="rotate(-0 87.692709 297.794041)">2025</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill: #5b6774; font: 11.5px 'DejaVu Sans'; text-anchor: middle" x="250.414903" y="297.794041" transform="rotate(-0 250.414903 297.794041)">2026</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="fill: #5b6774; font: 11.5px 'DejaVu Sans'; text-anchor: middle" x="413.137097" y="297.794041" transform="rotate(-0 413.137097 297.794041)">2030</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill: #5b6774; font: 11.5px 'DejaVu Sans'; text-anchor: middle" x="575.859291" y="297.794041" transform="rotate(-0 575.859291 297.794041)">2035</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_3">
+    <path d="M 11.376 285.555838 
+L 652.176 285.555838 
+" style="fill: none; stroke: #e8edf1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 40.503273 67506.267163 
+L 134.882145 67506.267163 
+L 134.882145 265.401007 
+L 40.503273 265.401007 
+z
+" clip-path="url(#pf242774b76)" style="fill: #b9c2cc"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 203.225467 67506.267163 
+L 297.604339 67506.267163 
+L 297.604339 221.666535 
+L 203.225467 221.666535 
+z
+" clip-path="url(#pf242774b76)" style="fill: #7e93a8"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 365.947661 67506.267163 
+L 460.326533 67506.267163 
+L 460.326533 146.348625 
+L 365.947661 146.348625 
+z
+" clip-path="url(#pf242774b76)" style="fill: #24425c"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 528.669855 67506.267163 
+L 623.048727 67506.267163 
+L 623.048727 84.697139 
+L 528.669855 84.697139 
+z
+" clip-path="url(#pf242774b76)" style="fill: #15917b"/>
+   </g>
+   <g id="text_5">
+    <text style="fill: #1f2733; font: 700 12.5px 'DejaVu Sans'; text-anchor: middle" x="87.692709" y="254.075174" transform="rotate(-0 87.692709 254.075174)">20 ribu</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #1f2733; font: 700 12.5px 'DejaVu Sans'; text-anchor: middle" x="250.414903" y="210.340702" transform="rotate(-0 250.414903 210.340702)">90 ribu</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #1f2733; font: 700 12.5px 'DejaVu Sans'; text-anchor: middle" x="413.137097" y="134.925135" transform="rotate(-0 413.137097 134.925135)">1,2 juta</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #1f2733; font: 700 12.5px 'DejaVu Sans'; text-anchor: middle" x="575.859291" y="73.27365" transform="rotate(-0 575.859291 73.27365)">10 juta</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 449.826366 88.019312 
+Q 511.844735 86.384535 572.07487 84.796895 
+" style="fill: none; stroke: #15917b; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 567.213296 82.52421 
+L 572.07487 84.796895 
+L 567.339778 87.322543 
+" style="fill: none; stroke: #15917b; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_9">
+    <text style="fill: #15917b; font: 700 12px 'DejaVu Sans'" transform="translate(339.91211 86.113181)">naik 500×</text>
+    <text style="fill: #15917b; font: 700 12px 'DejaVu Sans'" transform="translate(339.91211 99.550556)">dalam 10 tahun</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #1f2733; font: 700 15px 'DejaVu Sans'; text-anchor: start" x="11.376" y="18.597656" transform="rotate(-0 11.376 18.597656)">Shipment robot humanoid per tahun — skala logaritmik</text>
+   </g>
+  </g>
+  <g id="text_11">
+   <text style="fill: #8a95a3; font: 8.5px 'DejaVu Sans'; text-anchor: start" x="7.2" y="324.231111" transform="rotate(-0 7.2 324.231111)">Sumber: Proyeksi BofA Global Research</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf242774b76">
+   <rect x="11.376" y="32.597656" width="640.8" height="252.958182"/>
+  </clipPath>
+ </defs>
+</svg>
