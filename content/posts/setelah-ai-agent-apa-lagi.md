@@ -34,12 +34,12 @@ Padahal sekarang AI sudah bisa banyak hal:
 
 - Nulis dan bantu mikir.
 - Coding — baca satu project, edit banyak file, jalanin test, beresin bug.
-- Bikin gambar, suara, musik, sampai video dan motion dari satu kalimat.
+- Bikin gambar, suara, musik, sampai video dari satu kalimat.
 - Riset dan mengolah data.
 - Bantu trading — scan pasar, briefing, jurnal, backtest.
-- Jadi agent — buka browser dan urus multi-step task.
+- Jadi agent — buka browser, urus tugas yang langkahnya banyak.
 
-Urutannya jelas kalau dilihat ke belakang. 2020 ada GPT-3 — GPT itu kepanjangan dari Generative Pre-trained Transformer. 2022 gambar bisa dibuat dari teks, lalu ChatGPT muncul. 2023 GPT-4 bisa paham gambar. 2024 ada Sora untuk video dan GPT-4o yang menyatukan teks, suara, dan gambar. Awal 2025, agent mulai bisa pakai browser sendiri dan coding dari terminal.
+Urutannya jelas kalau dilihat ke belakang. 2020 ada GPT-3. 2022 gambar bisa dibuat dari teks, lalu ChatGPT muncul. 2023 GPT-4 bisa paham gambar. 2024 ada Sora untuk video dan GPT-4o yang menyatukan teks, suara, dan gambar. Awal 2025, agent mulai bisa pakai browser sendiri dan coding dari terminal.
 
 Kata, gambar, suara, video, kode, lalu tindakan.
 
@@ -49,12 +49,14 @@ Nah, di situ pertanyaan tadi mulai ramai dijawab orang — dan jawabannya ternya
 
 ## Jawabannya ternyata bercabang
 
-Kalau googling pertanyaan yang sama, jawaban yang muncul beda-beda. Tulisan di IDN Times dan di Python in Plain English (publikasi teknologi di Medium) misalnya, menyebut beberapa kandidat lain:
+Kalau googling pertanyaan yang sama, jawabannya tidak tunggal. Ada yang langsung loncat ke AGI, ada yang nyebut ini-itu sebagai fase berikutnya.
 
-- **Multi-agent — sudah ada sekarang.** Dari satu agent solo ke banyak agent spesialis yang kerja bareng seperti tim: bagi tugas dan saling cek hasilnya. Ini bukan konsep lagi — sistem riset Anthropic misalnya sudah pakai satu agent pemimpin yang membagi kerja ke beberapa agent lain, dan hasilnya lebih bagus dari satu agent sendirian. Cuma belum murah dan belum selalu rapi: agent makin banyak, biaya dan ribet ngaturnya ikut naik.
-- **Self-improving agent — baru mulai, kebanyakan masih riset.** Versi ringannya sudah ada: agent yang ingat pengalaman sebelumnya dan memperbaiki jawabannya dari feedback. Tapi versi penuhnya — agent yang menulis ulang kodenya sendiri biar makin pintar, seperti Darwin Gödel Machine dari Sakana AI di 2025 — masih percobaan di lab, belum jadi produk yang dipakai umum. AlphaEvolve dari Google DeepMind juga searah: agent yang terus memperbaiki algoritma, bahkan sampai ikut menghemat pelatihan AI-nya sendiri. Makin mandiri, makin penting juga aturan main dan batas izinnya: apa yang boleh dia lakukan sendiri, apa yang harus minta izin dulu, dan siapa yang tanggung jawab kalau salah.
-- **Economic agent — baru mulai dipakai.** Jalur bayarnya baru dibuka di 2025: Visa dan Mastercard bikin cara khusus biar agent bisa belanja atas nama kita, lalu Google dan OpenAI–Stripe menyusul dengan cara belanja langsung dari chat. Jadi agent sudah bisa membelikan sesuatu — tapi masih dengan batas dan izin dari pemilik uangnya. Yang pegang budget sendiri bebas dan dinilai dari untung-rugi, itu belum kejadian.
-- **AGI (Artificial General Intelligence)** di ujung paling jauh — AI yang bisa belajar hal baru lintas bidang, seperti manusia. Ini yang paling sering disebut, tapi juga yang paling belum jelas kapan.
+Dicek lagi sekarang, Oktober 2026, statusnya beda-beda:
+
+- **Multi-agent — sudah jadi.** Banyak agent kerja bareng, masing-masing punya tugas, hasilnya saling dicek. Sudah dipakai produksi beneran, saya sendiri hidup di fase ini tiap hari. Sisa masalahnya cuma biaya dan ribet ngaturnya.
+- **Self-improving agent — setengah jadi.** Yang ringan — ingat dan belajar dari pengalaman — sudah jadi fitur biasa. Yang berat — nulis ulang kodenya sendiri — masih di lab.
+- **Economic agent — sudah kejadian, belum jadi kebiasaan.** Agent sudah bisa belanja dan bayar, bahkan sempat ramai lalu mundur selangkah. Bayar benerannya masih lebih sering di tempat penjual.
+- **AGI — belum kejadian.** Satu-satunya yang masih murni “nanti”.
 
 Semuanya masuk akal. Semuanya juga masih di dalam layar.
 
@@ -64,9 +66,9 @@ Yang paling dekat dan paling kerasa buat saya justru satu lagi: AI keluar dari l
 
 Physical AI itu sederhananya: AI yang bisa melihat sekitarnya, mikir, lalu bergerak di dunia nyata. Bukan cuma robot humanoid — mobil otonom dan drone juga termasuk.
 
-Bedanya dengan robot lama: robot lama rajin tapi kaku, semua gerakannya diprogram satu-satu. Barang miring sedikit, dia bingung. Physical AI belajar dari mencoba — salah, diperbaiki, coba lagi. Seperti kita belajar naik sepeda.
+Bedanya dengan robot lama: robot lama rajin tapi kaku, semua gerakannya diprogram satu-satu. Barang miring sedikit, dia bingung. Physical AI belajar dari mencoba — salah, diperbaiki, coba lagi. Kayak kita belajar naik sepeda.
 
-Cuma taruhannya beda. Chatbot salah, keluarnya jawaban yang salah. Robot salah, bisa ada barang jatuh atau orang ketabrak. Makanya tidak bisa secepat software.
+Cuma taruhannya beda. Chatbot salah, keluarnya jawaban yang salah. Robot salah, bisa ada barang jatuh, atau orang ketabrak. Makanya jalannya tidak bisa secepat software.
 
 ## Otaknya juga beda
 
@@ -80,7 +82,7 @@ Ringkasnya: tidak buta, tidak lumpuh, tidak ceroboh.
 
 Latihannya banyak di simulasi dulu — gagal seribu kali di dunia virtual tidak apa-apa, tidak ada yang pecah.
 
-Contoh paling dekatnya justru bukan humanoid pabrik, tapi Microduck — robot bebek open-source dari Hugging Face dan Pollen Robotics yang dirilis Agustus 2026 kemarin. Tingginya cuma 25 cm, harganya US$399, dan cara dia belajar jalan persis seperti itu: dilatih dulu di simulasi sampai bisa, baru dipindah ke robot beneran. Dia memang belum bisa jadi asisten rumah — bisanya baru ambil benda ringan seperti kaus kaki atau pulpen — tapi itu yang bikin fasenya kerasa dekat: AI dapat badan ternyata sudah bisa dibeli seharga HP.
+Contoh paling dekatnya justru bukan humanoid pabrik, tapi Microduck — robot bebek open-source dari Hugging Face dan Pollen Robotics, dirilis Agustus 2026 kemarin. Tingginya cuma 25 cm, harganya US$399. Cara dia belajar jalan persis seperti itu: dilatih dulu di simulasi sampai bisa, baru dipindah ke robot beneran. Dia memang belum bisa jadi asisten rumah — bisanya baru ambil benda ringan kayak kaus kaki atau pulpen. Tapi justru itu yang bikin fasenya kerasa dekat: AI dapat badan ternyata sudah bisa dibeli seharga HP.
 
 ## Yang mahal bukan otaknya
 
@@ -120,11 +122,13 @@ Alasannya juga bukan cuma teknologi. Tenaga kerja makin kurang, populasi menua, 
 
 ## Tapi belum gampang
 
-Agent saja belum selesai, apalagi robot. Harganya masih mahal, baterainya belum awet, badannya belum sekuat tuntutan kerja seharian, dan aturan keselamatannya masih disusun. Dunia nyata juga jauh lebih berantakan daripada video demo — barang beda bentuk, orang lewat tiba-tiba. Satu saja macet, jadwalnya geser semua.
+Agent saja belum selesai, apalagi robot. Harganya masih mahal, baterainya belum awet, badannya belum sekuat tuntutan kerja seharian, dan aturan keselamatannya masih disusun.
+
+Dunia nyata juga jauh lebih berantakan daripada video demo — barang beda bentuk, orang lewat tiba-tiba. Satu saja macet, jadwalnya geser semua.
 
 ## Jadi, setelah agent apa lagi?
 
-Jawaban sementaranya: banyak — dan sebagian ternyata sudah jalan. Multi-agent sudah dipakai sekarang, economic agent baru mulai, self-improving agent masih di lab. Semuanya datang bareng, bukan antre satu-satu.
+Jawaban sementaranya: banyak, dan sebagian besar sudah jalan bareng, bukan antre satu-satu. Yang belum kejadian cuma AGI.
 
 Tapi kalau ditanya mana yang paling mengubah rasanya, jawaban saya tetap: AI dapat badan.
 
@@ -144,4 +148,4 @@ Saya belum tahu. Itu yang bikin penasaran, sekaligus agak ngeri. Tapi kalau bela
 
 ---
 
-*Sumber: Bank of America Institute — “Humanoid Robots 101” (29 April 2025), “Physical AI, Part 1: The Basics” (26 Februari 2026), dan “Physical AI, Part 2: Humanoid Robots” (12 Maret 2026). Angka pengiriman, populasi, biaya, dan pendanaan adalah proyeksi BofA Global Research. Perkiraan pemasangan 2027 mengutip Counterpoint Research via BofA. Bagian kandidat lain disarikan dari tulisan-tulisan bertema sama di IDN Times dan Python in Plain English; statusnya dicek dari sumber aslinya: Anthropic (sistem riset multi-agent, Juni 2025), Sakana AI dan Google DeepMind (riset self-improving agent, 2025), serta Visa, Mastercard, Google, dan OpenAI–Stripe (layanan pembayaran untuk agent, 2025). Tulisan ini catatan pribadi, bukan rekomendasi investasi.*
+*Sumber: Bank of America Institute — “Humanoid Robots 101” (29 April 2025), “Physical AI, Part 1: The Basics” (26 Februari 2026), dan “Physical AI, Part 2: Humanoid Robots” (12 Maret 2026). Angka pengiriman, populasi, biaya, dan pendanaan adalah proyeksi BofA Global Research. Perkiraan pemasangan 2027 mengutip Counterpoint Research via BofA. Status singkat soal multi-agent, self-improving agent, economic agent, dan AGI dicek per Oktober 2026 dari sumber primer masing-masing (antara lain Anthropic, Meta, Visa/Mastercard/Google, OpenAI–Stripe, dan Coinbase). Tulisan ini catatan pribadi, bukan rekomendasi investasi.*
