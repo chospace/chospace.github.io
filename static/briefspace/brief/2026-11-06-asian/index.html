@@ -154,8 +154,37 @@ footer a.bl:hover{text-decoration:underline}
 .cl{margin:8px 0 4px 20px;font-size:14px}
 .cl li{margin:5px 0}
 @media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
-</style></head><body>
-<nav class="topnav"><a class="brand" href="../../"><span class="lb">brief</span><span class="ls">space</span></a><div class="nav-right"><div class="links"><a class="" href="../../">Latest</a><a class="" href="../../arsip/">Archive</a><a class="" href="../../panduan/">Guide</a><a class="" href="../../about/">About</a></div><div class="nav-actions"><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button></div></div></nav>
+.fpill{display:inline-block;padding:2px 11px;border-radius:99px;font-size:12px;font-weight:600;vertical-align:1px}
+.fpill.bear{color:var(--red);background:var(--badge)}
+.fpill.bull{color:var(--green);background:color-mix(in srgb,var(--green) 14%,transparent)}
+.fpill.mix{color:var(--muted);background:var(--card)}
+.fbullets{margin:2px 0 12px;font-size:14px;line-height:1.65}
+.fbullets div::before{content:"• ";color:var(--faint)}
+.ftblwrap{overflow-x:auto;margin:0 -4px;padding:0 4px}
+.ftbl{border-collapse:collapse;min-width:840px;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+.ftbl th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--faint);font-weight:600;padding:8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.ftbl td{padding:10px 8px;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:top}
+.ftbl tbody tr:last-child td{border-bottom:none}
+.ftbl .sym{font-weight:700;font-size:13.5px}
+.ftbl .cprice{display:block;font-size:12.5px;color:var(--muted);margin-top:1px}
+.ftbl .chg{font-size:11.5px;margin-left:5px}
+.ftbl .chg.neg{color:var(--red)}.ftbl .chg.pos{color:var(--green)}
+.ftbl .sub{display:block;font-size:11px;color:var(--muted);margin-top:1px}
+.ftbl .sub.neg{color:var(--red)}.ftbl .sub.pos{color:var(--green)}
+.ftbl .lvl{font-weight:600}
+.ftbl .fmacd{font-weight:600}
+.fchip{display:inline-block;padding:2px 9px;border-radius:7px;font-size:12px;font-weight:600;background:var(--card);color:var(--muted)}
+.fchip.up{color:var(--green);background:color-mix(in srgb,var(--green) 14%,transparent)}
+.fchip.dn{color:var(--red);background:var(--badge)}
+.pos{color:var(--green)}.neg{color:var(--red)}
+.fmethod{margin-top:18px;font-size:11.5px;line-height:1.6;color:var(--muted)}
+.fteaser{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:44px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;text-decoration:none}
+.fteaser:hover{border-color:var(--faint)}
+.fteaser .ft-l{font-weight:700;font-size:14px;display:flex;align-items:center;gap:9px}
+.fteaser .ft-m{color:var(--muted);font-size:12.5px}
+</style><style>body{max-width:780px;padding-left:10px;padding-right:10px;background-color:#e9e1cf;background-image:radial-gradient(130% 80% at 50% -10%,rgba(255,252,240,.65),rgba(255,252,240,0) 55%),radial-gradient(150% 120% at 50% 115%,rgba(96,76,44,.17),rgba(96,76,44,0) 60%),var(--paper)}[data-theme="dark"] body{background-color:#25211a;background-image:radial-gradient(130% 80% at 50% -10%,rgba(255,240,200,.05),rgba(255,240,200,0) 55%),radial-gradient(150% 120% at 50% 115%,rgba(0,0,0,.42),rgba(0,0,0,0) 60%),var(--paper)}.topnav{background-color:transparent;background-image:none}.topnav.scrolled{background-color:rgba(233,225,207,.86)}[data-theme="dark"] .topnav.scrolled{background-color:rgba(37,33,26,.86)}footer{color:#8b8172}[data-theme="dark"] footer{color:#9a917e}.sheet{position:relative;margin:36px 0 8px;padding:38px 40px 30px;border-radius:3px;background-color:#fffdf7;background-image:var(--paper);color:#1c1c1c;--text:#1c1c1c;--muted:#7e7a6f;--faint:#aaa38f;--line:#e8e1cf;--red:#c43d3d;--green:#1d9e57;--card:#f4efdf;--badge:#fdeeee;--badgeh:#fbd9d4;box-shadow:0 1px 2px rgba(74,59,32,.22),0 16px 36px rgba(74,59,32,.24),0 34px 80px rgba(74,59,32,.16);transform:rotate(-.25deg)}[data-theme="dark"] .sheet{background-color:#f5eedb}.tape{position:absolute;top:-15px;left:50%;width:168px;height:34px;transform:translateX(-50%) rotate(-1.8deg);background-color:rgba(243,220,146,.66);background-image:var(--paper);box-shadow:0 2px 6px rgba(74,59,32,.22);clip-path:polygon(1% 12%,4% 0,95% 4%,99% 0,100% 84%,97% 100%,5% 96%,0 100%,1% 45%)}@media(max-width:700px){.sheet{padding:28px 18px 24px;margin-top:28px;transform:none}.tape{width:132px;height:28px;top:-12px}}</style></head><body>
+<nav class="topnav"><a class="brand" href="../../"><span class="lb">brief</span><span class="ls">space</span></a><div class="nav-right"><div class="links"><a class="" href="../../">Latest</a><a class="" href="../../arsip/">Archive</a><a class="" href="../../futures/">Futures</a><a class="" href="../../panduan/">Guide</a><a class="" href="../../about/">About</a></div><div class="nav-actions"><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button></div></div></nav>
+<div class="sheet"><div class="tape" aria-hidden="true"></div>
 <div class="overline">Pre-session briefing</div>
 <h1>Asian · Jumat 6 Nov 2026</h1>
 <div class="meta">07:00–11:00 WIB</div>
@@ -261,7 +290,8 @@ footer a.bl:hover{text-decoration:underline}
 <div class="focus">Sesi Asia = jangan kejar harga setelah sell-off Kamis — semua mata ke NFP 20:30 WIB. Simpan energi, hindari entry agresif jelang NFP. UMich 22:00 WIB bukan red-folder, sekadar pelengkap.</div>
 <div class="pn">
 <span><a href="../2026-11-05-ny/">← sesi sebelumnya</a></span>
-<span></span>
+<span><a href="../2026-11-06-london/">sesi berikutnya →</a></span>
 </div>
-<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.0</div></footer>
+</div>
+<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.2</div></footer>
 <script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}function toggleMenu(){var l=document.querySelector('.topnav .links');if(l)l.classList.toggle('open')}window.addEventListener('scroll',function(){var n=document.querySelector('.topnav');if(n)n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='Released'}else if(s<3600){txt='in '+Math.floor(s/60)+'m'}else{txt='in '+Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
