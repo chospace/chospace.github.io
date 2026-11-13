@@ -154,14 +154,239 @@ footer a.bl:hover{text-decoration:underline}
 .cl{margin:8px 0 4px 20px;font-size:14px}
 .cl li{margin:5px 0}
 @media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
+.fpill{display:inline-block;padding:2px 11px;border-radius:99px;font-size:12px;font-weight:600;vertical-align:1px}
+.fpill.bear{color:var(--red);background:var(--badge)}
+.fpill.bull{color:var(--green);background:color-mix(in srgb,var(--green) 14%,transparent)}
+.fpill.mix{color:var(--muted);background:var(--card)}
+.fbullets{margin:2px 0 12px;font-size:14px;line-height:1.65}
+.fbullets div::before{content:"• ";color:var(--faint)}
+.ftblwrap{overflow-x:auto;margin:0 -4px;padding:0 4px}
+.ftbl{border-collapse:collapse;min-width:840px;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+.ftbl th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--faint);font-weight:600;padding:8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.ftbl td{padding:10px 8px;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:top}
+.ftbl tbody tr:last-child td{border-bottom:none}
+.ftbl .sym{font-weight:700;font-size:13.5px}
+.ftbl .cprice{display:block;font-size:12.5px;color:var(--muted);margin-top:1px}
+.ftbl .chg{font-size:11.5px;margin-left:5px}
+.ftbl .chg.neg{color:var(--red)}.ftbl .chg.pos{color:var(--green)}
+.ftbl .sub{display:block;font-size:11px;color:var(--muted);margin-top:1px}
+.ftbl .sub.neg{color:var(--red)}.ftbl .sub.pos{color:var(--green)}
+.ftbl .lvl{font-weight:600}
+.ftbl .fmacd{font-weight:600}
+.fchip{display:inline-block;padding:2px 9px;border-radius:7px;font-size:12px;font-weight:600;background:var(--card);color:var(--muted)}
+.fchip.up{color:var(--green);background:color-mix(in srgb,var(--green) 14%,transparent)}
+.fchip.dn{color:var(--red);background:var(--badge)}
+.pos{color:var(--green)}.neg{color:var(--red)}
+.fmethod{margin-top:18px;font-size:11.5px;line-height:1.6;color:var(--muted)}
+.fteaser{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:44px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;text-decoration:none}
+.fteaser:hover{border-color:var(--faint)}
+.fteaser .ft-l{font-weight:700;font-size:14px;display:flex;align-items:center;gap:9px}
+.fteaser .ft-m{color:var(--muted);font-size:12.5px}
 </style></head><body>
-<nav class="topnav"><a class="brand" href="../"><span class="lb">brief</span><span class="ls">space</span></a><div class="nav-right"><div class="links"><a class="" href="../">Latest</a><a class="active" href="../arsip/">Archive</a><a class="" href="../panduan/">Guide</a><a class="" href="../about/">About</a></div><div class="nav-actions"><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button></div></div></nav>
+<nav class="topnav"><a class="brand" href="../"><span class="lb">brief</span><span class="ls">space</span></a><div class="nav-right"><div class="links"><a class="" href="../">Latest</a><a class="active" href="../arsip/">Archive</a><a class="" href="../futures/">Futures</a><a class="" href="../panduan/">Guide</a><a class="" href="../about/">About</a></div><div class="nav-actions"><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button></div></div></nav>
 <h1>Arsip briefing</h1>
 <div class="meta">Asian · London · NY — terbaru dulu</div>
+<div class="arch-day">
+<div class="d">2026-11-13</div>
+<div class="sess">
+<a href="../brief/2026-11-13-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-13-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-12</div>
+<div class="sess">
+<a href="../brief/2026-11-12-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-12-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-12-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-11</div>
+<div class="sess">
+<a href="../brief/2026-11-11-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-11-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-11-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-10</div>
+<div class="sess">
+<a href="../brief/2026-11-10-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-10-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-10-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-09</div>
+<div class="sess">
+<a href="../brief/2026-11-09-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-09-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-09-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-08</div>
+<div class="sess">
+<a href="../brief/2026-11-08-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-08-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-08-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-07</div>
+<div class="sess">
+<a href="../brief/2026-11-07-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-07-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-07-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-06</div>
+<div class="sess">
+<a href="../brief/2026-11-06-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-06-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-06-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-05</div>
+<div class="sess">
+<a href="../brief/2026-11-05-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-05-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-05-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-04</div>
+<div class="sess">
+<a href="../brief/2026-11-04-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-04-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-04-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-03</div>
+<div class="sess">
+<a href="../brief/2026-11-03-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-03-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-03-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-02</div>
+<div class="sess">
+<a href="../brief/2026-11-02-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-02-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-02-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-11-01</div>
+<div class="sess">
+<a href="../brief/2026-11-01-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-11-01-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-11-01-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-31</div>
+<div class="sess">
+<a href="../brief/2026-10-31-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-31-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-10-31-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-30</div>
+<div class="sess">
+<a href="../brief/2026-10-30-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-30-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-10-30-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-29</div>
+<div class="sess">
+<a href="../brief/2026-10-29-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-29-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-10-29-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-28</div>
+<div class="sess">
+<a href="../brief/2026-10-28-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-28-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-10-28-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-27</div>
+<div class="sess">
+<a href="../brief/2026-10-27-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-27-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-10-27-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-26</div>
+<div class="sess">
+<a href="../brief/2026-10-26-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-26-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-10-26-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-25</div>
+<div class="sess">
+<a href="../brief/2026-10-25-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-25-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-10-25-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-24</div>
+<div class="sess">
+<a href="../brief/2026-10-24-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-24-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-10-24-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-23</div>
+<div class="sess">
+<a href="../brief/2026-10-23-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-23-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-10-23-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-22</div>
+<div class="sess">
+<a href="../brief/2026-10-22-asian/">ASIAN <span class="t">06:30–11:00 WIB</span></a>
+<a href="../brief/2026-10-22-london/">LONDON <span class="t">12:30–16:00 WIB</span></a>
+<a href="../brief/2026-10-22-ny/">NY <span class="t">17:30–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-21</div>
+<div class="sess">
+<a href="../brief/2026-10-21-asian/">ASIAN <span class="t">06:30–11:00 WIB</span></a>
+<a href="../brief/2026-10-21-london/">LONDON <span class="t">12:30–16:00 WIB</span></a>
+<a href="../brief/2026-10-21-ny/">NY <span class="t">17:30–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-20</div>
+<div class="sess">
+<a href="../brief/2026-10-20-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-20-london/">LONDON <span class="t">12:30–16:00 WIB</span></a>
+<a href="../brief/2026-10-20-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-19</div>
+<div class="sess">
+<a href="../brief/2026-10-19-asian/">ASIAN <span class="t">06:30–11:00 WIB</span></a>
+<a href="../brief/2026-10-19-london/">LONDON <span class="t">12:30–16:00 WIB</span></a>
+<a href="../brief/2026-10-19-ny/">NY <span class="t">17:30–21:00 WIB</span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-18</div>
+<div class="sess">
+<a href="../brief/2026-10-18-asian/">ASIAN <span class="t">06:30–11:00 WIB</span></a>
+<a href="../brief/2026-10-18-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-10-18-ny/">NY <span class="t"></span></a>
+</div></div>
+<div class="arch-day">
+<div class="d">2026-10-17</div>
+<div class="sess">
+<a href="../brief/2026-10-17-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-17-london/">LONDON <span class="t">13:00–16:00 WIB</span></a>
+<a href="../brief/2026-10-17-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
+</div></div>
 <div class="arch-day">
 <div class="d">2026-10-16</div>
 <div class="sess">
 <a href="../brief/2026-10-16-asian/">ASIAN <span class="t">07:00–11:00 WIB</span></a>
+<a href="../brief/2026-10-16-london/">LONDON <span class="t">12:30–16:00 WIB</span></a>
+<a href="../brief/2026-10-16-ny/">NY <span class="t">18:00–21:00 WIB</span></a>
 </div></div>
 <div class="arch-day">
 <div class="d">2026-10-15</div>
@@ -240,5 +465,5 @@ footer a.bl:hover{text-decoration:underline}
 <a href="../brief/2026-10-05-london/">LONDON <span class="t"></span></a>
 <a href="../brief/2026-10-05-ny/">NY <span class="t"></span></a>
 </div></div>
-<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.0</div></footer>
+<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.1</div></footer>
 <script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}function toggleMenu(){var l=document.querySelector('.topnav .links');if(l)l.classList.toggle('open')}window.addEventListener('scroll',function(){var n=document.querySelector('.topnav');if(n)n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='Released'}else if(s<3600){txt='in '+Math.floor(s/60)+'m'}else{txt='in '+Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
