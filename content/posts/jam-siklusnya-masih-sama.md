@@ -17,9 +17,9 @@ ShowWordCount: true
 ---
 Awal Oktober kemarin, waktu Bitcoin masih di kisaran $85 ribu — baru turun sedikit dari puncak impuls $87.399 — saya menulis sebuah bacaan siklus untuk konten saya.
 
-Suasananya waktu itu masih optimistis; banyak yang mengira reli akan lanjut terus. Bacaan saya beda di dua hal. Pertama: bottom besar siklus ini **sudah lewat** — di $57,8–58 ribu, bulan Juni 2026 kemarin, bukan di depan. Kedua: justru karena impuls dari bottom itu sudah selesai, yang menunggu di depan adalah koreksi gelombang kedua — dan koreksi itu bisa dalam, sampai ke zona fibo 61,8% di sekitar $69 ribu.
+Suasananya waktu itu masih optimistis; banyak yang mengira reli akan lanjut terus. Bacaan saya beda di dua hal. Pertama: bottom besar siklus ini **sudah lewat** — di $57,8–58 ribu, bulan Juni 2026 kemarin, bukan di depan. Kedua: justru karena impuls dari bottom itu sudah selesai, yang menunggu di depan adalah koreksi gelombang kedua — dan koreksi itu bisa dalam, sampai ke zona fibo 61,8% (skala log) di sekitar $67,7 ribu.
 
-Hari ini Bitcoin di kisaran $70 ribu. Persis di tepi zona yang saya tulis itu.
+Hari ini Bitcoin di kisaran $70 ribu — sedang turun menuju zona yang saya tulis itu.
 
 Minggu ini saya meminta riset mendalam soal satu pertanyaan lanjutan: berdasarkan histori dan musimnya, kapan bull market crypto berikutnya? Riset itu mengonfirmasi satu hal soal low Juni tadi: titik terendah Bitcoin sejauh ini di siklus ini memang **$58.524, pada 30 Juni 2026** — terdalam, dan sampai hari ini belum tertembus lagi.
 
@@ -87,4 +87,4 @@ Kamu sendiri tim yang mana: siklus masih hidup, atau kali ini benar-benar berbed
 
 ---
 
-*Catatan: angka-angka siklus di tulisan ini dirangkum dari riset yang saya minta susun pada 13 November 2026 (data BTC Pulse, Galaxy Research, CoinGlass, dan estimasi analis per nama/tanggal; seluruh harga berbasis penutupan harian). Versi lengkapnya ada di halaman riset saya. Bukan saran keuangan — do your own research, selalu.*
+*Catatan: angka-angka siklus di tulisan ini dirangkum dari riset yang saya minta susun pada 13 November 2026 (data BTC Pulse, Galaxy Research, CoinGlass, dan estimasi analis per nama/tanggal; seluruh harga berbasis penutupan harian, level fibo pada skala log). Versi lengkapnya ada di halaman riset saya. Bukan saran keuangan — do your own research, selalu.*
