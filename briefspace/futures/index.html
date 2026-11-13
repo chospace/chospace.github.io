@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hourly Futures Brief · briefspace</title>
+<meta property="og:title" content="Hourly Futures Brief · briefspace"><meta property="og:description" content="Brief futures per jam — wave, MACD, CVD, long/short, support/resistance, magnet likuidasi. Data OKX."><meta property="og:url" content="https://chospace.github.io/briefspace/futures/"><meta property="og:type" content="website"><meta name="twitter:card" content="summary">
+<script>(function(){try{var t=localStorage.getItem('briefspace-theme');if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
+<script>document.addEventListener('DOMContentLoaded',function(){var tabs=document.querySelectorAll('.tab');tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.classList.remove('active')});document.querySelectorAll('.tabpanel').forEach(function(x){x.hidden=true});t.classList.add('active');var p=document.querySelector('.tabpanel[data-panel="'+t.dataset.tab+'"]');if(p)p.hidden=false;});});});</script><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1c1c'/%3E%3Ctext x='32' y='45' font-family='-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif' font-size='38' font-weight='800' text-anchor='middle' fill='%23ffffff'%3Eb%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d1e20" media="(prefers-color-scheme: dark)"><style>
+:root{--bg:#fbfbfa;--text:#1c1c1c;--muted:#8b8b8b;--faint:#b5b5b5;
+--line:#e9e9e7;--red:#c43d3d;--green:#1d9e57;
+--card:#f4f4f2;--badge:#fdeeee;--badgeh:#fbd9d4;
+--paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.055 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+[data-theme="dark"]{--bg:#1d1e20;--text:#e8e6e3;--muted:#9c9c9c;--faint:#636363;
+--line:#2b2c30;--red:#e0685a;--green:#63bd85;
+--card:#26272b;--badge:#3a2424;--badgeh:#4a2c2c;
+--paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:#f3d3cc}
+[data-theme="dark"] ::selection{background:#4a2c2c}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:4px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background-color:var(--bg);background-image:var(--paper);color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+max-width:680px;margin:0 auto;padding:55px 21px 55px;line-height:1.618;font-size:15px}
+a{color:inherit}
+.overline{display:inline-block;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:13px;border:1px solid var(--line);border-radius:99px;padding:5px 14px}
+h1{font-size:30px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.meta{color:var(--muted);font-size:12px;margin-bottom:34px}
+h2{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--faint);
+font-weight:600;margin:34px 0 8px}
+.frow a.ff{font-size:12px;color:var(--faint);text-decoration:none}
+.frow a.ff:hover{color:var(--red)}
+.about h3{font-size:15px;font-weight:700;margin:24px 0 6px}
+.about p{font-size:15px;margin:8px 0;color:var(--text)}
+.about p b{font-weight:700}
+.nav{margin-bottom:34px;font-size:12px;color:var(--muted)}
+.nav a{text-decoration:none;border-bottom:1px solid var(--line)}
+.event{padding:18px 0;border-bottom:1px solid var(--line)}
+.event:last-child{border-bottom:none}
+.event .time{color:var(--red);font-weight:800;font-variant-numeric:tabular-nums}
+.event .etitle{font-weight:700;font-size:15px}
+.event .etitle .etime{color:var(--red);font-variant-numeric:tabular-nums}
+.event .etitle .cd{font-size:12px;color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums}
+
+
+.event .ev-meta a.nt{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1px solid var(--line)}
+.event .ev-meta a.nt:hover{border-bottom-color:var(--red)}
+
+.guide .tbl{overflow-x:auto}
+
+.event .frow{font-size:15px;margin-top:8px}
+.event .frow .fl{color:var(--muted);font-size:12px;font-weight:600}
+.event .frow.kx{color:var(--muted);font-size:12px}
+.event .frow.kx .fl{color:var(--faint)}
+.event .ezone{margin-top:8px;font-size:13px;color:var(--muted)}
+.event .ezone a{color:var(--red);font-weight:600;text-decoration:none}
+
+
+.hunt .hnum{font-size:12px;color:var(--faint);font-weight:700;letter-spacing:1.5px;margin-right:10px}
+.tabs{display:flex;gap:4px;margin:0 0 8px}
+.tab{background:none;border:none;font-family:inherit;font-size:13px;font-weight:600;color:var(--muted);padding:6px 12px;cursor:pointer;border-radius:8px}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--text);background:var(--line)}
+.newsline{padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
+.newsline:last-child{border-bottom:none}
+.row{display:grid;grid-template-columns:86px 1fr auto;gap:6px 14px;
+padding:13px 10px;border-bottom:1px solid var(--line);align-items:baseline;
+border-radius:10px;transition:background .15s ease}
+.row:hover{background:var(--card)}
+.row:last-child{border-bottom:none}
+.row .n{font-weight:700}
+.row .p{font-variant-numeric:tabular-nums}
+.row .p .chg{font-size:12.5px;color:var(--muted)}
+.row .lv{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px}
+.dot.up{background:var(--green)}.dot.dn{background:var(--red)}.dot.fl{background:var(--faint)}
+.row .note{grid-column:2/4;font-size:13px;color:var(--muted);margin-top:-2px}
+.calm{padding:13px 0;color:var(--faint);font-size:13.5px;font-style:italic}
+.hunt{padding:13px 0;border-bottom:1px solid var(--line)}
+.hunt:last-child{border-bottom:none}
+.hunt .pair{font-weight:700}
+.hunt .sell{color:var(--red);font-weight:600}.hunt .buy{color:var(--green);font-weight:600}
+.hunt .d{font-size:13.5px;color:var(--muted);margin-top:2px}
+.hunt .d b{color:var(--text)}
+.focus{margin-top:40px;padding-left:18px;border-left:2px solid var(--text);font-size:14.5px}
+.arch-day{padding:16px 0;border-bottom:1px solid var(--line)}
+.arch-day .d{font-weight:700;margin-bottom:6px}
+.arch-day .sess{display:flex;gap:10px;flex-wrap:wrap}
+.sess a{display:inline-block;font-size:13px;text-decoration:none;border:1px solid var(--line);
+border-radius:20px;padding:5px 14px;color:var(--text)}
+.sess a:hover{border-color:var(--text)}
+.sess a .t{color:var(--muted);font-size:11.5px}
+.badge-new{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1.5px;color:var(--green);
+border:1px solid var(--green);border-radius:20px;padding:3px 10px;margin-bottom:12px;text-transform:uppercase}
+.raw{font-size:14px}
+.raw h3{font-size:17px;margin:22px 0 8px}
+.raw h4{font-size:15px;margin:18px 0 6px}
+.raw p{margin:8px 0}
+.raw ul{margin:8px 0 8px 20px}
+.raw li{margin:4px 0}
+.raw table{border-collapse:collapse;width:100%;font-size:12.5px;margin:12px 0;display:block;overflow-x:auto}
+.raw th,.raw td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.raw th{background:var(--card);font-size:11px}
+.pn{display:flex;justify-content:space-between;margin-top:48px;padding-top:20px;
+border-top:1px solid var(--line);font-size:13.5px}
+.pn a{text-decoration:none;color:var(--muted)}
+.pn a:hover{color:var(--text)}
+.topnav{position:sticky;top:0;z-index:10;background-color:var(--bg);background-image:var(--paper);
+display:flex;justify-content:space-between;align-items:center;
+padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:36px;
+transition:backdrop-filter .3s,background-color .3s}
+.topnav.scrolled{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background-color:color-mix(in srgb,var(--bg) 85%,transparent)}
+
+.topnav .brand{font-weight:800;letter-spacing:-.5px;text-decoration:none;font-size:24px}
+.topnav .brand .lb{color:var(--text)}
+.topnav .brand .ls{color:var(--muted);font-weight:800}
+.topnav .links{display:flex;gap:20px;font-size:13.5px;align-items:center}
+.topnav .nav-right{display:flex;gap:20px;align-items:center}
+.topnav .nav-actions{display:flex;gap:8px;align-items:center}
+.topnav .burger{display:none;background:none;border:none;font-size:22px;color:var(--text);cursor:pointer;padding:4px}
+@media(max-width:520px){.topnav .brand{font-size:19px}.topnav .burger{display:block}.topnav .links{display:none;position:absolute;top:100%;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border:1px solid var(--line);border-radius:8px;min-width:150px;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:20}.topnav .links.open{display:flex}.topnav .links a{padding:12px 16px;border-bottom:1px solid var(--line)}.topnav .links a:last-of-type{border-bottom:none}.topnav{position:relative}}
+#theme-btn{background:none;border:none;cursor:pointer;padding:4px;color:var(--muted);display:flex;align-items:center}
+#theme-btn:hover{color:var(--text)}
+#theme-btn svg{width:19px;height:15px}
+#theme-btn #sun{display:none}
+[data-theme="dark"] #theme-btn #sun{display:block}
+[data-theme="dark"] #theme-btn #moon{display:none}
+.topnav .links a{text-decoration:none;color:var(--muted)}
+.topnav .links a:hover{color:var(--text)}
+.topnav .links a.active{color:var(--text);font-weight:700}
+.arch-link{display:block;text-align:center;margin-top:48px;font-size:14px;color:var(--muted);text-decoration:none}
+.arch-link:hover{color:var(--text)}
+.guide table{border-collapse:collapse;width:100%;font-size:13px;margin:14px 0}
+.guide th,.guide td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+.guide th{background:var(--card);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.guide td:first-child{font-weight:700;white-space:nowrap}
+.zone{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.zone:last-child{border-bottom:none}
+.zone .zd{flex:none;width:14px;height:14px;border-radius:50%;margin-top:5px}
+.zd.r{background:var(--red)}.zd.y{background:#d9a821}.zd.g{background:var(--green)}
+.zone .zt{font-weight:800;margin-bottom:4px}
+.zone .zt .tw{font-weight:400;color:var(--muted);font-size:13px}
+.zone p{font-size:13.5px;color:var(--muted);margin:4px 0}
+.zone p b{color:var(--text)}
+footer{margin-top:56px;color:var(--faint);font-size:12px;line-height:1.8;text-align:center}
+footer a.bl{color:var(--text);text-decoration:none;font-weight:700}
+footer a.bl:hover{text-decoration:underline}
+.ver{margin-top:12px;font-size:11px;color:var(--faint)}
+.clwrap{margin:8px 0;border-bottom:1px solid var(--line);padding:10px 0}
+.clwrap summary{cursor:pointer;font-size:14.5px;font-weight:700;list-style:none}
+.clwrap summary::-webkit-details-marker{display:none}
+.clwrap summary::before{content:'+  ';color:var(--faint);font-weight:400}
+.clwrap[open] summary::before{content:'–  '}
+.clwrap summary span{color:var(--muted);font-weight:400;font-size:13px;margin-left:10px}
+.cl{margin:8px 0 4px 20px;font-size:14px}
+.cl li{margin:5px 0}
+@media(max-width:520px){.row{grid-template-columns:78px 1fr}.row .lv{grid-column:2/3}.row .note{grid-column:2/3}}
+.fpill{display:inline-block;padding:2px 11px;border-radius:99px;font-size:12px;font-weight:600;vertical-align:1px}
+.fpill.bear{color:var(--red);background:var(--badge)}
+.fpill.bull{color:var(--green);background:color-mix(in srgb,var(--green) 14%,transparent)}
+.fpill.mix{color:var(--muted);background:var(--card)}
+.fbullets{margin:2px 0 12px;font-size:14px;line-height:1.65}
+.fbullets div::before{content:"• ";color:var(--faint)}
+.ftblwrap{overflow-x:auto;margin:0 -4px;padding:0 4px}
+.ftbl{border-collapse:collapse;min-width:840px;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+.ftbl th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--faint);font-weight:600;padding:8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.ftbl td{padding:10px 8px;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:top}
+.ftbl tbody tr:last-child td{border-bottom:none}
+.ftbl .sym{font-weight:700;font-size:13.5px}
+.ftbl .cprice{display:block;font-size:12.5px;color:var(--muted);margin-top:1px}
+.ftbl .chg{font-size:11.5px;margin-left:5px}
+.ftbl .chg.neg{color:var(--red)}.ftbl .chg.pos{color:var(--green)}
+.ftbl .sub{display:block;font-size:11px;color:var(--muted);margin-top:1px}
+.ftbl .sub.neg{color:var(--red)}.ftbl .sub.pos{color:var(--green)}
+.ftbl .lvl{font-weight:600}
+.ftbl .fmacd{font-weight:600}
+.fchip{display:inline-block;padding:2px 9px;border-radius:7px;font-size:12px;font-weight:600;background:var(--card);color:var(--muted)}
+.fchip.up{color:var(--green);background:color-mix(in srgb,var(--green) 14%,transparent)}
+.fchip.dn{color:var(--red);background:var(--badge)}
+.pos{color:var(--green)}.neg{color:var(--red)}
+.fmethod{margin-top:18px;font-size:11.5px;line-height:1.6;color:var(--muted)}
+.fteaser{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:44px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;text-decoration:none}
+.fteaser:hover{border-color:var(--faint)}
+.fteaser .ft-l{font-weight:700;font-size:14px;display:flex;align-items:center;gap:9px}
+.fteaser .ft-m{color:var(--muted);font-size:12.5px}
+</style></head><body>
+<nav class="topnav"><a class="brand" href="../"><span class="lb">brief</span><span class="ls">space</span></a><div class="nav-right"><div class="links"><a class="" href="../">Latest</a><a class="" href="../arsip/">Archive</a><a class="active" href="../futures/">Futures</a><a class="" href="../panduan/">Guide</a><a class="" href="../about/">About</a></div><div class="nav-actions"><button id="theme-btn" onclick="toggleTheme()" title="Mode gelap / terang" aria-label="Ganti tema"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button></div></div></nav>
+<div class="overline">Futures brief</div>
+<h1>Hourly Futures Brief</h1>
+<div class="meta">Brief 2026-11-13 13:00 WIB &nbsp;<span class="fpill bear">🌙 Bearish</span></div>
+<div class="fbullets">
+<div>Wave 1H: 2 bearish · 1 bullish · 2 mixed</div>
+<div>MACD 1H: 5 bearish · 0 bullish (0 turning up)</div>
+<div>CVD 24H: 5 negative · 0 positive</div>
+<div>CVD 1W: 5 negative · 0 positive</div>
+</div>
+<div class="ftblwrap"><table class="ftbl"><thead><tr><th>Coin</th><th>Wave</th><th>MACD</th><th>CVD 1H</th><th>CVD 1D</th><th>CVD 1W</th><th>L/S</th><th>Support</th><th>Resist</th><th>Liq magnet</th></tr></thead><tbody>
+<tr>
+<td><span class="dot" style="background:#f7931a"></span><span class="sym">BTC</span><span class="cprice">$68,100.9<span class="chg neg">-7.42%</span></span></td>
+<td><span class="fchip mix">~ mix</span></td>
+<td class="fmacd neg">bear</td>
+<td class="pos">+$21.03M</td>
+<td class="neg">-$972.80M</td>
+<td class="neg">-$1.56B</td>
+<td>3.23</td>
+<td><span class="lvl">62.7K</span><span class="sub neg">-7.95%</span></td>
+<td><span class="lvl">79.4K</span><span class="sub pos">+16.57%</span></td>
+<td>↓ long liq · $68.6K<span class="sub">$8.07M</span></td>
+</tr>
+<tr>
+<td><span class="dot" style="background:#627eea"></span><span class="sym">ETH</span><span class="cprice">$1,910.7<span class="chg neg">-6.60%</span></span></td>
+<td><span class="fchip dn">↘ dn</span></td>
+<td class="fmacd neg">bear</td>
+<td class="pos">+$27.72M</td>
+<td class="neg">-$435.00M</td>
+<td class="neg">-$930.32M</td>
+<td>3.74</td>
+<td><span class="lvl">1,868.0</span><span class="sub neg">-2.23%</span></td>
+<td><span class="lvl">2,391.2</span><span class="sub pos">+25.15%</span></td>
+<td>↓ long liq · $1,915.3<span class="sub">$2.87M</span></td>
+</tr>
+<tr>
+<td><span class="dot" style="background:#0fa47a"></span><span class="sym">HYPE</span><span class="cprice">$71.192<span class="chg neg">-0.36%</span></span></td>
+<td><span class="fchip mix">~ mix</span></td>
+<td class="fmacd neg">bear</td>
+<td class="pos">+$60.3K</td>
+<td class="neg">-$8.61M</td>
+<td class="neg">-$44.66M</td>
+<td>2.72</td>
+<td>—</td>
+<td><span class="lvl">82.52</span><span class="sub pos">+15.91%</span></td>
+<td>↓ long liq · $69.677<span class="sub">$247.7K</span></td>
+</tr>
+<tr>
+<td><span class="dot" style="background:#9945ff"></span><span class="sym">SOL</span><span class="cprice">$78.47<span class="chg neg">-5.25%</span></span></td>
+<td><span class="fchip dn">↘ dn</span></td>
+<td class="fmacd neg">bear</td>
+<td class="pos">+$7.72M</td>
+<td class="neg">-$57.14M</td>
+<td class="neg">-$143.74M</td>
+<td>3.82</td>
+<td><span class="lvl">73.92</span><span class="sub neg">-5.80%</span></td>
+<td><span class="lvl">98.13</span><span class="sub pos">+25.05%</span></td>
+<td>↓ long liq · $78.79<span class="sub">$1.32M</span></td>
+</tr>
+<tr>
+<td><span class="dot" style="background:#f0b90b"></span><span class="sym">BNB</span><span class="cprice">$625.62<span class="chg neg">-7.16%</span></span></td>
+<td><span class="fchip up">↗ up</span></td>
+<td class="fmacd neg">bear</td>
+<td class="pos">+$311.1K</td>
+<td class="neg">-$6.27M</td>
+<td class="neg">-$10.67M</td>
+<td>3.06</td>
+<td><span class="lvl">599.3</span><span class="sub neg">-4.21%</span></td>
+<td><span class="lvl">701.75</span><span class="sub pos">+12.17%</span></td>
+<td>↓ long liq · $639.41<span class="sub">$453.0K</span></td>
+</tr>
+</tbody></table></div>
+<p class="fmethod">Wave = 1H swing structure · MACD 12/26/9 on closed 1H candles · CVD 24H/1W = rolled closed 1H taker buy−sell (24h / 7d), OKX contracts · S/R = 90-day daily swings · Liq = sampled OKX liquidation prints (proxy), not price targets.<br>Hourly script brief, no LLM. Not financial advice.</p>
+<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.1</div></footer>
+<script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}function toggleMenu(){var l=document.querySelector('.topnav .links');if(l)l.classList.toggle('open')}window.addEventListener('scroll',function(){var n=document.querySelector('.topnav');if(n)n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='Released'}else if(s<3600){txt='in '+Math.floor(s/60)+'m'}else{txt='in '+Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
