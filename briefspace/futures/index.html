@@ -171,6 +171,17 @@ footer a.bl:hover{text-decoration:underline}
 .ftbl .chg.neg{color:var(--red)}.ftbl .chg.pos{color:var(--green)}
 .ftbl .sub{display:block;font-size:11px;color:var(--muted);margin-top:1px}
 .ftbl .sub.neg{color:var(--red)}.ftbl .sub.pos{color:var(--green)}
+.ftbl tr.coinrow td{border-bottom:none}
+.ftbl tr.coinrow.solo td{border-bottom:1px solid var(--line)}
+.ftbl .fread td{padding:1px 8px 10px;font-size:12px;font-style:italic;color:var(--muted);white-space:normal;border-bottom:1px solid var(--line)}
+.mstrip{position:relative;width:200px;height:14px}
+.mst-track{position:absolute;left:0;right:0;top:6px;height:2px;background:var(--line);border-radius:2px}
+.mst-dot{position:absolute;top:3px;width:8px;height:8px;border-radius:50%}
+.mst-dot.bid{left:0;background:var(--green)}
+.mst-dot.ask{right:0;background:var(--red)}
+.mst-poc{position:absolute;top:3px;width:8px;height:8px;background:#a97b0f;transform:translateX(-50%) rotate(45deg)}
+.mst-price{position:absolute;top:1px;width:11px;height:11px;border-radius:50%;background:var(--text);box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--faint);transform:translateX(-50%)}
+.mst-labs{display:flex;justify-content:space-between;width:200px;font-size:10.5px;color:var(--muted);margin-top:1px}
 .ftbl .lvl{font-weight:600}
 .ftbl .fmacd{font-weight:600}
 .fchip{display:inline-block;padding:2px 9px;border-radius:7px;font-size:12px;font-weight:600;background:var(--card);color:var(--muted)}
@@ -187,76 +198,81 @@ footer a.bl:hover{text-decoration:underline}
 <div class="sheet"><div class="tape" aria-hidden="true"></div>
 <div class="overline">Futures brief</div>
 <h1>Hourly Futures Brief</h1>
-<div class="meta">Brief 2026-11-20 19:00 WIB &nbsp;<span class="fpill mix">🌙 Mixed / inconclusive</span></div>
+<div class="meta">Brief 2026-11-20 20:00 WIB &nbsp;<span class="fpill mix">🌙 Mixed / inconclusive</span></div>
 <div class="fbullets">
 <div>Wave 1H: 4 bearish · 0 bullish · 1 mixed</div>
-<div>MACD 1H: 3 bearish · 2 bullish (3 turning up)</div>
+<div>MACD 1H: 3 bearish · 2 bullish (0 turning up)</div>
 <div>CVD 24H: 2 negative · 3 positive</div>
 <div>CVD 1W: 5 negative · 0 positive</div>
 </div>
 <div class="ftblwrap"><table class="ftbl"><thead><tr><th>Coin</th><th>Wave</th><th>MACD</th><th>CVD 1H</th><th>CVD 1D</th><th>CVD 1W</th><th>L/S</th><th>Support</th><th>Resist</th><th>Magnet</th></tr></thead><tbody>
-<tr>
-<td><span class="dot" style="background:#f7931a"></span><span class="sym">BTC</span><span class="cprice">$61,782.1<span class="chg neg">-3.34%</span></span><span class="sub">F +0.003% · OI 96.8K</span></td>
+<tr class="coinrow">
+<td><span class="dot" style="background:#f7931a"></span><span class="sym">BTC</span><span class="cprice">$61,536.7<span class="chg neg">-3.61%</span></span><span class="sub">F +0.0041% · OI 96.6K ▲1.91%</span></td>
 <td><span class="fchip dn">↘ dn</span></td>
 <td class="fmacd pos">bull</td>
-<td class="pos">+$11.30M</td>
-<td class="neg">-$185.55M</td>
-<td class="neg">-$1.01B</td>
-<td>3.21</td>
+<td class="pos">+$27.09M</td>
+<td class="neg">-$197.42M</td>
+<td class="neg">-$961.77M</td>
+<td>3.17</td>
 <td>—</td>
-<td><span class="lvl">79.4K</span><span class="sub pos">+28.50%</span></td>
-<td>↓ bid $60.0K<span class="sub">277 BTC · -2.88%</span>↑ ask $62.0K<span class="sub">409 BTC · +0.35%</span>POC $62.0K<span class="sub">+0.35%</span><span class="sub">Liq 24j long 746 · short 156</span></td>
+<td><span class="lvl">79.4K</span><span class="sub pos">+29.01%</span></td>
+<td><div class="mstrip"><div class="mst-track"></div><span class="mst-dot bid"></span><span class="mst-dot ask"></span><span class="mst-poc" style="left:100.0%"></span><span class="mst-price" style="left:69.1%"></span></div><div class="mst-labs"><span>$60.5K · 465</span><span>$62.0K · 364</span></div><span class="sub">POC nempel dinding ask</span><span class="sub">Liq 24j long 747 · short 154</span></td>
 </tr>
-<tr>
-<td><span class="dot" style="background:#627eea"></span><span class="sym">ETH</span><span class="cprice">$1,748.1<span class="chg neg">-3.23%</span></span><span class="sub">F +0.0059% · OI 2.48M</span></td>
+<tr class="fread"><td colspan="10">Long kena flush 4.9× short · magnet atas $62.0K (+0.75%) nempel POC</td></tr>
+<tr class="coinrow">
+<td><span class="dot" style="background:#627eea"></span><span class="sym">ETH</span><span class="cprice">$1,738.6<span class="chg neg">-3.69%</span></span><span class="sub">F +0.006% · OI 2.48M ▲0.43%</span></td>
 <td><span class="fchip dn">↘ dn</span></td>
 <td class="fmacd pos">bull</td>
-<td class="pos">+$40.00M</td>
-<td class="neg">-$77.50M</td>
-<td class="neg">-$510.15M</td>
-<td>3.15</td>
-<td><span class="lvl">1,709.1</span><span class="sub neg">-2.23%</span></td>
-<td><span class="lvl">2,391.2</span><span class="sub pos">+36.79%</span></td>
-<td>↓ bid $1,720.0<span class="sub">18.3K ETH · -1.61%</span>↑ ask $1,755.0<span class="sub">19.3K ETH · +0.40%</span>POC $1,742.0<span class="sub">-0.35%</span><span class="sub">Liq 24j long 27.1K · short 6.9K</span></td>
+<td class="neg">-$9.79M</td>
+<td class="neg">-$88.64M</td>
+<td class="neg">-$528.67M</td>
+<td>3.10</td>
+<td><span class="lvl">1,709.1</span><span class="sub neg">-1.70%</span></td>
+<td><span class="lvl">2,391.2</span><span class="sub pos">+37.53%</span></td>
+<td><div class="mstrip"><div class="mst-track"></div><span class="mst-dot bid"></span><span class="mst-dot ask"></span><span class="mst-poc" style="left:91.4%"></span><span class="mst-price" style="left:81.7%"></span></div><div class="mst-labs"><span>$1,710.0 · 20.9K</span><span>$1,745.0 · 21.4K</span></div><span class="sub">POC $1,742.0 · +0.19%</span><span class="sub">Liq 24j long 27.0K · short 6.7K</span></td>
 </tr>
-<tr>
-<td><span class="dot" style="background:#0fa47a"></span><span class="sym">HYPE</span><span class="cprice">$63.933<span class="chg neg">-6.79%</span></span><span class="sub">F -0.0005% · OI 5.02M</span></td>
+<tr class="fread"><td colspan="10">Long kena flush 4.0× short · magnet terdekat POC $1,742.0 (+0.19%) · funding agak panas, long ramai</td></tr>
+<tr class="coinrow">
+<td><span class="dot" style="background:#0fa47a"></span><span class="sym">HYPE</span><span class="cprice">$63.334<span class="chg neg">-8.07%</span></span><span class="sub">F -0.0016% · OI 5.03M ▲0.14%</span></td>
 <td><span class="fchip dn">↘ dn</span></td>
 <td class="fmacd neg">bear</td>
-<td class="pos">+$54.0K</td>
-<td class="pos">+$1.95M</td>
-<td class="neg">-$18.08M</td>
-<td>2.18</td>
-<td><span class="lvl">59.96</span><span class="sub neg">-6.21%</span></td>
-<td><span class="lvl">71.021</span><span class="sub pos">+11.09%</span></td>
-<td>↓ bid $60<span class="sub">369.1K HYPE · -6.15%</span>↑ ask $70<span class="sub">154.7K HYPE · +9.49%</span>POC $65.35<span class="sub">+2.22%</span><span class="sub">Liq 24j long 15.6K · short 1.5K</span></td>
+<td class="neg">-$959.6K</td>
+<td class="pos">+$358.0K</td>
+<td class="neg">-$20.18M</td>
+<td>2.19</td>
+<td><span class="lvl">59.96</span><span class="sub neg">-5.33%</span></td>
+<td><span class="lvl">71.021</span><span class="sub pos">+12.14%</span></td>
+<td><div class="mstrip"><div class="mst-track"></div><span class="mst-dot bid"></span><span class="mst-dot ask"></span><span class="mst-poc" style="left:100.0%"></span><span class="mst-price" style="left:86.9%"></span></div><div class="mst-labs"><span>$50 · 370.4K</span><span>$65 · 168.5K</span></div><span class="sub">POC $65.35 · +3.18%</span><span class="sub">Liq 24j long 15.6K · short 1.5K</span></td>
 </tr>
-<tr>
-<td><span class="dot" style="background:#9945ff"></span><span class="sym">SOL</span><span class="cprice">$71.73<span class="chg neg">-4.12%</span></span><span class="sub">F +0.0007% · OI 8.46M</span></td>
+<tr class="fread"><td colspan="10">Long kena flush 10.5× short · magnet atas $65 (+2.63%)</td></tr>
+<tr class="coinrow">
+<td><span class="dot" style="background:#9945ff"></span><span class="sym">SOL</span><span class="cprice">$71.06<span class="chg neg">-5.00%</span></span><span class="sub">F -0.0019% · OI 8.56M ▲2.62%</span></td>
 <td><span class="fchip mix">~ mix</span></td>
 <td class="fmacd neg">bear</td>
-<td class="pos">+$3.48M</td>
-<td class="pos">+$22.27M</td>
-<td class="neg">-$79.47M</td>
-<td>2.67</td>
-<td><span class="lvl">67.33</span><span class="sub neg">-6.13%</span></td>
-<td><span class="lvl">98.13</span><span class="sub pos">+36.80%</span></td>
-<td>↓ bid $70<span class="sub">961.2K SOL · -2.41%</span>↑ ask $75<span class="sub">1.09M SOL · +4.56%</span>POC $72<span class="sub">+0.38%</span><span class="sub">Liq 24j long 87.8K · short 11.0K</span></td>
+<td class="neg">-$1.37M</td>
+<td class="pos">+$20.42M</td>
+<td class="neg">-$80.53M</td>
+<td>2.70</td>
+<td><span class="lvl">67.33</span><span class="sub neg">-5.25%</span></td>
+<td><span class="lvl">98.13</span><span class="sub pos">+38.09%</span></td>
+<td><div class="mstrip"><div class="mst-track"></div><span class="mst-dot bid"></span><span class="mst-dot ask"></span><span class="mst-poc" style="left:70.0%"></span><span class="mst-price" style="left:60.6%"></span></div><div class="mst-labs"><span>$65 · 1.03M</span><span>$75 · 1.17M</span></div><span class="sub">POC $72 · +1.32%</span><span class="sub">Liq 24j long 87.9K · short 10.4K</span></td>
 </tr>
-<tr>
-<td><span class="dot" style="background:#f0b90b"></span><span class="sym">BNB</span><span class="cprice">$569.76<span class="chg neg">-3.80%</span></span><span class="sub">F +0% · OI 535.1K</span></td>
+<tr class="fread"><td colspan="10">Long kena flush 8.4× short · magnet terdekat POC $72 (+1.32%)</td></tr>
+<tr class="coinrow">
+<td><span class="dot" style="background:#f0b90b"></span><span class="sym">BNB</span><span class="cprice">$567.26<span class="chg neg">-4.23%</span></span><span class="sub">F +0% · OI 534.2K ▲0.62%</span></td>
 <td><span class="fchip dn">↘ dn</span></td>
 <td class="fmacd neg">bear</td>
-<td class="neg">-$97.1K</td>
-<td class="pos">+$1.22M</td>
-<td class="neg">-$5.70M</td>
+<td class="neg">-$715.3K</td>
+<td class="pos">+$385.1K</td>
+<td class="neg">-$6.68M</td>
 <td>2.23</td>
-<td><span class="lvl">565.6</span><span class="sub neg">-0.73%</span></td>
-<td><span class="lvl">701.75</span><span class="sub pos">+23.17%</span></td>
-<td>↓ bid $565<span class="sub">9.9K BNB · -0.84%</span>↑ ask $575<span class="sub">8.2K BNB · +0.92%</span>POC $571<span class="sub">+0.22%</span><span class="sub">Liq 24j long 1.7K · short 58.3</span></td>
+<td><span class="lvl">565.6</span><span class="sub neg">-0.29%</span></td>
+<td><span class="lvl">701.75</span><span class="sub pos">+23.71%</span></td>
+<td><div class="mstrip"><div class="mst-track"></div><span class="mst-dot bid"></span><span class="mst-dot ask"></span><span class="mst-poc" style="left:73.3%"></span><span class="mst-price" style="left:48.4%"></span></div><div class="mst-labs"><span>$560 · 7.7K</span><span>$575 · 6.7K</span></div><span class="sub">POC $571 · +0.66%</span><span class="sub">Liq 24j long 1.7K · short 58.3</span></td>
 </tr>
+<tr class="fread"><td colspan="10">Long kena flush 29.5× short · magnet terdekat POC $571 (+0.66%)</td></tr>
 </tbody></table></div>
 <p class="fmethod">Wave = 1H swing structure · MACD 12/26/9 on closed 1H candles · CVD 24H/1W = rolled closed 1H taker buy−sell (24h / 7d), OKX contracts · S/R = 90-day daily swings · Funding, OI, liq 24h = OpenMarket (Binance Futures) · Magnet = largest order-book walls + volume-profile POC (OpenMarket, Binance Futures), not price targets.<br>Hourly script brief, no LLM. Not financial advice.</p>
 </div>
-<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.3</div></footer>
+<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.4</div></footer>
 <script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}function toggleMenu(){var l=document.querySelector('.topnav .links');if(l)l.classList.toggle('open')}window.addEventListener('scroll',function(){var n=document.querySelector('.topnav');if(n)n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='Released'}else if(s<3600){txt='in '+Math.floor(s/60)+'m'}else{txt='in '+Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>

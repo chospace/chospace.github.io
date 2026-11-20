@@ -171,6 +171,17 @@ footer a.bl:hover{text-decoration:underline}
 .ftbl .chg.neg{color:var(--red)}.ftbl .chg.pos{color:var(--green)}
 .ftbl .sub{display:block;font-size:11px;color:var(--muted);margin-top:1px}
 .ftbl .sub.neg{color:var(--red)}.ftbl .sub.pos{color:var(--green)}
+.ftbl tr.coinrow td{border-bottom:none}
+.ftbl tr.coinrow.solo td{border-bottom:1px solid var(--line)}
+.ftbl .fread td{padding:1px 8px 10px;font-size:12px;font-style:italic;color:var(--muted);white-space:normal;border-bottom:1px solid var(--line)}
+.mstrip{position:relative;width:200px;height:14px}
+.mst-track{position:absolute;left:0;right:0;top:6px;height:2px;background:var(--line);border-radius:2px}
+.mst-dot{position:absolute;top:3px;width:8px;height:8px;border-radius:50%}
+.mst-dot.bid{left:0;background:var(--green)}
+.mst-dot.ask{right:0;background:var(--red)}
+.mst-poc{position:absolute;top:3px;width:8px;height:8px;background:#a97b0f;transform:translateX(-50%) rotate(45deg)}
+.mst-price{position:absolute;top:1px;width:11px;height:11px;border-radius:50%;background:var(--text);box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--faint);transform:translateX(-50%)}
+.mst-labs{display:flex;justify-content:space-between;width:200px;font-size:10.5px;color:var(--muted);margin-top:1px}
 .ftbl .lvl{font-weight:600}
 .ftbl .fmacd{font-weight:600}
 .fchip{display:inline-block;padding:2px 9px;border-radius:7px;font-size:12px;font-weight:600;background:var(--card);color:var(--muted)}
@@ -216,6 +227,12 @@ footer a.bl:hover{text-decoration:underline}
 <p>Disusun tiap sesi oleh AI Agent Waginem 🤖 untuk Cho.</p>
 <h2>Riwayat perubahan</h2>
 <details class="clwrap">
+<summary>v1.4<span>20 Nov 2026</span></summary>
+<ul class="cl">
+<li>Futures: kolom Magnet jadi strip visual — posisi harga terhadap dinding bid/ask dan POC terbaca sekali lirik, menggantikan baris teks</li>
+<li>Futures: baris bacaan per koin (rangkuman deskriptif: dominasi likuidasi, magnet terdekat, keramaian funding) + panah perubahan open interest</li>
+</ul></details>
+<details class="clwrap">
 <summary>v1.3<span>20 Nov 2026</span></summary>
 <ul class="cl">
 <li>Futures: kolom Magnet ganti dari proksi likuidasi OKX ke data asli — dinding order book terbesar + POC volume profile (OpenMarket, Binance Futures)</li>
@@ -241,5 +258,5 @@ footer a.bl:hover{text-decoration:underline}
 <li>Label news merah: no-trade → zona merah</li>
 </ul></details></div>
 </div>
-<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.3</div></footer>
+<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.4</div></footer>
 <script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}function toggleMenu(){var l=document.querySelector('.topnav .links');if(l)l.classList.toggle('open')}window.addEventListener('scroll',function(){var n=document.querySelector('.topnav');if(n)n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='Released'}else if(s<3600){txt='in '+Math.floor(s/60)+'m'}else{txt='in '+Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
