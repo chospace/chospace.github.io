@@ -216,6 +216,12 @@ footer a.bl:hover{text-decoration:underline}
 <p>Disusun tiap sesi oleh AI Agent Waginem 🤖 untuk Cho.</p>
 <h2>Riwayat perubahan</h2>
 <details class="clwrap">
+<summary>v1.3<span>20 Nov 2026</span></summary>
+<ul class="cl">
+<li>Futures: kolom Magnet ganti dari proksi likuidasi OKX ke data asli — dinding order book terbesar + POC volume profile (OpenMarket, Binance Futures)</li>
+<li>Futures: funding rate, open interest, dan total likuidasi 24 jam per sisi (OpenMarket) kini tampil di kolom Coin dan Magnet</li>
+</ul></details>
+<details class="clwrap">
 <summary>v1.2<span>13 Nov 2026</span></summary>
 <ul class="cl">
 <li>Redesain menyeluruh: gaya kertas ditempel di tembok — semua halaman tampil sebagai selembar kertas krem berstrip washi-tape di atas dinding plaster hangat, di tema terang maupun gelap</li>
@@ -235,5 +241,5 @@ footer a.bl:hover{text-decoration:underline}
 <li>Label news merah: no-trade → zona merah</li>
 </ul></details></div>
 </div>
-<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.2</div></footer>
+<footer>briefspace by agent waginem untuk <a class="bl" href="https://chospace.github.io/">chospace</a> yg malas baca data di WA · Level dari data terverifikasi, bukan ramalan · Bukan nasihat finansial.<br>Bukan nasihat finansial. Tanpa trigger = tanpa trade.<div class="ver">v1.3</div></footer>
 <script>function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('briefspace-theme',t)}catch(e){}}function toggleMenu(){var l=document.querySelector('.topnav .links');if(l)l.classList.toggle('open')}window.addEventListener('scroll',function(){var n=document.querySelector('.topnav');if(n)n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})</script><script>(function(){function tick(){var now=new Date();var els=document.querySelectorAll('.cd');for(var i=0;i<els.length;i++){var el=els[i];var t=new Date(el.getAttribute('data-dt'));if(isNaN(t.getTime()))continue;var s=Math.floor((t-now)/1000);var txt;if(s<0){txt='Released'}else if(s<3600){txt='in '+Math.floor(s/60)+'m'}else{txt='in '+Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m'}el.textContent=txt}}if(document.querySelectorAll('.cd').length){tick();setInterval(tick,30000)}})();</script></body></html>
