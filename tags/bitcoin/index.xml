@@ -11,21 +11,21 @@
     </image>
     <generator>Hugo -- 0.170.1</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 10:40:00 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 09:20:00 +0700</lastBuildDate>
     <atom:link href="https://chospace.github.io/tags/bitcoin/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>BTC Cycle Matrix — Penanda Siklus Berbasis Halving</title>
-      <link>https://chospace.github.io/posts/btc-cycle-matrix/</link>
-      <pubDate>Mon, 23 Nov 2026 10:40:00 +0700</pubDate>
-      <guid>https://chospace.github.io/posts/btc-cycle-matrix/</guid>
-      <description>Indikator Pine Script buat TradingView yang menandai kalender siklus Bitcoin berbasis halving: zona waktu ambil untung di minggu ke-40–80, dan penanda mulai akumulasi di minggu ke-110 yang berulang tiap 12 minggu. Gratis, kodenya terbuka di halaman ini.</description>
-    </item>
     <item>
       <title>Menunggu, dan Semoga Dikasih</title>
       <link>https://chospace.github.io/posts/area-akumulasi-saya/</link>
       <pubDate>Mon, 23 Nov 2026 09:20:00 +0700</pubDate>
       <guid>https://chospace.github.io/posts/area-akumulasi-saya/</guid>
       <description>Bitcoin 60,8 ribu — penutupan mingguannya bertahan di atas low Juni 58.524. Daripada menebak bottom, tulisan ini melihat datanya sama-sama: tiga bear market terakhir selalu berhenti di area fibo yang sama.</description>
+    </item>
+    <item>
+      <title>BTC Cycle Matrix — Penanda Siklus Berbasis Halving</title>
+      <link>https://chospace.github.io/posts/btc-cycle-matrix/</link>
+      <pubDate>Fri, 20 Nov 2026 09:00:00 +0700</pubDate>
+      <guid>https://chospace.github.io/posts/btc-cycle-matrix/</guid>
+      <description>Indikator Pine Script buat TradingView yang menandai kalender siklus Bitcoin berbasis halving: zona waktu ambil untung di minggu ke-40–80, dan penanda mulai akumulasi di minggu ke-110 yang berulang tiap 12 minggu. Gratis, kodenya terbuka di halaman ini.</description>
     </item>
     <item>
       <title>Jam Siklusnya Masih Sama, Amplitudonya yang Patah</title>

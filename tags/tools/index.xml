@@ -11,12 +11,12 @@
     </image>
     <generator>Hugo -- 0.170.1</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 10:40:00 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 09:00:00 +0700</lastBuildDate>
     <atom:link href="https://chospace.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BTC Cycle Matrix — Penanda Siklus Berbasis Halving</title>
       <link>https://chospace.github.io/posts/btc-cycle-matrix/</link>
-      <pubDate>Mon, 23 Nov 2026 10:40:00 +0700</pubDate>
+      <pubDate>Fri, 20 Nov 2026 09:00:00 +0700</pubDate>
       <guid>https://chospace.github.io/posts/btc-cycle-matrix/</guid>
       <description>Indikator Pine Script buat TradingView yang menandai kalender siklus Bitcoin berbasis halving: zona waktu ambil untung di minggu ke-40–80, dan penanda mulai akumulasi di minggu ke-110 yang berulang tiap 12 minggu. Gratis, kodenya terbuka di halaman ini.</description>
     </item>
