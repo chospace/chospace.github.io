@@ -1,6 +1,6 @@
 ---
 title: "BTC Cycle Matrix — Penanda Siklus Berbasis Halving"
-date: 2026-11-23T10:45:00+07:00
+date: 2026-11-23T10:40:00+07:00
 tags: ["trading", "bitcoin", "tools"]
 author: "Cho"
 summary: "Indikator Pine Script buat TradingView yang menandai kalender siklus Bitcoin berbasis halving: zona waktu ambil untung di minggu ke-40–80, dan penanda mulai akumulasi di minggu ke-110 yang berulang tiap 12 minggu. Gratis, kodenya terbuka di halaman ini."
