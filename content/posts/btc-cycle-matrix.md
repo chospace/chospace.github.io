@@ -29,6 +29,8 @@ Semua angka minggunya bisa diganti di pengaturan indikator, jadi kerangkanya bis
 2. Buka **Pine Editor** di panel bawah, hapus isi bawaannya, lalu tempel kode di bawah ini.
 3. Klik **Add to chart**. Selesai — penandanya muncul mengikuti tanggal halving.
 
+Buat yang mau coba-coba dulu tanpa pasang apa-apa, penanda ini juga bisa dicoba lewat Gemini: [Coba penandanya di Gemini](https://share.gemini.google/B8h0AtwcrPgr).
+
 Satu catatan jujur sebelum kodenya: penanda ini **kalender, bukan sinyal**. Dia tidak memprediksi harga dan tidak bilang kapan harus beli atau jual. Dia cuma menjawab satu pertanyaan: *sekarang kita lagi di musim apa, menurut jam halving?* Keputusan tetap di masing-masing.
 
 ## Kodenya
