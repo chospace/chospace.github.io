@@ -41,8 +41,6 @@ Februari 2023, saya beli ONE di $0,01219, jual di $0,02791 — naik +129%, untun
 
 Februari 2024, giliran PEPE. Saya entry di awal Februari, dan posisi itu nggak saya tutup besoknya — saya tahan 68 hari, sempat saya trim beberapa kali di tengah jalan, baru close di April: +$726. Itu win terbesar saya di seluruh jurnal ini, dan dia yang bikin 2024 jadi tahun terbaik saya. Pelajarannya sama persis kayak ONE, cuma skalanya lebih gede: winner yang sabar dibiarin jalan.
 
-*Catatan: trade PEPE ini sempat tercatat salah di jurnal saya — tertulis kena stop loss, −$9. Baru belakangan saya koreksi dari kartu posisi Bybit yang masih saya simpan; harga close-nya perkiraan, karena riwayat Bybit-nya sudah nggak bisa saya akses lagi. Di halaman jurnal lengkapnya, koreksi ini saya catat terbuka.*
-
 2024: +$1.111,36 — tahun terbaik. 2025: +$961,92, puncak saldo $2.950,95. Lalu 2026: -$416,37, saldo sempat turun $624,73 dari puncaknya, tutup di $2.326,23. Totalnya masih +2.226% dari $100 — tapi setahun terakhir merah. Begitulah.
 
 ## Jurnalnya yang Bikin Semua Ini Kelihatan
