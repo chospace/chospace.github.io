@@ -6,7 +6,7 @@ author: "Cho"
 summary: "Bitcoin 60,8 ribu — penutupan mingguannya bertahan di atas low Juni 58.524. Daripada menebak bottom, tulisan ini melihat datanya sama-sama: tiga bear market terakhir selalu berhenti di area fibo yang sama."
 showToc: true
 TocOpen: false
-draft: true
+draft: false
 ---
 
 Bitcoin pagi ini di 60,8 ribu. Seminggu yang brutal: sempat jebol ke 55.130 hari Sabtu, tapi penutupan mingguan Senin pagi di 60.784 — masih di atas low Juni 58.524, turun 7% dalam seminggu. Pertanyaan yang muncul di mana-mana sama: ini sudah bottom, atau belum?
