@@ -75,6 +75,16 @@ Di sini pasar yang harus ngomong dulu: harga masuk zona, penutupan mingguan bere
 
 Zona ini yang memutuskan **di mana** saya bereaksi. **Kapan** bereaksinya tetap pasar yang menentukan. Menunggu bukan berarti diam; menunggu itu siap bereaksi.
 
+---
+
+**Penanda waktu yang saya pakai**
+
+Musim akumulasi di tulisan ini saya pantau pakai penanda berbasis halving: zona waktu ambil untung di minggu ke-40–80 setelah halving, dan penanda mulai akumulasi di minggu ke-110 yang berulang tiap 12 minggu. Buat siklus ini, penanda akumulasinya sudah jalan sejak pertengahan 2026 — penanda terakhir pertengahan November kemarin, berikutnya Februari 2027.
+
+Penanda itu saya jalankan sebagai indikator Pine Script di TradingView, namanya **BTC Cycle Matrix**. Kalau mau ikut memantau pakai penanda yang sama, kodenya saya bagikan gratis di [halaman ini](/posts/btc-cycle-matrix/).
+
+---
+
 Secara waktu, harusnya sudah dekat. Secara harga, nggak ada yang tahu — masih dikasih diskon lagi, atau nggak.
 
 Saya menunggu di zona saya. Semoga dikasih.
