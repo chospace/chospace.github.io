@@ -9,7 +9,7 @@ TocOpen: false
 draft: false
 ---
 
-Ini penanda waktu yang saya pakai buat memantau musim siklus Bitcoin — penanda yang jadi bahan tulisan [Jam Siklusnya Masih Sama, Amplitudonya yang Patah](/posts/jam-siklusnya-masih-sama/), dan kepakai lagi di tulisan lanjutannya, [Menunggu, dan Semoga Dikasih](/posts/area-akumulasi-saya/).
+Ini penanda waktu yang saya pakai buat memantau musim siklus Bitcoin — penanda yang jadi bahan tulisan [Jam Siklusnya Masih Sama, Amplitudonya yang Patah](/posts/jam-siklusnya-masih-sama/).
 
 Kerangkanya konsep umum yang sudah lama dipakai banyak orang: kalender halving. Skripnya saya tulis sebagai indikator Pine Script buat TradingView, dan saya bagikan gratis di halaman ini — silakan pakai, ubah, atau pelajari.
 
