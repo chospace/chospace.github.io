@@ -85,6 +85,8 @@ Jawaban saya sederhana: masa akumulasi itu membosankan, dan memang seharusnya be
 
 Kamu sendiri tim yang mana: siklus masih hidup, atau kali ini benar-benar berbeda? Saya penasaran, karena dua-duanya punya data.
 
+*PS — penanda waktu berbasis halving yang jadi bahan tulisan ini saya jalankan sebagai indikator Pine Script di TradingView, namanya **BTC Cycle Matrix**. Kodenya saya bagikan gratis di [halaman ini](/posts/btc-cycle-matrix/), kalau mau ikut memantau pakai penanda yang sama.*
+
 ---
 
 *Catatan: angka-angka siklus di tulisan ini dirangkum dari riset yang saya minta susun pada 13 November 2026 (data BTC Pulse, Galaxy Research, CoinGlass, dan estimasi analis per nama/tanggal; seluruh harga berbasis penutupan harian, level fibo pada skala log). Versi lengkapnya ada di halaman riset saya. Bukan saran keuangan — do your own research, selalu.*
