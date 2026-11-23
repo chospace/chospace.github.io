@@ -1,23 +1,23 @@
 ---
-title: "Yang Saya Pelajari Setelah Kalah 467 Kali"
+title: "Yang Saya Pelajari Setelah Kalah 466 Kali"
 date: 2026-08-31T18:00:00+07:00
 tags: ["trading", "journal", "crypto", "forex"]
 author: "Cho"
-summary: "467 kali kalah dari 638 trade — dan inilah yang saya pelajari. Bukan cerita jadi kaya, tapi catatan apa yang bikin akun $100 tetap hidup 5 tahun."
+summary: "466 kali kalah dari 638 trade — dan inilah yang saya pelajari. Bukan cerita jadi kaya, tapi catatan apa yang bikin akun $100 tetap hidup 5 tahun."
 showToc: true
 TocOpen: false
 draft: false
 ---
 
-Saya kalah 467 kali.
+Saya kalah 466 kali.
 
-Dari 638 trade selama 5 tahun, saya bener cuma 26,6% — kira-kira 1 dari 4. Dan $100 saya jadi $1.590. Ini yang saya pelajari dari 467 kekalahan itu.
+Dari 638 trade selama 5 tahun, saya bener cuma 26,8% — kira-kira 1 dari 4. Dan $100 saya jadi $2.326. Ini yang saya pelajari dari 466 kekalahan itu.
 
 [Desember 2022, saya nulis di blog ini](/posts/catatan_trading/): "Trading adalah permainan probabilitas. Kita tidak perlu selalu benar, yang penting konsisten mengikuti aturan." Waktu itu saya nulisnya dari teori. Jurnal ini baru setahun jalan dan masih jalan di tempat.
 
 Tiga tahun berikutnya, 638 trade ini yang ngebuktiin kalimat itu.
 
-![Kurva saldo $100 Challenge — $100 jadi $1.590 dalam 5 tahun](/images/equity-curve-100-challenge.svg)
+![Kurva saldo $100 Challenge — $100 jadi $2.326 dalam 5 tahun](/images/equity-curve-100-challenge.svg)
 
 *[Lihat jurnal lengkapnya di halaman $100 Challenge →](/100-challenge/)*
 
@@ -25,7 +25,7 @@ Tiga tahun berikutnya, 638 trade ini yang ngebuktiin kalimat itu.
 
 Cara main saya sederhana. Saya trading pakai teknikal analisis — baca grafik harga, cari setup dari pola dan level di chart, bukan dari berita atau feeling. Saya hanya ambil setup yang risikonya sekecil mungkin dan untungnya sebesar mungkin. Selain itu, nggak saya ambil.
 
-Setiap entry dan exit ikut plan. Setup kayak gitu probabilitasnya emang rendah — makanya saya bener cuma 1 dari 4 kali. Bukan karena asal tembak, tapi karena plan-nya sendiri yang probabilitasnya kecil, payoff-nya besar. Begitu harga nyentuh level invalidasi, saya keluar. Cepat. Bukan karena panik — karena plan-nya bilang begitu. Rata-rata rugi saya -$12,60, rata-rata untung saya +$43,39. Sekali bener, nutupin tiga kali salah — plus sisa.
+Setiap entry dan exit ikut plan. Setup kayak gitu probabilitasnya emang rendah — makanya saya bener cuma 1 dari 4 kali. Bukan karena asal tembak, tapi karena plan-nya sendiri yang probabilitasnya kecil, payoff-nya besar. Begitu harga nyentuh level invalidasi, saya keluar. Cepat. Bukan karena panik — karena plan-nya bilang begitu. Rata-rata rugi saya -$12,61, rata-rata untung saya +$47,38. Sekali bener, nutupin tiga kali salah — plus sisa.
 
 Idealnya, risiko per trade dibatasi sebagai fraksi tetap dari modal (*fixed fractional*). Pedoman umumnya: 1–2% per trade. Jujur aja, risiko saya sebenarnya 10% — jauh di atas pedoman itu. Itu kenapa akun ini pernah nyentuh $57,94 dan kenapa 20 kali kalah beruntun hampir ngabisin semuanya. Saya beruntung akunnya selamat — dan itu bukan sesuatu yang saya rekomendasiin.
 
@@ -39,13 +39,17 @@ Lalu ada masa kalah 20 kali beruntun. Dua puluh. Akunnya tetap hidup, karena rug
 
 Februari 2023, saya beli ONE di $0,01219, jual di $0,02791 — naik +129%, untung +$424,44. Satu trade itu yang ngangkat 2023 jadi +$558,31. Satu winner yang dibiarin jalan bisa nutupin puluhan loss kecil.
 
-2024: +$375,94. 2025: +$961,92, tahun terbaik, puncak saldo $2.215,53. Lalu 2026: -$416,37, saldo sempat turun $624,73 dari puncaknya, tutup di $1.590,81. Totalnya masih +1.491% dari $100 — tapi setahun terakhir merah. Begitulah.
+Februari 2024, giliran PEPE. Saya entry di awal Februari, dan posisi itu nggak saya tutup besoknya — saya tahan 68 hari, sempat saya trim beberapa kali di tengah jalan, baru close di April: +$726. Itu win terbesar saya di seluruh jurnal ini, dan dia yang bikin 2024 jadi tahun terbaik saya. Pelajarannya sama persis kayak ONE, cuma skalanya lebih gede: winner yang sabar dibiarin jalan.
+
+*Catatan: trade PEPE ini sempat tercatat salah di jurnal saya — tertulis kena stop loss, −$9. Baru belakangan saya koreksi dari kartu posisi Bybit yang masih saya simpan; harga close-nya perkiraan, karena riwayat Bybit-nya sudah nggak bisa saya akses lagi. Di halaman jurnal lengkapnya, koreksi ini saya catat terbuka.*
+
+2024: +$1.111,36 — tahun terbaik. 2025: +$961,92, puncak saldo $2.950,95. Lalu 2026: -$416,37, saldo sempat turun $624,73 dari puncaknya, tutup di $2.326,23. Totalnya masih +2.226% dari $100 — tapi setahun terakhir merah. Begitulah.
 
 ## Jurnalnya yang Bikin Semua Ini Kelihatan
 
 Semua angka di atas saya tahu karena saya nyatet. Tanpa jurnal, semua ini cuma perasaan.
 
-Perasaan setelah kalah 20x beruntun itu: "saya payah, sistem ini nggak jalan, udahan aja." Jurnal bilang beda: "ruginya kecil-kecil, sistemnya masih jalan, lanjut." Perasaan setelah ONE +$424 itu: "saya jago." Jurnal bilang: "satu trade itu yang ngangkat setahun — jangan besar kepala."
+Perasaan setelah kalah 20x beruntun itu: "saya payah, sistem ini nggak jalan, udahan aja." Jurnal bilang beda: "ruginya kecil-kecil, sistemnya masih jalan, lanjut." Perasaan setelah ONE +$424 dan PEPE +$726 itu: "saya jago." Jurnal bilang: "dua trade itu yang ngangkat dua tahun penuh — jangan besar kepala."
 
 Saya pernah coba nyatet pakai template di Notion. Nggak nempel. Yang cocok ternyata mirroring di TradingView — aplikasi buat lihat grafik harga. Setiap order beneran, saya catat ulang di sana. Simple, nempel di chart, nggak perlu buka aplikasi lain.
 
@@ -59,9 +63,9 @@ Tapi pekerjaan makin nyita waktu dan fokus. Jurnalnya mulai goyang — kadang ng
 
 Jadi jurnal ini saya tutup. Jurnal lama di TradingView saya hapus, arsip ini saya bangun ulang dari file export biar angkanya bener. Dan saya mulai fresh start: akun $100 baru, disiplin lebih ketat — setiap trade pakai checklist, screenshot dari aplikasi jadi sumber kebenaran, jurnal dicatat harian. Bukan biar jadi robot tanpa emosi — tapi biar kalau psikologi goyang, ada sistem yang narik saya balik ke aturan.
 
-Trading bukan soal sering bener. Soal kalah kecil, menang gede, dan bertahan cukup lama buat belajar. Lima tahun, $100 jadi $1.590. Bukan cerita jadi kaya. Cerita bertahan.
+Trading bukan soal sering bener. Soal kalah kecil, menang gede, dan bertahan cukup lama buat belajar. Lima tahun, $100 jadi $2.326. Bukan cerita jadi kaya. Cerita bertahan.
 
-Mungkin hasilnya nggak seberapa kalau dilihat dari nominalnya — $1.490 untung selama 5 tahun. Tapi kalau dilihat dari modalnya — $100 jadi $1.590, naik hampir 16x lipat — itu udah cukup buat saya. Challenge ini bukan soal nominalnya. Soal buktiin sistemnya jalan dengan modal kecil, sebelum dipercaya modal yang lebih gede.
+Mungkin hasilnya nggak seberapa kalau dilihat dari nominalnya — $2.226 untung selama 5 tahun. Tapi kalau dilihat dari modalnya — $100 jadi $2.326, naik lebih dari 23x lipat — itu udah cukup buat saya. Challenge ini bukan soal nominalnya. Soal buktiin sistemnya jalan dengan modal kecil, sebelum dipercaya modal yang lebih gede.
 
 Dan ekspektasinya realistis — kayak dagang. Untung kecil nggak apa-apa. Yang penting muter, untung dikit-dikit, dan tokonya tetap buka besok. Itu yang saya maksud di [Matematika Trading](/posts/matematika-trading/): mengubah mindset dari penjudi menjadi bisnis.
 
